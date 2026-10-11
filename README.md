@@ -19,7 +19,7 @@ $X_\Delta(N)$ lies between $X_1(N)$ and $X_0(N)$. It is *strict* if both inclusi
 
 | $N$ | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| $\mathrm{gon}_{\mathbb Q} X_1(N)$ | 22 | 12 | 24 | 15 | 18 | 19 | 29 | 16 | 21 | 15 |
+| $`\mathrm{gon}_{\mathbb Q} X_1(N)`$ | 22 | 12 | 24 | 15 | 18 | 19 | 29 | 16 | 21 | 15 |
 
 ## How the proofs work
 
@@ -30,7 +30,7 @@ computational methods.
    $\mathrm{gon}_{\mathbb Q}\le\deg D$: divisors supported on cusps (computed from $q$-expansions at all cusps),
    pullbacks of pencils along forgetful maps, and Riemann–Roch in low genus.
 2. **Finite-field exclusion** (lower bounds). At a prime $p$ of good reduction,
-   $\mathrm{gon}_{\mathbb Q} X\ge\mathrm{gon}_{\mathbb F_p} X_{\mathbb F_p}$, and the latter is computed by the
+   $`\mathrm{gon}_{\mathbb Q} X\ge\mathrm{gon}_{\mathbb F_p} X_{\mathbb F_p}`$, and the latter is computed by the
    algorithm of Derickx and Terao. Their package CurveArith has two phases: (1) the places of small degree and the
    expansions of holomorphic differentials there, and (2) a search for effective divisors $D$ with
    $\ell(D)\ge2$, using $\ell(D)=\deg D+1-\mathrm{rank}\,M_D$. For the large curves $X_1(N)$ we use phase 1

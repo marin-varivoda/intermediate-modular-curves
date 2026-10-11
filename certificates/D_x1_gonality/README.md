@@ -2,12 +2,12 @@
 
 | $N$ | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| $\mathrm{gon}_{\mathbb Q} X_1(N)$ | 22 | 12 | 24 | 15 | 18 | 19 | 29 | 16 | 21 | 15 |
+| $`\mathrm{gon}_{\mathbb Q} X_1(N)`$ | 22 | 12 | 24 | 15 | 18 | 19 | 29 | 16 | 21 | 15 |
 
 **Upper bounds.** Derickx and van Hoeij: the coordinate $x$ of the Sutherland–van Hoeij model is a modular unit
 whose degree is the number in the table. Nothing is computed for the upper bounds here.
 
-**Lower bounds.** At a prime $p$ of good reduction, $\mathrm{gon}_{\mathbb Q}X_1(N)\ge\mathrm{gon}_{\mathbb F_p}X_1(N)_{\mathbb F_p}$.
+**Lower bounds.** At a prime $p$ of good reduction, $`\mathrm{gon}_{\mathbb Q}X_1(N)\ge\mathrm{gon}_{\mathbb F_p}X_1(N)_{\mathbb F_p}`$.
 So it suffices to show that the reduction has no function of degree at most $d=\text{upper bound}-1$ over
 $\mathbb F_p$. The prime and $d$ for each level are in `levels.csv`. Level 48 is done differently, through a
 double cover (see below).
@@ -19,7 +19,7 @@ Write $X$ for the reduction, $g$ for its genus and $q=p$. The test follows Deric
 
 **Phase 1 (Magma, CurveArith unchanged).** `phase1/phase1.m` calls CurveArith's own
 `PrecomputePowerseriesExpansions` with exactly the places and precisions that `CAHasFunctionOfDegreeAtMost`
-uses. Those places are all places of degree $\le d-n_1$, where $n_1=\lceil\#X(\mathbb F_q)/(q+1)\rceil$. The output
+uses. Those places are all places of degree $\le d-n_1$, where $`n_1=\lceil\#X(\mathbb F_q)/(q+1)\rceil`$. The output
 is the power series expansions of a basis of holomorphic differentials at each of these places. The script then
 writes the expansions to a text file instead of passing them to CurveArith's search. Only this output step is new.
 
@@ -38,13 +38,13 @@ $D\le H$, so the kernel gives the least degree of a function in $L(H)$ directly.
 
 **Why the two phases agree with CurveArith.** Phase 1 is CurveArith's code. Phase 2 is a different but complete
 search (paper, Proposition 3.3). `validation/validate.py` reruns both phases on $X_1(26)$ at $p=3,5,7$ and $X_1(29)$ at
-$p=2,3$, at $d=\mathrm{gon}_{\mathbb F_p}-1$ and $d=\mathrm{gon}_{\mathbb F_p}$. It checks that the answers are
+$p=2,3$, at $`d=\mathrm{gon}_{\mathbb F_p}-1`$ and $`d=\mathrm{gon}_{\mathbb F_p}`$. It checks that the answers are
 "no" and "yes", against CurveArith's unmodified `CAGonality`. The results are in `validation/validate*.log`.
 
 **Models.** `models/X1_N.txt` are the Sutherland–van Hoeij plane models. `model_checks.m` checks, for each level
 and prime used, that the reduction mod $p$ has the same degree in $y$, is irreducible with exact constant field
 $\mathbb F_p$, and has genus $g(X_1(N))$. By §2.2 of the paper, this identifies its function field with that of
-$X_1(N)_{\mathbb F_p}$. The output is in `model_checks.log`.
+$`X_1(N)_{\mathbb F_p}`$. The output is in `model_checks.log`.
 
 ## Running Phase 1 in parallel
 
@@ -106,7 +106,7 @@ $X_1(47)$ was restarted once with a larger memory limit, and its log is from the
 
 At $N=48$ the place counts over small fields are too large for Phase 1. Instead, `double_cover_48/` works on the
 quotient $Y=X_1(48)/\langle 23\rangle$, which has genus 13 (paper, §5.1). A function of degree $\le 15$ on
-$X_1(48)_{\mathbb F_7}$ has a norm to $Y$ of degree $\le 15$, and the norm bound limits the possible divisors of
+$`X_1(48)_{\mathbb F_7}`$ has a norm to $Y$ of degree $\le 15$, and the norm bound limits the possible divisors of
 that norm. `dc_certificate.m` enumerates all 1328 effective divisors $E$ allowed by this bound and all candidate
 functions. Of the 3 709 104 candidate functions, all but 18 are discarded by the norm bound; the remaining 18 are
 checked directly, and none has degree $\le 15$.
