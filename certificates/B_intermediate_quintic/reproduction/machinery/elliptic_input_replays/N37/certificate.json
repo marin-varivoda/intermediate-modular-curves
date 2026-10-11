@@ -1,0 +1,17 @@
+{
+  "level": 37,
+  "status": "EXACT_ELLIPTIC_INPUT",
+  "conclusion": {
+    "minimum_positive_elliptic_degree": 12
+  },
+  "source_sha256": {
+    "run_elliptic_input_audit.py": "46baeb6ae75b93e3a105be83b3a20b2f3a53303975c4b1a7f5c7f9ee3416bbd5",
+    "small_density_elliptic.m": "406ff5256f8abf7c4da87d2be3fb9ea75a21116213aa2cb81c312c92f8bcfae7",
+    "run_genus5_batch.py": "091fcc9774fb29f7892f008b996e1c627458684b80a74959aff55c27228ca952",
+    "ELLIPTIC_DEGREE_EXCLUSIONS.md": "838d6861663520d297e6ac4384f1a49b5cc3dbe9bdfbb1efd1bbb119a4fd14f7",
+    "DEBARRE_FAHLAOUI_OBSTRUCTION.md": "f32cb166a3481277aa65832a3c354652535480beb120c59c549f4db7ccd17b3c"
+  },
+  "artifact_sha256": {
+    "calculation.log": "fcc97b7ef4132dad1c3ecaa9f07fdb55f0a3cb4f5b6eb9c4e5f89c949ee6b444"
+  }
+}

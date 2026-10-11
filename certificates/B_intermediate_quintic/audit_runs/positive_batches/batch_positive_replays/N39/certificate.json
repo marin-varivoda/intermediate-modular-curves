@@ -1,0 +1,24 @@
+{
+  "id": "39:1,4,10,14,16,17,22,23,25,29,35,38",
+  "status": "INFINITE_BY_NEW_EXACT_FUNCTION",
+  "source_sha256": {
+    "run_batch_positive_audit.py": "8603820caa89be0111b7ece084d2339cd13e99c6ec8e05cc5896c9a9a3e1713e",
+    "run_genus5_batch.py": "091fcc9774fb29f7892f008b996e1c627458684b80a74959aff55c27228ca952",
+    "canonical_relations.py": "59449a294fc0c6edd642a3af16ac06b4f9ab3cae117cab209c753089c0d4b404",
+    "enumeration.py": "a65b1e9507e3637f4328f5d5c36e5449c7cff5ff3e9cdb3285a7c96ad62e351a",
+    "export_genus5.py": "fcc728a6acc901c994fe4a5eed66f2622f27968a4906ee7f99fbc98c39e71f58",
+    "verify_genus5.m": "7e1bd0a06b963c1b53f1e953841af496ea10213970ed3833b6392c93998115e3",
+    "search_quintic_genus5.m": "377fb452f37a6d969f34d1637ae87af476606813be75ced9cdd7e47512427136",
+    "search_residual_genus5.m": "a9b321af2722666e0f3de4415ad9c06e126f4063c218bf6214ed65e10aca278e",
+    "RATIONAL_MODELS.md": "96e8c26aafd61ebdacc3d69bda02d5209ce4e825ce718edc9acbf3cb8f51b304",
+    "MODEL_IDENTIFICATION.md": "a0325651bfbfb2c0a6255a833236fa218f3a327b2db61bc398c694d25f1d8205"
+  },
+  "artifact_sha256": {
+    "relations.json": "3f5db66b2edb8ad5df881919afd26b7c7a3c2ebabcdd992d97b841c2e23fb7ae",
+    "relations.log": "8327a731560e96b74ced5ea3ec6579008682e465b51fcb386fe2dc9fe554a1f8",
+    "export.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "genus5_input.m": "8de995092281bef6c75244196fdaf2c97f55c4cb85e84a0b4451f62d8df2b096",
+    "geometry.log": "048b88d528722489d822fa2648f7cbc8c819d7c6d5f7a272b62f7a00abaadad2",
+    "effective.log": "7abe7cbfd93630f324f0cc940210790f3325e6f9e74bd0ff4431869e8c34a692"
+  }
+}

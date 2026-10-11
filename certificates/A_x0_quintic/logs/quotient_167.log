@@ -1,0 +1,14 @@
+Loading "common.m"
+Loading "coordinates.m"
+Loading "place_cache.m"
+N=167 p=3 genus=14 quotient_genus=2 m=83 Aorder=19 J=[ 12961363, 0 ]
+place_counts=[ 2, 18, 12, 12, 46 ]
+partition=[ 5 ] divisors=46 classes=46
+partition=[ 4, 1 ] divisors=70 classes=70
+partition=[ 3, 2 ] divisors=286 classes=286
+partition=[ 3, 1, 1 ] divisors=322 classes=322
+partition=[ 2, 2, 1 ] divisors=664 classes=660
+partition=[ 2, 1, 1, 1 ] divisors=736 classes=730
+partition=[ 1, 1, 1, 1, 1 ] divisors=742 classes=736
+RESULT N=167 divisors=742 W0=736 full_indices={ 2, 3 } special_indices={}
+SUCCESS quotient N=167

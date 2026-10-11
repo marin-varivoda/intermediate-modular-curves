@@ -1,0 +1,73 @@
+PASS translates_74: 3.8s
+PASS translates_128: 4.0s
+PASS translates_82: 7.9s
+PASS translates_123: 9.2s
+PASS translates_118: 14.0s
+PASS translates_143: 9.1s
+PASS translates_141: 19.2s
+PASS translates_111: 31.2s
+PASS quotient_79: 1.0s
+PASS translates_77: 42.5s
+PASS translates_142: 51.9s
+PASS quotient_89: 18.1s
+PASS translates_155: 43.8s
+PASS translates_99: 63.7s
+PASS quotient_107: 2.4s
+PASS quotient_131: 3.9s
+PASS quotient_101: 10.2s
+PASS translates_145: 56.2s
+PASS empty_85: 1.2s
+PASS empty_88: 1.4s
+PASS empty_92: 1.9s
+PASS quotient_191: 15.9s
+PASS quotient_167: 19.9s
+PASS local_88: 4.1s
+PASS local_77: 19.3s
+PASS rank_zero_100: 5.5s
+PASS quotient_83: 66.5s
+PASS arithmetic: 8.8s
+PASS cubic83: 0.2s
+PASS pencils74: 17.1s
+PASS quotient_103: 72.0s
+PASS local_85: 59.8s
+PASS rank_zero_96: 48.5s
+PASS rank_zero_98: 80.7s
+PASS translates_159: 259.1s
+PASS translates_86: 682.2s
+PASS arithmetic
+PASS cubic83
+PASS empty_85
+PASS empty_88
+PASS empty_92
+PASS local_77
+PASS local_85
+PASS local_88
+PASS pencils74
+PASS quotient_101
+PASS quotient_103
+PASS quotient_107
+PASS quotient_131
+PASS quotient_167
+PASS quotient_191
+PASS quotient_79
+PASS quotient_83
+PASS quotient_89
+PASS rank_zero_100
+PASS rank_zero_96
+PASS rank_zero_98
+PASS translates_111
+PASS translates_118
+PASS translates_123
+PASS translates_128
+PASS translates_141
+PASS translates_142
+PASS translates_143
+PASS translates_145
+PASS translates_155
+PASS translates_159
+PASS translates_74
+PASS translates_77
+PASS translates_82
+PASS translates_86
+PASS translates_99
+36/36 certificates passed

@@ -1,0 +1,11 @@
+{
+  "status": "PORTABLE_ALL_POSITIVE_BATCHES_PASS",
+  "receipts": {
+    "canonical_low_genus": "b718ec9c36cd76249d50ed3acd61ee1c8d2cf3eb1bdf00d337f91fe51180da39",
+    "explicit": "332ee83c3642fd3bdcc59e0c2ecfb15efe5b660835518abc14bc75c42d737aea",
+    "batch": "c2647b9a988a7b4abe1ccf636a8c9f9c018b4277f7e84b22097f2006a85a7512",
+    "last": "0d025c5bba472715f6aa15de7c761364c31f6acf1b1ef5c26e3be4fc456538b0",
+    "level64": "b7db3f8abe603cc09c11333f98ea6f731166d99298a313e8db16aea71f3419f0"
+  },
+  "bundle_manifest_sha256": "27f7dfad27ae4582457bb04ed5de997e9bd340687b0de82e73602bc447ef9f60"
+}

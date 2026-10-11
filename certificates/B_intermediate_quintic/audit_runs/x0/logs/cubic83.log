@@ -1,0 +1,12 @@
+Loading "coordinates.m"
+cubic_polynomial=x^3 + 4*x^2 + 2*x - 5 discriminant=-83
+cubic_point_coordinates= [
+    2*u^2 + 4*u - 4,
+    3*u^2 + 5*u - 7,
+    u^2 + 3*u - 3,
+    3*u^2 + 3*u - 5,
+    2*u,
+    -2*u^2 - 2*u + 2,
+    2
+]
+SUCCESS: a reduced rational degree-three divisor fixed pointwise by w83; its pullback-degree-one translate has index 23 and fixed cubic part.

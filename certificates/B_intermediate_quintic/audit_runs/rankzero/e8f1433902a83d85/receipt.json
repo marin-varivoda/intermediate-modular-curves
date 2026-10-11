@@ -1,0 +1,13 @@
+{
+  "id": "X1(48)",
+  "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+  "command": [
+    "magma",
+    "-b",
+    "N:=48",
+    "/home/mvarivoda/x0_deg5/intermediate_modular_curves/central_value.m"
+  ],
+  "genus": 37,
+  "source_sha256": "76e75dcec9371897cd6d40cbfc031ba7ab3a9db596f9f28a8213afd565f814c9",
+  "log_sha256": "dbf020aa2008cb858c560e8fe66a45ec5f9bc29e0d1c548d9c9f94baed10dfea"
+}

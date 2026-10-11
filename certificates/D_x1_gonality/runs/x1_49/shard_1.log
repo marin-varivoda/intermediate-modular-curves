@@ -1,0 +1,7 @@
+Loading "/home/mvarivoda/imc/intermediate-modular-curves-lab/publication/certif\
+icates/D_x1_gonality/models/X1_49.txt"
+Loading "/home/mvarivoda/imc/intermediate-modular-curves-lab/publication/certif\
+icates/D_x1_gonality/runs/x1_49/phase1.m"
+PHASE1_PLACES g=69 q=2 rational=21 n=7 counts=[ 21, 0, 6, 0, 0, 0, 0, 0, 42, 126, 252, 441, 609 ] seconds=127.710
+PHASE1_EXPANSIONS shard=1/4 places=[ 0, 0, 0, 0, 0, 0, 0, 0, 7, 42, 63, 126, 147 ] seconds=1136.850
+PHASE1_DONE shard=1/4 seconds=1140.660

@@ -1,0 +1,33 @@
+Loading "models/X1_26.txt"
+MODEL_OK N=26 p=3 genus=10
+Loading "models/X1_26.txt"
+MODEL_OK N=26 p=5 genus=10
+Loading "models/X1_26.txt"
+MODEL_OK N=26 p=7 genus=10
+Loading "models/X1_29.txt"
+MODEL_OK N=29 p=2 genus=22
+Loading "models/X1_29.txt"
+MODEL_OK N=29 p=3 genus=22
+Loading "models/X1_29.txt"
+MODEL_OK N=29 p=5 genus=22
+Loading "models/X1_41.txt"
+MODEL_OK N=41 p=2 genus=51
+Loading "models/X1_42.txt"
+MODEL_OK N=42 p=5 genus=25
+Loading "models/X1_43.txt"
+MODEL_OK N=43 p=2 genus=57
+Loading "models/X1_44.txt"
+MODEL_OK N=44 p=3 genus=36
+Loading "models/X1_45.txt"
+MODEL_OK N=45 p=2 genus=41
+Loading "models/X1_46.txt"
+MODEL_OK N=46 p=3 genus=45
+Loading "models/X1_47.txt"
+MODEL_OK N=47 p=2 genus=70
+Loading "models/X1_48.txt"
+MODEL_OK N=48 p=5 genus=37
+Loading "models/X1_49.txt"
+MODEL_OK N=49 p=2 genus=69
+Loading "models/X1_50.txt"
+MODEL_OK N=50 p=3 genus=48
+ALL_MODELS_OK

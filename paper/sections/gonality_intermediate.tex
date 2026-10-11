@@ -1,0 +1,104 @@
+\section{Gonality of intermediate curves: proof of Theorem C}\label{sec:gonality-intermediate}
+
+There are $76$ strict intermediate curves with $N\le50$, of which $52$ have $N\le40$; for those, both bounds
+are in \cite[Theorem~1.2, Table~1]{Orlic2025}, and we only recall them in \cref{tab:C}. The remaining $24$
+curves, with $41\le N\le50$, are treated as follows.
+
+\subsection{Upper bounds}
+Each upper bound is Method~I.
+\begin{itemize}
+\item \emph{Pullbacks.} Fourteen curves map, by a forgetful map of degree $m$, to a curve whose gonality $\gamma$
+ is known, with $m\gamma$ equal to the lower bound. The targets have genus at most $3$, or are hyperelliptic,
+ or are curves $X_1(M)$ with $M\le 40$ \cite{DerickxVanHoeij2014}; the degree and target of each map are listed in
+the data file of the accompanying repository.
+\item \emph{Cuspidal divisors.} For five curves ($41.168.11.b.1$, $41.210.11.b.1$, $41.420.21.d.1$,
+ $45.432.21.g.2$, $49.392.19.i.2$), a rational divisor $D$ supported on the cusps has degree equal to the
+ lower bound and $\ell(D)\ge2$. We compute $\ell(D)=\deg D+1-g+\ell(K-D)$, where $H^0(K-D)$ is the space of
+ weight-$2$ cusp forms vanishing to the prescribed orders at the cusps, from $q$-expansions at all cusps
+ computed with Zywina's package \cite{ZywinaModular}. Conditions at one cusp of each Galois orbit suffice,
+ since the basis is rational.
+\item \emph{Published.} $44.144.8.c.4$ is in Orli\'c's list of $\Q$-pentagonal curves
+ \cite[Theorems~1.4--1.5]{Orlic2025}, and $45.144.5.a.1$ in the list of $\Q$-tetragonal curves
+ \cite[Theorem~1.3]{Orlic2025}; $49.168.3.b.1$ is a nonhyperelliptic genus-$3$
+ curve with a rational point.
+\item \emph{Two special divisors at level $43$.} For $43.308.15.b.1$ (genus $15$) we take $D=3C_3+C_4+P_5$, where
+ $C_3,C_4$ are rational cusps and $P_5$ is a point of degree $5$, the image of a point of degree $15$ on
+ $X_1(43)$ found by van Hoeij \cite{vanHoeij2012}; then $\deg D=9$ and $\ell(D)=2$. For $43.132.9.a.2$
+ (genus $9$), let $\pi\colon X\to X_0^+(43)=E$ be the map of degree $6$ to the elliptic curve $43a1$; with rational
+ cusps $C_1,C_2,C_3$, the divisor $D=3C_3+7C_2-3C_1+\pi^*(G)-\pi^*(O)$ for a point $G\in E(\Q)$ of infinite
+ order has degree $7$ and $\ell(D)=2$.
+\end{itemize}
+
+\subsection{Lower bounds}
+Twenty-one of the $24$ lower bounds are Method~II, using CurveArith's \texttt{CAGonality} unchanged at a prime
+of good reduction (\cref{tab:C}). Six of these curves ($41.84.5.a.1$, $44.144.8.c.4$, $45.144.5.a.1$ and the
+three curves of genus $5$ and $7$ at level $48$) are also covered by Orli\'c's classification
+\cite{Orlic2025}; we recompute them as a check. The longest computation, for $48.384.19.bc.1$ at $p=7$, takes
+about an hour; all others take at most eleven minutes. The curves $49.168.3.b.1$ and $50.180.4.a.2$ have
+genus $3$ and $4$ and are not hyperelliptic \cite{IshiiMomose1991}, hence have gonality at least $3$.
+
+The remaining curve, $43.132.9.a.2$, needs Method~III.
+
+\subsection{The curve \texorpdfstring{$43.132.9.a.2$}{43.132.9.a.2}}
+Let $X=X_\Delta(43)$ with $\Delta=\langle-1,2\rangle=\{\pm1,\pm2,\pm4,\pm8,\pm11,\pm16,\pm21\}$. It has genus
+$9$, three rational cusps $C_1,C_2,C_3$ and one cusp orbit $C_{(3)}$ of degree $3$. The forgetful map
+$X\to X_0(43)$ has degree $3$, and composing with the quotient by the Atkin--Lehner involution gives
+$\pi\colon X\to X_0^+(43)=E$, of degree $6$, where $E$ is the elliptic curve $43a1$ of rank $1$.
+
+\begin{proposition}\label{prop:43}
+$\gon_\Q X=7$.
+\end{proposition}
+
+The Castelnuovo--Severi inequality does not help here: the maps to $X_0(43)$ (genus $3$, degree $3$) and to
+$E$ (degree $6$) exclude nothing in degrees $2$ to $6$. Over $\F_2$ the gonality is $5$ and over $\F_5$ it is
+$4$; we use $p=3$, where $X$ has good reduction.
+
+\begin{proof}
+The upper bound is the divisor above. For the lower bound, let $J=\Jac X$, and let $c=C_3$ be the base point of
+the Abel--Jacobi map.
+
+\emph{Step 1: over $\F_3$.} \texttt{CAGonality} gives $\gon_{\F_3}X_{\F_3}=6$, so by \cref{lem:specialization}
+there is no function of degree at most $5$ over $\Q$. Here $n=\lceil 4/4\rceil=1$, and testing the $845$
+effective divisors of degree $6$ over $\F_3$ containing a rational place shows that exactly four have
+$\ell\ge2$, and that they are linearly equivalent. So $W^1_6(X_{\F_3})(\F_3)$ is a single class $T$, and
+$T-6c$ has order $1596$ in $J(\F_3)$, a group of order $19152$.
+
+\emph{Step 2: the rational points of $J$.} Let $A=\pi^*E\subseteq J$ and $B=J/A$. The pullback $\pi^*$ is
+injective: a nontrivial kernel would make $\pi$ factor through an isogeny onto $E$ of degree dividing $6$, but
+$43a1$ has no rational cyclic isogeny and $E(\Q)_{\mathrm{tors}}=0$. So $A(\Q)\cong E(\Q)\cong\Z$. The
+abelian variety $B$ is isogenous to a product of modular abelian varieties of dimensions $2$, $2$ and $4$
+whose $L$-values at $1$ are nonzero (exact modular-symbol computations of $L$-ratios $2/7$, $3/16$,
+$1/361$); by Kato \cite[Corollary~14.3]{Kato2004}, $B(\Q)$ is finite. Its order divides
+$\gcd_{p}\#B(\F_p)$ over odd primes $p\ne43$, since reduction is injective on rational torsion at such
+primes \cite[Appendix]{Katz1981}; the gcd over $p=3,5,23$ is already $532$. (Point counts are invariant under
+isogeny, so we may compute them on the modular abelian variety isogenous to $B$.)
+On the other hand, the subgroup $\mathcal C\subseteq J(\Q)$ generated by $[C_2-C_1]$, $[C_3-C_1]$ and
+$[C_{(3)}-3C_3]$ is finite (its generators are torsion, as checked below; this is also an instance of the theorem of
+Manin and Drinfeld \cite{Manin1972,Drinfeld1973}), of order at least $532$ (its reduction modulo $3$ has order
+$532$), and it meets $A(\Q)$ trivially, as $A(\Q)$ is torsion-free. So $\mathcal C$ maps isomorphically
+onto $B(\Q)$, and
+\[
+ J(\Q)=A(\Q)+\mathcal C.
+\]
+
+\emph{Step 3: conclusion.} Let $H_3\subseteq J(\F_3)$ be the subgroup generated by $\pi^*E(\F_3)$ and the
+reduction of $\mathcal C$. It has order $3192$, and $T-6c\notin H_3$. If $f\colon X\to\PP^1$ had degree $6$
+over $\Q$, the class of $L=f^*\mathcal O(1)$ would satisfy $[L-6c]\in J(\Q)$, so its reduction would lie in
+$H_3$; but by \cref{lem:specialization} the reduction of $L$ is a degree-$6$ class with two sections, that is
+$T$. This contradiction shows $\gon_\Q X\ge7$.
+\end{proof}
+
+\begin{remark}
+The saturation in Step~2 cannot be avoided: $J(\F_3)$ has cyclic $3$-part, and the $3$-component of $T-6c$
+lies in $\pi^*E(\F_3)$, so $T-6c\notin H_3$ only because of its $2$-, $7$- and $19$-parts. In particular the
+coarser statement ``$532\cdot J(\Q)\subseteq A(\Q)$'' would not suffice.
+\end{remark}
+
+The certificate for \cref{prop:43} runs in about $12$ seconds; the computations of $L$-ratios and of
+$\#B(\F_p)$ take a few minutes.
+The scripts work with the LMFDB model of $X$, its map to $X_0(43)$ and its cusps; the script
+\texttt{identify\_model.m} shows that this model is isomorphic over $\Q$ to the MD~Sage model, by an explicit
+linear change of coordinates (found by matching points over $\F_{101}$ and $\F_{103}$, and checked exactly). The three
+classes generating $\mathcal C$ are certified to be torsion directly over $\Q$ (\texttt{torsion\_classes.m}): with
+$D_1=C_2-C_1$, $D_2=C_3-C_1$ and $E=C_{(3)}-(C_1+C_2+C_3)$, the divisors $38D_1$, $38D_2$ and $7E$ are principal,
+and $C_{(3)}-3C_3=E+D_1-2D_2$. So the proof does not depend on knowing that these points are cusps.

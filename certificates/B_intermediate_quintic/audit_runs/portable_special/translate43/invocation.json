@@ -1,0 +1,8 @@
+{
+  "command": [
+    "/opt/sage/envs/sage/bin/python",
+    "run_43_certificate.py"
+  ],
+  "snapshot": "/tmp/quintic-translate43-fxqkjqh5/machinery",
+  "pid": 3637477
+}

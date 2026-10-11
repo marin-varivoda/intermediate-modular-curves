@@ -1,0 +1,3 @@
+positive_factor=[ 0, -1, 1, -2, 2 ] exact_optimal_modular_degree=4
+CERTIFIED minimum_positive_elliptic_degree=8
+SUCCESS small-density elliptic obstruction

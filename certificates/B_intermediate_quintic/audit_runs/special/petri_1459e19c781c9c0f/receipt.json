@@ -1,0 +1,33 @@
+{
+  "status": "FRESH_SPECIAL_CERTIFICATE_PASS",
+  "name": "petri_1459e19c781c9c0f",
+  "id": "36:1,17,19,35",
+  "seconds": 69.35,
+  "scope": "Fresh certificate computation on supplied canonical model data",
+  "certificate": "hilbert_jobs/1459e19c781c9c0f/integral_model/petri_certificate.json",
+  "source_sha256": {
+    "run_petri_certificate.py": "25b807b26bafb80a04971631244c02bc4107c3e85f18a96db74577297919143b",
+    "integral_relations.py": "f6273829c3da935a985a2591e85e76d2b804ef2eeab5bf4d46568d6fe985d902",
+    "export_canonical.py": "7e5b6af585f164e645f8dedae695a768a82bfb23369129be573aac6c0cd0f81a",
+    "verify_canonical_hilbert.m": "8315c4a7e7a1b03fa6b848810120a9b8d09418a0d05fde02769de380ba775829",
+    "intermediate_central_value.m": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+    "verify_petri_lifting.m": "0166bd270042c5916c98984643b0cd1184bdefe4ef77dbbacb19df9731ccf8a9",
+    "PETRI_LIFTING_CERTIFICATE.md": "14fd2adeefca9ac15e0a5dd82c7fb49faa11ca28ad928407277b48959de407bf"
+  },
+  "outputs": {
+    "evidence/hilbert_jobs/1459e19c781c9c0f/canonical_input.m": "18de7227dcaf146991574f9dc43930424f25f4a9a77f3b3577525248719b353b",
+    "evidence/hilbert_jobs/1459e19c781c9c0f/geometry.log": "9e0ecc80831a06b5488964e12db10cfd452c02ad8fd8e2697287ef9426db2340",
+    "evidence/hilbert_jobs/1459e19c781c9c0f/integral_model/canonical_input.m": "18de7227dcaf146991574f9dc43930424f25f4a9a77f3b3577525248719b353b",
+    "evidence/hilbert_jobs/1459e19c781c9c0f/integral_model/petri_certificate.json": "f0ad6dfcfe74c707512228a516f9e041b70b55cdef251bdbf19b0b85881c9de9",
+    "evidence/hilbert_jobs/1459e19c781c9c0f/integral_model/petri_geometry_Q.log": "9e0ecc80831a06b5488964e12db10cfd452c02ad8fd8e2697287ef9426db2340",
+    "evidence/hilbert_jobs/1459e19c781c9c0f/integral_model/petri_lifting.log": "d51b0a6cf422796582094d0827802734501e7e1b87d872236056c8178dad5c1c",
+    "evidence/hilbert_jobs/1459e19c781c9c0f/integral_model/petri_rank.log": "a7672e2090d7ebc6ebdef251cf6520a884449b593926a90ecbc1f44f6d9d331a",
+    "evidence/hilbert_jobs/1459e19c781c9c0f/integral_model/quartic_witnesses.m": "e394ec76723a13969dfc5ec931010b03279493d6013a28e213bd1497d7e33531",
+    "evidence/hilbert_jobs/1459e19c781c9c0f/integral_model/relations.json": "777c284111d59ee0bc49cfac142b40b26ba6cf097d674b634abaeb7af229cf6f",
+    "evidence/hilbert_jobs/1459e19c781c9c0f/integral_model/saturation.json": "d703972a2e15fc0dfa9d04fe10dede23e497e24363849ccac27f1b69251b2c47",
+    "evidence/hilbert_jobs/1459e19c781c9c0f/relations.json": "777c284111d59ee0bc49cfac142b40b26ba6cf097d674b634abaeb7af229cf6f",
+    "evidence/hilbert_jobs/1459e19c781c9c0f/result.json": "1700d3645eed02bc7c0d53fe86ec6cae393a9ab96912baeb97c093562f0311df",
+    "invocation.json": "fa636b37d08cf0e2df832f434febedd84a7983a04f47bafb0135447e9a49e9b8",
+    "run.log": "b5d8a984d8f4fa6211bbe477f03d1cf504c4322e158eed636db5fee057c63a30"
+  }
+}

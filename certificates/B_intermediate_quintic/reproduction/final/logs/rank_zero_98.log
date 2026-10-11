@@ -1,0 +1,15 @@
+Loading "common.m"
+Loading "coordinates.m"
+Loading "place_cache.m"
+N=98 p=3 genus=7 place_counts=[ 6, 15, 4, 14, 48 ] rational_lifts=4
+lifted degree-4 pencil: {* 1^^2, 3^^2 *}
+partition=[ 5 ] tested=48 special=0
+partition=[ 4, 1 ] tested=132 special=0
+partition=[ 3, 2 ] tested=192 special=0
+partition=[ 3, 1, 1 ] tested=276 special=0
+partition=[ 2, 2, 1 ] tested=996 special=6
+partition=[ 2, 1, 1, 1 ] tested=1836 special=12
+partition=[ 1, 1, 1, 1, 1 ] tested=2088 special=24
+RESULT N=98 tested=2088 special_divisors=24 max_h0=2 degree4_poles=4 W4_classes=1 W5_classes=6
+Hypothesis (5) fails at p=3: four rational lifts, six finite-field points.
+SUCCESS rank_zero N=98

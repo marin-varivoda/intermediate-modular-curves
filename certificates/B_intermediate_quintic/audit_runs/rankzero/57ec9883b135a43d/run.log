@@ -1,0 +1,3 @@
+RESULT N=75 delta=[ 1, 14, 16, 29, 31, 44, 46, 59, 61, 74 ] dimension=17 
+central_zero=false
+SUCCESS intermediate central-value test

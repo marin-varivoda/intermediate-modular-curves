@@ -1,0 +1,15 @@
+Loading "common.m"
+Loading "coordinates.m"
+Loading "place_cache.m"
+N=103 p=5 genus=8 quotient_genus=2 m=17 Aorder=55 J=[ 2, 2, 2, 114070, 0 ]
+place_counts=[ 6, 31, 38, 152, 646 ]
+degree=5 place_classes=500/646
+partition=[ 5 ] divisors=646 classes=646
+partition=[ 4, 1 ] divisors=1558 classes=1558
+partition=[ 3, 2 ] divisors=2736 classes=2736
+partition=[ 3, 1, 1 ] divisors=3534 classes=3534
+partition=[ 2, 2, 1 ] divisors=6510 classes=6504
+partition=[ 2, 1, 1, 1 ] divisors=8246 classes=8222
+partition=[ 1, 1, 1, 1, 1 ] divisors=8498 classes=8468
+RESULT N=103 divisors=8498 W0=8468 full_indices={ 2, 3 } special_indices={ 2, 3 }
+SUCCESS quotient N=103

@@ -1,0 +1,5 @@
+X1_26 p=3: CAGonality=6  phase2(d=5)=(False, True)  phase2(d=6)=(True, True)  PASS
+X1_26 p=5: CAGonality=6  phase2(d=5)=(False, True)  phase2(d=6)=(True, True)  PASS
+X1_26 p=7: CAGonality=6  phase2(d=5)=(False, True)  phase2(d=6)=(True, True)  PASS
+X1_29 p=2: CAGonality=11  phase2(d=10)=(False, True)  phase2(d=11)=(True, True)  PASS
+X1_29 p=3: CAGonality=11  phase2(d=10)=(False, True)  phase2(d=11)=(True, True)  PASS

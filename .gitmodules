@@ -1,0 +1,9 @@
+[submodule "third_party/mdsage"]
+	path = third_party/mdsage
+	url = https://github.com/koffie/mdsage
+[submodule "third_party/CurveArith"]
+	path = third_party/CurveArith
+	url = https://github.com/nt-lib/CurveArith
+[submodule "third_party/Modular"]
+	path = third_party/Modular
+	url = https://github.com/davidzywina/Modular

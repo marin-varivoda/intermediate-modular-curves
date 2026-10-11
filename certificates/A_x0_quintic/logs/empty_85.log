@@ -1,0 +1,13 @@
+Loading "common.m"
+Loading "coordinates.m"
+Loading "place_cache.m"
+place_counts=[ 4, 12, 12, 2, 68 ]
+partition=[ 5 ] divisors=68 classes=68
+partition=[ 4, 1 ] divisors=76 classes=76
+partition=[ 3, 2 ] divisors=220 classes=220
+partition=[ 3, 1, 1 ] divisors=340 classes=328
+partition=[ 2, 2, 1 ] divisors=652 classes=632
+partition=[ 2, 1, 1, 1 ] divisors=892 classes=856
+partition=[ 1, 1, 1, 1, 1 ] divisors=948 classes=912
+RESULT N=85 p=3 divisors=948 W0=912 subgroup_order=17 whole_cosets=0
+SUCCESS empty N=85

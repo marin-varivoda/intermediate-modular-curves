@@ -1,0 +1,91 @@
+\section{Preliminaries}\label{sec:prelim}
+
+\subsection{Curves and models}
+The groups $\Delta$ and the curves $X_\Delta(N)$ are enumerated with Derickx's package MD~Sage
+\cite{MDSage} (\texttt{intermediate\_modular\_groups}), as in \cite{Orlic2025,DerickxOrlic2026}. We identify
+each curve with its LMFDB label by checking that the corresponding open subgroup of $\GL_2(\Z/N\Z)$,
+\[
+ H_\Delta=\left\{\begin{pmatrix}a&b\\0&d\end{pmatrix}\in\GL_2(\Z/N\Z): a\in\Delta\right\},
+\]
+is conjugate to the group of the label. Rational Fourier expansions at the cusp $\infty$ describe the model
+of $X_\Delta(N)$ that parametrizes $\mu_N$-markings; since $\Delta=\Delta^{-1}$, it is $\Q$-isomorphic to
+the model parametrizing points of order $N$: quotienting by the marked subgroup and dualizing interchanges the two
+moduli problems over $\Q$ and carries the diamond operator $\langle a\rangle$ to $\langle a^{-1}\rangle$, so it descends to
+$X_\Delta(N)$ because $\Delta^{-1}=\Delta$. In particular the cusp
+$\infty$ is a rational point of $X_\Delta(N)$.
+
+For genus $g\ge 5$ we use the canonical model computed by MD~Sage
+(\texttt{vanishing\_quadratic\_forms} with \texttt{minimize\_strategy="LLL"}); all lower bounds over
+finite fields for Theorems~C and~D are computed on these models or on the models of $X_1(N)$ below (for
+Theorem~A, on Magma's canonical models of $X_0(N)$). For $X_1(N)$ we use the plane models
+of Sutherland and van Hoeij \cite{SutherlandX1}: each comes with explicit Tate normal form data $(E,P)$ over its
+function field with $P$ of order $N$, which gives the birational map to $X_1(N)$ (compare \cite{Sutherland2012}).
+
+\subsection{Good reduction}
+All lower bounds over $\Q$ in this paper come from a prime of good reduction.
+
+\begin{lemma}[Specialization]\label{lem:specialization}
+Let $C/\Q$ be a smooth projective geometrically integral curve, and let $\mathcal C$ be a smooth proper model
+of $C$ over $\Z_{(p)}$. Then $\gon_\Q C\ge\gon_{\Fp}\mathcal C_{\Fp}$. More generally, if $L$ is a line
+bundle on $C$ with $h^0(L)\ge2$, then its extension to $\mathcal C$ has $h^0\ge2$ on $\mathcal C_{\Fp}$.
+\end{lemma}
+\begin{proof}
+The second statement is upper semicontinuity of $h^0$ \cite[III.12.8]{Hartshorne1977}, applied to the
+extension of $L$ (which exists because $\mathcal C$ is regular). If $f\colon C\to\PP^1$ has degree $d$, take
+$L=f^*\mathcal O(1)$: its extension has degree $d$ and at least two sections on the special fibre, so
+$\gon_{\Fp}\mathcal C_{\Fp}\le d$. This is standard; see for example \cite{Poonen2007} and \cite{NajmanOrlic2024}.
+\end{proof}
+
+We certify that a given model has good reduction at $p$ in one of two ways.
+\begin{enumerate}
+\item For the canonical model of an intermediate curve of genus $g$, we check that the reduction of the
+ MD~Sage equations modulo $p$ is an integral curve with the Hilbert polynomial $(2g-2)t+1-g$ of the generic
+ canonical curve, whose normalization has genus $g$, and which contains the reduction $(1:0:\dots:0)$ of the
+ cusp $\infty$. Then the flat closure of $C$ in the integral model has the same special fibre (both have the same
+ Hilbert polynomial and one contains the other); equality of arithmetic and geometric genus makes it normal,
+ hence smooth, and the rational point makes it geometrically integral. (The primes $p\nmid N$ at which this can
+ fail are controlled by Derickx and Najman \cite{DerickxNajman}; we only use primes where the check passes.)
+\item For $X_1(N)$ with $p\nmid N$: the curve $X_1(N)$ has good reduction at $p$ \cite{DeligneRapoport1973}.
+ Its function field is $\Q(x,y)$ with $F(x,y)=0$ the plane model of \cite{SutherlandX1}, scaled to a
+ primitive polynomial in $\Z[x,y]$. We reduce $F$ modulo $p$ and check that $\deg_y\bar F=\deg_yF$, that
+ $\bar F$ is irreducible over $\Fp(x)$, that $\Fp$ is algebraically closed in
+ $K_p=\Fp(x)[y]/(\bar F)$, and that $K_p$ has genus $g(X_1(N))$. The field $K_p$ is the residue field of
+ the Gauss valuation of $\Q(x,y)$ extending the $p$-adic valuation, so it is the function field of a
+ component of the special fibre of some normal model of $X_1(N)$. Every such model is dominated by a
+ blow-up of the smooth model, whose exceptional components are rational \cite[\S9.3, \S10.1]{Liu2002}; as
+ $g(K_p)=g(X_1(N))\ge 2$, $K_p$ is the function field of $X_1(N)_{\Fp}$.
+\end{enumerate}
+
+\subsection{Tools from the geometry of curves}
+
+\begin{lemma}[Castelnuovo--Severi {\cite[Theorem~3.11.3]{Stichtenoth2009}}]\label{lem:CS}
+Let $C$ be a curve of genus $g$ over a perfect field, with morphisms $C\to C_1$ and $C\to C_2$ of degrees
+$d_1,d_2$ to curves of genera $g_1,g_2$. If the two morphisms do not both factor through a common morphism
+of degree $>1$, then $g\le d_1g_1+d_2g_2+(d_1-1)(d_2-1)$.
+\end{lemma}
+
+We use it mainly with $C_2=\PP^1$: a morphism $C\to\PP^1$ of degree $d$ that does not factor through a
+morphism $C\to C_1$ of degree $m$ to a curve of genus $h$ satisfies $g\le mh+(m-1)(d-1)$. If $\gcd(d,m)=1$
+the factorization condition holds automatically.
+
+\begin{lemma}[Pullback]\label{lem:pullback}
+If $\pi\colon C\to D$ has degree $m$ over $\Q$, then $\gon_\Q C\le m\cdot\gon_\Q D$.
+\end{lemma}
+
+\begin{lemma}[Hilbert irreducibility]\label{lem:hilbert}
+If a curve $C/\Q$ has a morphism $C\to\PP^1$ of degree $d$ over $\Q$, then it has infinitely many points
+of degree $d$.
+\end{lemma}
+\begin{proof}
+By Hilbert's irreducibility theorem, the set of $t\in\PP^1(\Q)$ whose fibre is a single closed point of degree $d$
+is the complement of a thin set, and in particular infinite.
+\end{proof}
+
+\begin{lemma}[{Frey \cite{Frey1994}, Abramovich \cite{Abramovich1996}}]\label{lem:frey}
+If $C/\Q$ has infinitely many points of degree $d$, then $\gon_\Q C\le 2d$. For a modular curve of index
+$\mu$ in $\mathrm{PSL}_2(\Z)$, $\gon_{\mathbb C}\ge\frac{\lambda_1}{24}\mu$ with $\lambda_1\ge\frac{975}{4096}$
+by Kim and Sarnak \cite[Appendix~2]{KimSarnak2003}.
+\end{lemma}
+
+In particular, a modular curve with $119\mu>120000$ has $\gon_{\mathbb C}>10$ and so only finitely many
+points of degree $5$; this is the form used in \cite[Theorem~3.16]{Orlic2025} and below.

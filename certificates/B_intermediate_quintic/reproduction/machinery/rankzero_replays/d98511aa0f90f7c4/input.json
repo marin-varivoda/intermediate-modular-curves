@@ -1,0 +1,44 @@
+{
+  "kind": "intermediate",
+  "row": {
+    "level": 35,
+    "delta": [
+      1,
+      6,
+      8,
+      13,
+      22,
+      27,
+      29,
+      34
+    ],
+    "index": 144,
+    "genus": 7,
+    "elliptic2": 0,
+    "elliptic3": 0,
+    "cusps": 12,
+    "cusp_widths": [
+      1,
+      1,
+      1,
+      5,
+      5,
+      5,
+      7,
+      7,
+      7,
+      35,
+      35,
+      35
+    ],
+    "degree_to_x0": 3,
+    "strict": true,
+    "id": "35:1,6,8,13,22,27,29,34",
+    "model_status": "CANONICAL_MODEL_VERIFIED",
+    "degree5_function": "DOES_NOT_EXIST",
+    "quintic_status": "FINITE_BY_BIELLIPTIC_AND_RANK_ZERO",
+    "source": "bielliptic_obstruction",
+    "central_value_log": "intermediate_central/d98511aa0f90f7c4.log",
+    "model_certificate": "hilbert_jobs/d98511aa0f90f7c4"
+  }
+}

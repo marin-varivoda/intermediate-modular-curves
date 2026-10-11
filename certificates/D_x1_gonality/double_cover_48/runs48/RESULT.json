@@ -1,0 +1,14 @@
+{
+ "N": 48,
+ "method": "double cover X1(48) -> Y = X_{+-1,+-23}(48), search on Y (paper, Section 5.1)",
+ "p": 7, "dmax": 15, "gX": 37, "gY": 13, "c": 12,
+ "gon_Y_over_F7": 8,
+ "divisors_E": 1328,
+ "candidate_functions": 3709104,
+ "discarded_by_norm_bound": 3709086,
+ "min_degree_bound": 16,
+ "parts": "E split by EKey(E) mod 8; parts 0,3,4,6 of 8 in shard_*.log; parts 1,2,5,7 (whose first runs exceeded their memory cap) redone as parts {1,9},{2,10},{5,13},{7,15} of 16 in redo16_*.log",
+ "certified_logs": ["shard_0.log","shard_3.log","shard_4.log","shard_6.log","redo16_1.log","redo16_9.log","redo16_2.log","redo16_10.log","redo16_5.log","redo16_13.log","redo16_7.log","redo16_15.log"],
+ "max_part_seconds": 45041.4,
+ "conclusion": "gon(X1(48) over F_7) > 15; with the Derickx-van Hoeij upper bound 16, gon_Q X1(48) = 16"
+}

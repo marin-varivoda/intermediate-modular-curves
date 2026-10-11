@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper."
+title: "Gonality and quintic points on intermediate modular curves"
+authors:
+  - family-names: Varivoda
+    given-names: Marin
+    affiliation: "University of Zagreb"
+repository-code: "https://github.com/marin-varivoda/intermediate-modular-curves"
+license: MIT

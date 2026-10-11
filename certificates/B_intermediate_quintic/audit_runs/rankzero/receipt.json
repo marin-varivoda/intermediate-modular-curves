@@ -1,0 +1,953 @@
+{
+  "status": "FRESH_RANKZERO_REPLAY_PASS",
+  "count": 65,
+  "results": [
+    {
+      "id": "35:1,6,8,13,22,27,29,34",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=35",
+        "g:=7",
+        "delta:=1,6,8,13,22,27,29,34",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 7,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "379625f4a38282a2fafb37d2319523e166c09d00d65e1f4d973220198e26a09f"
+    },
+    {
+      "id": "51:1,2,4,8,13,16,19,25,26,32,35,38,43,47,49,50",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=51",
+        "g:=9",
+        "delta:=1,2,4,8,13,16,19,25,26,32,35,38,43,47,49,50",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 9,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "efd2b36d80cbc8608efbe4fa0ec8bd6030e7fcc31c2509085fb96649fdabeb9c"
+    },
+    {
+      "id": "51:1,4,13,16,35,38,47,50",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=51",
+        "g:=17",
+        "delta:=1,4,13,16,35,38,47,50",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 17,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "3a0b0c905d9518c8e23f8dbf3019e18fcf49a2ef8398762768e7d1791f6df1b2"
+    },
+    {
+      "id": "51:1,16,35,50",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=51",
+        "g:=33",
+        "delta:=1,16,35,50",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 33,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "a2e9af9dd903df94a8fc41febcaf4d39a4fa0159fc1ba6c4565ddd8b592136d2"
+    },
+    {
+      "id": "52:1,3,9,17,23,25,27,29,35,43,49,51",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=52",
+        "g:=9",
+        "delta:=1,3,9,17,23,25,27,29,35,43,49,51",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 9,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "01129b93c2502cce0c01adba0b7ccfab8b36da7d6a32ec273468b2c327aa0c5a"
+    },
+    {
+      "id": "52:1,5,21,25,27,31,47,51",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=52",
+        "g:=13",
+        "delta:=1,5,21,25,27,31,47,51",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 13,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "c15bac99bef24ccf51e53fdb9006ee5c180474b29a294910cdb812e7bf5ecfef"
+    },
+    {
+      "id": "52:1,9,23,29,43,51",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=52",
+        "g:=19",
+        "delta:=1,9,23,29,43,51",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 19,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "f907999ad9d7ec90240a918bf3c0ffe30c253327f675ab3c4e237dc2fad39a92"
+    },
+    {
+      "id": "52:1,25,27,51",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=52",
+        "g:=25",
+        "delta:=1,25,27,51",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 25,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "3cfb478612bcd93c4b1cd4c697a259e5bd43c55b2e4dd760e67c035357c1355a"
+    },
+    {
+      "id": "54:1,17,19,35,37,53",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=54",
+        "g:=10",
+        "delta:=1,17,19,35,37,53",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 10,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "37fbbc46be17c5bcec62449536fff62b4146d55c02bb0ac07e99c151b8dcbdf8"
+    },
+    {
+      "id": "55:1,4,6,9,14,16,19,21,24,26,29,31,34,36,39,41,46,49,51,54",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=55",
+        "g:=9",
+        "delta:=1,4,6,9,14,16,19,21,24,26,29,31,34,36,39,41,46,49,51,54",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 9,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "ceac775c28b54710cd47d6b3758e34439de0838b906e2e1dba9353ef839e8dd0"
+    },
+    {
+      "id": "55:1,16,19,24,26,29,31,36,39,54",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=55",
+        "g:=17",
+        "delta:=1,16,19,24,26,29,31,36,39,54",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 17,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "8bc5ca9ed6a7c9fda3134caac83003b396237ed8c312c92b3e95b1f694f8da7c"
+    },
+    {
+      "id": "55:1,12,21,23,32,34,43,54",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=55",
+        "g:=21",
+        "delta:=1,12,21,23,32,34,43,54",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 21,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "19177c794f0f23d5bf7a286938fdccfc51aac32947ef6ec1cd0d51196563bf7c"
+    },
+    {
+      "id": "55:1,21,34,54",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=55",
+        "g:=41",
+        "delta:=1,21,34,54",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 41,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "6d8149f2eef5ec57c080bf97cc632a338cf915c9cbdcf069507c96503c3f6387"
+    },
+    {
+      "id": "56:1,3,9,19,25,27,29,31,37,47,53,55",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=56",
+        "g:=9",
+        "delta:=1,3,9,19,25,27,29,31,37,47,53,55",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 9,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "37627aad87806b177129c99ffdcd4b94a40bdecf958dadab3e4f5bf0cd3d6ba5"
+    },
+    {
+      "id": "56:1,5,9,11,13,25,31,43,45,47,51,55",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=56",
+        "g:=11",
+        "delta:=1,5,9,11,13,25,31,43,45,47,51,55",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 11,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "c0e97905f37d9bed29900c3ecc4961256ce330d079be73c0b1bc150d5c2b7f17"
+    },
+    {
+      "id": "56:1,9,15,17,23,25,31,33,39,41,47,55",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=56",
+        "g:=11",
+        "delta:=1,9,15,17,23,25,31,33,39,41,47,55",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 11,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "552d5f424ad16ee735f8d029b3acfecbb4e66b3611b787bbabda9389c4ac51c4"
+    },
+    {
+      "id": "56:1,13,15,27,29,41,43,55",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=56",
+        "g:=13",
+        "delta:=1,13,15,27,29,41,43,55",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 13,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "4518cac8ef15d76a149fac3e26d75eea47cfb58d403da0670b1449f2623aae43"
+    },
+    {
+      "id": "56:1,9,25,31,47,55",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=56",
+        "g:=21",
+        "delta:=1,9,25,31,47,55",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 21,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "f55a95a3875ee6575e66132aaf532bee8fdedb1cdcc805ea0866a991a46ab9a9"
+    },
+    {
+      "id": "56:1,13,43,55",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=56",
+        "g:=31",
+        "delta:=1,13,43,55",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 31,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "f1ada468595fc04c261ad3c857e231f02c71b832b6dd0e4490493123da274445"
+    },
+    {
+      "id": "56:1,15,41,55",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=56",
+        "g:=31",
+        "delta:=1,15,41,55",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 31,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "f1556629d8180fd68c6b501f44201cd3e46a2f0b77e47c90c8bce9ceeeeeb1a2"
+    },
+    {
+      "id": "56:1,27,29,55",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=56",
+        "g:=25",
+        "delta:=1,27,29,55",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 25,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "4f2879718caf17fcf9093e28b7c99cdaaae93337120dd2583dcc6837edea6920"
+    },
+    {
+      "id": "63:1,4,5,16,17,20,22,25,26,37,38,41,43,46,47,58,59,62",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=63",
+        "g:=9",
+        "delta:=1,4,5,16,17,20,22,25,26,37,38,41,43,46,47,58,59,62",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 9,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "717044859b2777fa1851f5afeb80bcb2af4e15848a77ed4d445192b127c46aa5"
+    },
+    {
+      "id": "63:1,2,4,8,16,31,32,47,55,59,61,62",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=63",
+        "g:=17",
+        "delta:=1,2,4,8,16,31,32,47,55,59,61,62",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 17,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "32a9d62d83f220b6ab88f1ead1085ac58334681874dc493074278cc9e24c3c26"
+    },
+    {
+      "id": "63:1,5,8,11,23,25,38,40,52,55,58,62",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=63",
+        "g:=17",
+        "delta:=1,5,8,11,23,25,38,40,52,55,58,62",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 17,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "44192d44864167884dcfa354ed4d126a1ae982cef680c8e28e221ad548fff021"
+    },
+    {
+      "id": "63:1,8,10,17,19,26,37,44,46,53,55,62",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=63",
+        "g:=17",
+        "delta:=1,8,10,17,19,26,37,44,46,53,55,62",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 17,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "e5b65df9238990ba3db6da81e2e514e4b15336ccba192b84ae801030a425c7e9"
+    },
+    {
+      "id": "63:1,8,13,20,22,29,34,41,43,50,55,62",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=63",
+        "g:=13",
+        "delta:=1,8,13,20,22,29,34,41,43,50,55,62",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 13,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "5824efbcebcc3fa0c748e7cd9b37639f401d840b090af2808c46788fec28b881"
+    },
+    {
+      "id": "63:1,4,16,47,59,62",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=63",
+        "g:=33",
+        "delta:=1,4,16,47,59,62",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 33,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "0da174beece05b41684c96283a89f7abc1a3c8bf607fced9d78844222e2c9f76"
+    },
+    {
+      "id": "63:1,17,26,37,46,62",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=63",
+        "g:=33",
+        "delta:=1,17,26,37,46,62",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 33,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "3da147c3890da495336e67e63451b6b6e583a5048849cd9c420cda6c8cdd41ec"
+    },
+    {
+      "id": "63:1,20,22,41,43,62",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=63",
+        "g:=25",
+        "delta:=1,20,22,41,43,62",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 25,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "76d795eb1fdf6dccb9f35704ae459b6826bc045bedb88b25bb7c9d40fbfdadb3"
+    },
+    {
+      "id": "63:1,8,55,62",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=63",
+        "g:=49",
+        "delta:=1,8,55,62",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 49,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "b40bb22b6ccd1ef4bfa68f95625c5dea851cfb6d237621ba052c27d379365d69"
+    },
+    {
+      "id": "64:1,15,17,31,33,47,49,63",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=64",
+        "g:=13",
+        "delta:=1,15,17,31,33,47,49,63",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 13,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "e172b23596309da26633ddea24187878c53b0c89271166fefecc58411974f693"
+    },
+    {
+      "id": "64:1,31,33,63",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=64",
+        "g:=37",
+        "delta:=1,31,33,63",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 37,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "5ddcada13f52498f69f90ad13f43be56aebd5d6937f7d0086091a43824507cb9"
+    },
+    {
+      "id": "68:1,9,13,15,19,21,25,33,35,43,47,49,53,55,59,67",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=68",
+        "g:=13",
+        "delta:=1,9,13,15,19,21,25,33,35,43,47,49,53,55,59,67",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 13,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "3e4560f17fcf6e3a57db0819fcaaf46001c145f11fe34e1fa5f141bd2209f1c4"
+    },
+    {
+      "id": "72:1,5,19,23,25,29,43,47,49,53,67,71",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=72",
+        "g:=13",
+        "delta:=1,5,19,23,25,29,43,47,49,53,67,71",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 13,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "d10fab4b9482d13386fbf09a21a7c4f311d384b2a1c258042bed3752a8f83a35"
+    },
+    {
+      "id": "72:1,7,17,23,25,31,41,47,49,55,65,71",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=72",
+        "g:=13",
+        "delta:=1,7,17,23,25,31,41,47,49,55,65,71",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 13,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "6c190903a0bf21d1e4da30a51d6b97312b93c6bc85ea11e6599a149879152d0c"
+    },
+    {
+      "id": "72:1,11,13,23,25,35,37,47,49,59,61,71",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=72",
+        "g:=9",
+        "delta:=1,11,13,23,25,35,37,47,49,59,61,71",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 9,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "39d1836ba488d143086383fe17ef6b4aa5ed1e76bef3230c9adca7c74eecd9dc"
+    },
+    {
+      "id": "72:1,17,19,35,37,53,55,71",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=72",
+        "g:=21",
+        "delta:=1,17,19,35,37,53,55,71",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 21,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "c5bcac4fde3466a5223c7f561da26b63cbaba7b02806cb3828d735db4dc23196"
+    },
+    {
+      "id": "72:1,23,25,47,49,71",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=72",
+        "g:=25",
+        "delta:=1,23,25,47,49,71",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 25,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "ef2f3944e4752d4c8831f1be947a8c59884e06945ede71929fdf7faa8b5145e0"
+    },
+    {
+      "id": "72:1,17,55,71",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=72",
+        "g:=49",
+        "delta:=1,17,55,71",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 49,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "77b6cd5c8a562e5392ad32db7c082c3829c600a949bbd2e52ac6dae5ce494520"
+    },
+    {
+      "id": "72:1,19,53,71",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=72",
+        "g:=49",
+        "delta:=1,19,53,71",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 49,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "8e0981f057f659ef18d9b55b8d2d03264c45fb317914653c656882a4d6ef795c"
+    },
+    {
+      "id": "72:1,35,37,71",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=72",
+        "g:=41",
+        "delta:=1,35,37,71",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 41,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "41481260bc92550a8b046701c02a1a77b97294e3c8a47254614cf6aee67aaad9"
+    },
+    {
+      "id": "75:1,14,16,29,31,44,46,59,61,74",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=75",
+        "g:=17",
+        "delta:=1,14,16,29,31,44,46,59,61,74",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 17,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "e4a339e3d8b23a7569ab9eb6f8fca486a809e2f6e16e8c89ad279cb0bd62b1d8"
+    },
+    {
+      "id": "75:1,7,26,32,43,49,68,74",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=75",
+        "g:=37",
+        "delta:=1,7,26,32,43,49,68,74",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 37,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "a94cfbcc3e7444e7dd0983a1b56c7cef1c9ddcf657b342098fbe236965245ad8"
+    },
+    {
+      "id": "80:1,3,9,13,27,31,37,39,41,43,49,53,67,71,77,79",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=80",
+        "g:=15",
+        "delta:=1,3,9,13,27,31,37,39,41,43,49,53,67,71,77,79",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 15,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "90a8ea094826c0b0ed0380e6a16c6b05257ea1e7aa6ef7e38339895f2c561b9a"
+    },
+    {
+      "id": "80:1,7,9,17,23,31,33,39,41,47,49,57,63,71,73,79",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=80",
+        "g:=15",
+        "delta:=1,7,9,17,23,31,33,39,41,47,49,57,63,71,73,79",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 15,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "ef7eca8b9f54839216ec5591a15547b1d0bdf116fd9efba9394e8613fc10e46e"
+    },
+    {
+      "id": "80:1,9,11,19,21,29,31,39,41,49,51,59,61,69,71,79",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=80",
+        "g:=13",
+        "delta:=1,9,11,19,21,29,31,39,41,49,51,59,61,69,71,79",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 13,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "20673a5d5bc25d5c3cb7750918533659b2f6a2a14fe98eca3c4821118f484563"
+    },
+    {
+      "id": "80:1,7,23,31,49,57,73,79",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=80",
+        "g:=35",
+        "delta:=1,7,23,31,49,57,73,79",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 35,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "de218821995163f793ea3742abf7ce5a366d6e9905e388188eea48e6fc210258"
+    },
+    {
+      "id": "80:1,9,13,37,43,67,71,79",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=80",
+        "g:=35",
+        "delta:=1,9,13,37,43,67,71,79",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 35,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "86bacea200feb53348e2b7366b2001e9c2dcb38aae5b8f81653ada04bfc9a883"
+    },
+    {
+      "id": "80:1,17,31,33,47,49,63,79",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=80",
+        "g:=35",
+        "delta:=1,17,31,33,47,49,63,79",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 35,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "7f0f840be4fc9fbe73d3df5c85d8b53b94a48902011c6d3cf15ab6ee00e7756b"
+    },
+    {
+      "id": "81:1,8,10,17,19,26,28,35,37,44,46,53,55,62,64,71,73,80",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=81",
+        "g:=10",
+        "delta:=1,8,10,17,19,26,28,35,37,44,46,53,55,62,64,71,73,80",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 10,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "e0031e31ce4deacc7fe162fa3be3ee47612214cf1bf24d712d2155a9ef2b5add"
+    },
+    {
+      "id": "81:1,26,28,53,55,80",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=81",
+        "g:=46",
+        "delta:=1,26,28,53,55,80",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+      ],
+      "genus": 46,
+      "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+      "log_sha256": "2fa3e2b2594857b4998783a643635b4eeaf954cc4fd2718cf03d8e1c21222188"
+    },
+    {
+      "id": "X1(29)",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=29",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/central_value.m"
+      ],
+      "genus": 22,
+      "source_sha256": "76e75dcec9371897cd6d40cbfc031ba7ab3a9db596f9f28a8213afd565f814c9",
+      "log_sha256": "874a8704c4422cc2e01e389bf14cb8f8cf3df19459f1cc1c985ded1ed3dca9d4"
+    },
+    {
+      "id": "X1(33)",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=33",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/central_value.m"
+      ],
+      "genus": 21,
+      "source_sha256": "76e75dcec9371897cd6d40cbfc031ba7ab3a9db596f9f28a8213afd565f814c9",
+      "log_sha256": "d2442ea833632c5ab95d4133ea619d3cd3f08d3f9d29dd12b292ec94d8844b00"
+    },
+    {
+      "id": "X1(34)",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=34",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/central_value.m"
+      ],
+      "genus": 21,
+      "source_sha256": "76e75dcec9371897cd6d40cbfc031ba7ab3a9db596f9f28a8213afd565f814c9",
+      "log_sha256": "b9aa7d5fb5cf03a7f8529c9bc009fb9a1b474f01c1ee5c76221e68123ad0ef32"
+    },
+    {
+      "id": "X1(35)",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=35",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/central_value.m"
+      ],
+      "genus": 25,
+      "source_sha256": "76e75dcec9371897cd6d40cbfc031ba7ab3a9db596f9f28a8213afd565f814c9",
+      "log_sha256": "69bcbf3e420eb38fe59a1cfbe4dce252251a623198111ff8da710a82a700d353"
+    },
+    {
+      "id": "X1(38)",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=38",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/central_value.m"
+      ],
+      "genus": 28,
+      "source_sha256": "76e75dcec9371897cd6d40cbfc031ba7ab3a9db596f9f28a8213afd565f814c9",
+      "log_sha256": "339c88fc592fd52cf46f7e87df13c55f20d3f8f36c6b9f41938d7cb08d1c3f4a"
+    },
+    {
+      "id": "X1(39)",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=39",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/central_value.m"
+      ],
+      "genus": 33,
+      "source_sha256": "76e75dcec9371897cd6d40cbfc031ba7ab3a9db596f9f28a8213afd565f814c9",
+      "log_sha256": "aea467fa3477b3de27633ef6bba1cf36bbd23ab15f889023d15f39c62ca65859"
+    },
+    {
+      "id": "X1(40)",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=40",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/central_value.m"
+      ],
+      "genus": 25,
+      "source_sha256": "76e75dcec9371897cd6d40cbfc031ba7ab3a9db596f9f28a8213afd565f814c9",
+      "log_sha256": "fa5ebc795cdaaf2520859cdbb9d32977f2525083f088e6527083b2ff9181033f"
+    },
+    {
+      "id": "X1(41)",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=41",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/central_value.m"
+      ],
+      "genus": 51,
+      "source_sha256": "76e75dcec9371897cd6d40cbfc031ba7ab3a9db596f9f28a8213afd565f814c9",
+      "log_sha256": "4158c132bf9502c66652576ef827fe2c7918aba880e24bc212da30e3bb3202fb"
+    },
+    {
+      "id": "X1(42)",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=42",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/central_value.m"
+      ],
+      "genus": 25,
+      "source_sha256": "76e75dcec9371897cd6d40cbfc031ba7ab3a9db596f9f28a8213afd565f814c9",
+      "log_sha256": "9044768508d15c9be4c6593d539fea6c800fe04a9e6ff1ad3082e02c52b16850"
+    },
+    {
+      "id": "X1(44)",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=44",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/central_value.m"
+      ],
+      "genus": 36,
+      "source_sha256": "76e75dcec9371897cd6d40cbfc031ba7ab3a9db596f9f28a8213afd565f814c9",
+      "log_sha256": "b894f73224de1d6578d40c08f65e64512ee56e565aa33b1e122d083044c76cac"
+    },
+    {
+      "id": "X1(45)",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=45",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/central_value.m"
+      ],
+      "genus": 41,
+      "source_sha256": "76e75dcec9371897cd6d40cbfc031ba7ab3a9db596f9f28a8213afd565f814c9",
+      "log_sha256": "ba24423e20ed2c9a6167e70837007e7f1199a5f9df3b091892976ec3cdcdcd48"
+    },
+    {
+      "id": "X1(48)",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=48",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/central_value.m"
+      ],
+      "genus": 37,
+      "source_sha256": "76e75dcec9371897cd6d40cbfc031ba7ab3a9db596f9f28a8213afd565f814c9",
+      "log_sha256": "dbf020aa2008cb858c560e8fe66a45ec5f9bc29e0d1c548d9c9f94baed10dfea"
+    },
+    {
+      "id": "X1(49)",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=49",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/central_value.m"
+      ],
+      "genus": 69,
+      "source_sha256": "76e75dcec9371897cd6d40cbfc031ba7ab3a9db596f9f28a8213afd565f814c9",
+      "log_sha256": "c044d85a48c8ba3086cf03da130c0406cd394f632a8835085a85e592830d96c0"
+    },
+    {
+      "id": "X1(50)",
+      "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+      "command": [
+        "magma",
+        "-b",
+        "N:=50",
+        "/home/mvarivoda/x0_deg5/intermediate_modular_curves/central_value.m"
+      ],
+      "genus": 48,
+      "source_sha256": "76e75dcec9371897cd6d40cbfc031ba7ab3a9db596f9f28a8213afd565f814c9",
+      "log_sha256": "a50ac27ec2213f9848dd4e8b61019958832621b962012a1cb2fd6bc4afc52d12"
+    }
+  ]
+}

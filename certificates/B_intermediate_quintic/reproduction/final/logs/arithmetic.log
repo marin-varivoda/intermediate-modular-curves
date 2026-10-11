@@ -1,0 +1,21 @@
+Loading "common.m"
+Loading "coordinates.m"
+Loading "place_cache.m"
+N=83 genus=7 involution=w83 quotient_genus=1
+N=89 genus=7 involution=w89 quotient_genus=1
+N=92 genus=10 involution=w23 quotient_genus=1
+N=101 genus=8 involution=w101 quotient_genus=1
+N=107 genus=9 involution=w107 quotient_genus=2
+N=111 genus=11 involution=w111 quotient_genus=2
+N=118 genus=14 involution=w59 quotient_genus=3
+N=123 genus=13 involution=w41 quotient_genus=3
+N=131 genus=11 involution=w131 quotient_genus=1
+N=141 genus=15 involution=w47 quotient_genus=3
+N=142 genus=17 involution=w71 quotient_genus=2
+N=143 genus=13 involution=w143 quotient_genus=2
+N=145 genus=13 involution=w29 quotient_genus=4
+N=155 genus=15 involution=w155 quotient_genus=4
+N=159 genus=17 involution=w159 quotient_genus=4
+N=167 genus=14 involution=w167 quotient_genus=2
+N=191 genus=16 involution=w191 quotient_genus=2
+SUCCESS arithmetic

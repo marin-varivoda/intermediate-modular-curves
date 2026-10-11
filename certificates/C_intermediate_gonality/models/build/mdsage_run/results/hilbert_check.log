@@ -1,0 +1,50 @@
+HILBERT N=29 gens=[12] g=8 true
+HILBERT N=30 gens=[11, 19] g=5 true
+HILBERT N=31 gens=[6] g=6 true
+HILBERT N=31 gens=[23] g=6 true
+HILBERT N=32 gens=[17, 31] g=5 true
+HILBERT N=33 gens=[10, 23] g=11 true
+HILBERT N=33 gens=[2] g=5 true
+HILBERT N=34 gens=[13] g=9 true
+HILBERT N=34 gens=[9] g=5 true
+HILBERT N=35 gens=[6, 29] g=13 true
+HILBERT N=35 gens=[19] g=9 true
+HILBERT N=35 gens=[8, 34] g=7 true
+HILBERT N=35 gens=[26, 29] g=5 true
+HILBERT N=36 gens=[17, 19] g=7 true
+HILBERT N=37 gens=[6] g=16 true
+HILBERT N=37 gens=[11] g=10 true
+HILBERT N=38 gens=[27] g=10 true
+HILBERT N=39 gens=[14, 25] g=17 true
+HILBERT N=39 gens=[17] g=9 true
+HILBERT N=39 gens=[14, 31] g=9 true
+HILBERT N=39 gens=[4, 14] g=5 true
+HILBERT N=40 gens=[9, 31] g=13 true
+HILBERT N=40 gens=[29, 39] g=13 true
+HILBERT N=40 gens=[21, 39] g=9 true
+HILBERT N=40 gens=[13, 31] g=7 true
+HILBERT N=40 gens=[17, 31] g=7 true
+HILBERT N=40 gens=[9, 21, 31] g=5 true
+HILBERT N=41 gens=[9] g=21 true
+HILBERT N=41 gens=[27] g=11 true
+HILBERT N=41 gens=[23] g=11 true
+HILBERT N=41 gens=[8] g=5 true
+HILBERT N=42 gens=[13, 29] g=13 true
+HILBERT N=42 gens=[5] g=9 true
+HILBERT N=43 gens=[7] g=15 true
+HILBERT N=43 gens=[8] g=9 true
+HILBERT N=44 gens=[21, 23] g=16 true
+HILBERT N=44 gens=[35] g=8 true
+HILBERT N=45 gens=[19, 26] g=21 true
+HILBERT N=45 gens=[14] g=9 true
+HILBERT N=45 gens=[26, 28] g=11 true
+HILBERT N=45 gens=[11, 44] g=5 true
+HILBERT N=48 gens=[41, 47] g=19 true
+HILBERT N=48 gens=[17, 31] g=19 true
+HILBERT N=48 gens=[25, 47] g=13 true
+HILBERT N=48 gens=[5, 47] g=7 true
+HILBERT N=48 gens=[17, 25, 31] g=7 true
+HILBERT N=48 gens=[13, 47] g=5 true
+HILBERT N=49 gens=[19] g=19 true
+HILBERT N=50 gens=[7] g=22 true
+ALL_HILBERT_CHECKS_PASSED

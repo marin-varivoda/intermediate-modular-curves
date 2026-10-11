@@ -1,0 +1,11 @@
+{
+  "status": "FRESH_ALL_6_ARITHMETIC_INPUTS_PASS",
+  "receipts": {
+    "degree37": "83d451f2765bafc0a8fc3be967f350ac6c93525ae9fed0251618613141f8daf6",
+    "degree57": "7071e7cf89e57a236f967839ffc6345839bf28c4a7b75171bb91d2f206ebd3a0",
+    "rank_endpoints": "6cb85e3a57e1367ebba4289cb87dbea70f8ef04d70b016c6dd61b36616317aee",
+    "elliptic73": "a55de5874900aeea06200d37e25621f2535096d097200a72f4ccaf77e254e796",
+    "elliptic109": "40a7a75a95cbf0b6d7e6996d5dfd7857c27087d02664c04179c4258d4882798d",
+    "elliptic125": "8874e461c964bde77a5fb425ee269fcba19c1e7a440aab4440b48402a1b39e28"
+  }
+}

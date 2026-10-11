@@ -1,0 +1,15 @@
+{
+  "id": "51:1,4,13,16,35,38,47,50",
+  "status": "FRESH_EXACT_CENTRAL_VALUE_NONZERO",
+  "command": [
+    "magma",
+    "-b",
+    "N:=51",
+    "g:=17",
+    "delta:=1,4,13,16,35,38,47,50",
+    "/home/mvarivoda/x0_deg5/intermediate_modular_curves/intermediate_central_value.m"
+  ],
+  "genus": 17,
+  "source_sha256": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+  "log_sha256": "3a0b0c905d9518c8e23f8dbf3019e18fcf49a2ef8398762768e7d1791f6df1b2"
+}

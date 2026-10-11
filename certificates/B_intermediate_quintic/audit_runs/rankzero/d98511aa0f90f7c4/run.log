@@ -1,0 +1,2 @@
+RESULT N=35 delta=[ 1, 6, 8, 13, 22, 27, 29, 34 ] dimension=7 central_zero=false
+SUCCESS intermediate central-value test

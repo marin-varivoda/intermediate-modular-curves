@@ -1,0 +1,3 @@
+RESULT N=63 delta=[ 1, 8, 13, 20, 22, 29, 34, 41, 43, 50, 55, 62 ] dimension=13 
+central_zero=false
+SUCCESS intermediate central-value test

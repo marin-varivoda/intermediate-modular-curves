@@ -1,0 +1,19 @@
+{
+  "status": "FRESH_SPECIAL_MODEL_PASS",
+  "id": "48:1,7,17,23,25,31,41,47",
+  "accepted_input": "hilbert_jobs/efd0600330b90e51",
+  "source_sha256": {
+    "canonical_relations.py": "59449a294fc0c6edd642a3af16ac06b4f9ab3cae117cab209c753089c0d4b404",
+    "enumeration.py": "a65b1e9507e3637f4328f5d5c36e5449c7cff5ff3e9cdb3285a7c96ad62e351a",
+    "export_canonical.py": "7e5b6af585f164e645f8dedae695a768a82bfb23369129be573aac6c0cd0f81a",
+    "verify_canonical_hilbert.m": "8315c4a7e7a1b03fa6b848810120a9b8d09418a0d05fde02769de380ba775829",
+    "run_genus5_batch.py": "091fcc9774fb29f7892f008b996e1c627458684b80a74959aff55c27228ca952"
+  },
+  "outputs": {
+    "canonical_input.m": "b4348ee798fe4ab8fca6fc265a91877464fee65053272ffe92a524f401455fac",
+    "export.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "geometry.log": "9e0ecc80831a06b5488964e12db10cfd452c02ad8fd8e2697287ef9426db2340",
+    "relations.json": "5bde6e40842c4017a40e66da3c5995a3f5aa9b0b8d04e9694f97bec31296101e",
+    "relations.log": "93765f818603d4c76717db67bfa0cfbde57efbd1857ff1ae76c4501e2fa848e8"
+  }
+}

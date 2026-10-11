@@ -1,0 +1,159 @@
+\section{Points of degree 5 on \texorpdfstring{$X_0(N)$}{X0(N)}: proof of Theorem A}\label{sec:quintic-x0}
+
+Let $C=X_0(N)$ for one of the thirty levels of Theorem~A, of genus $g$, and $J=\Jac C$. The rational cusp
+$\infty$ identifies $\Pic^5(C)$ with $J$. For $r\ge0$ let $W^r_5\subseteq\Pic^5(C)$ be the locus of classes
+with $h^0\ge r+1$. \Cref{tab:A} lists, for every level, the argument for each of the two assertions of
+Theorem~A.
+
+\subsection{The framework}
+\begin{lemma}\label{lem:inject}
+If $C$ has no function of degree $5$ over $\Q$, then the points of degree $5$ inject into $\W(\Q)$, and a
+point of degree $5$ is the unique effective divisor in its class.
+\end{lemma}
+\begin{proof}
+If $D$ is a point of degree $5$ and $h^0(D)\ge2$, a nonconstant $f\in L(D)$ over $\Q$ has a nonzero rational
+pole divisor bounded by $D$; since $D$ is irreducible, it equals $D$, so $\deg f=5$.
+\end{proof}
+
+Up to isogeny, $J$ is a product of modular abelian varieties. Let $\A\subseteq J$ be the sum of the isotypic
+components whose $L$-function vanishes at $s=1$; the vanishing is decided by exact modular-symbol
+computations. By Kolyvagin and Logachev \cite{KolyvaginLogachev1989}, $(J/\A)(\Q)$ is finite. By Faltings
+\cite{Faltings1991}, the Zariski closure of $\W(\Q)$ is a finite union of translates of abelian subvarieties;
+a positive-dimensional component with dense rational points has its direction in $\A$. So it suffices to show,
+in addition to excluding functions of degree $5$, that every positive-dimensional translate $T\subseteq\W$
+with $T(\Q)$ dense has a fixed proper subdivisor on its locus with $h^0=1$: then only finitely many classes
+can contain an irreducible divisor.
+
+At each working prime $p\nmid N$ we check that the reduction of Magma's canonical model is an integral curve
+of arithmetic genus $g$, with normalization of genus $g$ and a rational point (\S\ref{sec:prelim}), and we
+enumerate all effective divisors of degree $5$ over $\Fp$, for every partition of $5$ into degrees of places.
+If $x+B\subseteq\W$ over $\Q$, then the reduction contains the entire coset $\bar x+B(\Fp)$ in $\W(\Fp)$.
+
+\begin{lemma}[Local rigidity]\label{lem:local}
+Let $R=\Z_p$, let $Z$ be a closed subscheme of a scheme smooth over $R$, and let $U\to Z$ be a morphism from a
+smooth $R$-scheme of relative dimension $n$. Let $u\mapsto z$ be rational points of the special fibres. If
+$\dim T_zZ_{\Fp}=n$ and $T_uU_{\Fp}\to T_zZ_{\Fp}$ is an isomorphism, then $U\to Z$ induces an isomorphism of
+completed local rings at $u$ and $z$.
+\end{lemma}
+\begin{proof}
+Lifting cotangent generators gives a surjection $R[[x_1,\dots,x_n]]\to\widehat{\mathcal O}_{Z,z}$; its
+composite with $\widehat{\mathcal O}_{Z,z}\to\widehat{\mathcal O}_{U,u}\cong R[[t_1,\dots,t_n]]$ has invertible
+linear part modulo $p$, so it is an isomorphism, and the surjection is injective.
+\end{proof}
+We apply this to $Z_S=\bigcap_{s\in S}(\W-s)$ for a finite subgroup $S\subseteq J(\Fp)$, after lifting $S$
+to $J(\Z_p)$: prime-to-$p$ torsion points lift uniquely to torsion points over $\Z_p$ (and if $S$ lies in the
+reduction of both a candidate direction and a known abelian subvariety $B$, the lifts lie in both); when the
+direction is already known to be $B$, we may lift points of $B(\Fp)$ arbitrarily to $B(\Z_p)$, including
+$p$-primary points, since both families are stable under all of $B$. At a class with $h^0(D)=1$ the annihilator
+of $T_{[D]}\W$ in $H^0(K_C)$ is $H^0(K_C-D)$, and at a class with $h^0\ge2$ the tangent space is everything. A known family $V\subseteq\W$ defined over $\Q$
+which fills the local branch then contains every candidate translate through that residue class. (For the
+tangent space of $W^1_5$ and the base-point-free pencil trick used below see \cite[Chapter~IV]{ACGH1985}.)
+
+\subsection{Excluding functions of degree 5}
+\emph{The double-cover inequality.} If $C$ has an involution $w$ with quotient of genus $h$ and $g>2h+4$, a
+morphism of degree $5$ cannot exist, even over $\overline\Q$, by \cref{lem:CS} (the degrees $2$ and $5$ are
+coprime). This applies to $17$ levels (\cref{tab:A}). For $12$ of them, namely
+$83,89,92,101,107,111,131,141,142,143,167,191$, this exclusion is already
+\cite[Proposition~5.2]{DHJO}; it is new for $118,123,145,155,159$.
+
+\emph{Published gonality.} $\gon_\Q X_0(82)=6$ \cite[Theorem~1.4]{NajmanOrlic2024}.
+
+\emph{Empty special loci.} At $N=86,99,128$ and $p=7,5,3$ respectively, the numbers of effective divisors of
+degree $5$ over $\Fp$ and of their classes are equal, so $W^1_5(\Fp)=\varnothing$, and \cref{lem:specialization}
+applies.
+
+\emph{Local pencils.} At $N=77,85,88$ the curve has $\Q$-gonality $4$ \cite[Theorem~1.2]{NajmanOrlic2024}. At
+$p=5,7,3$, every special divisor of degree $5$ has $h^0=2$ and is $A_4+P$ for the unique class $A_4$ of degree $4$
+with two sections, and $\dim T_{[D]}W^1_5=8-g+h^0(K-D-A_4)=1$ (the base-point-free pencil trick). The rational
+tetragonal pencil reduces to a class of degree $4$ with two sections, which must be $A_4$ (an extra section would
+give a class of degree $5$ with $h^0\ge3$ after adding a rational point); so it lifts $A_4$, the Abel map $P\mapsto A_4+P$ is an immersion, and \cref{lem:local} identifies
+$W^1_5$ near every relevant point with this family. Its sections come from $A_4$, so a rational class in
+$W^1_5$ has a base point. Level $74$ uses the same argument at the two primes $3$ and $5$. The possible positive-rank part $A$ is isogenous
+to $E_{37}^2$, and the rank-zero quotient $R=J/A$ has $\#R(\Q)$ dividing $513$ (the gcd of its point counts at
+$q\le31$). Since $\#E_{37}(\F_3)=7$ and $\#E_{37}(\F_5)=8$, $A(\F_3)$ is a $7$-group and $A(\F_5)$ a $2$-group, so
+$A(\Q)_{\mathrm{tors}}$, which injects into both, is trivial. The four rational cusps generate a torsion group
+$\mathcal C$ whose reductions modulo $3$ and $5$ have order $513$; it meets the torsion-free $A(\Q)$ trivially, so it
+maps onto $R(\Q)$, and every rational class lies in $\mathcal C+A(\Q)$, whose reduction lies in
+$\bar{\mathcal C}+A(\Fp)\subseteq\bar{\mathcal C}+J(\Fp)[\ell^\infty]$ with $\ell=7,2$. At
+$p=3$ (using $J(\F_3)[7^\infty]$, of order $49$) and at $p=5$ (using $J(\F_5)[2^\infty]$, of order $256$) the
+local pencil argument applies outside two exceptional cusp labels each, and the exceptional labels at the two
+primes are disjoint; so every rational class is covered at one of the primes.
+
+The remaining levels are treated with the finiteness argument below: rank-zero lifting at $96,98,100$ and the
+quotient sieve at $79,103$.
+
+\subsection{Route R: direct reduction}
+\emph{Rank zero ($96,98,100$).} Here $L(J,1)\ne0$, so $J(\Q)$ is finite and reduction is injective on it at
+the odd good primes $p=7,3,3$. This is the situation of \cite[Proposition~5.5]{NajmanVarivoda}. The computation
+shows that every special class of degree $5$ over $\Fp$ has $h^0=2$ and is $\bar A_4+\bar P$ for a class $\bar
+A_4$ of degree $4$ with two sections and a point $\bar P\in C(\Fp)$, and it lifts every such $\bar A_4$ to a
+rational class $A_4$. At $96$ and $100$ every point of $C(\Fp)$ is the reduction of a rational point $P$, and
+injectivity forces a rational special class to be $A_4+P$, which has the base point $P$. At $98$ only four of the
+six points of $C(\F_3)$ (the cusps) lift. If $L$ is a rational special class, then $L-A_4$ is a rational class of
+degree $1$ whose reduction is $\bar P$; its push-forward along the degeneracy map $X_0(98)\to X_0(49)=E$ is a point
+of $E(\Q)\cong\Z/2$ reducing to the image of $\bar P$. For a noncuspidal $\bar P$ that image is a noncuspidal
+point of $E(\F_3)\cong\Z/4$ (degeneracy maps send noncusps to noncusps), of order $4$, which is not the
+reduction of a point of $E(\Q)$. So $\bar P$ is a cusp, and $L=A_4+P$ with a fixed rational cusp $P$.
+
+\emph{Empty cosets ($85,88,92$).} Here $\A$ is simple, of dimension $2,1,1$. At $p=3$, the $\ell$-primary
+subgroup of $\A(\F_3)$, for $\ell=17,7,7$, has no full coset inside $\W(\F_3)$; so no translate exists.
+
+\subsection{Route Q: a rank-zero quotient (nine prime levels)}
+For $N\in\{79,83,89,101,103,107,131,167,191\}$ let $Y=C/w_N$, $A=\pi^*\Jac Y$ and $R=J/A$; here $\A=A$ is simple
+of multiplicity one and $R$ has rank $0$. With $t=[w_N(\infty)-\infty]$, the gcd $m$ of $\#R(\F_q)$ over
+$q\le19$ odd equals the order of $\bar t$ in $R(\Fp)$ at the working prime, so $R(\Q)=\langle t\rangle$ is
+cyclic of order $m$. Every rational class of degree $5$ lies on some $T_i=[5\infty]+it+A$, $0\le i<m$, and only the following
+indices survive the coset test over $\Fp$: $i\in\{1,2,3,4\}$ for $N=79,89,101,131$; $\{1,2,3,4,23\}$ for $N=83$;
+$\{2,3\}$ for $N=103,107,167,191$. For $g(Y)=1$ these are the families
+$\pi^*\Pic^1(Y)+3P$, $\pi^*\Pic^2(Y)+P$, $\pi^*\Pic^2(Y)+Q$, $\pi^*\Pic^1(Y)+3Q$ with $P=\infty$,
+$Q=w_N(\infty)$, and for $g(Y)=2$ only the middle two. The cusp is a fixed subdivisor: if $D$ contains no full
+fibre of $\pi$ and $d+\deg D<g-2g(Y)+1$, then $H^0(C,\pi^*M(D))=H^0(Y,M)$ for every $M$ of degree $d$. At
+$N=83$ the index $23$ is the family $\pi^*\Pic^1(Y)+D$ through an explicit $w_{83}$-fixed cubic point $D$: with
+$F=\infty+w_{83}(\infty)$ and $c=[F+D-5\infty]$, invariance of $F+D$ under $w_{83}$, which acts as $-1$ on $R$,
+gives $2c=5t$ in $R(\Q)\cong\Z/41$, so $c=23t$; the fixed subdivisor is $D$. At $79$ and $103$ the same sieve shows that all classes of $W^1_5(\Fp)$ lie over the indices $2,3$,
+whose families have fixed cusps; so there is no function of degree $5$.
+
+\subsection{Route T: known families (fifteen levels)}
+For the remaining levels, $C$ has a double cover $C\to Y$ with $g(Y)=2$ or a map of degree $4$ to a curve of
+genus $1$, giving a family $V=B+[F_4]+C\subseteq\W$ with $B$ the pulled-back Jacobian and $F_4$ a fibre (or
+twice a fibre). For every tested subgroup $S$ and every full coset $x+S\subseteq\W(\Fp)$, the certificate checks (\cref{tab:routeT})
+that $S\subseteq B(\Fp)$, that $x+S\subseteq B(\Fp)+[F_4]+C(\Fp)$, that $\dim T_xZ_S=\dim B+1$, and that the
+differential of $B\times C\to\Pic^5(C)$ has rank $\dim B+1$. The subgroups tested cover every possible direction
+in $\A$: for each prime order $\ell\ne p$ tested, every simple factor of $\A$ has Frobenius order divisible by
+some tested $\ell$, and all subgroups of that order in $J(\Fp)$ are tested. At $82,99,128$ the unique positive
+elliptic part is identified with $B$ through its newform, so the whole of $B(\Fp)$ may be used. At $86$ the
+repeated elliptic factor is isogenous to $E_{43}\colon y^2+y=x^3+x^2$, which has no rational $2$-isogeny, so every
+curve in its isogeny class is linked to it by an odd-degree isogeny and has cyclic group of order $8$ over $\F_7$;
+all $192$ cyclic subgroups of order $8$ of $J(\F_7)$ are tested. By \cref{lem:local}, every translate $T$ lies in $V$.
+Projecting to $J/B$, which has dimension $>1$, shows $T\subseteq B+[F_4]+P$ for a fixed point $P$, whose Galois
+orbit is then a proper fixed subdivisor.
+
+\begin{proof}[Proof of Theorem A]
+Combine the function exclusions with the three routes, as in \cref{tab:A}. The $36$ certificates are in the
+accompanying repository (\texttt{certificates/A\_x0\_quintic}), with a list of the data per level.
+\end{proof}
+
+\begin{table}[ht]\centering\small
+\caption{Theorem A: the thirty levels. The route proves finiteness of the points of degree $5$ assuming there is
+no function of degree $5$; the last column is the separate argument excluding functions of degree $5$ (``double
+cover'': the inequality $g>2h+4$).}\label{tab:A}
+\begin{tabular}{rrll@{\qquad}rrll}\toprule
+$N$&$g$&route&degree-5 functions&$N$&$g$&route&degree-5 functions\\\midrule
+74&8&T&local pencil, 2 primes&107&9&Q&double cover\\
+77&7&T&local pencil&111&11&T&double cover\\
+79&6&Q&quotient sieve&118&14&T&double cover\\
+82&9&T&\cite{NajmanOrlic2024}&123&13&T&double cover\\
+83&7&Q&double cover&128&9&T&$W^1_5(\F_3)=\varnothing$\\
+85&7&R&local pencil&131&11&Q&double cover\\
+86&10&T&$W^1_5(\F_7)=\varnothing$&141&15&T&double cover\\
+88&9&R&local pencil&142&17&T&double cover\\
+89&7&Q&double cover&143&13&T&double cover\\
+92&10&R&double cover&145&13&T&double cover\\
+96&9&R&rank zero&155&15&T&double cover\\
+98&7&R&rank zero&159&17&T&double cover\\
+99&9&T&$W^1_5(\F_5)=\varnothing$&167&14&Q&double cover\\
+100&7&R&rank zero&191&16&Q&double cover\\
+101&8&Q&double cover&&&&\\
+103&8&Q&quotient sieve&&&&\\\bottomrule
+\end{tabular}
+\end{table}

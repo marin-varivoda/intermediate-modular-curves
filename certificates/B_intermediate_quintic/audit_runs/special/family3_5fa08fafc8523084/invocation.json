@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/opt/sage/envs/sage/bin/python",
+    "run_family3_certificate.py",
+    "5fa08fafc8523084"
+  ],
+  "snapshot": "/tmp/quintic-family3_5fa08fafc8523084-9gpnq0vg/machinery",
+  "pid": 3627699
+}

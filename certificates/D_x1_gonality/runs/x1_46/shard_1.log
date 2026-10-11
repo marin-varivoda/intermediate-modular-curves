@@ -1,0 +1,17 @@
+Loading "/home/mvarivoda/imc/intermediate-modular-curves-lab/publication/certif\
+icates/D_x1_gonality/models/X1_46.txt"
+Loading "/home/mvarivoda/imc/intermediate-modular-curves-lab/publication/certif\
+icates/D_x1_gonality/runs/x1_46/phase1.m"
+PHASE1_PLACES g=45 q=3 rational=22 n=6 counts=[ 22, 0, 0, 55, 44, 55, 264, 781, 1958, 6292, 16634, 43890 ] seconds=1534.420
+PHASE1_EXPANSIONS shard=1/2 places=[ 8, 0, 0, 34, 27, 27, 132, 402, 969, 3172, 8406, 21949 ] seconds=40161.970
+PHASE1_DONE shard=1/2 seconds=40174.760
+2, 16634, 43890 ] seconds=1534.680
+
+While attempting to compile ../../../third_party/CurveArith/src/gonality.m (Data file non-existent):
+Can't open input file ../../../third_party/CurveArith/src/gonality.m (No such file or directory)
+
+In file "/home/mvarivoda/imc/intermediate-modular-curves-lab/publication/certificates/D_x1_gonality/runs/x1_46/phase1.m", line 48, column 15:
+>> expansions := PrecomputePowerseriesExpansions(FF, [[places[i][j] : j in min
+                 ^
+Runtime error: Package "../../../third_party/CurveArith/src/gonality.m" cannot be loaded
+

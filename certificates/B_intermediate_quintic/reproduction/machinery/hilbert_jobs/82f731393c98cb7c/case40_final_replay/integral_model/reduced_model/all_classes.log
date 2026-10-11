@@ -1,0 +1,21 @@
+Loading "canonical_input.m"
+Loading "short_signed_support.m"
+class=1 h0=1
+class=2 h0=1
+class=3 h0=1
+class=4 h0=1
+class=5 h0=1
+class=6 h0=1
+class=7 h0=2
+rational base point=5
+class=8 h0=2
+rational base point=6
+class=9 h0=2
+rational base point=1
+class=10 h0=2
+rational base point=2
+class=11 h0=2
+rational base point=4
+class=12 h0=2
+rational base point=3
+SUCCESS all 12 classes excluded by exact canonical fat-point conditions

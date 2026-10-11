@@ -1,0 +1,581 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,hyperref}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Fp}{\mathbb F_p}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\Pic}{\operatorname{Pic}}
+\newcommand{\gon}{\operatorname{gon}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\title{Intermediate modular curves with infinitely many quintic points}
+\author{Proof and computational certificates}
+\date{6 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We classify the intermediate modular curves with infinitely many closed
+points of degree exactly five over $\Q$. There are 43 positive strict
+subgroup-defined pairs, each admitting a rational function of degree five.
+We separate the short mathematical arguments from the exact computations
+they require. Complete case tables, source checks, and freshly replayed
+computational certificates accompany the proof.
+\end{abstract}
+
+\section{Statement and conventions}
+For $\{\pm1\}\subseteq\Delta\subseteq(\mathbb Z/N\mathbb Z)^\times$, set
+\[
+ \Gamma_\Delta(N)=\left\{\begin{pmatrix}a&b\\c&d\end{pmatrix}
+ \in\mathrm{SL}_2(\mathbb Z):c\equiv0\pmod N,\ a\bmod N\in\Delta\right\}.
+\]
+The smooth projective modular curve attached to this subgroup is denoted
+$X_\Delta(N)$. We keep the pairs $(N,\Delta)$, rather than identifying
+curves that happen to be isomorphic. A pair is \emph{strict} if both subgroup
+inclusions above are strict. A quintic point means a closed point with
+residue field of degree exactly five, not a point of degree at most five.
+
+\begin{theorem}[Classification]
+The strict intermediate curves with infinitely many quintic points are
+the 43 pairs in Table~\ref{tab:positive}. Each admits a $\Q$-rational
+function of degree exactly five. Every other strict intermediate curve
+has only finitely many quintic points.
+
+Including endpoints, $X_1(N)$ is positive precisely for
+$N\in\{1,\ldots,25\}\setminus\{23\}$. The positive $X_0$ levels are
+\[
+ \{1,\ldots,45\}\cup\{47,\ldots,58\}\cup
+ \{61,63,64,65,67,68,72,73,75,80,81,91,109,121,125\}.
+\]
+\end{theorem}
+
+The endpoint assertions are inputs to the strict classification. The
+$X_1$ assertion comes from Derickx--Sutherland \cite{DS}; the $X_0$ assertion uses
+the published classification \cite[Theorem 1.10]{DHJO} together with the
+thirty-level proof included at
+\texttt{reproduction/final/quintic\_points.tex} (also supplied as
+\texttt{x0\_proof.pdf}). Its three routes use rank-zero lifting, quotient
+class sieves and local rigidity of reducible divisor families. All 36
+computational certificates in that companion proof have been freshly
+replayed; the upstream dependency is not a reference to unavailable code.
+
+For completeness, the $X_1$ endpoint statement concerns exact degree five.
+The cyclic torsion orders in \cite[Theorem 1.1]{DS} are precisely
+$1\le N\le25$, $N\ne23$. At genus zero, the rational cusp gives
+$X_1(N)\simeq\PP^1$. At positive genus in this range, rank zero from
+\cite[Theorem 4.1]{DS} makes rational points finite, so the infinitely
+many marked elliptic curves over quintic fields give genuine quintic
+points. Conversely, infinitely many quintic points give infinitely many
+marked elliptic curves; uniform boundedness and finite fibers of the
+$j$-map force a torsion group occurring infinitely often. Its cyclic
+subgroup order must lie in the same list. Finally,
+\cite[Corollary 2.4]{DS} gives exact degree-five functions at the positive
+rank-zero endpoints as well.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lr}\toprule
+Family of arguments & Strict pairs through level 191\\\midrule
+Projection and spectral gonality &829\\
+Rank-zero Jacobians &82\\
+Positive-rank density and elliptic families &57\\
+Degree-five function constructions &43\\\bottomrule
+\end{tabular}
+\caption{The four main groups of proof assignments.}
+\end{table}
+
+\section{Three elementary reductions}
+\begin{lemma}[A function produces quintic points]
+If a geometrically integral curve $C/\Q$ admits a degree-five map to
+$\PP^1$, then it has infinitely many quintic points.
+\end{lemma}
+\begin{proof}
+Hilbert irreducibility supplies infinitely many rational fibers whose
+degree-five coordinate algebra is a field. After omitting branch values,
+these fibers are closed points of degree five.
+\end{proof}
+
+\begin{lemma}[Projection]
+Let $C\to D$ be finite over $\Q$. If $D$ has finitely many rational
+points and finitely many quintic points, then $C$ has finitely many
+quintic points.
+\end{lemma}
+\begin{proof}
+The residue degree of the image divides five, hence is one or five.
+There are finitely many such images and each fiber has finite support.
+\end{proof}
+The rational-point hypothesis cannot be dropped. In applications it
+follows from $g(D)>1$ and Faltings' theorem \cite{Faltings}.
+A negative $X_0$ target cannot
+have genus at most two, since its rational cusp and the low-genus
+construction below would give infinitely many quintic points.
+Forgetting maps are defined
+over $\Q$: for $M\mid N$, reduction of $\Delta_N$ into $\Delta_M$
+permits $(E,P)\mapsto(E,(N/M)P)$. Same-level subgroup inclusions are
+special cases. Iteration starts only from proved negatives, so it creates
+no circular dependencies.
+
+\begin{lemma}[Rank zero]
+Suppose $C(\Q)\ne\varnothing$ and $J(C)(\Q)$ has rank zero.
+If $C$ has no rational function of degree five, it has finitely many
+quintic points.
+\end{lemma}
+\begin{proof}
+A rational base point identifies $\Pic^5(C)(\Q)$ with the finite group
+$J(C)(\Q)$. Let $D$ be an irreducible effective quintic divisor. If
+$h^0(D)>1$, a nonconstant rational function in $L(D)$ has a nonzero pole
+divisor bounded by $D$. Since $D$ is one closed point with coefficient
+one, that pole divisor must equal $D$. This is a degree-five function,
+a contradiction. Otherwise $D$ is the unique effective representative
+of its class. There are only finitely many classes.
+\end{proof}
+\begin{remark}
+The rank-zero assumption is essential to this argument. It will not be
+used implicitly in the positive-rank cases.
+\end{remark}
+
+\section{Enumeration and rational models}
+Primitive rows $(c,d)$ modulo $N$, modulo multiplication by $\Delta$,
+parametrize $\Gamma_\Delta(N)\backslash\mathrm{SL}_2(\mathbb Z)$.
+The scalar action is free: if $u(c,d)=(c,d)$, primitivity implies $u=1$.
+Thus the index is
+\[
+ \mu=\frac{N^2}{|\Delta|}\prod_{\ell\mid N}(1-\ell^{-2}).
+\]
+Right multiplication by the standard generators gives permutations
+$(c,d)\mapsto(d,-c)$ and $(c,d)\mapsto(c,c+d)$. Fixed points of the
+order-two and order-three permutations count the elliptic points;
+cycles of the latter translation count cusps. Therefore
+\[
+ g=1+\frac\mu{12}-\frac{e_2}4-\frac{e_3}3-\frac{c_\infty}2.
+\]
+Enumerating subgroups by successively adjoining every unit is complete:
+every subgroup has a finite generating set. Full element sets, not their
+orders or genera, are used as identifiers. A second computation with
+Sage's abstract unit groups and \texttt{GammaH} checks all 1388 pairs
+through level 191, of which 1011 are strict.
+
+The rational structure deserves explicit attention. Rational Fourier
+expansions at the Tate cusp describe the model parametrizing
+$\mu_N$-markings, not automatically the analytically identical
+point-marked model \cite[proof of Lemma 6.1.6]{CES}. Quotienting an elliptic curve by its marked subgroup
+and dualizing the isogeny interchanges a $\mu_N$-marking and a
+$\mathbb Z/N\mathbb Z$-marking. These inverse constructions are over
+$\Q$ and interchange diamond $a$ with diamond $a^{-1}$. Since $\Delta$
+is closed under inversion, they descend to a $\Q$-isomorphism of the
+two intermediate models. In particular all these curves have a rational
+Tate cusp after this identification.
+
+For genus at least three, the full weight-two cusp space supplies
+canonical differentials. A degree-$d$ relation has weight $2d$ and is
+certified by vanishing through $\lfloor2d\mu/12\rfloor$. Extra Fourier
+coefficients are checked but do not replace this bound. The quadratic
+product rank distinguishes the hyperelliptic canonical image from the
+nonhyperelliptic case. In the latter case the known canonical image is
+embedded, of degree $2g-2$ and genus $g$. Exact containment in the proposed
+scheme, followed by equality of Hilbert polynomials, identifies the whole
+scheme: the quotient ideal sheaf has zero Hilbert polynomial and hence
+vanishes. Merely matching genera would not suffice.
+
+Before a reduction argument, the displayed equations must pass a separate
+test at the chosen prime. Their special fiber is required to have the same
+Hilbert polynomial as the generic canonical curve, to be reduced and
+irreducible, to have normalization genus equal to its arithmetic genus,
+and to have a rational point. Here is why these tests suffice. The flat
+closure of the generic curve is contained in the displayed integral scheme.
+Its special fiber has the generic Hilbert polynomial. Equality with the
+displayed special-fiber Hilbert polynomial therefore identifies these two
+special fibers by the same quotient-sheaf argument as above. Equality of
+normalization and arithmetic genera makes the integral special curve
+normal, hence smooth over the perfect residue field. Its rational point
+forces the constant field to be the residue field, giving geometric
+integrality. The flat closure is consequently a smooth proper model near
+the special fiber. This is the model on which specialization is used;
+the condition $p\nmid N$ alone is not a check on chosen coordinates.
+
+\section{Positive cases}
+If $g\le2$ and $P\in C(\Q)$, Riemann--Roch gives
+$h^0(5P)=6-g$ and $h^0(4P)=5-g$. Thus a rational function in
+$L(5P)\setminus L(4P)$ has pole divisor exactly $5P$, giving a
+degree-five map.
+
+In genus three, the echelon pivot exponents of the Fourier basis are
+the Weierstrass gaps at the Tate cusp: a form of order $a$ yields a
+differential of order $a-1$. If five is not a gap, then
+$h^0(5P)>h^0(4P)$, giving a function with pole divisor $5P$.
+
+In genus four, nonhyperellipticity makes the canonical bundle separate
+all length-two subschemes. Therefore $K-P$ is base-point-free, including
+at $P$, and has degree five. A general pair of sections again gives
+the desired map. Nonhyperellipticity is checked by quadratic product
+rank nine rather than seven.
+
+The remaining twelve new positive cases use explicitly verified degree-five
+pole divisors on certified models. The four published cases are exactly
+those in Orli\'c's Theorems 1.4--1.5 \cite{Orlic}.
+Fresh model generation and the degree-five witness checks have been replayed
+for all twelve new cases. The fourteen canonical low-genus cases have also
+been replayed; the thirteen genus-at-most-two cases use the uniform argument
+above. Replay evidence is indexed in \texttt{REAUDIT.md}.
+
+\clearpage
+\begin{center}
+\textbf{Positive strict pairs.}\quad
+L: genus at most two; C: canonical low-genus argument;
+W: explicit witness; P: published pentagonality.
+\end{center}
+\begingroup\small
+\input{positive_table.tex}
+\endgroup
+
+\section{Uniform negative arguments}
+Projection to the completed $X_0$ classification excludes every level
+$N\ge192$. It excludes 807 strict pairs below this boundary. Seven more
+pairs are excluded by other forgetting maps. The spectral bound
+$\gon_{\mathbb C}C\ge119\mu/12000$ \cite[Theorem 3.16]{Orlic}, together with Frey's necessary bound
+\cite[Proposition 2.2]{DS}
+for quintic density, excludes another fifteen pairs: the implementation
+uses the strict integer inequality $119\mu>120000$.
+
+For rank-zero curves, it remains to exclude degree-five functions.
+The published classifications of hyperelliptic, trigonal, tetragonal
+and pentagonal intermediate curves do this whenever $\gon_{\Q}C\ge6$.
+The subgroup lists are expanded as element sets before comparison;
+genus or group order alone is not a sufficient identifier.
+Nonvanishing central values establish rank zero by the modular
+nonvanishing theorem. For the nontrivial-nebentypus factors occurring here,
+we use Kato's Corollary 14.3, as applied to modular Jacobians in
+Derickx--Sutherland, Section 4 \cite{Kato,DS}; citing only the
+trivial-nebentypus version would not justify all intermediate cases.
+The Magma overload used here factors the modular
+abelian variety and tests exact modular-symbol $L$-ratios. It is not a
+numerical approximation to $L(1)$. Rank zero of $J_1(N)$ also descends
+to its intermediate quotients up to isogeny.
+
+Two rank-zero exceptions, of genera seven and nine at levels 35 and 55,
+are geometrically bielliptic \cite[Theorem 0.2 and Table 6]{JKS}.
+A degree-two elliptic map and a degree-five
+rational map generate the function field, since their degrees are coprime.
+Castelnuovo--Severi would give $g\le2+(2-1)(5-1)=6$. Thus no quintic
+function exists even geometrically. A tetragonal curve is not excluded
+just because its gonality happens to equal four.
+
+\section{Exhaustive rational divisor-class sieves}
+Let $C$ have good reduction at an odd prime $p$ and a rational point $P$.
+Suppose rank zero has been proved and an explicit subgroup of rational
+divisor classes is proved to exhaust $J(C)(\Q)$. Reduction on rational
+torsion over the unramified field $\Q_p$ is injective. Enumerate every
+effective degree-five divisor on $C_{\Fp}$, using all closed places of
+degrees one through five and all partitions of five. Keep the classes
+with $h^0\ge2$ that belong to the known rational subgroup, shifted by
+$5P$. This includes the specialization of every rational quintic pencil,
+by upper semicontinuity. Over a finite field, an effective rational
+line-bundle class has a rational effective representative, so enumeration
+of rational effective divisors omits no relevant class.
+
+Lift each surviving class to a rational divisor and compute its full
+Riemann--Roch space. A bounded search may find a convenient representative,
+but every surviving class must be checked. Injectivity of reduction
+identifies the lift with the intended rational class. If its section
+space has dimension at most one, it is not a pencil. If the dimension
+is two and the complete system has a base point, it cannot give a
+degree-five map. These checks exclude every rational quintic function;
+the rank-zero lemma then excludes quintic density.
+
+The assertion that the rational subgroup is complete is crucial.
+At level 40, a full integral Manin-symbol lattice, intersected with the
+cusp-boundary kernel, gives absolute integral homology. On its rational
+quotient by this lattice, rational torsion is fixed by complex conjugation
+and annihilated, away from the residue characteristic, by
+\[
+ 1-T_p+p\langle p\rangle=1-T_p+T_p^2-T_{p^2}.
+\]
+Smith normal forms give rigorous upper bounds, with each residue prime
+omitted when bounding its own primary part. Their combination with
+Frobenius-order bounds gives 4032. Explicit rational point differences
+generate 4032 classes on reduction, proving equality. Twelve special
+classes remain, and all twelve are checked over $\Q$.
+
+For the two level-48 cases, use the published description of
+$J_1(48)(\Q)_{\rm tors}$ by rational cusp-orbit divisors
+\cite[Theorem 4.13]{DEH}. Their embedding
+is recomputed in full integral homology. Transfer for the degree-four
+forgetting map is obtained by summing lifted paths over all sheets;
+it induces pullback on Jacobians. Every rational torsion class on the
+target must transfer into the computed rational cuspidal group upstairs.
+This restricts the target Hecke bounds to 2304 and 12800, respectively.
+Explicit closed-cusp classes attain both bounds. The two finite-field
+sieves then leave four and 24 classes, all checked rationally. Pullback
+need not be injective: taking its inverse image is the correct restriction.
+
+Characterwise rational decompositions are used only for isogeny invariants,
+not as integral homology lattices. For a rational-point divisor $D$, the
+final Riemann--Roch computations can instead use canonical hyperplanes:
+the saturated ideal $I_C+I(P)^m$ cuts out $mP$ on the smooth curve.
+Its linear part is $H^0(K-mP)$. Intersect these spaces and apply
+Riemann--Roch. Equalities $h^0(D-P)=h^0(D)$ certify base points.
+
+\section{A formal lifting lemma}
+The same local argument underlies the two remaining computational methods.
+It is stronger than a dimension count on the special fiber.
+\begin{lemma}\label{lem:formal}
+Let $R$ be a complete discrete valuation ring. Let $\mathcal P/R$ be
+smooth of relative dimension $g$, and $\mathcal T\subseteq\mathcal P$
+a closed subscheme. Suppose a smooth formal $r$-dimensional branch
+through a residue point maps into $\mathcal T$ and is a formal immersion
+into $\mathcal P$. If the relative tangent space of $\mathcal T$ at
+that residue point has dimension at most $r$, then the completion of
+$\mathcal T$ there is exactly that branch.
+\end{lemma}
+\begin{proof}
+Write the completed ambient ring as $R[[x_1,\ldots,x_g]]$. The tangent
+bound supplies $g-r$ equations in the ideal of $\mathcal T$ with
+independent transverse linear terms modulo the maximal ideal of $R$.
+The formal implicit function theorem eliminates these variables and
+leaves $R[[t_1,\ldots,t_r]]$. The contained branch has the same tangent
+dimension, so its map into this ring is an isomorphism by the formal
+inverse function theorem. Every remaining equation vanishes on that
+branch and hence is zero. In particular, no additional vertical or
+infinitesimal components survive.
+\end{proof}
+
+\subsection{Petri lifting for rank-zero curves}
+Suppose explicit base-point-free quartic bundles $A_i$ have $h^0=2$
+over $\Q$ and after good reduction. Suppose an exhaustive computation
+shows that every class in $W^1_5(\Fp)$ is some $A_i+P$, with
+$P\in C(\Fp)$, has exactly two sections, and has Petri tangent
+dimension one. Each relative Abel curve $A_i+C$ lies in relative $W^1_5$.
+Its differential is injective. Lemma~\ref{lem:formal} identifies the
+whole local $W^1_5$ with this known branch.
+
+A hypothetical rational quintic pencil would therefore lie over $\Q_p$
+on some $A_i+C$. Upper semicontinuity bounds its number of sections by
+two. Both sections then vanish at the added point, contradicting
+base-point-freeness. The rank-zero lemma gives finiteness.
+The tangent calculation is the exact Petri formula
+\[
+ \dim T_{[D]}W^1_5=g-\operatorname{rank}
+ \bigl(H^0(D)\otimes H^0(K-D)\longrightarrow H^0(K)\bigr)
+ \quad(h^0(D)=2).
+\]
+
+\section{Positive rank: density theorems and elliptic maps}
+Here it is necessary to exclude infinite divisor families, not merely
+moving linear systems. First check from the lower-degree classifications
+that points of each degree one through four are finite. Quintic density
+would then have minimum density degree five. Kadets--Vogt's genus bound
+\cite[Theorem 1.3]{KV}
+forces a degree-five map to $\PP^1$ or a positive-rank elliptic curve
+when $g\ge12$. Their arithmetic classification for $g\ge9$ additionally
+allows a Debarre--Fahlaoui normalization
+\cite[Proposition 6.3, arithmetic row]{KV}.
+All 51 uses of these density theorems have been compared, by full subgroup
+element sets, with the lower-degree lists in \cite[Theorems 1.4--1.6]{DO};
+the executable \texttt{check\_density\_hypotheses.py} records that check.
+
+The latter alternative lies on $\operatorname{Sym}^2E$ in numerical class
+$B=(5+m)H-mF$, $1\le m\le5$, with $H^2=H\cdot F=1$, $F^2=0$,
+and $K=-2H+F$. Direct adjunction gives
+\[
+ p_a(B)=1+\tfrac12(B^2+B\cdot K)=11-\tfrac12m(m-1).
+\]
+If the normalization has genus at least nine, then $m=1$ or $2$.
+The addition map to $E$ consequently has degree $B\cdot F=6$ or $7$.
+Thus excluding elliptic maps of degrees five, six and seven handles
+these alternatives as well. The arithmetic construction, over $\Q$,
+is needed here; the geometric classification alone would not suffice.
+
+At the levels where the optimal-parametrization theorem applies, every
+positive-rank elliptic factor has full conductor $N$, multiplicity one,
+and odd analytic rank. For $N\le800$ the composition through $X_0(N)$
+is optimal \cite[Corollary 4.10]{DO}. If
+$t=[(\mathbb Z/N\mathbb Z)^\times:\Delta]$ and $d$
+is the optimal modular degree on $X_0(N)$, every elliptic map in that
+isogeny class has degree a multiple of $td$. In the applications $t,d>1$,
+so degree five is impossible. At levels 37 and 57 the sharper bounds
+are 12 and eight. At 73, 109 and 125 the relevant factor computations
+exclude positive-rank elliptic quotients. Every application also needs
+its separate exclusion of rational quintic functions.
+
+\section{Positive rank: the remaining elliptic families}
+Suppose the only potentially positive-rank simple factor of $J(C)$ is
+one copy of an elliptic curve. Let $A\subseteq J(C)$ be that elliptic
+subvariety. The rational Mordell--Weil group has Zariski closure contained
+in finitely many translates of $A$. An infinite intersection of $W_5$
+with one such translate is dense in that elliptic curve, so the whole
+translate lies in $W_5$.
+
+At level 43, good reduction at two gives $|A(\mathbb F_2)|=5$ and
+$J(\mathbb F_2)\simeq\mathbb Z/38\oplus\mathbb Z/1330$. There is
+a unique order-five subgroup. Exhaustive enumeration gives
+$|W_5(\mathbb F_2)|=2133$ and no full coset of that subgroup in $W_5$.
+Prime-to-two torsion specializes injectively, so no rational elliptic
+translate can exist. Thus $W_5(\Q)$ is finite.
+
+For levels 53, 61 and the three exceptional level-65 curves, there is
+a degree-four map $f:C\to E$ whose pullback image is $A$. The surface
+\[
+ Z=\{f^*Q+P:Q\in\Pic^1(E),\ P\in C\}\subseteq\Pic^5(C)
+\]
+is an unavoidable family of reducible effective divisors. At a good odd
+prime $p$, let $B=A(\Fp)$. The decisive finite-field tests are:
+\begin{enumerate}
+\item every full $B$-coset in $W_5(\Fp)$ is a known fiber-plus-point coset;
+\item the intersection of the corresponding translated tangent spaces
+      has dimension at most two;
+\item $A\times C\to\Pic^5(C)$ has rank-two differential at every
+      relevant rational reduction preimage.
+\end{enumerate}
+Since $p\nmid4$, $f_*f^*=[4]$ identifies a smooth elliptic subgroup
+over $\mathbb Z_p$. Lift each $b\in B$ to some $a_b\in A(\mathbb Z_p)$
+and intersect the relative loci $W_5-a_b$. Neither torsion lifts nor
+a subgroup of lifts are required. Both $Z$ and every hypothetical
+$A$-translate in $W_5$ are contained in this intersection. The tests and
+Lemma~\ref{lem:formal} identify its completion at each relevant point
+with the known smooth two-dimensional branch. Consequently each such
+elliptic translate is contained in the closed surface $Z$.
+
+An irreducible quintic divisor cannot occur on $Z$ when no quintic
+function exists. Indeed, its $h^0$ must be one, so its unique effective
+representative is $f^*Q+P$. The leftover point $P$ is unique: distinct
+fibers are disjoint, whereas removing two points from a degree-five
+divisor leaves common support of degree at least three. Galois invariance
+therefore makes $P$ rational, contradicting irreducibility. Only finitely
+many isolated rational classes remain outside these families, and each
+contributes at most one irreducible divisor.
+
+The tangent computations use a consistent differential basis. At a class
+with $h^0(D)=1$, the annihilator of $T_{[D]}W_d$ is $H^0(K-D)$.
+Ignoring classes with more sections only weakens the upper bound.
+Intersections of tangents at known quartic fibers identify the line
+$T_0A$; comparison with Abel tangents checks the final immersion.
+
+The numerical checks for these five curves are summarized below. The
+last column counts full $B$-cosets in $W_5(\Fp)$, all of which are known
+fiber-plus-point cosets. Every one has tangent-intersection dimension two
+and passes the immersion test.
+\begin{center}\small
+\begin{tabular}{rrrrrr}\toprule
+$N$ & Generators of $\Delta$ & $g$ & $p$ & $|B|$ & Full cosets\\\midrule
+53 & $\langle-1,4\rangle$ & 8 & 5 & 6 & 8\\
+61 & $\langle-1,4\rangle$ & 8 & 5 & 9 & 10\\
+65 & $\langle-1,2,7\rangle$ & 9 & 7 & 12 & 4\\
+65 & $\langle-1,3\rangle$ & 11 & 3 & 6 & 8\\
+65 & $\langle-1,6\rangle$ & 11 & 3 & 6 & 4\\\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Exceptional case index}
+Table~\ref{tab:special} specifies the curves requiring the three
+divisor-class methods and the elliptic-family method. Full subgroup
+element sets and certificate paths are in \texttt{all\_cases.csv}.
+The executable \texttt{replay\_special.py} assigns each of these twelve
+cases a separate working copy, re-executes its certificate, and retains
+the resulting evidence. It reuses the supplied canonical-model data;
+that distinction from fresh model generation is intentional.
+\begingroup\small
+\input{special_table.tex}
+\endgroup
+
+\section{Conclusion and verification scope}
+\begin{proof}[Proof of the classification theorem]
+The completed $X_0$ classification and the projection lemma exclude all
+$N\ge192$. The independent subgroup census lists every remaining pair.
+For the 43 strict pairs in Table~\ref{tab:positive}, the indicated
+construction gives an exact degree-five function, hence infinitely many
+quintic points. Table~\ref{tab:negative} assigns each of 154 strict pairs
+one of the direct negative arguments proved above. The remaining negative
+pairs are the 807 projections to negative $X_0$ curves and the seven
+explicit other forgetting maps in the appendix. Every projection target
+has genus greater than one and an already established negative result.
+These disjoint assignments account for all $43+154+807+7=1011$ strict
+pairs. The endpoint arguments at the start complete the classification.
+\end{proof}
+
+The code checks the stated finite-field, divisor-class, rank and model
+identities; the deductions from these identities are the mathematical
+arguments above. This is not a formal proof-assistant verification.
+\texttt{SOURCE\_AUDIT.md} records the published inputs and their hypotheses.
+\texttt{REAUDIT.md} records the completed mathematical review, fresh
+computations and portability tests. The command \texttt{python3 verify.py}
+checks the sealed package and its complete case assignments without
+requiring the working repository.
+The machine-readable \texttt{all\_cases.csv} retains the complete subgroup,
+answer, projection target and proof metadata for every enumerated pair.
+It is an index to the evidence, not a substitute for the arguments.
+
+\appendix
+\section{Complete direct negative assignments}
+The table below accounts for all 154 direct negative assignments. Together
+with the 807 projections to negative $X_0$ curves and seven other forgetting
+maps, these give $154+807+7=968$ negative strict pairs. The 43 positive
+pairs complete the 1011 strict pairs through level 191; projection to
+$X_0$ excludes all larger levels. The CSV records the exact target for
+each forgetting map and the certificate or published input for every row.
+
+For convenience, the seven non-$X_0$ projections are displayed explicitly:
+\begin{center}\small
+\input{projection_table.tex}
+\end{center}
+
+The proof codes refer to the preceding arguments:
+\begin{center}\small
+\begin{tabular}{ll}\toprule
+Code & Argument\\\midrule
+S & Spectral gonality bound $119\mu>120000$\\
+Z & Rank zero and published rational gonality at least six\\
+B & Rank zero and the bielliptic double-cover inequality\\
+R & Complete rational divisor-class sieve\\
+T & Rank zero and Petri lifting\\
+E & Minimum density five and elliptic-degree obstruction\\
+E0 & Minimum density five and no positive-rank elliptic factor\\
+D & Debarre--Fahlaoui obstruction in genus nine or ten\\
+C & No elliptic translate survives reduction\\
+F & Surviving elliptic families contain only reducible divisors\\\bottomrule
+\end{tabular}
+\end{center}
+\begingroup\small
+\input{negative_table.tex}
+\endgroup
+
+\begin{thebibliography}{99}
+\raggedright
+\bibitem{DS} M. Derickx and A. V. Sutherland,
+\emph{Torsion subgroups of elliptic curves over quintic and sextic number fields},
+Proc. Amer. Math. Soc. 145 (2017), 4233--4245.
+\url{https://math.mit.edu/~drew/proc13605.pdf}.
+\bibitem{Kato} K. Kato,
+\emph{$p$-adic Hodge theory and values of zeta functions of modular forms},
+Ast\'erisque 295 (2004), 117--290, especially Corollary 14.3.
+\url{https://www.numdam.org/item/AST_2004__295__117_0/}.
+\bibitem{Orlic} P. Orli\'c, \emph{Tetragonal intermediate modular curves},
+arXiv:2407.14512v1, Theorems 1.3--1.5.
+\url{https://arxiv.org/html/2407.14512v1}.
+\bibitem{KV} B. Kadets and I. Vogt,
+\emph{Subspace configurations and low degree points on curves},
+arXiv:2208.01067v2.
+\url{https://arxiv.org/html/2208.01067v2}.
+\bibitem{DO} M. Derickx and P. Orli\'c,
+\emph{Intermediate modular curves with infinitely many quartic points},
+arXiv:2504.15937v1.
+\url{https://arxiv.org/html/2504.15937v1}.
+\bibitem{JKS} D. Jeon, C. H. Kim and A. Schweizer,
+\emph{Bielliptic intermediate modular curves}, arXiv:1709.00510.
+\url{https://arxiv.org/html/1709.00510}.
+\bibitem{DEH} M. Derickx, A. Etropolski, M. van Hoeij, J. S. Morrow
+and D. Zureick-Brown, \emph{Sporadic cubic torsion}, arXiv:2007.13929v2.
+\url{https://arxiv.org/html/2007.13929v2}.
+\bibitem{DHJO} M. Derickx, W. Hwang, D. Jeon and P. Orli\'c,
+\emph{Modular curves $X_0(N)$ of density degree 5}, arXiv:2503.08975v2.
+\url{https://arxiv.org/html/2503.08975v2}.
+\bibitem{CES} B. Conrad, B. Edixhoven and W. Stein,
+\emph{$J_1(p)$ has connected fibers}, Documenta Math. 8 (2003), 325--402.
+\url{https://virtualmath1.stanford.edu/~conrad/papers/j1p.pdf}.
+\bibitem{Faltings} G. Faltings,
+\emph{Diophantine approximation on abelian varieties},
+Ann. of Math. 133 (1991), 549--576.
+\url{https://annals.math.princeton.edu/1991/133-3/p04}.
+\end{thebibliography}
+\end{document}

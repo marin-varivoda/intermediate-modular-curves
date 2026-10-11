@@ -1,0 +1,7 @@
+Loading "canonical_input.m"
+rational point (3 : 0 : 0 : 1 : 1)
+quadratic point (2a+3:2a:a+1:a:1), a^2-2a-1=0
+function (-$.1 + 1)/($.1^4 - 2*$.1^3 - 2*$.1 - 1)*$.2*$.3 - 2*$.1/($.1^4 - 
+    2*$.1^3 - 2*$.1 - 1)*$.2 - 1/($.1^2 - 2*$.1 - 1)*$.3 + (-$.1 - 1)/($.1^2 - 
+    2*$.1 - 1)
+SUCCESS exact degree five at level 64

@@ -1,0 +1,14 @@
+Loading "common.m"
+Loading "coordinates.m"
+Loading "place_cache.m"
+N=131 p=3 genus=11 quotient_genus=1 m=65 Aorder=5 J=[ 5, 125515, 0 ]
+place_counts=[ 4, 13, 10, 18, 49 ]
+partition=[ 5 ] divisors=49 classes=49
+partition=[ 4, 1 ] divisors=121 classes=121
+partition=[ 3, 2 ] divisors=251 classes=251
+partition=[ 3, 1, 1 ] divisors=351 classes=351
+partition=[ 2, 2, 1 ] divisors=715 classes=691
+partition=[ 2, 1, 1, 1 ] divisors=975 classes=927
+partition=[ 1, 1, 1, 1, 1 ] divisors=1031 classes=971
+RESULT N=131 divisors=1031 W0=971 full_indices={ 1, 2, 3, 4 } special_indices={}
+SUCCESS quotient N=131

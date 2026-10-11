@@ -1,0 +1,41 @@
+Loading "../data_48_23.m"
+Loading "dc_certificate_frozen.m"
+SETUP N=48 a=23 p=7 gX=37 gY=13 deg(B)=24 dmax=15
+PROGRESS E=12 done=1 candidates=2793 seconds=920.660
+PROGRESS E=23 done=2 candidates=5586 seconds=1178.690
+PROGRESS E=25 done=3 candidates=8379 seconds=1450.850
+PROGRESS E=105 done=4 candidates=11172 seconds=1697.050
+PROGRESS E=118 done=5 candidates=13965 seconds=1953.830
+PROGRESS E=126 done=6 candidates=16758 seconds=2233.930
+PROGRESS E=252 done=7 candidates=19551 seconds=2492.460
+PROGRESS E=265 done=8 candidates=22344 seconds=2737.040
+PROGRESS E=292 done=9 candidates=25137 seconds=2984.080
+PROGRESS E=310 done=10 candidates=27930 seconds=3230.580
+PROGRESS E=437 done=11 candidates=30723 seconds=3485.360
+PROGRESS E=556 done=12 candidates=33516 seconds=3747.780
+PROGRESS E=662 done=13 candidates=36309 seconds=4006.870
+PROGRESS E=756 done=14 candidates=39102 seconds=4264.930
+PROGRESS E=839 done=15 candidates=41895 seconds=4504.450
+PROGRESS E=856 done=16 candidates=44688 seconds=4774.480
+PROGRESS E=858 done=17 candidates=47481 seconds=5025.220
+PROGRESS E=871 done=18 candidates=50274 seconds=5273.710
+PROGRESS E=921 done=19 candidates=53067 seconds=5516.160
+PROGRESS E=929 done=20 candidates=55860 seconds=5765.450
+PROGRESS E=947 done=21 candidates=58653 seconds=6008.290
+PROGRESS E=991 done=22 candidates=61446 seconds=6257.780
+PROGRESS E=1052 done=23 candidates=64239 seconds=6504.040
+PROGRESS E=1124 done=24 candidates=67032 seconds=6755.590
+PROGRESS E=1132 done=25 candidates=69825 seconds=7009.810
+PROGRESS E=1184 done=26 candidates=72618 seconds=7258.570
+PROGRESS E=1202 done=27 candidates=75411 seconds=7504.470
+PROGRESS E=1227 done=28 candidates=78204 seconds=7768.420
+PROGRESS E=1256 done=29 candidates=80997 seconds=8015.970
+PROGRESS E=1267 done=30 candidates=83790 seconds=8262.720
+PROGRESS E=1273 done=31 candidates=86583 seconds=8511.560
+PROGRESS E=1279 done=32 candidates=89376 seconds=8751.270
+PROGRESS E=1295 done=33 candidates=92169 seconds=9005.470
+PROGRESS E=1296 done=34 candidates=94962 seconds=9257.150
+PROGRESS E=1317 done=35 candidates=97755 seconds=9512.250
+SEARCH shard=1/16 effective_E_total=1328 effective_E_this_shard=36 
+candidate_functions=100548 min_degree_bound=16 discarded_by_norm_bound=100546
+CERTIFIED gon(X1(48) over F_7) > 15

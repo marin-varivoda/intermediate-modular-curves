@@ -1,0 +1,48 @@
+\section{Computations}\label{sec:computations}
+
+All computations use Magma~V2.29-4 \cite{Magma}, SageMath~10.7 with MD~Sage \cite{MDSage} (commit
+\texttt{6022429}), CurveArith \cite{DerickxTerao} (commit \texttt{b7c6192}) and Zywina's package
+\cite{ZywinaModular} (commit \texttt{ce31d78}); the three packages are pinned as git submodules of the
+accompanying repository. The repository is organized by theorem:
+\begin{center}\small
+\begin{tabular}{ll}\toprule
+folder & contents\\\midrule
+\texttt{data/} & one row per curve: bounds, methods, certificates or citations\\
+\texttt{certificates/A\_x0\_quintic/} & Theorem A: $36$ Magma certificates and logs\\
+\texttt{certificates/B\_intermediate\_quintic/} & Theorem B and Corollary E: all $1388$ pairs $(N,\Delta)$, $N\le191$ ($1011$ strict)\\
+\texttt{certificates/C\_intermediate\_gonality/} & Theorem C: models, CurveArith runs, upper-bound certificates\\
+\texttt{certificates/C\_43.132.9.a.2/} & \cref{prop:43}\\
+\texttt{certificates/D\_x1\_gonality/} & Theorem D: Phase~1 driver, Phase~2 program, logs\\
+\texttt{verify.py} & checks that every row of \texttt{data/} has a passing log or a citation\\\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Method II for \texorpdfstring{$X_1(N)$}{X1(N)}}
+Phase~1 is a short Magma script that loads CurveArith and calls its internal function
+\texttt{PrecomputePowerseriesExpansions} with exactly the places and precisions that
+\texttt{CAHasFunctionOfDegreeAtMost} would use; no CurveArith code is modified. It runs in several Magma processes. Every
+process enumerates all places, as CurveArith does, and computes the expansions only at the places assigned to it: the
+place's key (the irreducible polynomial $g(t)\in\Fp[t]$ below it, encoded as an integer, or $0$ at infinity) is
+hashed by a fixed integer function, and the hash determines the process. This assignment does not depend on the order in which Magma lists the places, so
+the processes together treat every place exactly once; the merge checks that the counts add up, and that the
+processes agree on the curve, the place counts and the basis of differentials. (Splitting by position in the list
+instead is not safe: Magma does not always list the places in the same order in different processes.) Its
+output is the list of matrices of \cref{lem:rank}.
+
+Phase~2 is a C++ program of about $1000$ lines (with GMP) that enumerates $\mathcal F_b(d)$, performs the
+incremental Gaussian elimination of \S\ref{sec:phase2} over $\Fp$, and enumerates the kernel vectors up to scalars
+(\cref{lem:kernel}). It is a reimplementation, for speed, of the option \texttt{Al:="Cover"} of a modified
+CurveArith, which we used to cross-check it on small curves. The baseline $b$ is chosen to minimize the number of
+divisors times the size of the kernels. For any $b$ the result is correct; it only affects the running time.
+
+\subsection*{Validation}
+The pipeline was tested in both directions against CurveArith's unmodified \texttt{CAGonality}: on
+$X_1(26)$ over $\F_3,\F_5,\F_7$ and on $X_1(29)$ over $\F_2,\F_3$, it finds no function of degree
+$\gon_{\F_p}-1$ and finds one of degree $\gon_{\F_p}$. When a function is found, its divisor is checked independently by a rank computation.
+Each Phase~1 process also computes a few Riemann--Roch dimensions with Magma's \texttt{Dimension}, for
+divisors supported on its own places; Phase~2 checks them against \cref{lem:rank} before searching.
+
+\subsection*{Running times}
+The $36$ certificates of Theorem~A take $40$ minutes of CPU time in total, the longest ($N=86$) $16$ minutes.
+The certificates of \cref{prop:43} take a few minutes. The lower bounds of Theorem~C take about $2$ hours in
+total, dominated by $48.384.19.bc.1$ ($66$ minutes). The running times for Theorem~D are in \cref{tab:D}.

@@ -1,0 +1,16 @@
+# LaTeX build files
+paper/*.aux
+paper/*.log
+paper/*.blg
+paper/*.out
+paper/build.log
+# compiled Phase 2 program
+certificates/D_x1_gonality/phase2/search
+# large intermediate outputs of Phase 1 (recreated by run.sh)
+certificates/D_x1_gonality/runs/**/shard_*.txt
+**/*.ffjets
+certificates/D_x1_gonality/validation/run_*/
+certificates/D_x1_gonality/validation/ca_*.m
+__pycache__/
+certificates/D_x1_gonality/runs/**/shard_*.m
+certificates/D_x1_gonality/runs/**/phase1.m

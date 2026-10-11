@@ -1,0 +1,13 @@
+Loading "family_input.m"
+forgetting map and involution verified over finite field
+elliptic_fiber_subgroup=6 expected=6 base_points=8
+W5=7294 known_B_plus_C=48 full_B_coset_union=48 extra_classes=0
+orbit_size=6 intersection_tangent_dimension=2
+orbit_size=6 intersection_tangent_dimension=2
+orbit_size=6 intersection_tangent_dimension=2
+orbit_size=6 intersection_tangent_dimension=2
+orbit_size=6 intersection_tangent_dimension=2
+orbit_size=6 intersection_tangent_dimension=2
+orbit_size=6 intersection_tangent_dimension=2
+orbit_size=6 intersection_tangent_dimension=2
+SUCCESS elliptic-family metadata; no Q-classification asserted

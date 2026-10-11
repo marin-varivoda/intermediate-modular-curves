@@ -1,0 +1,14 @@
+{
+  "status": "EXACT_LOW_GENUS_CANONICAL_CERTIFICATES",
+  "source_sha256": {
+    "run_low_genus_audit.py": "a018861e50fb2f7843d6c8b2c6c4ec3a082387ae6a7b4a8f1cdf480297a04e6f",
+    "run_genus5_batch.py": "091fcc9774fb29f7892f008b996e1c627458684b80a74959aff55c27228ca952",
+    "low_genus_certificates.py": "dab0c64b9d8b4af7189aadb5b646ac2bba7d980b0165c0c5d86118522995dc35",
+    "LOW_GENUS.md": "79dfa2680efe0ac7e4c125272b6e8adadf096136c165d67956da45eea45adc4e",
+    "RATIONAL_MODELS.md": "96e8c26aafd61ebdacc3d69bda02d5209ce4e825ce718edc9acbf3cb8f51b304"
+  },
+  "artifact_sha256": {
+    "low_genus_certificates.json": "916fad309e25ae9fa1a80ab5e52b98330e20c5d737280eb6476789b55fe8a194",
+    "low_genus_audit.log": "bf7726261609304a1ebcfa3b8d651a61cb77c98bc68d0761789244aaf92e13a9"
+  }
+}

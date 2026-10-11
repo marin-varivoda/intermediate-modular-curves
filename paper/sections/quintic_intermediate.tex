@@ -1,0 +1,130 @@
+\section{Points of degree 5 on intermediate curves: proof of Theorem B}\label{sec:quintic-intermediate}
+
+\subsection{Reduction to finitely many curves}
+\begin{lemma}[Projection]\label{lem:projection}
+Let $C\to D$ be a finite morphism over $\Q$. If $D$ has only finitely many points of degree $1$ and of degree
+$5$, then $C$ has only finitely many points of degree $5$.
+\end{lemma}
+\begin{proof}
+The image of a point of degree $5$ has degree dividing $5$, and fibres are finite.
+\end{proof}
+Forgetful maps $X_\Delta(N)\to X_{\Delta'}(M)$, for $M\mid N$ and $\Delta$ mapping into $\Delta'$, are defined
+over $\Q$; in particular every $X_\Delta(N)$ maps to $X_0(N)$. By Theorem~A and \cite[Theorem~1.10]{DHJO},
+$X_0(N)$ has finitely many points of degree $5$ unless
+\[
+ N\in\{1,\dots,45\}\cup\{47,\dots,58\}\cup\{61,63,64,65,67,68,72,73,75,80,81,91,109,121,125\},
+\]
+and every $X_0(N)$ with $N$ outside this list has genus $>1$ (otherwise its rational cusp would give a
+function of degree $5$, \S\ref{sec:method-I}), hence finitely many rational points by Faltings
+\cite{Faltings1991}; so these $X_0(N)$ can serve as targets in \cref{lem:projection}. So every strict pair with $N\ge192$, and $807$ of the $1011$
+strict pairs with $N\le191$, have finitely many points of degree $5$. The strict pairs with $N\le191$ are
+enumerated twice, once from primitive rows $(c,d)$ modulo $N$ up to $\Delta$ and once with Sage's
+\texttt{GammaH}; full sets of elements, not orders or genera, are used to identify them. Seven more pairs map to
+intermediate curves already shown to be negative (\cref{tab:projection}), and fifteen more, of genus $57$ to
+$256$, satisfy $119\mu>120000$, so they have $\gon_{\mathbb C}>10$ and finitely many points of degree $5$ by
+\cref{lem:frey} and \cite[Proposition~2.2]{DerickxSutherland2017}. This leaves $182$ strict pairs.
+
+\subsection{The \texorpdfstring{$43$}{43} positive curves}
+Each curve in \cref{tab:positive} has a function of degree $5$ over $\Q$, hence infinitely many points of degree
+$5$ (\cref{lem:hilbert}):
+\begin{itemize}
+\item[L] ($13$ curves, $g\le2$): for a rational cusp $P$, $\ell(5P)=6-g>\ell(4P)$;
+\item[K] ($14$ curves, $g=3,4$): in genus $3$, $5$ is not a Weierstrass gap at the cusp $\infty$ (read off
+ from the orders of vanishing of a basis of cusp forms); in genus $4$ the curve is not hyperelliptic (the
+ quadrics in the canonical ideal have the right rank), so $K-P$ is base-point free of degree $5$;
+\item[W] ($12$ curves): an explicit divisor $D$ of degree $5$ with $\ell(D)=2$ and no base point, on a canonical
+ model certified through the Sturm bound and a Hilbert polynomial comparison;
+\item[P] ($4$ curves): the $\Q$-pentagonal curves of \cite[Theorems~1.4--1.5]{Orlic2025}.
+\end{itemize}
+
+\subsection{The negative curves}
+For the remaining $139$ curves we show finiteness. The arguments are listed by code in \cref{tab:negative}.
+
+\begin{lemma}[Rank zero]\label{lem:rankzero}
+If $C(\Q)\ne\varnothing$, $J(C)(\Q)$ is finite and $C$ has no function of degree $5$ over $\Q$, then $C$ has
+finitely many points of degree $5$.
+\end{lemma}
+\begin{proof}
+As in \cref{lem:inject}, each point of degree $5$ is the unique effective divisor in its class, and there are
+finitely many classes.
+\end{proof}
+
+\emph{Rank zero} ($82$ curves). We show $J(\Q)$ finite from nonvanishing $L$-values (exact modular-symbol
+$L$-ratios), using Kato \cite[Corollary~14.3]{Kato2004} as applied to modular Jacobians with nontrivial
+character in \cite[\S4]{DerickxSutherland2017}. The absence of a function of degree $5$ comes from
+\begin{itemize}
+\item[Z] ($74$ curves) Orli\'c's classification: genus $\ge5$ and not in Orli\'c's lists of curves of
+ $\Q$-gonality at most $5$, so $\gon_\Q\ge6$ \cite{Orlic2025};
+\item[B] ($2$ curves, $35\langle-1,8\rangle$ and $55\langle-1,4\rangle$, of genus $7$ and $9$) the curves are
+ bielliptic \cite[Theorem~0.2]{JeonKimSchweizer2020}, so a function of degree $5$ would violate
+ \cref{lem:CS}: $g\le 2+4=6$;
+\item[T] ($3$ curves) Petri lifting: over $\Fp$ every class of $W^1_5$ is $A+P$ for an explicit rational
+ base-point free class $A$ of degree $4$, with Petri tangent dimension $1$; \cref{lem:local} identifies $W^1_5$
+ near each such class with the Abel curve $A+C$, so a rational pencil of degree $5$ has a base point;
+\item[R] ($3$ curves) a complete sieve of rational divisor classes: an explicit subgroup of $J(\Q)$ generated
+ by differences of rational points is shown to be all of $J(\Q)$, and every class of $W^1_5(\Fp)$ in its reduction
+ is lifted and checked over $\Q$. At level $40$ the order $4032$ of $J(\Q)$ is bounded above using the action of
+ $1-T_\ell+\ell\langle\ell\rangle$ on the integral homology (computed from Manin symbols) together with point
+ counts, and attained by the explicit subgroup; at level $48$ the bounds $2304$ and $12800$ come from the
+ description of $J_1(48)(\Q)_{\mathrm{tors}}$ by cuspidal divisors \cite[Theorem~4.13]{DEH2021}, transferred along
+ the forgetful map.
+\end{itemize}
+
+\emph{Positive rank} ($57$ curves). None of these curves has a function of degree $5$ over $\Q$: they have genus
+at least $8$ and are not in the classification of curves of $\Q$-gonality at most $5$
+\cite{IshiiMomose1991,JeonKim2007}, \cite[Theorems~1.3--1.5]{Orlic2025}, except $43\langle-1,2\rangle$, which has
+$\Q$-gonality $7$ by \cref{prop:43}. Here we use the classification of curves with infinitely many points of
+degree at most $4$ \cite[Theorems~1.4--1.6]{DerickxOrlic2026}: none of these curves has infinitely many points of
+degree $\le4$, so if it had infinitely many points of degree $5$, its density degree would be $5$. By Kadets and
+Vogt \cite[Theorem~1.3]{KadetsVogt2025}, applied with $d=5$ (so $m=\lceil d/2\rceil-1=2$ and $\varepsilon=3d-1-6m=2$),
+either $g\le\max(d(d-1)/2+1,\,3m(m-1)+m\varepsilon)=11$, or there is a morphism $X\to Y$ of degree $5$ to a curve
+$Y$ with infinitely many rational points, that is, to $\PP^1$ or to an elliptic curve of positive rank. So for
+$g\ge12$ it suffices to exclude these two kinds of maps. For $9\le g\le11$, the classification of curves of minimum density degree $5$
+\cite[Proposition~6.3 and Table~1]{KadetsVogt2025} leaves, besides these covers and curves of genus $5$ to $8$,
+only normalizations of Debarre--Fahlaoui curves: the points may then come from a curve in
+$\mathrm{Sym}^2E$ of class $(5+m)H-mF$ (Debarre--Fahlaoui \cite{DebarreFahlaoui1993}); adjunction gives
+arithmetic genus $11-m(m-1)/2$, so $m\le2$ and the addition map to $E$ has degree $6$ or $7$.
+\begin{itemize}
+\item[E] ($43$ curves, genus $\ge12$, so only elliptic maps of degree $5$ need to be excluded) every positive-rank elliptic factor $E$ has conductor $N$, multiplicity one
+ and odd analytic rank, and for $N\le800$ the parametrization through $X_0(N)$ is optimal
+ \cite[Corollary~4.10]{DerickxOrlic2026}; so every morphism $X_\Delta(N)\to E'$ with $E'$ isogenous to $E$ has
+ degree divisible by $t\cdot d_E$, where $t=[(\Z/N\Z)^\times:\Delta]$ and $d_E$ is the optimal modular degree,
+ and $t,d_E>1$ in all these cases (\cref{tab:classE}; see also \cite[Corollary~4.12]{DerickxOrlic2026}); so $t\,d_E$ is composite and
+ the degree is not $5$;
+\item[E0] ($5$ curves, at levels $109$ and $125$) the decomposition of the Jacobian has no positive-rank
+ elliptic factor;
+\item[D] ($3$ curves of genus $9$ or $10$: $37\langle-1,10\rangle$, $57\langle-1,2\rangle$, $73\langle-1,6\rangle$)
+ here a Debarre--Fahlaoui configuration must also be excluded, that is, elliptic maps of degree $5$, $6$ or $7$:
+ at level $73$ there is no positive-rank elliptic factor, and at levels $37$ and $57$ every elliptic map of
+ positive rank has degree at least $12$ and $8$ respectively \cite[Corollary~4.10]{DerickxOrlic2026};
+\item[C] ($1$ curve, $43\langle-1,2\rangle$) the only possibly positive-rank factor is an elliptic curve $A$; at
+ $p=2$, $A(\F_2)$ has order $5$, and no full coset of it lies in $\W(\F_2)$, which has $2133$ elements. A
+ positive-dimensional translate in $\W$ over $\Q$ would reduce to such a coset (prime-to-$2$ torsion specializes
+ injectively), so $\W(\Q)$ is finite;
+\item[F] ($5$ curves, levels $53$, $61$, $65$) there is a map $f\colon C\to E$ of degree $4$ whose pullback is
+ the positive-rank part $A$, and the surface $Z=\{f^*Q+P\}$ of reducible divisors lies in $\W$. At a good odd
+ prime $p$, with $B=A(\Fp)$, we check that every full $B$-coset in $\W(\Fp)$ lies in $Z$, that the intersection
+ of the corresponding tangent spaces has dimension at most $2$, and that $A\times C\to\Pic^5C$ has injective
+ differential at the relevant points. Since $f_*f^*=[4]$ and $p$ is odd, $A$ has a smooth model over $\Z_p$;
+ lifting $B$ to $A(\Z_p)$ and applying \cref{lem:local} puts every rational translate of $A$ in $\W$ into $Z$.
+ A point of degree $5$ in $Z$ would be $f^*Q+P$ with a unique, hence rational, point $P$, which is impossible.
+\end{itemize}
+
+\begin{proof}[Proof of Theorem B]
+The $43$ positive curves, the $139$ curves above, the $7$ further projections, the $15$ curves with large index
+and the $807$ projections to $X_0(N)$ account for all $1011$ strict pairs with $N\le191$, and projection to
+$X_0(N)$ handles $N\ge192$.
+\end{proof}
+
+\begin{proof}[Proof of Corollary E]
+The $39$ positive curves other than Orli\'c's four $\Q$-pentagonal curves have $\Q$-gonality at most $4$: those
+of genus $g\le4$ have a rational cusp, so $\gon_\Q\le\max(g,2)\le4$ (\S\ref{sec:method-I}), and the twelve
+curves of type W are $\Q$-tetragonal \cite[Theorem~1.3]{Orlic2025}. By \cref{lem:hilbert} they have density degree at most $4$. The four
+pentagonal curves have genus $6$, $6$, $8$ and $16$, so finitely many rational points by Faltings
+\cite{Faltings1991}, and none of them occurs in the lists of \cite[Theorems~1.4, 1.5 and~1.6]{DerickxOrlic2026}
+of curves with infinitely many points of degree $2$, $3$ or $4$. By Theorem~B they have infinitely many points
+of degree $5$.
+\end{proof}
+
+Every case has a certificate or a precise citation in the accompanying repository
+(\texttt{certificates/B\_intermediate\_quintic}), which also contains the full case list.

@@ -1,0 +1,15 @@
+{
+  "id": "X1(35)",
+  "status": "RANK_ZERO_BY_EXACT_CENTRAL_VALUE",
+  "source_sha256": {
+    "run_rankzero_audit.py": "0aa37edfe204e3fb53363da1583daad71232a5cdecb23e025c48f432ccfcf7cd",
+    "central_value.m": "76e75dcec9371897cd6d40cbfc031ba7ab3a9db596f9f28a8213afd565f814c9",
+    "enumeration.py": "a65b1e9507e3637f4328f5d5c36e5449c7cff5ff3e9cdb3285a7c96ad62e351a",
+    "run_genus5_batch.py": "091fcc9774fb29f7892f008b996e1c627458684b80a74959aff55c27228ca952",
+    "UNIFORM_EXCLUSIONS.md": "6b1046ce577aaaf80cdb52fef9063ff6e8092c65df48831670c05b269276db9b"
+  },
+  "artifact_sha256": {
+    "input.json": "fc8153d2a7103fa0064dbd06f0fb569281483e03df123ccbf93c41b361f255e7",
+    "central_value.log": "69bcbf3e420eb38fe59a1cfbe4dce252251a623198111ff8da710a82a700d353"
+  }
+}

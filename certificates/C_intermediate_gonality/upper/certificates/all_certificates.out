@@ -1,0 +1,38 @@
+CERTIFIED 41.168.11.b.1: deg D = 6, h0(D) = 2, so gon_Q <= 6, where
+  D = 1*[orbit of 2/41 (width 1), degree 1]
+    + 5*[orbit of 3/41 (width 1), degree 1]
+ORBITS [ 1/41 (width 1), 6/41 (width 1), 2/41 (width 1), 3/41 (width 1), 41/40 
+(width 41) ]
+CERTIFIED 41.210.11.b.1: deg D = 8, h0(D) = 2, so gon_Q <= 8, where
+  D = 8*[orbit of 7/41 (width 1), degree 1]
+ORBITS [ 1/41 (width 1), 2/41 (width 1), 4/41 (width 1), 8/41 (width 1), 7/41 
+(width 1), 41/40 (width 41) ]
+CERTIFIED 41.420.21.d.1: deg D = 11, h0(D) = 2, so gon_Q <= 11, where
+  D = 11*[orbit of 2/41 (width 1), degree 1]
+ORBITS [ 1/41 (width 1), 6/41 (width 1), 4/41 (width 1), 11/41 (width 1), 7/41 
+(width 1), 16/41 (width 1), 8/41 (width 1), 3/41 (width 1), 12/41 (width 1), 
+2/41 (width 1), 41/40 (width 41) ]
+CERTIFIED 45.432.21.g.2: deg D = 10, h0(D) = 2, so gon_Q <= 10, where
+  D = 2*[orbit of 8/45 (width 1), degree 1]
+    + 2*[orbit of 2/45 (width 1), degree 1]
+    + 2*[orbit of 13/45 (width 1), degree 1]
+    + -1*[orbit of 4/63 (width 5), degree 2]
+    + 2*[orbit of 11/15 (width 3), degree 2]
+    + -1*[orbit of 8/81 (width 5), degree 2]
+    + -1*[orbit of 2/9 (width 5), degree 2]
+    + 1*[orbit of 2/15 (width 3), degree 2]
+    + -1*[orbit of 8/65 (width 9), degree 3]
+    + -1*[orbit of 1/25 (width 9), degree 3]
+    + 1*[orbit of 1/42 (width 15), degree 4]
+    + 1*[orbit of 45/44 (width 45), degree 6]
+ORBITS [ 1/45 (width 1), 11/45 (width 1), 8/45 (width 1), 4/45 (width 1), 2/45 
+(width 1), 13/45 (width 1), 4/63 (width 5), 11/15 (width 3), 8/81 (width 5), 2/9
+(width 5), 2/15 (width 3), 8/65 (width 9), 1/25 (width 9), 1/42 (width 15), 
+45/44 (width 45) ]
+CERTIFIED 49.392.19.i.2: deg D = 11, h0(D) = 2, so gon_Q <= 11, where
+  D = 5*[orbit of 9/49 (width 1), degree 1]
+    + 1*[orbit of 6/49 (width 1), degree 1]
+    + 4*[orbit of 12/49 (width 1), degree 1]
+    + 1*[orbit of 2/49 (width 1), degree 1]
+ORBITS [ 1/49 (width 1), 3/49 (width 1), 9/49 (width 1), 4/49 (width 1), 6/49 
+(width 1), 12/49 (width 1), 2/49 (width 1), 2/7 (width 7), 49/48 (width 49) ]

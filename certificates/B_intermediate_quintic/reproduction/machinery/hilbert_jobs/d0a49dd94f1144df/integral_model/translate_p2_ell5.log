@@ -1,0 +1,8 @@
+Loading "canonical_input.m"
+p=2 ell=5 genus=9 place_counts=[ 9, 4, 2, 0, 0 ] W5=2133 group=[ 38, 1330, 0 ] 
+tested_subgroups=1
+SUBGROUP generators=[
+266*G.2
+] complete_cosets=0
+COMPLETE_COSETS_TOTAL=0
+SUCCESS exhaustive translate-coset test

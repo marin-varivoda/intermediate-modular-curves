@@ -1,0 +1,5 @@
+N=73 genus=5 simple_dimensions=[ 1, 2, 2 ]
+ELLIPTIC conductor=73 coefficients=[ 1, -1, 0, 4, -3 ] rank_bounds=0,0 
+root_number=1 central_zero=false
+CERTIFIED: no positive-rank elliptic factors
+SUCCESS elliptic factor census

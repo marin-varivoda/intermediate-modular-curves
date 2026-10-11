@@ -1,0 +1,2 @@
+SUCCESS exact relations: {'level': 48, 'delta': [1, 11, 13, 23, 25, 35, 37, 47], 'index': 192, 'genus': 5, 'elliptic2': 0, 'elliptic3': 0, 'cusps': 24, 'cusp_widths': [1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 12, 12, 16, 16, 48, 48], 'degree_to_x0': 2, 'strict': True}
+Rational convention: mu-model duality. Geometric model check still required.

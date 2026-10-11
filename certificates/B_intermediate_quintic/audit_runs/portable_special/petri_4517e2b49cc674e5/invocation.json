@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/opt/sage/envs/sage/bin/python",
+    "run_petri_certificate.py",
+    "4517e2b49cc674e5",
+    "--prime",
+    "2"
+  ],
+  "snapshot": "/tmp/quintic-petri_4517e2b49cc674e5-e57sf028/machinery",
+  "pid": 3637481
+}

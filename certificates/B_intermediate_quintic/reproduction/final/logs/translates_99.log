@@ -1,0 +1,16 @@
+Loading "common.m"
+Loading "coordinates.m"
+Loading "place_cache.m"
+Loading "translation.m"
+N=99 p=5 positive_factors=[ <1, 1> ] positive_orders=[ 10 ]
+place_counts=[ 6, 31, 42, 126, 600 ]
+degree=5 place_classes=500/600
+partition=[ 5 ] divisors=600 classes=600
+partition=[ 4, 1 ] divisors=1356 classes=1356
+partition=[ 3, 2 ] divisors=2658 classes=2658
+partition=[ 3, 1, 1 ] divisors=3540 classes=3540
+partition=[ 2, 2, 1 ] divisors=6516 classes=6516
+partition=[ 2, 1, 1, 1 ] divisors=8252 classes=8252
+partition=[ 1, 1, 1, 1, 1 ] divisors=8504 classes=8504
+RESULT N=99 p=5 divisors=8504 W0=8504 B=10 n=10 subgroups=1 used=1 cosets=6 tangent=2
+SUCCESS translates N=99

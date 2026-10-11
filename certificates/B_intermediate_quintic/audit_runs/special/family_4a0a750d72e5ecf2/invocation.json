@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/opt/sage/envs/sage/bin/python",
+    "run_family_certificate.py",
+    "4a0a750d72e5ecf2",
+    "--prime",
+    "5"
+  ],
+  "snapshot": "/tmp/quintic-family_4a0a750d72e5ecf2-izo5qa0y/machinery",
+  "pid": 3626741
+}

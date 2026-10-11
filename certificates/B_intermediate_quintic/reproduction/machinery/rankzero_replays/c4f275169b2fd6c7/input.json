@@ -1,0 +1,53 @@
+{
+  "kind": "intermediate",
+  "row": {
+    "level": 56,
+    "delta": [
+      1,
+      9,
+      25,
+      31,
+      47,
+      55
+    ],
+    "index": 384,
+    "genus": 21,
+    "elliptic2": 0,
+    "elliptic3": 0,
+    "cusps": 24,
+    "cusp_widths": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      4,
+      4,
+      7,
+      7,
+      7,
+      7,
+      8,
+      8,
+      8,
+      8,
+      14,
+      14,
+      28,
+      28,
+      56,
+      56,
+      56,
+      56
+    ],
+    "degree_to_x0": 4,
+    "strict": true,
+    "id": "56:1,9,25,31,47,55",
+    "model_status": "NOT_CONSTRUCTED",
+    "degree5_function": "DOES_NOT_EXIST",
+    "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
+    "source": "intermediate_rank_zero_lemma",
+    "central_value_log": "intermediate_central/c4f275169b2fd6c7.log"
+  }
+}

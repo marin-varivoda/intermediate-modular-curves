@@ -1,0 +1,20 @@
+{
+  "id": "43:1,2,4,8,11,16,21,22,27,32,35,39,41,42",
+  "status": "FINITE_BY_ELLIPTIC_TRANSLATE_OBSTRUCTION",
+  "source_sha256": {
+    "case43_factors.m": "51f406fdf291bb9ec609ccf3650e83e4ff86d629bfd887e6edce49869949474b",
+    "test_translate_cosets.m": "5c0777cf9be994a9314ed387c7356ad5e8bb66382245b2a8656bd3e7f8a02dde",
+    "integral_relations.py": "f6273829c3da935a985a2591e85e76d2b804ef2eeab5bf4d46568d6fe985d902",
+    "export_canonical.py": "7e5b6af585f164e645f8dedae695a768a82bfb23369129be573aac6c0cd0f81a",
+    "verify_canonical_hilbert.m": "8315c4a7e7a1b03fa6b848810120a9b8d09418a0d05fde02769de380ba775829",
+    "CASE43.md": "d24ee094b5af82426452b0edeb75f928d37b170c9d6c7ab314070ba6c7f237a2"
+  },
+  "artifact_sha256": {
+    "relations.json": "836365b92b8e74c9abf936ea9b0878ee2fb2538bfbe629b0a86deed0e13bf350",
+    "canonical_input.m": "7abd178b7923b02b0ce1e03a5c910a206b5533093c39b6a824ba43d93450ac75",
+    "saturation.json": "0d797fe60cfc3b5de184e9f5538d546c32805cbe974c6f7d82076f44375c9971",
+    "geometry_Q.log": "2f4dfb6d5b227d1c022787f14586cf027fd7da07f260db0cde5d521b2f61af55",
+    "factors.log": "2810c7bedb262b5866d7a6119e6898dd0d73050df997db8490206eb6b95e9a63",
+    "translate_p2_ell5.log": "44db4b30ef017c8d9f568f060cd5b0ea89764d04fdbf4293f9118aca6c1a8908"
+  }
+}

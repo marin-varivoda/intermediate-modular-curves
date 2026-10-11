@@ -1,0 +1,12 @@
+{
+  "id": "48:1,5,19,23,25,29,43,47",
+  "model_verified": true,
+  "seconds": 2.76,
+  "source_sha256": {
+    "enumeration.py": "a65b1e9507e3637f4328f5d5c36e5449c7cff5ff3e9cdb3285a7c96ad62e351a",
+    "canonical_relations.py": "59449a294fc0c6edd642a3af16ac06b4f9ab3cae117cab209c753089c0d4b404",
+    "export_canonical.py": "7e5b6af585f164e645f8dedae695a768a82bfb23369129be573aac6c0cd0f81a",
+    "verify_canonical.m": "d2f6365b9c42eebff4cbd35bce1dcd0aa0ab05e42f6ae171505251d2d00596ac",
+    "RATIONAL_MODELS.md": "96e8c26aafd61ebdacc3d69bda02d5209ce4e825ce718edc9acbf3cb8f51b304"
+  }
+}

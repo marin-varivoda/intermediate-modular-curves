@@ -1,0 +1,5 @@
+Loading "canonical_input.m"
+Loading "quartic_witnesses.m"
+exact Q quartic pencils verified
+quartic_reduction_classes=2 rational_reduction_points=4 quintic_pencil_classes=8
+SUCCESS complete Petri lifting checks: only known basepointed pencils

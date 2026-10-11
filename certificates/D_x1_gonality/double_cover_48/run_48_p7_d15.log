@@ -1,0 +1,4 @@
+Loading "data_48_23.m"
+Loading "dc_certificate.m"
+SETUP N=48 a=23 p=7 gX=37 gY=13 deg(B)=24 dmax=15
+gon(Y over F_7) = 8

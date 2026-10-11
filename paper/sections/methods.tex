@@ -1,0 +1,140 @@
+\section{Three methods}\label{sec:methods}
+
+Throughout, $C$ is a smooth projective geometrically integral curve of genus $g$ over a field $k$, and for a
+divisor $D$ we write $L(D)=\{f\in k(C)^\times:\operatorname{div}f+D\ge0\}\cup\{0\}$ and $\ell(D)=\dim L(D)$.
+A nonconstant $f\in k(C)$ has degree $\deg f=\deg(f)_\infty$, the degree of its pole divisor, and
+$\gon_kC\le d$ if and only if there is an effective divisor $D$ of degree at most $d$ with $\ell(D)\ge2$.
+
+\subsection{Method I: explicit pencils}\label{sec:method-I}
+To prove $\gon_\Q C\le d$ we exhibit a rational effective divisor $D$ of degree $d$ and compute
+$\ell(D)\ge2$ with Magma's Riemann--Roch routine. The divisors used are of three kinds:
+\begin{enumerate}
+\item divisors supported on rational cusps, or on cusps and other low-degree points, whose
+ Riemann--Roch spaces we compute from $q$-expansions at all cusps, using Zywina's package
+ \cite{ZywinaModular};
+\item pullbacks along a forgetful map $X_\Delta(N)\to X_{\Delta'}(M)$ of a pencil of minimal degree on the
+ target, whose gonality is known (\cref{lem:pullback});
+\item low genus: if $g\ge2$ and $P\in C(\Q)$, then $\ell(K-(g-2)P)=\ell((g-2)P)+1\ge2$ by Riemann--Roch, so
+ $\gon_\Q C\le g$; if $g\le1$ and $P\in C(\Q)$, then $\ell(2P)\ge2$ (and $\ell(P)=2$ if $g=0$).
+\end{enumerate}
+For $X_1(N)$ the upper bounds in Theorem~D are the degrees of the modular units of Derickx and van
+Hoeij \cite[Table~1]{DerickxVanHoeij2014}, which also equal the degree in $y$ of the model of
+\cite{SutherlandX1}.
+
+\subsection{Method II: finite-field exclusion}\label{sec:method-II}
+To prove $\gon_\Q C>d$, we choose a prime $p$ of good reduction (\cref{lem:specialization}) and show that
+$C_{\Fp}$ has no nonconstant function of degree at most $d$. For this we use the algorithm of Derickx and Terao
+\cite{DerickxTerao}, implemented in their Magma package CurveArith; it works over any finite field $\Fq$ (here
+$q=p$) and has two phases.
+
+\emph{Phase 1 (places and expansions).} Let $N_1=\#C(\Fq)$ and $n=\lceil N_1/(q+1)\rceil$. CurveArith
+enumerates the places of $C_{\Fq}$ of degree at most $d-\min(n,d-1)$, fixes a basis $\omega_1,\dots,\omega_g$
+of $H^0(C,\Omega^1)$, and at each place $P$ computes the first $m_P$ coefficients of the expansions of the
+$\omega_i$ in a uniformizer at $P$, as vectors over $\Fq$ ($\deg P$ coordinates per coefficient). For an
+effective divisor $D=\sum a_PP$ with $a_P\le m_P$ this gives a $g\times\deg D$ matrix $M_D$, whose columns
+are the coefficients of index $<a_P$ at each $P$ in its support.
+
+\begin{lemma}[{\cite{DerickxTerao}}]\label{lem:rank}
+$\ell(D)=\deg D+1-\rank M_D$.
+\end{lemma}
+\begin{proof}
+By Riemann--Roch, $\ell(D)=\deg D+1-g+\ell(K-D)$, and $\ell(K-D)=g-\rank M_D$ is the dimension of the space of
+holomorphic differentials vanishing on $D$.
+\end{proof}
+
+\begin{lemma}[{\cite{DerickxTerao,DerickxVanHoeij2014}}]\label{lem:fibres}
+If $C_{\Fq}$ has a nonconstant function $f$ of degree at most $d$, it has one whose pole divisor contains at
+least $n$ distinct rational places.
+\end{lemma}
+\begin{proof}
+The $N_1$ rational points are distributed among the $q+1$ fibres of $f$ over $\PP^1(\Fq)$, so one fibre
+contains at least $n$ of them. Compose $f$ with an automorphism of $\PP^1$ over $\Fq$ moving that fibre to
+$\infty$.
+\end{proof}
+
+\emph{Phase 2 (search).} CurveArith tests all effective divisors $D$ of degree $d$ containing at least $n$
+rational places for $\ell(D)\ge2$ (\cref{lem:rank}). This is enough for every strict intermediate curve in
+this paper. For the curves $X_1(N)$ with $41\le N\le50$ there are far too many such divisors, and we use
+instead a smaller family of larger divisors, as follows.
+
+\subsection{A smaller search family}\label{sec:phase2}
+Let $S=\{P_1,\dots,P_{N_1}\}$ be the rational places, and also write $S=\sum P_i$. Fix an integer $b\ge1$.
+For an effective divisor $Q$ with no rational place in its support and an effective divisor $E$ supported on
+$S$, put $s=\#\supp E$ and
+\begin{equation}\label{eq:budget}
+ c(E,Q)=b\,s+\max(n-s,0)+\deg E+\deg Q.
+\end{equation}
+Let $\mathcal F_b(d)$ be the set of divisors $H=bS+E+Q$ with $\deg Q\le d-n$, $c(E,Q)\le d$, and $E$
+maximal with this property for its $Q$ (for the order $E\le E'$).
+
+\begin{proposition}\label{prop:covers}
+Suppose $n\ge1$. If $C_{\Fq}$ has a nonconstant function of degree at most $d$, then there is
+$H\in\mathcal F_b(d)$ such that $L(H)$ contains a nonconstant function of degree at most $d$.
+\end{proposition}
+\begin{proof}
+By \cref{lem:fibres} there is such an $f$ whose pole divisor $D=A+Q$ has at least $n$ distinct rational
+places in its support, where $A$ is supported on $S$ and $Q$ on the other places. Put
+$E=\sum_{P\in S}\max(v_P(A)-b,0)P$ and $s=\#\supp E$. A place in $\supp E$ contributes $b+v_P(E)$ to $\deg A$,
+and $\supp A$ has at least $\max(n-s,0)$ further places, each contributing at least $1$. Hence
+$c(E,Q)\le\deg A+\deg Q=\deg f\le d$, and in particular $\deg Q\le d-n$. Since $v_P(A)\le b+v_P(E)$ for every
+$P\in S$, we have $D\le bS+E+Q$. Enlarging $E$ to a maximal $E'$ with $c(E',Q)\le d$ keeps
+$D\le bS+E'+Q$, so $f\in L(bS+E'+Q)$ with $bS+E'+Q\in\mathcal F_b(d)$.
+\end{proof}
+
+The divisors in $\mathcal F_b(d)$ have degree larger than $d$, so $\ell(H)\ge2$ is not enough: we need the
+least degree of a nonconstant function in $L(H)$. It can be read off from the same matrix $M_H$.
+
+\begin{lemma}\label{lem:kernel}
+Let $H$ be effective. The space $L(H)/k$ is isomorphic to the space of vectors $x$ with $M_Hx=0$. Under this
+isomorphism, the order of the pole of $f$ at $P\in\supp H$ is the largest $j\le v_P(H)$ such that the
+coordinates of $x$ belonging to the coefficient of index $j-1$ at $P$ are not all zero.
+\end{lemma}
+\begin{proof}
+For each $P\in\supp H$ let $V_P=\mathcal O_P/\mathfrak m_P^{v_P(H)}$ and $V=\bigoplus V_P$. Write each $\omega_i$ as $g_i\,du_P$ with $u_P$ the uniformizer chosen by CurveArith at $P$; the columns of
+$M_H$ are the coordinates (over $k$, using a $k$-basis of the residue field at $P$) of the jets of the $g_i$ in
+$V$, in which, for every $j$, the subspace $\mathfrak m_P^j/\mathfrak m_P^{v_P(H)}$
+is cut out by the vanishing of the coordinates of index $<j$; indeed, CurveArith computes the coefficients
+one at a time, subtracting a lift of each coefficient and dividing by the uniformizer, and this is
+$k$-linear. The pairing $(\phi,\eta)\mapsto\sum_P\operatorname{Tr}_{k(P)/k}\Res_P(\phi\,\eta\,du_P)$ identifies the principal parts $\bigoplus_P\mathfrak m_P^{-v_P(H)}/\mathcal O_P$
+with the dual of $V$, a principal part having pole order $\le j$ at $P$ exactly when it annihilates
+$\mathfrak m_P^{j}/\mathfrak m_P^{v_P(H)}$. By the residue theorem and Serre duality, a principal part is
+the principal part of a function in $L(H)$ (unique up to constants) if and only if it annihilates the image
+of $H^0(C,\Omega^1)$ in $V$, that is, if and only if its coordinate vector $x$ satisfies $M_Hx=0$.
+\end{proof}
+
+\emph{Precision.} The expansions computed in Phase~1 suffice for every $H\in\mathcal F_b(d)$: at a rational place
+$P\in\supp E$ we have $v_P(H)=b+v_P(E)\le bs+\deg E\le d$, which is CurveArith's precision there, and at a place
+$P$ of degree $e\ge2$ we have $e\,v_P(H)\le\deg Q\le d-n$, so $v_P(H)\le\lfloor(d-\min(n,d-1))/e\rfloor$, which is
+CurveArith's precision there. (The program checks this before searching.)
+
+So for $H\in\mathcal F_b(d)$ we compute the kernel of $M_H$ and check whether some nonzero kernel vector, up
+to scalars, gives a pole divisor of degree at most $d$. By \cref{prop:covers}, if this fails for every
+$H\in\mathcal F_b(d)$, then $\gon_{\Fq}C>d$. The same argument with $b=0$ and all effective divisors of degree
+at most $d$ handles curves without rational points; we did not need this case.
+
+\begin{remark}
+\Cref{prop:covers} and \cref{lem:kernel} are an elementary variation on the second phase of
+\cite{DerickxTerao}; the first phase is used unchanged. The point is that $\mathcal F_b(d)$ is much smaller
+than the set of divisors of degree $d$ with $n$ rational places: the rational part is fixed to $bS$ up to the
+small excess $E$, and the kernels of $M_H$ have dimension at most $2$ or $3$ in all our computations.
+For a fixed $Q$, the divisors $bS+E+Q$ share the block of rows of $bS+Q$, so we eliminate those once and
+add the rows of $E$ incrementally. This variation was first implemented as an option
+\texttt{Al:="Cover"} of CurveArith's \texttt{CAHasFunctionOfDegreeAtMost}; for the curves $X_1(N)$ we run
+the same search in a short C++ program (\S\ref{sec:computations}).
+\end{remark}
+
+\subsection{Method III: lifting}\label{sec:method-III}
+When $C_{\Fp}$ has more functions or divisor classes of a given kind than can come from $\Q$, we use the
+structure of $J(\Q)$, where $J=\Jac C$, to decide which of them lift. The arguments are of three types, each
+explained where it is used:
+\begin{enumerate}
+\item \emph{rank zero}: if $J(\Q)$ is finite, reduction at an odd good prime is injective on $J(\Q)$, and
+ a finite list of classes over $\Fp$ can be compared with explicit rational classes
+ (\S\ref{sec:quintic-x0}, \S\ref{sec:quintic-intermediate});
+\item \emph{a known positive-rank part}: if $J(\Q)=A(\Q)+T$ for an explicit abelian subvariety $A$ and an
+ explicit finite group $T$, the reduction of $J(\Q)$ is contained in an explicit subgroup of $J(\Fp)$
+ (the curve $43.132.9.a.2$ in \S\ref{sec:gonality-intermediate}, and Route Q in \S\ref{sec:quintic-x0}, \cref{tab:routeQ});
+\item \emph{local rigidity}: if over $\Fp$ the relevant locus agrees, to first order, with a known family
+ defined over $\Q$, a formal implicit function argument shows that it agrees over $\Z_p$
+ (\cref{lem:local}).
+\end{enumerate}

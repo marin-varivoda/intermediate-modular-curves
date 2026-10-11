@@ -1,0 +1,104 @@
+\section{Introduction}
+
+Let $N$ be a positive integer and $\Delta$ a subgroup with $\{\pm1\}\subseteq\Delta\subseteq(\Z/N\Z)^\times$.
+The intermediate modular curve $X_\Delta(N)$ is the modular curve attached to
+\[
+ \Gamma_\Delta(N)=\left\{\begin{pmatrix}a&b\\c&d\end{pmatrix}\in\SL_2(\Z): c\equiv 0 \bmod N,\ a \bmod N\in\Delta\right\}.
+\]
+It lies between $X_1(N)=X_{\{\pm1\}}(N)$ and $X_0(N)=X_{(\Z/N\Z)^\times}(N)$, and it is defined over $\Q$.
+We call $X_\Delta(N)$ \emph{strict} if both inclusions $\{\pm1\}\subsetneq\Delta\subsetneq(\Z/N\Z)^\times$
+are strict. We follow the notation of Jeon, Kim and Schweizer \cite{JeonKimSchweizer2020}, Orli\'c
+\cite{Orlic2025} and Derickx and Orli\'c \cite{DerickxOrlic2026}, and we name curves by their LMFDB labels
+\cite{LMFDB,RSZB2022}.
+
+For a curve $C$ over a field $k$, the \emph{$k$-gonality} $\gon_k C$ is the least degree of a nonconstant
+morphism $C\to\PP^1$ defined over $k$. A \emph{point of degree $d$} on $C/\Q$ is a closed point whose residue
+field has degree $d$ over $\Q$. The \emph{density degree} of $C$ is the least $d$ such that $C$ has
+infinitely many points of degree $d$. By Hilbert irreducibility, $C$ has infinitely many points of degree
+$\gon_\Q C$, so the density degree is at most the $\Q$-gonality.
+
+\subsection{Previous work}
+Points of low degree on modular curves have been studied intensively, with the degree going up one at a
+time. For $X_0(N)$, the curves with infinitely many points of degree $2$ follow from Ogg's classification of
+hyperelliptic curves \cite{Ogg1974} and Bars' classification of bielliptic curves \cite{Bars1999}; degree
+$3$ is due to Jeon \cite{Jeon2021}; degree $4$ to Hwang and Jeon \cite{HwangJeon2024} and independently to
+Derickx and Orli\'c \cite{DerickxOrlicX0}; and degree $5$ to Derickx, Hwang, Jeon and Orli\'c \cite{DHJO},
+except for thirty levels that their methods did not reach. For intermediate curves, degree $2$ is due to
+Jeon, Kim and Schweizer \cite{JeonKimSchweizer2020}, degree $3$ to Dalal \cite{Dalal2023}, and degree
+$4$ to Derickx and Orli\'c \cite{DerickxOrlic2026}. In \cite{DerickxOrlic2026} the authors explain the obstacles to extending
+their methods to degree $5$; Theorem~B below settles that case.
+
+For gonality, the hyperelliptic and trigonal intermediate curves were found by Ishii and Momose
+\cite{IshiiMomose1991} and Jeon and Kim \cite{JeonKim2007}. Orli\'c \cite{Orlic2025} determined all
+intermediate curves of $\Q$-gonality at most $5$, and the $\Q$-gonality of every strict curve with $N\le40$.
+The $\Q$-gonality of $X_0(N)$ is known for $N<145$ by Najman and Orli\'c \cite{NajmanOrlic2024}, and that
+of $X_1(N)$ for $N\le40$ by Derickx and van Hoeij \cite{DerickxVanHoeij2014}, who also gave upper bounds
+for $N\le 250$.
+
+\subsection{Results}
+\begin{theoremC}\label{thm:C}
+Let $X_\Delta(N)$ be a strict intermediate curve with $N\le 50$. Its $\Q$-gonality is given in
+\cref{tab:C}. For $N\le 40$ these values are due to Orli\'c \cite{Orlic2025}, as are those of $6$ of the
+$24$ curves with $41\le N\le 50$, which have gonality $4$ or $5$; two more have genus $3$ and $4$ and are
+trigonal. The values for the other $16$ curves are new.
+\end{theoremC}
+
+\begin{theoremD}\label{thm:D}
+For $41\le N\le 50$, the $\Q$-gonality of $X_1(N)$ equals the upper bound of Derickx and van Hoeij
+\cite{DerickxVanHoeij2014}:
+\begin{center}
+\begin{tabular}{l|cccccccccc}
+$N$ & 41 & 42 & 43 & 44 & 45 & 46 & 47 & 48 & 49 & 50\\\hline
+$\gon_\Q X_1(N)$ & 22 & 12 & 24 & 15 & 18 & 19 & 29 & 16 & 21 & 15
+\end{tabular}
+\end{center}
+\end{theoremD}
+
+\begin{theoremA}\label{thm:A}
+For each of the thirty levels
+\[
+ N\in\{74, 77, 79, 82, 83, 85, 86, 88, 89, 92, 96, 98, 99, 100, 101, 103, 107, 111, 118, 123, 128, 131, 141, 142, 143, 145, 155, 159, 167, 191\}
+\]
+left open in \cite[\S7]{DHJO}, the curve $X_0(N)$ has only finitely many points of degree $5$, and no
+morphism of degree $5$ to $\PP^1$ over $\Q$. Together with \cite[Theorem~1.10]{DHJO}, this completes the
+list of curves $X_0(N)$ with infinitely many points of degree $5$.
+\end{theoremA}
+
+\begin{theoremB}\label{thm:B}
+Exactly $43$ strict intermediate curves $X_\Delta(N)$ have infinitely many points of degree $5$. They are
+listed in \cref{tab:positive}, and each of them has a morphism of degree $5$ to $\PP^1$ over $\Q$.
+\end{theoremB}
+
+\begin{corollaryE}\label{cor:E}
+The strict intermediate curves of density degree $5$ are exactly the four $\Q$-pentagonal curves of
+Orli\'c \cite[Theorems~1.4--1.5]{Orlic2025}: $X_\Delta(31)$ with $\Delta=\langle-1,2\rangle$ and
+$\Delta=\langle-1,5\rangle$, $X_\Delta(44)$ with $\Delta=\langle-1,5\rangle$, and $X_\Delta(125)$ with
+$\Delta=\langle-1,4\rangle$.
+\end{corollaryE}
+
+This parallels the case of $X_0(N)$, where $X_0(109)$ is the only curve of density degree $5$ \cite{DHJO}.
+
+\subsection{Methods}
+We have tried to keep the new mathematical input to a minimum, so that the paper can be checked by a human
+reader. Wherever a published result or an inequality settles a case, we use it: Castelnuovo--Severi, the
+classifications of curves of small gonality \cite{IshiiMomose1991,JeonKim2007,Orlic2025}, and the
+classifications of curves with infinitely many points of degree at most $4$
+\cite{JeonKimSchweizer2020,Dalal2023,DerickxOrlic2026,DHJO}. Everything else is done by three methods,
+each stated once:
+\begin{enumerate}
+\item[I.] \emph{Explicit pencils}: an explicit divisor $D$ with $\ell(D)\ge2$ gives $\gon_\Q\le\deg D$
+ (\S\ref{sec:method-I}).
+\item[II.] \emph{Finite-field exclusion}: at a prime of good reduction, a complete search over $\Fp$ shows
+ that there is no function of degree at most $d$ (\S\ref{sec:method-II}). We use the gonality algorithm of
+ Derickx and Terao \cite{DerickxTerao} and their package CurveArith. For the large curves $X_1(N)$ we keep
+ their first phase (places and expansions of differentials) unchanged and replace their second phase by a
+ search over a smaller family of divisors, run in compiled code (\S\ref{sec:phase2}). For $X_1(48)$ we
+ search instead on the quotient by a diamond involution (\S\ref{sec:double-cover}).
+\item[III.] \emph{Lifting arguments}: when a finite field allows more than $\Q$ does, a Mordell--Weil or
+ local argument decides which classes over $\Fp$ come from $\Q$. This is needed for Theorems~A
+ and~B and for one curve in Theorem~C.
+\end{enumerate}
+
+All computations were done in Magma~V2.29-4 \cite{Magma} and SageMath~10.7. Code, data and logs are
+available in the repository accompanying this paper; \S\ref{sec:computations} describes how to rerun
+them.

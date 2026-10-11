@@ -1,0 +1,77 @@
+label,N,Delta_generators,index,genus,gonality,lower_bound,lower_method,lower_source,upper_bound,upper_method,upper_source
+13.28.0.a.1,13,-1 3,28,0,1,1,genus,genus 0,1,genus,genus 0 with a rational cusp
+13.42.0.a.2,13,-1 5,42,0,1,1,genus,genus 0,1,genus,genus 0 with a rational cusp
+15.48.1.a.1,15,-1 4,48,1,2,2,genus,genus 1,2,genus,genus 1 with a rational cusp
+16.48.0.v.1,16,-1 7,48,0,1,1,genus,genus 0,1,genus,genus 0 with a rational cusp
+17.36.1.a.2,17,-1 2,36,1,2,2,genus,genus 1,2,genus,genus 1 with a rational cusp
+17.72.1.a.2,17,-1 4,72,1,2,2,genus,genus 1,2,genus,genus 1 with a rational cusp
+19.60.1.a.2,19,-1 7,60,1,2,2,genus,genus 1,2,genus,genus 1 with a rational cusp
+20.72.1.f.2,20,-1 9,72,1,2,2,genus,genus 1,2,genus,genus 1 with a rational cusp
+21.64.1.a.3,21,-1 4,64,1,2,2,genus,genus 1,2,genus,genus 1 with a rational cusp
+21.96.3.a.1,21,-1 8,96,3,2,2,cited,"Orlić, Thm 1.2 (Table 1)",2,cited,"Orlić, Thm 1.2 (Table 1)"
+24.96.1.dg.2,24,-1 11,96,1,2,2,genus,genus 1,2,genus,genus 1 with a rational cusp
+24.96.3.ge.2,24,-1 5,96,3,3,3,cited,"Orlić, Thm 1.2 (Table 1)",3,cited,"Orlić, Thm 1.2 (Table 1)"
+24.96.3.gi.1,24,-1 7,96,3,3,3,cited,"Orlić, Thm 1.2 (Table 1)",3,cited,"Orlić, Thm 1.2 (Table 1)"
+25.60.0.a.1,25,-1 4,60,0,1,1,genus,genus 0,1,genus,genus 0 with a rational cusp
+25.150.4.f.1,25,-1 7,150,4,4,4,cited,"Orlić, Thm 1.2 (Table 1)",4,cited,"Orlić, Thm 1.2 (Table 1)"
+26.84.4.a.1,26,-1 3,84,4,3,3,cited,"Orlić, Thm 1.2 (Table 1)",3,cited,"Orlić, Thm 1.2 (Table 1)"
+26.126.4.a.1,26,-1 5,126,4,3,3,cited,"Orlić, Thm 1.2 (Table 1)",3,cited,"Orlić, Thm 1.2 (Table 1)"
+27.108.1.a.1,27,-1 8,108,1,2,2,genus,genus 1,2,genus,genus 1 with a rational cusp
+28.96.4.c.4,28,-1 3,96,4,3,3,cited,"Orlić, Thm 1.2 (Table 1)",3,cited,"Orlić, Thm 1.2 (Table 1)"
+28.144.4.d.1,28,-1 13,144,4,3,3,cited,"Orlić, Thm 1.2 (Table 1)",3,cited,"Orlić, Thm 1.2 (Table 1)"
+29.60.4.a.1,29,-1 4,60,4,3,3,cited,"Orlić, Thm 1.2 (Table 1)",3,cited,"Orlić, Thm 1.2 (Table 1)"
+29.210.8.b.2,29,-1 12,210,8,6,6,cited,"Orlić, Thm 1.2 (Table 1)",6,cited,"Orlić, Thm 1.2 (Table 1)"
+30.144.5.a.1,30,-1 11,144,5,4,4,cited,"Orlić, Thm 1.2 (Table 1)",4,cited,"Orlić, Thm 1.2 (Table 1)"
+31.96.6.a.1,31,-1 2,96,6,5,5,cited,"Orlić, Thm 1.2 (Table 1)",5,cited,"Orlić, Thm 1.2 (Table 1)"
+31.160.6.c.1,31,-1 5,160,6,5,5,cited,"Orlić, Thm 1.2 (Table 1)",5,cited,"Orlić, Thm 1.2 (Table 1)"
+32.96.1.f.1,32,-1 7,96,1,2,2,genus,genus 1,2,genus,genus 1 with a rational cusp
+32.192.5.bu.1,32,-1 15,192,5,4,4,cited,"Orlić, Thm 1.2 (Table 1)",4,cited,"Orlić, Thm 1.2 (Table 1)"
+33.96.5.a.4,33,-1 2,96,5,4,4,cited,"Orlić, Thm 1.2 (Table 1)",4,cited,"Orlić, Thm 1.2 (Table 1)"
+33.240.11.a.1,33,-1 10,240,11,6,6,cited,"Orlić, Thm 1.2 (Table 1)",6,cited,"Orlić, Thm 1.2 (Table 1)"
+34.108.5.a.2,34,-1 9,108,5,4,4,cited,"Orlić, Thm 1.2 (Table 1)",4,cited,"Orlić, Thm 1.2 (Table 1)"
+34.216.9.a.1,34,-1 13,216,9,6,6,cited,"Orlić, Thm 1.2 (Table 1)",6,cited,"Orlić, Thm 1.2 (Table 1)"
+35.96.5.a.2,35,-1 4,96,5,4,4,cited,"Orlić, Thm 1.2 (Table 1)",4,cited,"Orlić, Thm 1.2 (Table 1)"
+35.144.7.a.2,35,-1 8,144,7,4,4,cited,"Orlić, Thm 1.2 (Table 1)",4,cited,"Orlić, Thm 1.2 (Table 1)"
+35.192.9.b.3,35,-1 11,192,9,6,6,cited,"Orlić, Thm 1.2 (Table 1)",6,cited,"Orlić, Thm 1.2 (Table 1)"
+35.288.13.a.2,35,-1 6,288,13,8,8,cited,"Orlić, Thm 1.2 (Table 1)",8,cited,"Orlić, Thm 1.2 (Table 1)"
+36.144.3.c.1,36,-1 11,144,3,3,3,cited,"Orlić, Thm 1.2 (Table 1)",3,cited,"Orlić, Thm 1.2 (Table 1)"
+36.216.7.u.1,36,-1 17,216,7,4,4,cited,"Orlić, Thm 1.2 (Table 1)",4,cited,"Orlić, Thm 1.2 (Table 1)"
+37.76.4.a.2,37,-1 3,76,4,3,3,cited,"Orlić, Thm 1.2 (Table 1)",3,cited,"Orlić, Thm 1.2 (Table 1)"
+37.114.4.b.1,37,-1 8,114,4,3,3,cited,"Orlić, Thm 1.2 (Table 1)",3,cited,"Orlić, Thm 1.2 (Table 1)"
+37.228.10.a.2,37,-1 10,228,10,6,6,cited,"Orlić, Thm 1.2 (Table 1)",6,cited,"Orlić, Thm 1.2 (Table 1)"
+37.342.16.c.2,37,-1 6,342,16,9,9,cited,"Orlić, Thm 1.2 (Table 1)",9,cited,"Orlić, Thm 1.2 (Table 1)"
+38.180.10.a.1,38,-1 7,180,10,6,6,cited,"Orlić, Thm 1.2 (Table 1)",6,cited,"Orlić, Thm 1.2 (Table 1)"
+39.112.5.a.2,39,-1 4,112,5,4,4,cited,"Orlić, Thm 1.2 (Table 1)",4,cited,"Orlić, Thm 1.2 (Table 1)"
+39.168.9.a.1,39,-1 5,168,9,4,4,cited,"Orlić, Thm 1.2 (Table 1)",4,cited,"Orlić, Thm 1.2 (Table 1)"
+39.224.9.a.3,39,-1 16,224,9,6,6,cited,"Orlić, Thm 1.2 (Table 1)",6,cited,"Orlić, Thm 1.2 (Table 1)"
+39.336.17.c.1,39,-1 14,336,17,8,8,cited,"Orlić, Thm 1.2 (Table 1)",8,cited,"Orlić, Thm 1.2 (Table 1)"
+40.144.5.gn.1,40,-1 9 11,144,5,4,4,cited,"Orlić, Thm 1.2 (Table 1)",4,cited,"Orlić, Thm 1.2 (Table 1)"
+40.144.7.fp.1,40,-1 3,144,7,4,4,cited,"Orlić, Thm 1.2 (Table 1)",4,cited,"Orlić, Thm 1.2 (Table 1)"
+40.144.7.fs.1,40,-1 7,144,7,4,4,cited,"Orlić, Thm 1.2 (Table 1)",4,cited,"Orlić, Thm 1.2 (Table 1)"
+40.288.13.sp.1,40,-1 9,288,13,8,8,cited,"Orlić, Thm 1.2 (Table 1)",8,cited,"Orlić, Thm 1.2 (Table 1)"
+40.288.13.sq.2,40,-1 11,288,13,7,7,cited,"Orlić, Thm 1.2 (Table 1)",7,cited,"Orlić, Thm 1.2 (Table 1)"
+40.288.9.bh.1,40,-1 19,288,9,6,6,cited,"Orlić, Thm 1.2 (Table 1)",6,cited,"Orlić, Thm 1.2 (Table 1)"
+41.84.5.a.1,41,-1 2,84,5,4,4,cagonality,"gon over F_3 = 4 (0.5 s); also Orlić, Thm 1.3",4,pullback,"degree 2 map to level 41 (genus 3, hyperelliptic)"
+41.168.11.b.1,41,-1 4,168,11,6,6,cagonality,gon over F_2 = 6 (1 s),6,cusp_rr,certificates/41.168.11.b.1.m
+41.210.11.b.1,41,-1 3,210,11,8,8,cagonality,gon over F_5 = 8 (164 s),8,cusp_rr,certificates/41.210.11.b.1.m
+41.420.21.d.1,41,-1 9,420,21,11,11,cagonality,gon over F_2 = 11 (79 s),11,cusp_rr,certificates/41.420.21.d.1.m
+42.192.9.c.2,42,-1 5,192,9,6,6,cagonality,gon over F_5 = 6 (2 s),6,pullback,"degree 3 map to level 21 (genus 1, genus 1)"
+42.288.13.a.1,42,-1 13,288,13,6,6,cagonality,gon over F_5 = 6 (32 s),6,pullback,"degree 3 map to level 21 (genus 3, hyperelliptic)"
+43.132.9.a.2,43,-1 2,132,9,7,7,lifting,gon over F_3 = 6 and the unique degree-6 class over F_3 does not lift (certificates/C_43.132.9.a.2),7,special,special/43.132.9.a.2/certificate.m: cusps plus fibres of the degree-6 map to the elliptic curve X0+(43)
+43.308.15.b.1,43,-1 6,308,15,9,9,cagonality,gon over F_2 = 9 (22 s),9,special,special/43.308.15.b.1/certificate.m: cusps plus a degree-5 point descended from van Hoeij's degree-15 point on X1(43)
+44.144.8.c.4,44,-1 5,144,8,5,5,cagonality,"gon over F_3 = 5 (0.8 s); also Orlić, Thm 1.5",5,cited,"Orlić, Thm 1.5 (Q-pentagonal list)"
+44.360.16.e.1,44,-1 21,360,16,8,8,cagonality,gon over F_3 = 8 (13 s),8,pullback,"degree 2 map to level 22 (genus 6, Derickx–van Hoeij, gonality of X1(N) for N <= 40)"
+45.144.5.a.1,45,-1 4,144,5,4,4,cagonality,"gon over F_2 = 4 (0.2 s); also Orlić, Thm 1.3",4,cited,"Orlić, Thm 1.3 (Q-tetragonal list)"
+45.216.11.d.2,45,-1 8,216,11,6,6,cagonality,gon over F_2 = 6 (4 s),6,pullback,"degree 6 map to level 9 (genus 0, genus 0)"
+45.288.9.a.4,45,-1 14,288,9,6,6,cagonality,gon over F_2 = 6 (2 s),6,pullback,"degree 3 map to level 15 (genus 1, genus 1)"
+45.432.21.g.2,45,-1 19,432,21,10,10,cagonality,gon over F_2 = 10 (79 s),10,cusp_rr,certificates/45.432.21.g.2.m
+48.192.5.ky.2,48,-1 11,192,5,4,4,cagonality,"gon over F_5 = 4 (0.3 s); also Orlić, Thm 1.3",4,pullback,"degree 2 map to level 48 (genus 3, hyperelliptic)"
+48.192.7.hj.1,48,-1 5,192,7,4,4,cagonality,"gon over F_5 = 4 (0.5 s); also Orlić, Thm 1.3",4,pullback,"degree 2 map to level 48 (genus 3, hyperelliptic)"
+48.192.7.ho.1,48,-1 7 17,192,7,4,4,cagonality,"gon over F_5 = 4 (0.8 s); also Orlić, Thm 1.3",4,pullback,"degree 2 map to level 48 (genus 3, hyperelliptic)"
+48.384.13.nt.1,48,-1 23,384,13,8,8,cagonality,gon over F_7 = 8 (283 s),8,pullback,"degree 4 map to level 48 (genus 3, hyperelliptic)"
+48.384.19.bc.1,48,-1 7,384,19,8,8,cagonality,gon over F_7 = 8 (3945 s),8,pullback,"degree 4 map to level 48 (genus 3, hyperelliptic)"
+48.384.19.bj.1,48,-1 17,384,19,8,8,cagonality,gon over F_5 = 8 (644 s),8,pullback,"degree 4 map to level 48 (genus 3, hyperelliptic)"
+49.168.3.b.1,49,-1 6,168,3,3,3,genus,"genus 3, not hyperelliptic",3,genus,"genus 3, not hyperelliptic, projection from the rational cusp"
+49.392.19.i.2,49,-1 18,392,19,11,11,cagonality,gon over F_2 = 11 (71 s),11,cusp_rr,certificates/49.392.19.i.2.m
+50.180.4.a.2,50,-1 9,180,4,3,3,genus,"genus 4, not hyperelliptic",3,pullback,"degree 3 map to level 25 (genus 0, genus 0)"
+50.450.22.f.1,50,-1 7,450,22,10,10,cagonality,gon over F_3 = 10 (649 s),10,pullback,"degree 5 map to level 50 (genus 2, genus 2)"

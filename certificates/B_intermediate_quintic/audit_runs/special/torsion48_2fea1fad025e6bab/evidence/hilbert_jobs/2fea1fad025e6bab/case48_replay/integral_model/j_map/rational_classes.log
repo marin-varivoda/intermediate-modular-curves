@@ -1,0 +1,12 @@
+Loading "canonical_input.m"
+Loading "closed_cusp_ideals.m"
+Loading "signed_cusp_candidates.m"
+class=1 h0=2
+moving_degree=4
+class=2 h0=2
+moving_degree=4
+class=3 h0=2
+moving_degree=4
+class=4 h0=2
+moving_degree=4
+SUCCESS all 4 rational classes have no degree-five pencil

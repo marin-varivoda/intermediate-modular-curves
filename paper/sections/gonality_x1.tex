@@ -1,0 +1,91 @@
+\section{Gonality of \texorpdfstring{$X_1(N)$}{X1(N)}: proof of Theorem D}\label{sec:gonality-x1}
+
+\begin{proof}[Proof of Theorem D]
+\emph{Upper bounds.} Derickx and van Hoeij \cite[Table~1]{DerickxVanHoeij2014} give, for each $N$, a modular unit
+on $X_1(N)$ over $\Q$ whose degree is the value in Theorem~D; it is also the degree in $y$ of the plane model of
+\cite{SutherlandX1}, i.e.\ the degree of the coordinate function $x$.
+
+\emph{Lower bounds.} Let $u$ be the value in Theorem~D and $d=u-1$. For $N=48$ see \S\ref{sec:double-cover}. For the other $N$ we apply Method~II to $X_1(N)$ at the prime
+$p$ of \cref{tab:D}, which does not divide $N$; \S\ref{sec:prelim} explains why the reduction of the plane model
+of \cite{SutherlandX1} computes $X_1(N)_{\Fp}$, and we check its genus. Phase~1 is CurveArith's: the places of
+degree at most $R=d-\min(n,d-1)$ and the expansions of a basis of holomorphic differentials at them, with
+CurveArith's precisions. Phase~2 is the search of \S\ref{sec:phase2} over the family $\mathcal F_b(d)$. In every
+case it finds no function of degree at most $d$. By \cref{prop:covers} and \cref{lem:kernel},
+$\gon_{\Fp}X_1(N)_{\Fp}>d$, and by \cref{lem:specialization}, $\gon_\Q X_1(N)\ge u$.
+\end{proof}
+
+\input{tables/thmD}
+
+The second phase also counts the divisors it tests and compares the total with an independent count of
+$\#\mathcal F_b(d)$ computed from the numbers of places of each degree; they agree in every case.
+As a check of the whole pipeline, the same programs reproduce $\gon_{\F_2}X_1(29)=11$ (degree $10$ is
+excluded after testing $8568$ divisors, and a function of degree $11$ is found). For $X_1(47)$, an independent earlier computation,
+with a different implementation of the first phase (a different enumeration of places and expansions), tested
+exactly the same number $651{,}609{,}964$ of divisors and also found no function of degree at most $28$.
+
+\subsection{The level \texorpdfstring{$48$}{48}: a double cover}\label{sec:double-cover}
+For $N=48$ Method~II over $\F_5$ or $\F_7$ would need all places of degree up to $12$, which is out of reach.
+We use instead the quotient of $X=X_1(48)$ by the diamond operator $\langle 23\rangle$, an involution; the
+quotient is $Y=X_{\{\pm1,\pm23\}}(48)$, of genus $13$, and $X$ has genus $37$. Everything is computed on $Y$.
+
+Let $k$ be a finite field of odd characteristic, and $\pi\colon X\to Y$ a morphism of degree $2$ of smooth
+curves over $k$, the quotient by an involution $\sigma$. For a function $a$ on $Y$ write $\pi^*a=a\circ\pi$;
+these are exactly the $\sigma$-invariant functions on $X$. Fix a function $w$ on $X$ with $\sigma w=-w$; then
+$w^2=\pi^*\delta$ for a function $\delta$ on $Y$. Write $\operatorname{div}_Y\delta=B-2H$ with $B$ the sum of
+the branch points, so that $c:=\deg H=\tfrac12\deg B=g_X-2g_Y+1$. (For a hyperelliptic curve
+$w^2=\delta(x)$ over $Y=\PP^1$, all of this is classical: every function is $a(x)+b(x)w$.)
+
+\begin{lemma}\label{lem:dc}
+\begin{enumerate}
+\item Every function $f$ on $X$ is uniquely $f=\pi^*a+\pi^*b\cdot w$ with $a,b$ functions on $Y$, and $f$ comes
+ from $Y$ if and only if $b=0$.
+\item Put $t=2a$ and $n=a^2-b^2\delta$. Then $f+\sigma f=\pi^*t$, $f\cdot\sigma f=\pi^*n$, and for every place
+ $P$ of $Y$ the total pole order of $f$ above $P$ is $\deg P\cdot\max(0,-v_P(t),-v_P(n))$. In particular
+ $\deg_Xf\ge\deg_Yn$ and $\deg_Xf\ge\deg_Yt$.
+\item If $\deg_Xf=d$ and $b\ne0$, there are an effective divisor $E$ on $Y$ of degree $d-c$ and $u\ne0$, $h$ in
+ $L_Y(E+H)$ with $f=(\pi^*h+w)/\pi^*u$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(1) Take $\pi^*a=(f+\sigma f)/2$ and $\pi^*b=(f-\sigma f)/(2w)$, both $\sigma$-invariant.
+(2) The first two identities are direct. Measure the orders of the two values of $f$ above $P$ in units of
+$v_P$, say $\alpha,\beta$ (if a single ramified point $Q$ lies above $P$, then $\alpha=\beta=v_Q(f)/2$; if a single
+unramified point $Q$ of degree $2\deg P$ lies above $P$, then $\alpha=\beta=v_Q(f)$). The
+pole order above $P$ is $\deg P(\max(0,-\alpha)+\max(0,-\beta))$, while $v_P(n)=\alpha+\beta$ and
+$v_P(t)\ge\min(\alpha,\beta)$ with equality if $\alpha\ne\beta$. If $\alpha,\beta\ge0$ both sides vanish; if
+$\alpha<0\le\beta$ then $v_P(t)=\alpha\le v_P(n)$ and both sides are $-\alpha$; if $\alpha,\beta<0$ then
+$v_P(n)<v_P(t)$ and both sides are $-\alpha-\beta$.
+(3) Since $\operatorname{div}_Xw=R-\pi^*H$ with $R$ the ramification divisor, for every divisor $A$ on $Y$ the
+poles of $f$ are bounded by $\pi^*A$ if and only if $a\in L_Y(A)$ and $b\in L_Y(A-H)$. Take $A=\pi_*$ of the pole
+divisor of $f$, of degree $d$, and $E=\operatorname{div}b+A-H\ge0$, $u=1/b$, $h=a/b$.
+\end{proof}
+
+\begin{proposition}\label{prop:dc}
+$X$ has no nonconstant function of degree at most $m$ if $2\gon_k Y>m$ and, for every effective divisor $E$ on $Y$
+of degree $m-c$, every $u\ne0$ and every $h$ in $L_Y(E+H)$, the function $(\pi^*h+w)/\pi^*u$ has degree $>m$.
+\end{proposition}
+\begin{proof}
+Functions with $b=0$ are $\pi^*a$, of degree $2\deg_Ya$. For the others use \cref{lem:dc}(3) and enlarge $E$
+by $m-d$ points, which only enlarges $L_Y(E+H)$.
+\end{proof}
+
+For $X_1(48)$ we take $k=\F_7$ and $m=15$, so $c=12$ and $E$ has degree $3$. The diamond operator $\langle23\rangle$
+is defined over $\Q$ and extends to the smooth model of $X_1(48)$ over $\Z_{(7)}$; since $2$ is invertible, the
+quotient commutes with base change, so $Y_{\F_7}=X_1(48)_{\F_7}/\langle23\rangle$ is the reduction of $Y$. We use
+MD~Sage's canonical model of $Y$ (coordinates $y_0,\dots,y_{12}$, a basis of $S_2(\Gamma_Y)$ with integral
+$q$-expansions, $y_0=q+O(q^2)$), checked to have good reduction at $7$ as in \S\ref{sec:prelim}. Let
+$\psi\in S_2(\Gamma_1(48))$ have integral $q$-expansion, nonzero modulo $7$, with $\langle23\rangle\psi=-\psi$, and put
+$w=\psi/y_0$, a function on $X_1(48)$ with $\sigma w=-w$. Then $\delta=w^2=\psi^2/y_0^2$ is a ratio of two forms of
+weight $8$ on $Y$, $\delta=\mathrm{Nm}(y)/\mathrm{Dn}(y)$, from an identity $\psi^2\,\mathrm{Dn}(y)=y_0^2\,\mathrm{Nm}(y)$
+with integral coefficients checked to the Sturm bound. Reducing modulo $7$, $\bar w$ is a function on
+$X_1(48)_{\F_7}$ with $\sigma\bar w=-\bar w$ and $\bar w^2=\bar\delta$, so the function field of $X_1(48)_{\F_7}$ is
+$\F_7(Y)(\sqrt{\bar\delta})$; as a check, Magma computes its genus as $37$. \texttt{CAGonality} gives
+$\gon_{\F_7}Y=8$, so $2\gon Y=16>15$. There are $1328$ effective divisors $E$ of degree $3$ on $Y_{\F_7}$; each
+$L_Y(E+H)$ has dimension $3$, giving $57$ choices of $u$ up to scalars and $49$ of $h$ modulo $u$, and
+$3{,}709{,}104$ functions in all. The bound $\deg_Xf\ge\deg_Yn$ of \cref{lem:dc}(2) excludes all but $18$ of
+them, and for those the exact degree, computed on $Y$, is at least $16$. Hence $\gon_{\F_7}X_1(48)>15$, and
+$\gon_\Q X_1(48)=16$ by \cref{lem:specialization}. The divisors $E$ are split into parts by a key that depends only on $E$ (not on the order in which Magma lists
+places), so the parts cover every $E$ exactly once; the longest part took $12.5$ hours. The
+degree formula of \cref{lem:dc}(2) was checked against Magma's degree computation on $X$ itself for a sample of
+the candidates, and the whole procedure was tested on $X_1(24)$ and $X_1(26)$, where it reproduces the known
+gonalities.

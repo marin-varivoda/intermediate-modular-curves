@@ -1,0 +1,18 @@
+{
+  "id": "39:1,5,8,14,25,31,34,38",
+  "model_verified": true,
+  "seconds": 1.53,
+  "source_sha256": {
+    "enumeration.py": "a65b1e9507e3637f4328f5d5c36e5449c7cff5ff3e9cdb3285a7c96ad62e351a",
+    "canonical_relations.py": "59449a294fc0c6edd642a3af16ac06b4f9ab3cae117cab209c753089c0d4b404",
+    "export_canonical.py": "7e5b6af585f164e645f8dedae695a768a82bfb23369129be573aac6c0cd0f81a",
+    "verify_canonical_hilbert.m": "8315c4a7e7a1b03fa6b848810120a9b8d09418a0d05fde02769de380ba775829",
+    "MODEL_IDENTIFICATION.md": "a0325651bfbfb2c0a6255a833236fa218f3a327b2db61bc398c694d25f1d8205",
+    "RATIONAL_MODELS.md": "96e8c26aafd61ebdacc3d69bda02d5209ce4e825ce718edc9acbf3cb8f51b304"
+  },
+  "artifact_sha256": {
+    "relations.json": "0fdd9f097c06627dd6ffbfd33de9fa7e5cd939353539cd64099d1d181858f801",
+    "canonical_input.m": "99afe61a378f146ae2b49456acd3d7c39a95022ffe9e56ecc4e17d08d09e3e80",
+    "geometry.log": "2f4dfb6d5b227d1c022787f14586cf027fd7da07f260db0cde5d521b2f61af55"
+  }
+}

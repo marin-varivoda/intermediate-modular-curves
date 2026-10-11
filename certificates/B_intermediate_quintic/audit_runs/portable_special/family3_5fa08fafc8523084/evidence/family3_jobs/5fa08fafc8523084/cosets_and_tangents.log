@@ -1,0 +1,13 @@
+Loading "family_input.m"
+Loading "../../quotient_rational_fibers.m"
+Loading "../../linear_scheme_divisor.m"
+Loading "../../canonical_elliptic_fibers.m"
+forgetting linear system and involution constructed over finite field
+complete canonical elliptic fibers=6 fixed_divisor_degree=4
+elliptic_fiber_subgroup=6 expected=6 base_points=4
+W5=356 known_B_plus_C=24 full_B_coset_union=24 extra_classes=0
+orbit_size=6 intersection_tangent_dimension=2
+orbit_size=6 intersection_tangent_dimension=2
+orbit_size=6 intersection_tangent_dimension=2
+orbit_size=6 intersection_tangent_dimension=2
+SUCCESS elliptic-family metadata; no Q-classification asserted

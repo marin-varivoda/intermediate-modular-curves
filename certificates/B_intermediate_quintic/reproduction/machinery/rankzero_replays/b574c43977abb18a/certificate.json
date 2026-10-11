@@ -1,0 +1,15 @@
+{
+  "id": "64:1,31,33,63",
+  "status": "RANK_ZERO_BY_EXACT_CENTRAL_VALUE",
+  "source_sha256": {
+    "run_rankzero_audit.py": "0aa37edfe204e3fb53363da1583daad71232a5cdecb23e025c48f432ccfcf7cd",
+    "intermediate_central_value.m": "9cba0d8b400b9891499a94aa4103ce1098b7199955f2e83ade606a1bfe9a97a3",
+    "enumeration.py": "a65b1e9507e3637f4328f5d5c36e5449c7cff5ff3e9cdb3285a7c96ad62e351a",
+    "run_genus5_batch.py": "091fcc9774fb29f7892f008b996e1c627458684b80a74959aff55c27228ca952",
+    "UNIFORM_EXCLUSIONS.md": "6b1046ce577aaaf80cdb52fef9063ff6e8092c65df48831670c05b269276db9b"
+  },
+  "artifact_sha256": {
+    "input.json": "9de991c55118929ff3837c699de11bd36bbc50e0aa9fb0afa89b2a15f2a4bf1e",
+    "central_value.log": "5ddcada13f52498f69f90ad13f43be56aebd5d6937f7d0086091a43824507cb9"
+  }
+}

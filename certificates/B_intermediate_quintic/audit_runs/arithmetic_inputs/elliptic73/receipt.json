@@ -1,0 +1,14 @@
+{
+  "status": "FRESH_ARITHMETIC_INPUT_PASS",
+  "name": "elliptic73",
+  "command": [
+    "magma",
+    "-b",
+    "N:=73",
+    "/home/mvarivoda/x0_deg5/intermediate_modular_curves/elliptic_factors.m"
+  ],
+  "source_sha256": {
+    "elliptic_factors.m": "e01fb41b3f12516ca3d1e2e75ebe0a1dcecac84c66c1260bd3bcf472735ef477"
+  },
+  "log_sha256": "326365a96f0437677fba68f37fa7f7fe96bcdd290a8555574df0cacfc4d3fb36"
+}
