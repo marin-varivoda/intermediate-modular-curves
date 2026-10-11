@@ -4,7 +4,7 @@ Code, data and computational certificates for the paper
 
 > Marin Varivoda, *Gonality and quintic points on intermediate modular curves* (`paper/main.pdf`).
 
-For a subgroup $\{\pm1\}\subseteq\Delta\subseteq(\mathbb Z/N\mathbb Z)^\times$, the intermediate modular curve
+For a subgroup $\lbrace\pm1\rbrace \subseteq\Delta\subseteq(\mathbb Z/N\mathbb Z)^\times$, the intermediate modular curve
 $X_\Delta(N)$ lies between $X_1(N)$ and $X_0(N)$. It is *strict* if both inclusions are strict.
 
 ## Results
@@ -33,7 +33,7 @@ computational methods.
    $\mathrm{gon}_{\mathbb Q} X\ge\mathrm{gon}_{\mathbb F_p} X_{\mathbb F_p}$, and the latter is computed by the
    algorithm of Derickx and Terao. Their package CurveArith has two phases: (1) the places of small degree and the
    expansions of holomorphic differentials there, and (2) a search for effective divisors $D$ with
-   $\ell(D)\ge2$, using $\ell(D)=\deg D+1-\operatorname{rank}M_D$. For the large curves $X_1(N)$ we use phase 1
+   $\ell(D)\ge2$, using $\ell(D)=\deg D+1-\mathrm{rank}\,M_D$. For the large curves $X_1(N)$ we use phase 1
    unchanged and replace phase 2 by a search over a smaller family of divisors $bS+E+Q$ (paper, §3.3), reading
    the least degree of a function in $L(H)$ off the kernel of $M_H$. For $X_1(48)$ the search runs on the
    quotient by the diamond involution $\langle 23\rangle$ instead (paper, §5.1).

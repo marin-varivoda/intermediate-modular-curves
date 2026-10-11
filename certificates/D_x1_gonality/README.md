@@ -26,7 +26,7 @@ writes the expansions to a text file instead of passing them to CurveArith's sea
 **Phase 2 (C++).** A function $f$ of degree $e\le d$ has a fibre $f^*(a)$ for some $a\in\mathbb P^1(\mathbb F_q)$.
 CurveArith enumerates all effective divisors of degree $e$ that could be such a fibre. `phase2/` enumerates the
 smaller family $F_b(d)$ of the paper (§3.3), the divisors $H=bS+E+Q$. For each $H$ it computes the kernel of the
-matrix $M_H$ of expansions. By Riemann–Roch, $\ell(D)=\deg D+1-\operatorname{rank}M_D$ for every
+matrix $M_H$ of expansions. By Riemann–Roch, $\ell(D)=\deg D+1-\mathrm{rank}\,M_D$ for every
 $D\le H$, so the kernel gives the least degree of a function in $L(H)$ directly. All arithmetic is exact
 (GMP, or $\mathbb F_p$ directly). The output `phase2.json` reports:
 
@@ -115,7 +115,7 @@ checked directly, and none has degree $\le 15$.
 - `run_24_*.m` and `run_26_*.m` are tests of the method on levels 24 and 26, where the answer is known.
 - `runs48/` holds the certificate itself, split into parts by a key of $E$ (as in Phase 1). Parts 0, 3, 4 and 6
   of 8 are in `shard_*.log`. Parts 1, 2, 5 and 7 exceeded their 16 GB limit (part 0 ran at 24 GB), so each was split in two and
-  redone as parts $\{1,9\}$, $\{2,10\}$, $\{5,13\}$ and $\{7,15\}$ of 16, at 30 GB each, in `redo16_*.log`.
+  redone as parts $\lbrace 1,9\rbrace$, $\lbrace 2,10\rbrace$, $\lbrace 5,13\rbrace$ and $\lbrace 7,15\rbrace$ of 16, at 30 GB each, in `redo16_*.log`.
   Every certified log ends with `CERTIFIED gon(X1(48) over F_7) > 15`. The counts `effective_E_this_shard` of
   the twelve logs add up to 1328.
 - `runs48/RESULT.json` summarises the run.
