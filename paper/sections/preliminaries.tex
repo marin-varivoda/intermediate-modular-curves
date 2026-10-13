@@ -42,12 +42,14 @@ We certify good reduction at $p$ in one of two ways.
  genus $g$, and has a nonsingular $\Fp$-point. Good reduction then follows from \cite[Lemma~2.3]{AKMJ2024}.
  The script \texttt{good\_reduction.m} verifies these conditions for every canonical model and prime used in
  this paper.
-\item For the plane models of $X_1(N)$ of \cite{SutherlandX1}, with $p\nmid N$, we check that reduction
- preserves the degree in $y$ and gives an irreducible function field with exact constant field $\Fp$ and genus
- $g(X_1(N))$ (\texttt{model\_checks.m}); as in \cite{DerickxVanHoeij2014}, we then compute on this reduction.
- Since $X_1(N)$ has good reduction at $p$ \cite{DeligneRapoport1973}, this field is the function field of its
- special fibre: all other components of a regular model dominating the smooth model are rational
- \cite[\S9.2.1, \S10.1]{Liu2002}.
+\item For $X_1(N)$ and $p\nmid N$ we compute, as Derickx and van Hoeij do \cite{DerickxVanHoeij2014}, with the
+ plane equation $F(x,y)=0$ of \cite{SutherlandX1} reduced modulo $p$. The script \texttt{model\_checks.m} checks
+ that the reduction is irreducible, with exact constant field $\Fp$ and genus $g=g(X_1(N))$. Since $X_1(N)$ has
+ good reduction at $p$ \cite{DeligneRapoport1973}, the reduced curve is a component of the special fibre of a
+ regular model of $X_1(N)$ (its generic point is regular, as the reduction is irreducible), and every such
+ special fibre consists of $X_1(N)_{\Fp}$ together with projective lines from blow-ups
+ \cite[\S9.2.1, \S9.3]{Liu2002}. Our curve has genus $g\ge2$, so it is not a projective line. It is therefore
+ $X_1(N)_{\Fp}$.
 \end{enumerate}
 
 \subsection{Tools from the geometry of curves}
