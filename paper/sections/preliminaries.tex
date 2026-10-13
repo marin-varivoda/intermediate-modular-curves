@@ -36,24 +36,18 @@ $L=f^*\mathcal O(1)$: its extension has degree $d$ and at least two sections on 
 $\gon_{\Fp}\mathcal C_{\Fp}\le d$. This is standard; see for example \cite{Poonen2007} and \cite{NajmanOrlic2024}.
 \end{proof}
 
-We certify that a given model has good reduction at $p$ in one of two ways.
+We certify good reduction at $p$ in one of two ways.
 \begin{enumerate}
-\item For the canonical model of an intermediate curve of genus $g$, we check that the reduction of the
- MD~Sage equations modulo $p$ is an integral curve with the Hilbert polynomial $(2g-2)t+1-g$ of the generic
- canonical curve, whose normalization has genus $g$, and which contains the reduction $(1:0:\dots:0)$ of the
- cusp $\infty$. Then the flat closure of $C$ in the integral model has the same special fibre (both have the same
- Hilbert polynomial and one contains the other); equality of arithmetic and geometric genus makes it normal,
- hence smooth, and the rational point makes it geometrically integral. (The primes $p\nmid N$ at which this can
- fail are controlled by Derickx and Najman \cite{DerickxNajman}; we only use primes where the check passes.)
-\item For $X_1(N)$ with $p\nmid N$: the curve $X_1(N)$ has good reduction at $p$ \cite{DeligneRapoport1973}.
- Its function field is $\Q(x,y)$ with $F(x,y)=0$ the plane model of \cite{SutherlandX1}, scaled to a
- primitive polynomial in $\Z[x,y]$. We reduce $F$ modulo $p$ and check that $\deg_y\bar F=\deg_yF$, that
- $\bar F$ is irreducible over $\Fp(x)$, that $\Fp$ is algebraically closed in
- $K_p=\Fp(x)[y]/(\bar F)$, and that $K_p$ has genus $g(X_1(N))$. The field $K_p$ is the residue field of
- the Gauss valuation of $\Q(x,y)$ extending the $p$-adic valuation, so it is the function field of a
- component of the special fibre of some normal model of $X_1(N)$. Every such model is dominated by a
- blow-up of the smooth model, whose exceptional components are rational \cite[\S9.3, \S10.1]{Liu2002}; as
- $g(K_p)=g(X_1(N))\ge 2$, $K_p$ is the function field of $X_1(N)_{\Fp}$.
+\item For a canonical model of genus $g$, we check that its reduction modulo $p$ is integral, has geometric
+ genus $g$, and has a nonsingular $\Fp$-point. Good reduction then follows from \cite[Lemma~2.3]{AKMJ2024}.
+ The script \texttt{good\_reduction.m} verifies these conditions for every canonical model and prime used in
+ this paper.
+\item For the plane models of $X_1(N)$ of \cite{SutherlandX1}, with $p\nmid N$, we check that reduction
+ preserves the degree in $y$ and gives an irreducible function field with exact constant field $\Fp$ and genus
+ $g(X_1(N))$ (\texttt{model\_checks.m}); as in \cite{DerickxVanHoeij2014}, we then compute on this reduction.
+ Since $X_1(N)$ has good reduction at $p$ \cite{DeligneRapoport1973}, this field is the function field of its
+ special fibre: all other components of a regular model dominating the smooth model are rational
+ \cite[\S9.2.1, \S10.1]{Liu2002}.
 \end{enumerate}
 
 \subsection{Tools from the geometry of curves}

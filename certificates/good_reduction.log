@@ -1,0 +1,371 @@
+Loading "C_intermediate_gonality/models/41.168.11.b.1.m"
+START_CHECK 41.168.11.b.1 p=2
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.070
+GENUS_OK seconds=0.120
+GOOD_REDUCTION 41.168.11.b.1 p=2 g=11 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=0.120
+Loading "C_intermediate_gonality/models/41.210.11.b.1.m"
+START_CHECK 41.210.11.b.1 p=5
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.190
+GENUS_OK seconds=0.320
+GOOD_REDUCTION 41.210.11.b.1 p=5 g=11 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=0.320
+Loading "C_intermediate_gonality/models/41.420.21.d.1.m"
+START_CHECK 41.420.21.d.1 p=2
+HILBERT_OK seconds=0.010
+INTEGRAL_OK seconds=1.050
+GENUS_OK seconds=3.220
+GOOD_REDUCTION 41.420.21.d.1 p=2 g=21 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=3.230
+Loading "C_intermediate_gonality/models/41.84.5.a.1.m"
+START_CHECK 41.84.5.a.1 p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.020
+GENUS_OK seconds=0.020
+GOOD_REDUCTION 41.84.5.a.1 p=3 g=5 point=[ 1, 0, 0, 0, 0 ] seconds=0.020
+Loading "C_intermediate_gonality/models/42.192.9.c.2.m"
+START_CHECK 42.192.9.c.2 p=5
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.060
+GENUS_OK seconds=0.110
+GOOD_REDUCTION 42.192.9.c.2 p=5 g=9 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=0.110
+Loading "C_intermediate_gonality/models/42.288.13.a.1.m"
+START_CHECK 42.288.13.a.1 p=5
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.440
+GENUS_OK seconds=1.190
+GOOD_REDUCTION 42.288.13.a.1 p=5 g=13 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=1.190
+Loading "C_intermediate_gonality/models/43.308.15.b.1.m"
+START_CHECK 43.308.15.b.1 p=2
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.220
+GENUS_OK seconds=0.740
+GOOD_REDUCTION 43.308.15.b.1 p=2 g=15 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=0.740
+Loading "C_intermediate_gonality/models/44.144.8.c.4.m"
+START_CHECK 44.144.8.c.4 p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.050
+GENUS_OK seconds=0.070
+GOOD_REDUCTION 44.144.8.c.4 p=3 g=8 point=[ 1, 0, 0, 0, 0, 0, 0, 0 ] seconds=0.070
+Loading "C_intermediate_gonality/models/44.360.16.e.1.m"
+START_CHECK 44.360.16.e.1 p=3
+HILBERT_OK seconds=0.010
+INTEGRAL_OK seconds=0.530
+GENUS_OK seconds=1.100
+GOOD_REDUCTION 44.360.16.e.1 p=3 g=16 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=1.100
+Loading "C_intermediate_gonality/models/45.144.5.a.1.m"
+START_CHECK 45.144.5.a.1 p=2
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.010
+GENUS_OK seconds=0.010
+GOOD_REDUCTION 45.144.5.a.1 p=2 g=5 point=[ 1, 0, 0, 0, 0 ] seconds=0.010
+Loading "C_intermediate_gonality/models/45.216.11.d.2.m"
+START_CHECK 45.216.11.d.2 p=2
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.080
+GENUS_OK seconds=0.150
+GOOD_REDUCTION 45.216.11.d.2 p=2 g=11 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=0.150
+Loading "C_intermediate_gonality/models/45.288.9.a.4.m"
+START_CHECK 45.288.9.a.4 p=2
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.030
+GENUS_OK seconds=0.050
+GOOD_REDUCTION 45.288.9.a.4 p=2 g=9 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=0.050
+Loading "C_intermediate_gonality/models/45.432.21.g.2.m"
+START_CHECK 45.432.21.g.2 p=2
+HILBERT_OK seconds=0.010
+INTEGRAL_OK seconds=1.120
+GENUS_OK seconds=3.900
+GOOD_REDUCTION 45.432.21.g.2 p=2 g=21 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=3.910
+Loading "C_intermediate_gonality/models/48.192.5.ky.2.m"
+START_CHECK 48.192.5.ky.2 p=5
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.000
+GENUS_OK seconds=0.000
+GOOD_REDUCTION 48.192.5.ky.2 p=5 g=5 point=[ 1, 0, 0, 0, 0 ] seconds=0.000
+Loading "C_intermediate_gonality/models/48.192.7.hj.1.m"
+START_CHECK 48.192.7.hj.1 p=5
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.040
+GENUS_OK seconds=0.050
+GOOD_REDUCTION 48.192.7.hj.1 p=5 g=7 point=[ 1, 0, 0, 0, 0, 0, 0 ] seconds=0.050
+Loading "C_intermediate_gonality/models/48.192.7.ho.1.m"
+START_CHECK 48.192.7.ho.1 p=5
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.020
+GENUS_OK seconds=0.030
+GOOD_REDUCTION 48.192.7.ho.1 p=5 g=7 point=[ 1, 0, 0, 0, 0, 0, 0 ] seconds=0.030
+Loading "C_intermediate_gonality/models/48.384.13.nt.1.m"
+START_CHECK 48.384.13.nt.1 p=7
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.240
+GENUS_OK seconds=0.400
+GOOD_REDUCTION 48.384.13.nt.1 p=7 g=13 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=0.400
+Loading "C_intermediate_gonality/models/48.384.19.bc.1.m"
+START_CHECK 48.384.19.bc.1 p=7
+HILBERT_OK seconds=0.010
+INTEGRAL_OK seconds=2.040
+GENUS_OK seconds=16.000
+GOOD_REDUCTION 48.384.19.bc.1 p=7 g=19 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=16.010
+Loading "C_intermediate_gonality/models/48.384.19.bj.1.m"
+START_CHECK 48.384.19.bj.1 p=5
+HILBERT_OK seconds=0.020
+INTEGRAL_OK seconds=1.460
+GENUS_OK seconds=5.860
+GOOD_REDUCTION 48.384.19.bj.1 p=5 g=19 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=5.870
+Loading "C_intermediate_gonality/models/49.392.19.i.2.m"
+START_CHECK 49.392.19.i.2 p=2
+HILBERT_OK seconds=0.010
+INTEGRAL_OK seconds=1.400
+GENUS_OK seconds=3.190
+GOOD_REDUCTION 49.392.19.i.2 p=2 g=19 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=3.200
+Loading "C_intermediate_gonality/models/50.450.22.f.1.m"
+START_CHECK 50.450.22.f.1 p=3
+HILBERT_OK seconds=0.020
+INTEGRAL_OK seconds=7.300
+GENUS_OK seconds=14.260
+GOOD_REDUCTION 50.450.22.f.1 p=3 g=22 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=14.270
+Loading "good_reduction_lmfdb_43.132.9.a.2.m"
+START_CHECK 43.132.9.a.2 (LMFDB model) p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.090
+GENUS_OK seconds=0.190
+GOOD_REDUCTION 43.132.9.a.2 (LMFDB model) p=3 g=9 point=[ 0, 0, 0, 0, 0, 1, 1, 0, 0 ] seconds=0.190
+Loading "D_x1_gonality/double_cover_48/data_48_23.m"
+START_CHECK Y = X_{+-1,+-23}(48) p=7
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.230
+GENUS_OK seconds=0.390
+GOOD_REDUCTION Y = X_{+-1,+-23}(48) p=7 g=13 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=0.390
+START_CHECK X_0(74) p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.140
+GENUS_OK seconds=0.160
+GOOD_REDUCTION X_0(74) p=3 g=8 point=[ 0, 0, 0, 0, 0, 0, 0, 1 ] seconds=0.160
+START_CHECK X_0(74) p=5
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.070
+GENUS_OK seconds=0.090
+GOOD_REDUCTION X_0(74) p=5 g=8 point=[ 0, 0, 0, 0, 0, 0, 0, 1 ] seconds=0.090
+START_CHECK X_0(77) p=5
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.030
+GENUS_OK seconds=0.060
+GOOD_REDUCTION X_0(77) p=5 g=7 point=[ 0, 0, 0, 0, 0, 1, 0 ] seconds=0.060
+START_CHECK X_0(79) p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.020
+GENUS_OK seconds=0.030
+GOOD_REDUCTION X_0(79) p=3 g=6 point=[ 0, 0, 0, 0, 1, 0 ] seconds=0.030
+START_CHECK X_0(82) p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.120
+GENUS_OK seconds=0.180
+GOOD_REDUCTION X_0(82) p=3 g=9 point=[ 0, 0, 0, 0, 0, 0, 0, 1, 0 ] seconds=0.180
+START_CHECK X_0(83) p=7
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.040
+GENUS_OK seconds=0.050
+GOOD_REDUCTION X_0(83) p=7 g=7 point=[ 0, 0, 0, 0, 0, 1, 0 ] seconds=0.050
+START_CHECK X_0(85) p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.040
+GENUS_OK seconds=0.050
+GOOD_REDUCTION X_0(85) p=3 g=7 point=[ 0, 0, 0, 0, 0, 1, 0 ] seconds=0.050
+START_CHECK X_0(85) p=7
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.040
+GENUS_OK seconds=0.070
+GOOD_REDUCTION X_0(85) p=7 g=7 point=[ 0, 0, 0, 0, 0, 1, 0 ] seconds=0.070
+START_CHECK X_0(86) p=7
+HILBERT_OK seconds=0.010
+INTEGRAL_OK seconds=0.130
+GENUS_OK seconds=0.220
+GOOD_REDUCTION X_0(86) p=7 g=10 point=[ 0, 0, 0, 0, 0, 0, 0, 0, 1, 0 ] seconds=0.220
+START_CHECK X_0(88) p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.070
+GENUS_OK seconds=0.100
+GOOD_REDUCTION X_0(88) p=3 g=9 point=[ 0, 0, 0, 0, 0, 0, 0, 1, 0 ] seconds=0.100
+START_CHECK X_0(89) p=3
+HILBERT_OK seconds=0.010
+INTEGRAL_OK seconds=0.040
+GENUS_OK seconds=0.050
+GOOD_REDUCTION X_0(89) p=3 g=7 point=[ 0, 0, 0, 0, 0, 1, 0 ] seconds=0.050
+START_CHECK X_0(92) p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.110
+GENUS_OK seconds=0.140
+GOOD_REDUCTION X_0(92) p=3 g=10 point=[ 0, 0, 0, 0, 0, 0, 0, 0, 1, 0 ] seconds=0.140
+START_CHECK X_0(96) p=7
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.060
+GENUS_OK seconds=0.080
+GOOD_REDUCTION X_0(96) p=7 g=9 point=[ 0, 0, 0, 0, 0, 0, 0, 0, 1 ] seconds=0.080
+START_CHECK X_0(98) p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.040
+GENUS_OK seconds=0.050
+GOOD_REDUCTION X_0(98) p=3 g=7 point=[ 0, 0, 0, 0, 0, 0, 1 ] seconds=0.050
+START_CHECK X_0(99) p=5
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.050
+GENUS_OK seconds=0.070
+GOOD_REDUCTION X_0(99) p=5 g=9 point=[ 0, 0, 0, 0, 0, 0, 0, 1, 0 ] seconds=0.070
+START_CHECK X_0(100) p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.020
+GENUS_OK seconds=0.030
+GOOD_REDUCTION X_0(100) p=3 g=7 point=[ 0, 0, 0, 0, 0, 0, 1 ] seconds=0.030
+START_CHECK X_0(101) p=5
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.060
+GENUS_OK seconds=0.080
+GOOD_REDUCTION X_0(101) p=5 g=8 point=[ 0, 0, 0, 0, 0, 0, 1, 0 ] seconds=0.080
+START_CHECK X_0(103) p=5
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.070
+GENUS_OK seconds=0.090
+GOOD_REDUCTION X_0(103) p=5 g=8 point=[ 0, 0, 0, 0, 0, 0, 1, 0 ] seconds=0.090
+START_CHECK X_0(107) p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.090
+GENUS_OK seconds=0.130
+GOOD_REDUCTION X_0(107) p=3 g=9 point=[ 0, 0, 0, 0, 0, 0, 0, 1, 1 ] seconds=0.130
+START_CHECK X_0(111) p=2
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.090
+GENUS_OK seconds=0.550
+GOOD_REDUCTION X_0(111) p=2 g=11 point=[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0 ] seconds=0.550
+START_CHECK X_0(118) p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.770
+GENUS_OK seconds=1.170
+GOOD_REDUCTION X_0(118) p=3 g=14 point=[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0 ] seconds=1.180
+START_CHECK X_0(123) p=2
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.580
+GENUS_OK seconds=0.890
+GOOD_REDUCTION X_0(123) p=2 g=13 point=[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0 ] seconds=0.890
+START_CHECK X_0(128) p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.030
+GENUS_OK seconds=0.080
+GOOD_REDUCTION X_0(128) p=3 g=9 point=[ 0, 0, 0, 0, 0, 0, 0, 0, 1 ] seconds=0.080
+START_CHECK X_0(131) p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.170
+GENUS_OK seconds=0.270
+GOOD_REDUCTION X_0(131) p=3 g=11 point=[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1 ] seconds=0.270
+START_CHECK X_0(141) p=2
+HILBERT_OK seconds=0.010
+INTEGRAL_OK seconds=0.440
+GENUS_OK seconds=0.840
+GOOD_REDUCTION X_0(141) p=2 g=15 point=[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0 ] seconds=0.840
+START_CHECK X_0(142) p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=1.210
+GENUS_OK seconds=2.260
+GOOD_REDUCTION X_0(142) p=3 g=17 point=[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 1 ] seconds=2.260
+START_CHECK X_0(143) p=2
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.250
+GENUS_OK seconds=0.430
+GOOD_REDUCTION X_0(143) p=2 g=13 point=[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 ] seconds=0.430
+START_CHECK X_0(145) p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.470
+GENUS_OK seconds=0.900
+GOOD_REDUCTION X_0(145) p=3 g=13 point=[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0 ] seconds=0.900
+START_CHECK X_0(155) p=2
+HILBERT_OK seconds=0.010
+INTEGRAL_OK seconds=0.400
+GENUS_OK seconds=1.030
+GOOD_REDUCTION X_0(155) p=2 g=15 point=[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0 ] seconds=1.040
+START_CHECK X_0(159) p=5
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=1.330
+GENUS_OK seconds=2.920
+GOOD_REDUCTION X_0(159) p=5 g=17 point=[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0 ] seconds=2.920
+START_CHECK X_0(167) p=3
+HILBERT_OK seconds=0.010
+INTEGRAL_OK seconds=0.510
+GENUS_OK seconds=0.990
+GOOD_REDUCTION X_0(167) p=3 g=14 point=[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1 ] seconds=0.990
+START_CHECK X_0(191) p=2
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.450
+GENUS_OK seconds=0.930
+GOOD_REDUCTION X_0(191) p=2 g=16 point=[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1 ] seconds=0.940
+Loading "B_intermediate_quintic/audit_runs/special/petri_1459e19c781c9c0f/evidence/hilbert_jobs/1459e19c781c9c0f/integral_model/canonical_input.m"
+START_CHECK petri 1459e19c781c9c0f p=5
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.020
+GENUS_OK seconds=0.020
+GOOD_REDUCTION petri 1459e19c781c9c0f p=5 g=7 point=[ 1, 0, 0, 0, 0, 0, 0 ] seconds=0.020
+Loading "B_intermediate_quintic/audit_runs/special/petri_4517e2b49cc674e5/evidence/hilbert_jobs/4517e2b49cc674e5/integral_model/canonical_input.m"
+START_CHECK petri 4517e2b49cc674e5 p=2
+HILBERT_OK seconds=0.010
+INTEGRAL_OK seconds=0.050
+GENUS_OK seconds=0.070
+GOOD_REDUCTION petri 4517e2b49cc674e5 p=2 g=9 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=0.070
+Loading "B_intermediate_quintic/audit_runs/special/petri_577694554b43283f/evidence/hilbert_jobs/577694554b43283f/integral_model/canonical_input.m"
+START_CHECK petri 577694554b43283f p=2
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.040
+GENUS_OK seconds=0.060
+GOOD_REDUCTION petri 577694554b43283f p=2 g=9 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=0.060
+Loading "B_intermediate_quintic/audit_runs/special/family_4a0a750d72e5ecf2/evidence/family_jobs/4a0a750d72e5ecf2/family_input.m"
+START_CHECK family 4a0a750d72e5ecf2 p=5
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.070
+GENUS_OK seconds=0.090
+GOOD_REDUCTION family 4a0a750d72e5ecf2 p=5 g=9 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=0.100
+Loading "B_intermediate_quintic/audit_runs/special/family_dc8a04ecdc10f967/evidence/family_jobs/dc8a04ecdc10f967/family_input.m"
+START_CHECK family dc8a04ecdc10f967 p=5
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.070
+GENUS_OK seconds=0.100
+GOOD_REDUCTION family dc8a04ecdc10f967 p=5 g=9 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=0.100
+Loading "B_intermediate_quintic/audit_runs/special/family_ef93d63ca2b377a8/evidence/family_jobs/ef93d63ca2b377a8/family_input.m"
+START_CHECK family65 ef93d63ca2b377a8 p=7
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.080
+GENUS_OK seconds=0.100
+GOOD_REDUCTION family65 ef93d63ca2b377a8 p=7 g=9 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=0.100
+Loading "B_intermediate_quintic/audit_runs/special/family3_5fa08fafc8523084/evidence/family3_jobs/5fa08fafc8523084/source/reduced_model/canonical_input.m"
+START_CHECK family3 5fa08fafc8523084 p=3
+HILBERT_OK seconds=0.010
+INTEGRAL_OK seconds=0.290
+GENUS_OK seconds=0.500
+GOOD_REDUCTION family3 5fa08fafc8523084 p=3 g=11 point=[ 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0 ] seconds=0.500
+Loading "B_intermediate_quintic/audit_runs/special/family3_bd67dfd630eb6c1b/evidence/family3_jobs/bd67dfd630eb6c1b/source/reduced_model/canonical_input.m"
+START_CHECK family3 bd67dfd630eb6c1b p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.220
+GENUS_OK seconds=0.340
+GOOD_REDUCTION family3 bd67dfd630eb6c1b p=3 g=11 point=[ 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0 ] seconds=0.340
+Loading "B_intermediate_quintic/audit_runs/special/torsion40/evidence/hilbert_jobs/82f731393c98cb7c/case40_final_replay/integral_model/reduced_model/canonical_input.m"
+START_CHECK torsion40 82f731393c98cb7c p=3
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.030
+GENUS_OK seconds=0.060
+GOOD_REDUCTION torsion40 82f731393c98cb7c p=3 g=7 point=[ 0, 0, 0, 0, 0, 1, 0 ] seconds=0.060
+Loading "B_intermediate_quintic/audit_runs/special/torsion48_2fea1fad025e6bab/evidence/hilbert_jobs/2fea1fad025e6bab/case48_replay/integral_model/canonical_input.m"
+START_CHECK torsion48 2fea1fad025e6bab p=5
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.040
+GENUS_OK seconds=0.050
+GOOD_REDUCTION torsion48 2fea1fad025e6bab p=5 g=7 point=[ 1, 0, 0, 0, 0, 0, 0 ] seconds=0.050
+Loading "B_intermediate_quintic/audit_runs/special/torsion48_efd0600330b90e51/evidence/hilbert_jobs/efd0600330b90e51/case48_replay/integral_model/canonical_input.m"
+START_CHECK torsion48 efd0600330b90e51 p=5
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.040
+GENUS_OK seconds=0.050
+GOOD_REDUCTION torsion48 efd0600330b90e51 p=5 g=7 point=[ 1, 0, 0, 0, 0, 0, 0 ] seconds=0.050
+Loading "B_intermediate_quintic/audit_runs/special/translate43/evidence/hilbert_jobs/d0a49dd94f1144df/integral_model/canonical_input.m"
+START_CHECK translate43 d0a49dd94f1144df p=2
+HILBERT_OK seconds=0.000
+INTEGRAL_OK seconds=0.030
+GENUS_OK seconds=0.070
+GOOD_REDUCTION translate43 d0a49dd94f1144df p=2 g=9 point=[ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=0.070
+ALL_67_GOOD_REDUCTION_CHECKS_PASS
