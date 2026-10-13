@@ -12,6 +12,7 @@ tables in `../data/`.
 | `C_intermediate_gonality/` | Theorem C: the 76 strict curves with $N\le 50$ | Magma, Sage | up to an hour per curve |
 | `C_43.132.9.a.2/` | Theorem C: the one curve that needs a lifting argument | Magma | minutes |
 | `D_x1_gonality/` | Theorem D: $X_1(N)$ for $41\le N\le 50$ | Magma, C++ | up to 30 hours per level |
+| `good_reduction.m` | Good reduction (paper, §2.2) of all 67 canonical models and primes used, via Adžaga et al., Lemma 2.3 | Magma | 30 seconds |
 
 `B_intermediate_quintic/` is a self-contained package with its own verifier and a hash-sealed record of every
 run (`audit_runs/`). Its receipts record the paths of the machine on which they were produced. They are left

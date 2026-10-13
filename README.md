@@ -53,6 +53,7 @@ computational methods.
 | `certificates/C_intermediate_gonality/` | Theorem C: canonical models, good-reduction checks, CurveArith lower bounds, upper-bound certificates |
 | `certificates/C_43.132.9.a.2/` | Theorem C: the curve 43.132.9.a.2, of gonality 7 (paper, Proposition 4.1) |
 | `certificates/D_x1_gonality/` | Theorem D: the two-phase computation for $X_1(N)$ and the double cover for $N=48$ |
+| `certificates/good_reduction.m` | Good reduction of every canonical model and prime used in the paper (Adžaga et al., Lemma 2.3) |
 | `third_party/` | Pinned external packages (git submodules) |
 | `verify.py` | Checks that every claim in `data/` is backed by a passing log or a citation |
 
