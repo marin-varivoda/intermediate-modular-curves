@@ -1,112 +1,63 @@
-// Streamlined characteristic-zero certificate for the degree-9 pencil.
-//
-// For D=3*C3+C4+P5, compute H^0(K-D) as exact linear conditions on the
-// 15-dimensional holomorphic differential space.  Cusp conditions use local
-// completions.  The P5 condition is evaluated directly in its degree-5
-// number field, avoiding expensive construction of P5 as a function-field
-// prime ideal.
+// gon_Q(43.308.15.b.1) <= 9: a base-point-free pencil of degree 9 on the MD Sage canonical model.
+// D = 3*C3 + C4 + P5 with C3, C4 rational points (cusps) and P5 a closed point of degree 5 (points.m).
+// See README.md for the argument. Run from this folder:  magma -b certificate.m
+SetQuitOnError(true); SetColumns(0);
+t0 := Realtime();
 
-SetSeed(2829824311);
-total_start := Realtime();
-load "model.m";
-load "place_tools.m";
+// ---- The model: a smooth canonical curve of genus 15 ----
+load "../../../models/43.308.15.b.1.m";        // X in P^14 (78 quadrics), g = 15
+eqs := DefiningEquations(X);
+assert g eq 15 and Dimension(X) eq 1 and Degree(X) eq 2*g - 2;
+assert IsIrreducible(X) and IsReduced(X);
+h := HilbertPolynomial(Ideal(X)); assert h eq (2*g - 2)*Parent(h).1 + 1 - g;
+// Its reduction mod 2 is integral of geometric genus 15 with a nonsingular F_2-point, so the model has good
+// reduction at 2 (Adzaga et al., Lemma 2.3); in particular X is smooth of genus 15 over Q.
+X2 := Curve(Reduction(X, 2));
+assert IsIrreducible(X2) and IsReduced(X2) and Genus(X2) eq g;
+assert IsNonsingular(X2, X2 ! ([GF(2) | 1] cat [GF(2) | 0 : i in [2..g]]));
+print "MODEL: smooth canonical curve of genus 15";
 
-Qt<t> := PolynomialRing(Rationals());
-fX := t^5 + 2*t^4 - 3*t^3 + 3*t^2 - t - 1;
-assert IsIrreducible(fX);
-K<a> := NumberField(fX);
-yvalue := (-2*a^4 - a^3 + 11*a^2 - 19*a + 13)/7;
-assert Evaluate(model,[a,yvalue]) eq 0;
-// The projection to the Y-line is etale at P5, so dY is a local generator.
-assert Evaluate(Derivative(model,1),[a,yvalue]) ne 0;
-print "P5_ETALENESS_VERIFIED=true";
+// ---- The points ----
+load "points.m";                                // K<a>, P5coeffs, P5coords, C3Jets, C4
+JacobianRank := func< pt | Rank(Matrix([[Evaluate(Derivative(f, j), pt) : j in [1..g]] : f in eqs])) >;
+// P5: on the curve and nonsingular; K has prime degree 5 and the coordinates are not all rational,
+// so P5 is a closed point of degree 5.
+assert Degree(K) eq 5 and P5coords[1] eq 1;
+assert &and[Evaluate(f, P5coords) eq 0 : f in eqs] and JacobianRank(P5coords) eq g - 2;
+assert Rank(Matrix(Rationals(), P5coeffs)) eq 5;
+// C3, C4: distinct rational points, nonsingular.
+C3 := C3Jets[1];
+assert &and[Evaluate(f, C3) eq 0 and Evaluate(f, C4) eq 0 : f in eqs];
+assert JacobianRank(C3) eq g - 2 and JacobianRank(C4) eq g - 2;
+assert Rank(Matrix(Rationals(), [C3, C4])) eq 2;
+// The jet at C3: the curve equations vanish to order 3 on C3 + C3Jets[2]*t + C3Jets[3]*t^2, and the tangent
+// vector C3Jets[2] is nonzero, so t is a local parameter at C3 (up to order 3).
+R<t> := PowerSeriesRing(Rationals(), 3);
+arc := [&+[R | C3Jets[n + 1][j]*t^n : n in [0..2]] + O(t^3) : j in [1..g]];
+assert &and[Valuation(Evaluate(f, arc)) ge 3 : f in eqs];
+assert Rank(Matrix(Rationals(), C3Jets[1..2])) eq 2;
+i0 := [j : j in [1..g] | C3[j] ne 0][1];
+assert C3Jets[1][i0] eq 1 and C3Jets[2][i0] eq 0 and C3Jets[3][i0] eq 0;   // x_{i0} = 1 along the jet
+print "POINTS: P5 of degree 5, C3 and C4 rational, all nonsingular";
 
-A2<Xaff,Yaff> := AffineSpace(Rationals(),2);
-C := Curve(A2,Evaluate(model,[Xaff,Yaff]));
-Fplane<xplane,yplane> := FunctionField(C);
-F, phi := AlgorithmicFunctionField(Fplane);
-x := phi(xplane);
-y := phi(yplane);
-assert x eq F.1;
-assert y eq F!BaseField(F).1;
+// ---- h^0(D) = 2 ----
+// A canonical section is a linear form in x_0, ..., x_14. Vanishing to order 3 at C3 is vanishing of the
+// coefficients of t^0, t^1, t^2 along the jet (x_{i0} = 1 trivializes the canonical bundle there);
+// vanishing at C4 is one condition; vanishing at P5 is one condition over K, i.e. five over Q.
+rows := C3Jets cat [C4] cat [[P5coeffs[j][n] : j in [1..g]] : n in [1..5]];
+r := Rank(Matrix(Rationals(), rows));
+assert #rows eq 9 and r eq 8;
+h0KD := g - r;                     // = 7
+h0D := 9 + 1 - g + h0KD;           // Riemann-Roch
+assert h0D eq 2;
+printf "H0: rank of the 9 conditions = %o, h0(K-D) = %o, h0(D) = %o\n", r, h0KD, h0D;
 
-O := MaximalOrderFinite(F);
-c3_saturated_ideal,c3_denominator :=
-    SaturatedOrderIdeal(O,[y,1/x]);
-c3_factors := Factorization(c3_saturated_ideal);
-c3_places := [Place(item[1]) : item in c3_factors];
-C3s := [P : P in c3_places |
-    Degree(P) eq 1 and Valuation(x,P) eq -4 and Valuation(y,P) eq 1];
-C4s := [P : P in InfinitePlaces(F) |
-    Degree(P) eq 1 and Valuation(x,P) eq 6 and Valuation(y,P) eq -4];
-assert #C3s eq 1 and #C4s eq 1;
-printf "PROGRESS|STAGE=cusps_finished|TOTAL_SECONDS=%.3o\n",
-    Realtime(total_start);
-
-W, to_diff := SpaceOfHolomorphicDifferentials(F);
-assert Dimension(W) eq 15 and Genus(F) eq 15;
-omegas := [to_diff(W.i) : i in [1..15]];
-dy := Differential(y);
-ratios := [omega/dy : omega in omegas];
-printf "PROGRESS|STAGE=holomorphic_space_finished|TOTAL_SECONDS=%.3o\n",
-    Realtime(total_start);
-
-condition_rows := [];
-
-// ord_C3(dY)=0: kill t^0,t^1,t^2.
-S3,m3 := Completion(F,C3s[1] : Precision := 5);
-E3 := [m3(ratio) : ratio in ratios];
-condition_rows cat:= [
-    [Rationals()!Coefficient(E3[j],exponent) : j in [1..15]]
-    : exponent in [0..2]
-];
-assert Rank(Matrix(Rationals(),condition_rows)) eq 3;
-printf "LOCAL_CONDITION|NAME=C3|RANK=3|TOTAL_SECONDS=%.3o\n",
-    Realtime(total_start);
-
-// ord_C4(dY)=-5: holomorphicity already kills t^0,...,t^4, and
-// ord_C4(omega)>=1 additionally kills t^5.
-S4,m4 := Completion(F,C4s[1] : Precision := 8);
-E4 := [m4(ratio) : ratio in ratios];
-condition_rows cat:= [
-    [Rationals()!Coefficient(E4[j],exponent) : j in [1..15]]
-    : exponent in [0..5]
-];
-assert Rank(Matrix(Rationals(),condition_rows)) eq 4;
-printf "LOCAL_CONDITION|NAME=C4|CUMULATIVE_RANK=4|TOTAL_SECONDS=%.3o\n",
-    Realtime(total_start);
-
-// P5 is unramified over the Y-line, so dY is a local generator of the
-// canonical sheaf there.  Evaluate each ratio exactly at (a,yvalue).
-function EvaluateAtP5(ratio)
-    coefficients := Eltseq(ratio);
-    value := K!0;
-    for i in [1..#coefficients] do
-        coefficient := coefficients[i];
-        numerator := Numerator(coefficient);
-        denominator := Denominator(coefficient);
-        specialized := Evaluate(numerator,yvalue)/Evaluate(denominator,yvalue);
-        value +:= specialized*a^(i-1);
-    end for;
-    return value;
-end function;
-
-P5_values := [EvaluateAtP5(ratio) : ratio in ratios];
-for coordinate in [1..5] do
-    Append(~condition_rows,[
-        Rationals()!Eltseq(P5_values[j])[coordinate] : j in [1..15]
-    ]);
-end for;
-
-M := Matrix(Rationals(),condition_rows);
-printf "VANISHING_MATRIX_ROWS=%o\n",NumberOfRows(M);
-printf "VANISHING_MATRIX_RANK=%o\n",Rank(M);
-assert Rank(M) eq 8;
-
-// deg(D)=3+1+5=9 and g=15.  Thus RR gives
-// h^0(D)=h^0(K-D)+9+1-15=(15-rank(M))-5=2.
-print "K_MINUS_D_H0=7";
-print "DEGREE9_DIVISOR_H0=2";
-print "RATIONAL_DEGREE9_PENCIL_VERIFIED=true";
-printf "TOTAL_SECONDS=%.3o\n",Realtime(total_start);
-exit;
+// ---- No base points ----
+// Removing one copy of C3, or C4, or the whole orbit P5 (a rational base locus containing one conjugate
+// contains all five) leaves h0 = 1, i.e. the conditions keep rank 8 resp. drop to rank 4 for 3*C3 + C4.
+assert Rank(Matrix(Rationals(), rows[1..2] cat rows[4..9])) eq 8;   // 2*C3 + C4 + P5
+assert Rank(Matrix(Rationals(), rows[1..3] cat rows[5..9])) eq 8;   // 3*C3 + P5
+assert Rank(Matrix(Rationals(), rows[1..4])) eq 4;                  // 3*C3 + C4
+print "BASE POINTS: none";
+printf "Q_GONALITY_UPPER_BOUND=9 VERIFIED=true  (%.1os)\n", Realtime(t0);
+quit;

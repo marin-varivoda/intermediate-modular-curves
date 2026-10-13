@@ -1,13 +1,7 @@
-Loading "model.m"
-Loading "place_tools.m"
-P5_ETALENESS_VERIFIED=true
-PROGRESS|STAGE=cusps_finished|TOTAL_SECONDS=40.690
-PROGRESS|STAGE=holomorphic_space_finished|TOTAL_SECONDS=180.460
-LOCAL_CONDITION|NAME=C3|RANK=3|TOTAL_SECONDS=366.140
-LOCAL_CONDITION|NAME=C4|CUMULATIVE_RANK=4|TOTAL_SECONDS=687.220
-VANISHING_MATRIX_ROWS=14
-VANISHING_MATRIX_RANK=8
-K_MINUS_D_H0=7
-DEGREE9_DIVISOR_H0=2
-RATIONAL_DEGREE9_PENCIL_VERIFIED=true
-TOTAL_SECONDS=688.510
+Loading "../../../models/43.308.15.b.1.m"
+MODEL: smooth canonical curve of genus 15
+Loading "points.m"
+POINTS: P5 of degree 5, C3 and C4 rational, all nonsingular
+H0: rank of the 9 conditions = 8, h0(K-D) = 7, h0(D) = 2
+BASE POINTS: none
+Q_GONALITY_UPPER_BOUND=9 VERIFIED=true  (1.6s)

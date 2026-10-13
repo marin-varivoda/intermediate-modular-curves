@@ -53,11 +53,11 @@ ingredient is needed:
   map X → X₀⁺(43) (an elliptic curve of rank 1) over P. Runtime 4.5 min.
 - `43.308.15.b.1`, degree 9: D = 3·cusp₃ + cusp₄ + P₅, where P₅ is the degree-5 point obtained by
   descending van Hoeij's degree-15 point on X₁(43) (van Hoeij, *Low degree places on the modular curve
-  X₁(N)*). Runtime 11.5 min.
+  X₁(N)*). The certificate works directly on the MD Sage model, with the three points given explicitly;
+  see `special/43.308.15.b.1/README.md`. Runtime 2 s.
 
-  **Status:** both are the old certificates, copied unchanged except for the file paths. They pass,
-  but they use the old models (the LMFDB model, and our own modular-unit plane model). The next step
-  is to port them to the MD Sage models.
+  The certificate for `43.132.9.a.2` works on the LMFDB model; `C_43.132.9.a.2/identify_model.m` shows
+  that this model is isomorphic over Q to the MD Sage model.
 
 ## Files
 
