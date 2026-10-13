@@ -13,9 +13,10 @@ are strict. We follow the notation of Jeon, Kim and Schweizer \cite{JeonKimSchwe
 
 For a curve $C$ over a field $k$, the \emph{$k$-gonality} $\gon_k C$ is the least degree of a nonconstant
 morphism $C\to\PP^1$ defined over $k$. A \emph{point of degree $d$} on $C/\Q$ is a closed point whose residue
-field has degree $d$ over $\Q$. The \emph{density degree} of $C$ is the least $d$ such that $C$ has
-infinitely many points of degree $d$. By Hilbert irreducibility, $C$ has infinitely many points of degree
-$\gon_\Q C$, so the density degree is at most the $\Q$-gonality.
+field has degree $d$ over $\Q$. The \emph{density degree set} $\delta(C/\Q)$ is the set of $d$ such that
+$C$ has infinitely many points of degree $d$, and its least element $\min\delta(C/\Q)$ is the \emph{minimum
+density degree} of $C$ \cite{KadetsVogt2025}. By Hilbert irreducibility, $C$ has infinitely many points of
+degree $\gon_\Q C$, so $\min\delta(C/\Q)\le\gon_\Q C$.
 
 \subsection{Previous work}
 Points of low degree on modular curves have been studied intensively, with the degree going up one at a
@@ -71,13 +72,13 @@ listed in \cref{tab:positive}, and each of them has a morphism of degree $5$ to 
 \end{theoremB}
 
 \begin{corollaryE}\label{cor:E}
-The strict intermediate curves of density degree $5$ are exactly the four $\Q$-pentagonal curves of
+The strict intermediate curves of minimum density degree $5$ are exactly the four $\Q$-pentagonal curves of
 Orli\'c \cite[Theorems~1.4--1.5]{Orlic2025}: $X_\Delta(31)$ with $\Delta=\langle-1,2\rangle$ and
 $\Delta=\langle-1,5\rangle$, $X_\Delta(44)$ with $\Delta=\langle-1,5\rangle$, and $X_\Delta(125)$ with
 $\Delta=\langle-1,4\rangle$.
 \end{corollaryE}
 
-This parallels the case of $X_0(N)$, where $X_0(109)$ is the only curve of density degree $5$ \cite{DHJO}.
+This parallels the case of $X_0(N)$, where $X_0(109)$ is the only curve of minimum density degree $5$ \cite{DHJO}.
 
 \subsection{Methods}
 We have tried to keep the new mathematical input to a minimum, so that the paper can be checked by a human

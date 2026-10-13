@@ -13,7 +13,7 @@ $X_\Delta(N)$ lies between $X_1(N)$ and $X_0(N)$. It is *strict* if both inclusi
 |---|---|
 | **Theorem A** | For the thirty levels $N$ left open by Derickx, Hwang, Jeon and Orlić, $X_0(N)$ has only finitely many points of degree 5 and no morphism of degree 5 to $\mathbb P^1$ over $\mathbb Q$. This completes the list of curves $X_0(N)$ with infinitely many quintic points. |
 | **Theorem B** | Exactly 43 strict intermediate curves have infinitely many points of degree 5, and each of them has a morphism of degree 5 to $\mathbb P^1$ over $\mathbb Q$. |
-| **Corollary E** | The strict intermediate curves of density degree 5 are exactly the four $\mathbb Q$-pentagonal curves of Orlić. |
+| **Corollary E** | The strict intermediate curves of minimum density degree 5 are exactly the four $\mathbb Q$-pentagonal curves of Orlić. |
 | **Theorem C** | The $\mathbb Q$-gonality of all 76 strict curves $X_\Delta(N)$ with $N\le 50$ (`data/strict_intermediate_N_le_50.csv`). |
 | **Theorem D** | The $\mathbb Q$-gonality of $X_1(N)$ for $41\le N\le 50$, which equals the Derickx–van Hoeij upper bound at every level. |
 

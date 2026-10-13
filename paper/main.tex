@@ -43,7 +43,7 @@
 \email{marin.varivoda@math.hr}
 \date{\today}
 \subjclass[2020]{11G18, 14H51, 11G05, 14G05}
-\keywords{modular curves, gonality, points of low degree, density degree}
+\keywords{modular curves, gonality, points of low degree, minimum density degree}
 
 \begin{abstract}
 For $\{\pm1\}\subseteq\Delta\subseteq(\Z/N\Z)^\times$ let $X_\Delta(N)$ be the intermediate modular curve
@@ -52,7 +52,7 @@ with $N\le 50$, and of $X_1(N)$ for $41\le N\le 50$, where it equals the upper b
 at every level. We also settle the thirty levels left open by Derickx, Hwang, Jeon and Orli\'c, completing the
 list of curves $X_0(N)$ with infinitely many points of degree $5$, and we show that exactly $43$ strict
 intermediate curves have infinitely many points of degree $5$. As a consequence, the strict intermediate curves
-of density degree $5$ are exactly the four $\Q$-pentagonal curves found by Orli\'c. The proofs use published
+of minimum density degree $5$ are exactly the four $\Q$-pentagonal curves found by Orli\'c. The proofs use published
 classifications, the Castelnuovo--Severi inequality, and three computational methods; all computations can be
 rerun from the accompanying code.
 \end{abstract}
@@ -67,14 +67,6 @@ rerun from the accompanying code.
 \input{sections/quintic_x0}
 \input{sections/quintic_intermediate}
 \input{sections/computations}
-
-\subsection*{Acknowledgements}
-The computations rest on software written by others: I thank Maarten Derickx for MD~Sage and for permission to build on its code,
-Maarten Derickx and Kenji Terao for CurveArith, Andrew Sutherland and Mark van Hoeij for their optimized
-models of $X_1(N)$, David Zywina for his Magma package for modular curves, and the LMFDB collaboration,
-whose database was used to find examples and to name curves; its model of one curve is used in
-\cref{prop:43}, and otherwise the LMFDB is not a source of proofs. I thank Petar
-Orli\'c for the tables of \cite{Orlic2025}, on which much of this paper builds.
 
 \subsection*{Use of AI tools}
 Large language model assistants (OpenAI's GPT-6 Astra, through Codex, and Anthropic's Claude, through Claude Code)

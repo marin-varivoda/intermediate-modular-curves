@@ -58,15 +58,15 @@ We certify that a given model has good reduction at $p$ in one of two ways.
 
 \subsection{Tools from the geometry of curves}
 
-\begin{lemma}[Castelnuovo--Severi {\cite[Theorem~3.11.3]{Stichtenoth2009}}]\label{lem:CS}
-Let $C$ be a curve of genus $g$ over a perfect field, with morphisms $C\to C_1$ and $C\to C_2$ of degrees
-$d_1,d_2$ to curves of genera $g_1,g_2$. If the two morphisms do not both factor through a common morphism
-of degree $>1$, then $g\le d_1g_1+d_2g_2+(d_1-1)(d_2-1)$.
+\begin{lemma}[Castelnuovo--Severi {\cite[Theorem~14]{KhawajaSiksek2024}}]\label{lem:CS}
+Let $C$ be a curve of genus $g$ over a perfect field $k$, with morphisms $C\to C_1$ and $C\to C_2$ over $k$ of
+degrees $d_1,d_2$ to curves of genera $g_1,g_2$. If $g>d_1g_1+d_2g_2+(d_1-1)(d_2-1)$, then both morphisms
+factor through a common morphism $C\to C'$ of degree $>1$ defined over $k$.
 \end{lemma}
 
-We use it mainly with $C_2=\PP^1$: a morphism $C\to\PP^1$ of degree $d$ that does not factor through a
-morphism $C\to C_1$ of degree $m$ to a curve of genus $h$ satisfies $g\le mh+(m-1)(d-1)$. If $\gcd(d,m)=1$
-the factorization condition holds automatically.
+We use it mainly with $C_2=\PP^1$: if $C$ has a morphism of degree $m$ to a curve of genus $h$ and a morphism
+to $\PP^1$ of degree $d$ with $\gcd(d,m)=1$, then a common factor of degree $>1$ is impossible, so
+$g\le mh+(m-1)(d-1)$.
 
 \begin{lemma}[Pullback]\label{lem:pullback}
 If $\pi\colon C\to D$ has degree $m$ over $\Q$, then $\gon_\Q C\le m\cdot\gon_\Q D$.
