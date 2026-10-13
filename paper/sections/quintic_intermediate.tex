@@ -63,9 +63,14 @@ character in \cite[\S4]{DerickxSutherland2017}. The absence of a function of deg
  near each such class with the Abel curve $A+C$, so a rational pencil of degree $5$ has a base point;
 \item[R] ($3$ curves) a complete sieve of rational divisor classes: an explicit subgroup of $J(\Q)$ generated
  by differences of rational points is shown to be all of $J(\Q)$, and every class of $W^1_5(\Fp)$ in its reduction
- is lifted and checked over $\Q$. At level $40$ the order $4032$ of $J(\Q)$ is bounded above using the action of
- $1-T_\ell+\ell\langle\ell\rangle$ on the integral homology (computed from Manin symbols) together with point
- counts, and attained by the explicit subgroup; at level $48$ the bounds $2304$ and $12800$ come from the
+ is lifted and checked over $\Q$. At level $40$ the explicit subgroup has order $4032$, and $\#J(\Q)$ is bounded
+ above by the Hecke method of \cite[\S4.3]{DEH2021}: rational torsion is fixed by complex conjugation, and for
+ $\ell\nmid40$ the Eichler--Shimura relation shows that $1-T_\ell+\ell\langle\ell\rangle$ kills rational torsion of order
+ prime to $\ell$; both operators act on the integral homology, computed from Manin symbols. Since the relation
+ at $\ell$ says nothing about $\ell$-primary torsion, for each $\ell\in\{3,7,11,13\}$ we bound the $\ell$-primary
+ part using only the relations at the other three primes, and the remaining primary parts using all four; each
+ of these computations gives a group of order $8064=2^7\cdot3^2\cdot7$. Point counts over finite fields give
+ $\#J(\Q)\mid28224$, so $\#J(\Q)\mid\gcd(8064,28224)=4032$; at level $48$ the bounds $2304$ and $12800$ come from the
  description of $J_1(48)(\Q)_{\mathrm{tors}}$ by cuspidal divisors \cite[Theorem~4.13]{DEH2021}, transferred along
  the forgetful map.
 \end{itemize}
@@ -75,15 +80,15 @@ at least $8$ and are not in the classification of curves of $\Q$-gonality at mos
 \cite{IshiiMomose1991,JeonKim2007}, \cite[Theorems~1.3--1.5]{Orlic2025}, except $43\langle-1,2\rangle$, which has
 $\Q$-gonality $7$ by \cref{prop:43}. Here we use the classification of curves with infinitely many points of
 degree at most $4$ \cite[Theorems~1.4--1.6]{DerickxOrlic2026}: none of these curves has infinitely many points of
-degree $\le4$, so if it had infinitely many points of degree $5$, its density degree would be $5$. By Kadets and
+degree $\le4$, so if it had infinitely many points of degree $5$, its minimum density degree $\min\delta(X/\Q)$ would be $5$. By Kadets and
 Vogt \cite[Theorem~1.3]{KadetsVogt2025}, applied with $d=5$ (so $m=\lceil d/2\rceil-1=2$ and $\varepsilon=3d-1-6m=2$),
 either $g\le\max(d(d-1)/2+1,\,3m(m-1)+m\varepsilon)=11$, or there is a morphism $X\to Y$ of degree $5$ to a curve
 $Y$ with infinitely many rational points, that is, to $\PP^1$ or to an elliptic curve of positive rank. So for
 $g\ge12$ it suffices to exclude these two kinds of maps. For $9\le g\le11$, the classification of curves of minimum density degree $5$
-\cite[Proposition~6.3 and Table~1]{KadetsVogt2025} leaves, besides these covers and curves of genus $5$ to $8$,
+\cite[Proposition~6.3 and Table~1]{KadetsVogt2025} leaves, besides these covers (and curves of genus at most $8$),
 only normalizations of Debarre--Fahlaoui curves: the points may then come from a curve in
-$\mathrm{Sym}^2E$ of class $(5+m)H-mF$ (Debarre--Fahlaoui \cite{DebarreFahlaoui1993}); adjunction gives
-arithmetic genus $11-m(m-1)/2$, so $m\le2$ and the addition map to $E$ has degree $6$ or $7$.
+$\mathrm{Sym}^2E$ of class $(5+j)H-jF$ with $1\le j\le5$ (Debarre--Fahlaoui \cite{DebarreFahlaoui1993}, \cite[Definition~5.1]{KadetsVogt2025}); adjunction gives
+arithmetic genus $11-j(j-1)/2$, so $j\le2$ and the addition map to $E$ has degree $6$ or $7$.
 \begin{itemize}
 \item[E] ($43$ curves, genus $\ge12$, so only elliptic maps of degree $5$ need to be excluded) every positive-rank elliptic factor $E$ has conductor $N$, multiplicity one
  and odd analytic rank, and for $N\le800$ the parametrization through $X_0(N)$ is optimal
@@ -127,4 +132,4 @@ of degree $5$.
 \end{proof}
 
 Every case has a certificate or a precise citation in the accompanying repository
-(\texttt{certificates/B\_intermediate\_quintic}), which also contains the full case list.
+(\texttt{certificates/\allowbreak B\_intermediate\_quintic}), which also contains the full case list.
