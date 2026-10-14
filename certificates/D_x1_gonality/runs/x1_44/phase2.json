@@ -1,1 +1,1 @@
-{"field_size":"3","answer":false,"complete":true,"degree":14,"genus":36,"threads":4,"baseline":1,"seconds":25.4526,"covers":3133892,"vectors":780,"fallbacks":0,"nodes":0,"expected_covers":"3133892","magma_checks":12,"witness":[]}
+{"field_size":"3","answer":false,"complete":true,"degree":14,"genus":36,"threads":8,"baseline":1,"seconds":7.10878,"covers":3133892,"vectors":780,"fallbacks":0,"nodes":0,"expected_covers":"3133892","magma_checks":12,"witness":[]}

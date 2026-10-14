@@ -1,7 +1,7 @@
-Loading "/home/mvarivoda/imc/intermediate-modular-curves-lab/publication/certif\
-icates/D_x1_gonality/models/X1_44.txt"
-Loading "/home/mvarivoda/imc/intermediate-modular-curves-lab/publication/certif\
-icates/D_x1_gonality/phase1/phase1.m"
-PHASE1_PLACES g=36 q=3 rational=15 n=4 counts=[ 15, 5, 0, 0, 63, 160, 240, 920, 2260, 5855 ] seconds=166.790
-PHASE1_EXPANSIONS shard=0/3 places=[ 10, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] seconds=2277.220
-PHASE1_DONE shard=0/3 seconds=2282.320
+Loading "/home/mvarivoda/imc/intermediate-modular-curves/certificates/D_x1_gona\
+lity/models/X1_44.txt"
+Loading "/home/mvarivoda/imc/intermediate-modular-curves/certificates/D_x1_gona\
+lity/runs/x1_44/phase1.m"
+PHASE1_PLACES g=36 q=3 rational=15 n=4 counts=[ 15, 5, 0, 0, 63, 160, 240, 920, 2260, 5855 ] seconds=126.280
+PHASE1_EXPANSIONS shard=0/3 places=[ 8, 5, 0, 0, 18, 46, 83, 301, 775, 1979 ] seconds=2053.850
+PHASE1_DONE shard=0/3 seconds=2054.860
