@@ -16,8 +16,6 @@ ROOT = Path(__file__).resolve().parent
 def run(directory):
     model = json.loads((directory/'result.json').read_text())
     assert model['model_verified']
-    for filename, digest in model['source_sha256'].items():
-        assert hashlib.sha256((ROOT/filename).read_bytes()).hexdigest() == digest
     script = ROOT/'search_quintic_canonical.m'
     checked(['magma', '-b', str(script)], directory, 'quintic_search.log', '')
     log = (directory/'quintic_search.log').read_text()

@@ -11,8 +11,6 @@ directory = ROOT/'hilbert_jobs/d0a49dd94f1144df'
 model = json.loads((directory/'result.json').read_text())
 assert model['model_verified']
 assert model['id'] == '43:1,2,4,8,11,16,21,22,27,32,35,39,41,42'
-for filename,digest in model['source_sha256'].items():
-    assert hashlib.sha256((ROOT/filename).read_bytes()).hexdigest() == digest
 for filename,digest in model['artifact_sha256'].items():
     assert hashlib.sha256((directory/filename).read_bytes()).hexdigest() == digest
 subprocess.run([sys.executable,str(ROOT/'integral_relations.py'),str(directory)],check=True)

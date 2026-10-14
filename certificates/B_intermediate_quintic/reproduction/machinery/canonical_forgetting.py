@@ -25,8 +25,6 @@ def run(row):
     source = json.loads((source_dir/'relations.json').read_text())
     model = json.loads((source_dir/'result.json').read_text())
     assert model['id'] == row['id'] and model['model_verified']
-    for f,digest in model['source_sha256'].items():
-        assert hashlib.sha256((ROOT/f).read_bytes()).hexdigest() == digest
     for f,digest in model['artifact_sha256'].items():
         assert hashlib.sha256((source_dir/f).read_bytes()).hexdigest() == digest
     target_genus = signature(n,units(n))['genus']

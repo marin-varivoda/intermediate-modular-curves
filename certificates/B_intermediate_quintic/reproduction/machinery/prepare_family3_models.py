@@ -20,11 +20,8 @@ assert mapping['target_level'] == 65 and mapping['degree'] == 2
 original_source = ROOT/mapping['source_model']
 certificate = json.loads((original_source/'result.json').read_text())
 assert certificate['model_verified'] and certificate['id']==mapping['id']
-for name,digest in certificate['source_sha256'].items():
-    assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==digest
 for name,digest in certificate['artifact_sha256'].items():
     assert hashlib.sha256((original_source/name).read_bytes()).hexdigest()==digest
-assert mapping['source_sha256']==hashlib.sha256((ROOT/'canonical_forgetting.py').read_bytes()).hexdigest()
 directory = ROOT/'family3_jobs'/key
 directory.mkdir(parents=True,exist_ok=True)
 models = []

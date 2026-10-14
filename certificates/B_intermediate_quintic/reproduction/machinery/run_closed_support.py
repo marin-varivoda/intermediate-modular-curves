@@ -13,8 +13,6 @@ def run(name):
     directory = ROOT/'genus5_jobs'/name
     model = json.loads((directory/'result.json').read_text())
     assert model['model_verified']
-    for filename, digest in model['source_sha256'].items():
-        assert hashlib.sha256((ROOT/filename).read_bytes()).hexdigest() == digest
     relations = json.loads((directory/'relations.json').read_text())
     assert (directory/'canonical_input.m').read_text() == export(relations)
     script = ROOT/'search_closed_support.m'

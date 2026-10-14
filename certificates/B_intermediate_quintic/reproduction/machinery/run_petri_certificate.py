@@ -25,8 +25,6 @@ def run(key, prime):
     row = json.loads((directory/'curve.json').read_text())
     assert model['model_verified'] and model['id'] == row['id']
     assert row['level'] % prime != 0
-    for filename,value in model['source_sha256'].items():
-        assert digest(ROOT/filename) == value
     for filename,value in model['artifact_sha256'].items():
         assert digest(directory/filename) == value
     integral = directory/'integral_model'

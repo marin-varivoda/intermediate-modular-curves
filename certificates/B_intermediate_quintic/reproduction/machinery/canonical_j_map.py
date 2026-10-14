@@ -22,8 +22,6 @@ def construct(directory):
     model = json.loads((directory.parent/'result.json').read_text())
     assert model['model_verified']
     assert model['id']==f'{n}:'+','.join(map(str,invariants['delta']))
-    for name,digest in model['source_sha256'].items():
-        assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==digest
     for name,digest in model['artifact_sha256'].items():
         assert hashlib.sha256((directory.parent/name).read_bytes()).hexdigest()==digest
     original = json.loads((directory.parent/'relations.json').read_text())

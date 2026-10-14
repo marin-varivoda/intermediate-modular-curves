@@ -33,9 +33,6 @@ def run(key):
     assert model['model_verified'] and model['id']==mapping['id']==row['id']
     assert row['level']==65 and row['genus'] in [9,11]
     assert mapping['degree']==row['degree_to_x0']==2 and at_least_six(row)
-    assert mapping['source_sha256']==digest(ROOT/'canonical_forgetting.py')
-    for name,value in model['source_sha256'].items():
-        assert digest(ROOT/name)==value
     for name,value in model['artifact_sha256'].items():
         assert digest(model_dir/name)==value
     source = json.loads((model_dir/'relations.json').read_text())

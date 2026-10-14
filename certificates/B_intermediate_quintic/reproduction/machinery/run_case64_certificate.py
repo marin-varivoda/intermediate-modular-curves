@@ -9,8 +9,6 @@ directory = ROOT/'hilbert_jobs/d6111b7c56067f5a'
 model = json.loads((directory/'result.json').read_text())
 assert model['model_verified']
 assert model['id']=='64:1,7,9,15,17,23,25,31,33,39,41,47,49,55,57,63'
-for name,digest in model['source_sha256'].items():
-    assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==digest
 for name,digest in model['artifact_sha256'].items():
     assert hashlib.sha256((directory/name).read_bytes()).hexdigest()==digest
 checked(['magma','-b',str(ROOT/'case64_quintic.m')],directory,

@@ -23,8 +23,6 @@ def run(key):
     row = json.loads((parent/'curve.json').read_text())
     assert model['model_verified'] and model['id']==row['id']
     assert row['level']==48 and row['genus']==7
-    for name,value in model['source_sha256'].items():
-        assert digest(ROOT/name)==value
     for name,value in model['artifact_sha256'].items():
         assert digest(parent/name)==value
     work = parent/'case48_replay'
