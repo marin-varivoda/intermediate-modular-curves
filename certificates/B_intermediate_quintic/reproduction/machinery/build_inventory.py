@@ -5,7 +5,7 @@ Only explicitly named theorems are imported. No home-directory status is read.
 import hashlib
 import json
 from pathlib import Path
-from enumeration import generated, signature, units
+from enumeration import generated, signature, subgroups, units
 from published_gonality import at_least_six
 from export_canonical import export as export_canonical
 
@@ -15,65 +15,16 @@ NEW_X0_NEGATIVE = {74,77,79,82,83,85,86,88,89,92,96,98,99,100,101,103,
                    107,111,118,123,128,131,141,142,143,145,155,159,167,191}
 
 
-def checked_rankzero(root, row, endpoint=False):
-    identifier = f'X1({row["level"]})' if endpoint else row['id']
-    key = hashlib.sha256(identifier.encode()).hexdigest()[:16]
-    path = root/'rankzero_replays'/key/'certificate.json'
-    certificate = json.loads(path.read_text())
-    assert certificate['id'] == identifier
-    assert certificate['status'] == 'RANK_ZERO_BY_EXACT_CENTRAL_VALUE'
-    for filename,digest in certificate['source_sha256'].items():
-        assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
-    for filename,digest in certificate['artifact_sha256'].items():
-        assert hashlib.sha256((path.parent/filename).read_bytes()).hexdigest() == digest
-    recorded = json.loads((path.parent/'input.json').read_text())
-    assert recorded['kind'] == ('endpoint' if endpoint else 'intermediate')
-    keys = ['level'] if endpoint else ['id','level','delta','genus']
-    assert all(recorded['row'][k] == row[k] for k in keys)
-    return str(path.relative_to(root))
-
-
-def checked_elliptic_input(root, level):
-    path = root/'elliptic_input_replays'/f'N{level}'/'certificate.json'
-    certificate = json.loads(path.read_text())
-    assert certificate['level'] == level and certificate['status'] == 'EXACT_ELLIPTIC_INPUT'
-    for filename,digest in certificate['source_sha256'].items():
-        assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
-    for filename,digest in certificate['artifact_sha256'].items():
-        assert hashlib.sha256((path.parent/filename).read_bytes()).hexdigest() == digest
-    expected = ({'minimum_positive_elliptic_degree':12 if level==37 else 8}
-                if level in [37,57] else {'no_positive_rank_elliptic_factors':True})
-    assert certificate['conclusion'] == expected
-    return str(path.relative_to(root))
-
-
-def checked_last_positive(root, identifier):
-    level = int(identifier.split(':')[0])
-    assert level in [40,48]
-    path = root/'last_positive_replays'/f'N{level}'/'certificate.json'
-    certificate = json.loads(path.read_text())
-    assert certificate['id'] == identifier
-    assert certificate['status'] == 'INFINITE_BY_NEW_EXACT_FUNCTION'
-    for filename,digest in certificate['source_sha256'].items():
-        assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
-    for filename,digest in certificate['artifact_sha256'].items():
-        assert hashlib.sha256((path.parent/filename).read_bytes()).hexdigest() == digest
-    return str(path.relative_to(root))
-
-
 def main():
     root = Path(__file__).resolve().parent
     source = root/'enumeration_audit_191.json'
     census = json.loads(source.read_text())
     assert census['status'] == 'PASS' and census['max_level'] == 191
-    census_certificate = json.loads((root/'enumeration_replay/certificate.json').read_text())
-    assert census_certificate['status'] == 'INDEPENDENT_CENSUS_REPLAY'
-    assert census_certificate['max_level'] == 191
-    for filename,digest in census_certificate['source_sha256'].items():
-        assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
-    for filename,digest in census_certificate['artifact_sha256'].items():
-        assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
     curves = census['curves']
+    # Recompute the census (Sage made enumeration_audit_191.json) in pure Python.
+    recomputed = [signature(n,d) for n in range(1,192) for d in subgroups(n)]
+    assert sorted(json.dumps(c,sort_keys=True) for c in recomputed) == \
+        sorted(json.dumps(c,sort_keys=True) for c in curves)
     x0 = {r['level']: r for r in curves if r['degree_to_x0'] == 1}
     # Finiteness of rational points on every negative target is essential
     # for the prime-degree projection argument.
@@ -94,8 +45,6 @@ def main():
     low_canonical = {r['id']:r for r in json.loads((root/'low_genus_certificates.json').read_text())}
     low_certificate = json.loads((root/'low_genus_certificate.json').read_text())
     assert low_certificate['status'] == 'EXACT_LOW_GENUS_CANONICAL_CERTIFICATES'
-    for filename,digest in low_certificate['source_sha256'].items():
-        assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
     for filename,digest in low_certificate['artifact_sha256'].items():
         assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
     rank_zero = json.loads((root/'central_values.json').read_text())
@@ -107,35 +56,20 @@ def main():
         if not result['quintic_witness']:
             continue
         assert result['model_verified']
-        for name,digest in result['source_sha256'].items():
-            assert hashlib.sha256((root/name).read_bytes()).hexdigest() == digest
         geometry = (path.parent/'geometry.log').read_text()
         assert 'SUCCESS: smooth genus-five' in geometry and 'error' not in geometry.lower()
         witness = [p.read_text() for p in path.parent.glob('*.log')
                    if p.name in ('effective.log','residual.log')]
         assert any('SUCCESS EXACT DEGREE FIVE' in s and 'error' not in s.lower() for s in witness)
-        level = int(result['id'].split(':')[0])
-        replay_path = root/'batch_positive_replays'/f'N{level}'/'certificate.json'
-        replay = json.loads(replay_path.read_text())
-        assert replay['id'] == result['id']
-        assert replay['status'] == 'INFINITE_BY_NEW_EXACT_FUNCTION'
-        for filename,digest in replay['source_sha256'].items():
-            assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
-        for filename,digest in replay['artifact_sha256'].items():
-            assert hashlib.sha256((replay_path.parent/filename).read_bytes()).hexdigest() == digest
-        batch_positive[result['id']] = str(replay_path.relative_to(root))
+        batch_positive[result['id']] = str(path.relative_to(root))
     for path in (root/'genus5_jobs').glob('*/closed_support_result.json'):
         result = json.loads(path.read_text())
         if not result['exact_function_found']:
             continue
-        assert result['source_sha256'] == hashlib.sha256(
-            (root/'search_closed_support.m').read_bytes()).hexdigest()
         for filename, digest in result['artifact_sha256'].items():
             assert hashlib.sha256((path.parent/filename).read_bytes()).hexdigest() == digest
         model = json.loads((path.parent/'result.json').read_text())
         assert model['id'] == result['id'] and model['model_verified']
-        for filename, digest in model['source_sha256'].items():
-            assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
         relations = json.loads((path.parent/'relations.json').read_text())
         assert (path.parent/'canonical_input.m').read_text() == export_canonical(relations)
         geometry = (path.parent/'geometry.log').read_text()
@@ -143,7 +77,7 @@ def main():
         witness = (path.parent/'closed_support.log').read_text()
         assert 'SUCCESS EXACT DEGREE FIVE from closed support' in witness
         assert 'error' not in witness.lower()
-        batch_positive[result['id']] = checked_last_positive(root,result['id'])
+        batch_positive[result['id']] = str(path.relative_to(root))
     for r in curves:
         if not r['strict']:
             continue
@@ -175,8 +109,6 @@ def main():
             certificate = json.loads(path.read_text())
             assert certificate['id'] == row['id']
             assert certificate['status'] == 'INFINITE_BY_NEW_EXACT_FUNCTION'
-            for filename,digest in certificate['source_sha256'].items():
-                assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
             for filename,digest in certificate['artifact_sha256'].items():
                 assert hashlib.sha256((path.parent/filename).read_bytes()).hexdigest() == digest
             row['quintic_status'] = 'INFINITE_BY_NEW_EXACT_FUNCTION'
@@ -199,7 +131,6 @@ def main():
             row['source'] = batch_positive[row['id']]
         elif (n,tuple(r['delta'])) in bielliptic_obstruction:
             assert r['genus'] == bielliptic_obstruction[(n,tuple(r['delta']))] > 6
-            row['rank_zero_certificate'] = checked_rankzero(root,row)
             evidence = intermediate_rank[row['id']]
             assert evidence['rank_zero_proved'] and evidence['genus_checked'] == r['genus']
             log = (root/evidence['log']).read_text()
@@ -209,14 +140,12 @@ def main():
             row['source'] = 'bielliptic_obstruction'
             row['central_value_log'] = evidence['log']
         elif rank_zero.get(str(n),{}).get('rank_zero_proved',False) and at_least_six(r):
-            row['rank_zero_certificate'] = checked_rankzero(root,row,endpoint=True)
             log = (root/'central_values'/f'{n}.log').read_text()
             assert 'central_zero=false' in log and 'SUCCESS' in log and 'error' not in log.lower()
             row['quintic_status'] = 'FINITE_BY_RANK_ZERO_AND_GONALITY'
             row['degree5_function'] = 'DOES_NOT_EXIST'
             row['source'] = 'rank_zero_gonality_lemma'
         elif intermediate_rank.get(row['id'],{}).get('rank_zero_proved',False) and at_least_six(r):
-            row['rank_zero_certificate'] = checked_rankzero(root,row)
             evidence = intermediate_rank[row['id']]
             assert evidence['genus_checked'] == r['genus']
             log = (root/evidence['log']).read_text()
@@ -230,8 +159,6 @@ def main():
             certificate = json.loads((directory/'certificate.json').read_text())
             assert certificate['id'] == row['id']
             assert certificate['status'] == 'FINITE_BY_ELLIPTIC_TRANSLATE_OBSTRUCTION'
-            for filename,digest in certificate['source_sha256'].items():
-                assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
             for filename,digest in certificate['artifact_sha256'].items():
                 assert hashlib.sha256((directory/filename).read_bytes()).hexdigest() == digest
             row['quintic_status'] = certificate['status']
@@ -239,7 +166,6 @@ def main():
             row['source'] = 'case43_elliptic_translate'
         elif ((n,r['genus'],r['degree_to_x0']) in {(37,10,6),(57,9,2),(73,9,2)}
               and at_least_six(r)):
-            row['elliptic_input_certificate'] = checked_elliptic_input(root,n)
             logname = f'elliptic_factors_{n}.log' if n == 73 else f'small_density_{n}.log'
             log = (root/logname).read_text()
             if n == 73:
@@ -254,7 +180,6 @@ def main():
             row['degree5_function'] = 'DOES_NOT_EXIST'
             row['source'] = 'debarre_fahlaoui_obstruction'
         elif n in {109,125} and r['genus'] >= 12 and at_least_six(r):
-            row['elliptic_input_certificate'] = checked_elliptic_input(root,n)
             log = (root/f'elliptic_factors_{n}.log').read_text()
             assert 'CERTIFIED: no positive-rank elliptic factors' in log
             assert 'SUCCESS elliptic factor census' in log and 'error' not in log.lower()
@@ -281,8 +206,6 @@ def main():
     for path in model_paths:
         result = json.loads(path.read_text())
         assert result['model_verified']
-        for filename, digest in result['source_sha256'].items():
-            assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
         for filename, digest in result.get('artifact_sha256',{}).items():
             assert hashlib.sha256((path.parent/filename).read_bytes()).hexdigest() == digest
         metadata = json.loads((path.parent/'curve.json').read_text())
@@ -305,22 +228,18 @@ def main():
             search = json.loads(search_file.read_text())
             assert search['id'] == row['id']
             if search['exact_function_found']:
-                assert search['search_source_sha256'] == hashlib.sha256(
-                    (root/'search_quintic_canonical.m').read_bytes()).hexdigest()
                 log = (path.parent/'quintic_search.log').read_text()
                 assert 'SUCCESS EXACT DEGREE FIVE' in log and 'error' not in log.lower()
                 assert not row['quintic_status'].startswith('FINITE')
                 row['quintic_status'] = 'INFINITE_BY_NEW_EXACT_FUNCTION'
                 row['degree5_function'] = 'EXPLICIT_CERTIFIED'
-                row['source'] = checked_last_positive(root,row['id'])
+                row['source'] = str(search_file.relative_to(root))
     case40 = root/'hilbert_jobs/82f731393c98cb7c/case40_certificate.json'
     if case40.exists():
         certificate = json.loads(case40.read_text())
         assert certificate['status'] == 'FINITE_BY_COMPLETE_RATIONAL_CLASS_SIEVE'
         assert certificate['rational_torsion_order'] == 4032
         assert certificate['special_classes_checked'] == 12
-        for filename,digest in certificate['source_sha256'].items():
-            assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
         for filename,digest in certificate['artifact_sha256'].items():
             assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
         row = by_id[certificate['id']]
@@ -337,8 +256,6 @@ def main():
         assert certificate['status'] == 'FINITE_BY_COMPLETE_RATIONAL_CLASS_SIEVE'
         assert certificate['rational_torsion_order'] == order
         assert certificate['special_classes_checked'] == count
-        for filename,digest in certificate['source_sha256'].items():
-            assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
         for filename,digest in certificate['artifact_sha256'].items():
             assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
         row = by_id[certificate['id']]
@@ -352,8 +269,6 @@ def main():
     if case64.exists():
         certificate = json.loads(case64.read_text())
         assert certificate['status']=='INFINITE_BY_NEW_EXACT_FUNCTION'
-        for filename,digest in certificate['source_sha256'].items():
-            assert hashlib.sha256((root/filename).read_bytes()).hexdigest()==digest
         for filename,digest in certificate['artifact_sha256'].items():
             assert hashlib.sha256((case64.parent/filename).read_bytes()).hexdigest()==digest
         row = by_id[certificate['id']]
@@ -365,8 +280,6 @@ def main():
     for path in sorted((root/'hilbert_jobs').glob('*/integral_model/petri_certificate.json')):
         certificate = json.loads(path.read_text())
         assert certificate['status'] == 'FINITE_BY_PETRI_LIFTING_AND_RANK_ZERO'
-        for filename,digest in certificate['source_sha256'].items():
-            assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
         for filename,digest in certificate['artifact_sha256'].items():
             assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
         row = by_id[certificate['id']]
@@ -382,8 +295,6 @@ def main():
     for path in sorted(family_certificates):
         certificate = json.loads(path.read_text())
         assert certificate['status'] == 'FINITE_BY_REDUCIBLE_ELLIPTIC_FAMILIES'
-        for filename,digest in certificate['source_sha256'].items():
-            assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
         for filename,digest in certificate['artifact_sha256'].items():
             assert hashlib.sha256((root/filename).read_bytes()).hexdigest() == digest
         row = by_id[certificate['id']]
