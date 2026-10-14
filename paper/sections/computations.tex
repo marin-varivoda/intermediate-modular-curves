@@ -32,8 +32,8 @@ output is the list of matrices of \cref{lem:rank}.
 
 Phase~2 is a C++ program of about $1000$ lines (with GMP) that enumerates $\mathcal F_b(d)$, performs the
 incremental Gaussian elimination of \S\ref{sec:phase2} over $\Fp$, and enumerates the kernel vectors up to scalars
-(\cref{lem:kernel}). It is a reimplementation, for speed, of the option \texttt{Al:="Cover"} of a modified
-CurveArith, which we used to cross-check it on small curves. The baseline $b$ is chosen to minimize the number of
+(\cref{lem:kernel}). It is a reimplementation, for speed, of the option \texttt{Al:="Cover"} of our fork of CurveArith (\S\ref{sec:phase2}), which we used to
+cross-check it on small curves. The baseline $b$ is chosen to minimize the number of
 divisors times the size of the kernels. For any $b$ the result is correct; it only affects the running time.
 
 \subsection*{Validation}
