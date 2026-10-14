@@ -1,6 +1,6 @@
 # Upper bounds on gon_Q for all 76 strict X_Δ(N), N ≤ 50
 
-**Result.** `upper_bounds.csv` gives an upper bound for every curve, with one source per curve.
+**Result.** `../../../data/strict_intermediate_N_le_50.csv` gives an upper bound for every curve, with one source per curve.
 Every bound equals the proved gonality, so each is sharp.
 
 | Method | Curves | Argument |
@@ -65,8 +65,6 @@ ingredient is needed:
 |---|---|
 | `pullback.py` → `pullback.json` | Best pullback bound for each curve with 41 ≤ N ≤ 50 (Sage with MD Sage; 10 s) |
 | `cited_gonalities.json` | Published gonalities available as pullback targets, with sources |
-| `orlic_check.py` | Checks that Orlić's Table 1 lists exactly our curves with N ≤ 40 and g ≥ 3, with the same genus and gonality |
 | `cusp_certificate.m`, `certificates/` | The five cuspidal Riemann–Roch certificates |
 | `special/` | The two special certificates and their inputs |
-| `assemble.py` → `upper_bounds.csv` | One row per curve: bound, method and source |
-| `discovery/` | The search that found the cuspidal divisors. It is a discovery tool, not a certificate |
+
