@@ -10,8 +10,8 @@
     "build_inventory.py": "727cc7a0859238fc0ca9ea4515cd613049a4c205b13c9952f5f2f32d79b8b546",
     "build_complete_inventory.py": "1600a95aaffb0281f21aab08bead58ab92d3ee6cefa993d940ee64231aa6e151",
     "write_classification_report.py": "2dc4d153a7b3c666e3b714c45765ad70e69a0ec1775e1c9267e499b4bae78c1a",
-    "classification_inventory.json": "e2a3a7c586e0fdc3faf2d26ee696b2f24d5993d556f4d51ff127cb5735c47ce0",
-    "complete_inventory.json": "a5451bbfeeacc951b8bd973ccaad26d5d4f15050bb5fb61b0c0078bac57b43d9",
+    "classification_inventory.json": "00ce451b38232e85abafff7e31be9542cc89f02d05d7e7fb3278c2154f2cd999",
+    "complete_inventory.json": "e3df9f021ee953c4fc5f4703d667aeed5365baf26e98a7ce5748d368dc6a3b89",
     "CLASSIFICATION_TABLE.md": "cb36aec011f5a3c4cd0b92e21d6bddd3c3728eb22f2ed804307b53460e7a32bf"
   }
 }

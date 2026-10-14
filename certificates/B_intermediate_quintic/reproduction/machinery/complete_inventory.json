@@ -2,7 +2,7 @@
   "status": "ALL_CASES_CLASSIFIED_AND_AUDITED",
   "max_enumerated_level": 191,
   "all_level_boundary": "N >= 192 excluded by DHJO and prime-degree projection; X0 has genus > 1",
-  "strict_inventory_sha256": "e2a3a7c586e0fdc3faf2d26ee696b2f24d5993d556f4d51ff127cb5735c47ce0",
+  "strict_inventory_sha256": "00ce451b38232e85abafff7e31be9542cc89f02d05d7e7fb3278c2154f2cd999",
   "endpoint_source": "endpoints: X_1 by Derickx-Sutherland, X_0 by DHJO Theorem 1.10 and Theorem A",
   "unresolved": [],
   "curves": [
@@ -3602,12 +3602,11 @@
       "degree_to_x0": 3,
       "strict": true,
       "id": "35:1,6,8,13,22,27,29,34",
-      "model_status": "CANONICAL_MODEL_VERIFIED",
+      "model_status": "NOT_CONSTRUCTED",
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_BIELLIPTIC_AND_RANK_ZERO",
       "source": "bielliptic_obstruction",
       "central_value_log": "intermediate_central.log",
-      "model_certificate": "hilbert_jobs/d98511aa0f90f7c4",
       "kind": "STRICT"
     },
     {
@@ -8634,12 +8633,11 @@
       "degree_to_x0": 2,
       "strict": true,
       "id": "55:1,4,6,9,14,16,19,21,24,26,29,31,34,36,39,41,46,49,51,54",
-      "model_status": "CANONICAL_MODEL_VERIFIED",
+      "model_status": "NOT_CONSTRUCTED",
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_BIELLIPTIC_AND_RANK_ZERO",
       "source": "bielliptic_obstruction",
       "central_value_log": "intermediate_central.log",
-      "model_certificate": "hilbert_jobs/1e5199b136fae728",
       "kind": "STRICT"
     },
     {
