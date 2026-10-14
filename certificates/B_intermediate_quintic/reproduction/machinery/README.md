@@ -94,7 +94,7 @@ See `STATUS.md` for the current ledger, `ELLIPTIC_DEGREE_EXCLUSIONS.md` and
 `DEBARRE_FAHLAOUI_OBSTRUCTION.md` for the new uniform finiteness arguments.
 
 External mathematical inputs are explicitly cited in the proof notes.
-The completed X0 quintic-point proof and certificates are in `../final/`;
+The completed X0 quintic-point proof and certificates are in `../../../A_x0_quintic/`;
 the old home-directory intermediate-curve database is not a dependency.
 
 This folder belongs to the current x0_deg5 repository; it is not a new

@@ -3,8 +3,7 @@
 This folder is the self-contained presentation package for Theorem B and
 Corollary E. The proofs are in Section 7 of the paper (`../../paper/main.pdf`),
 which is authoritative; `classification.pdf` (source: `classification.tex`) is a
-longer write-up, and `x0_proof.pdf` is a copy of
-`../A_x0_quintic/quintic_points.pdf` (Theorem A). The package code `C` for the
+longer write-up. Theorem A is in `../A_x0_quintic/`. The package code `C` for the
 positive curves of genus 3 and 4 is `K` in the paper.
 
 The classification has **43 positive strict subgroup-defined pairs**.
@@ -39,8 +38,8 @@ proof-assistant certification or a substitute for reading the arguments.
 ## Reproduce computations
 
 `reproduction/machinery/` contains the intermediate-curve sources and accepted
-evidence. `reproduction/final/` contains the thirty-level X0 proof and its
-36 computational certificates. No original repository or home-directory
+evidence. The thirty-level X0 proof and its 36 certificates are in
+`../A_x0_quintic/`. No original repository or home-directory
 code is needed. Absolute paths in historical logs are provenance, not inputs.
 
 For fresh computations, follow `reproduction/machinery/REPRODUCING.md` in a

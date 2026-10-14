@@ -7,7 +7,7 @@
   "unresolved": 0,
   "sha256": {
     "AUDIT.md": "2923b52a2e2877e1d0a83a23408342da6965632d24c87a97fa644eda1afa10a3",
-    "ENDPOINTS.md": "9a646c312d5628a8df2e6dc1dfae33604dcadbe3383fb34c731195b04097c184",
+    "ENDPOINTS.md": "2968d3d44439aea26f3dceccfe844b07346b73a44e16a221b9177421fd68f483",
     "RATIONAL_MODELS.md": "96e8c26aafd61ebdacc3d69bda02d5209ce4e825ce718edc9acbf3cb8f51b304",
     "MODEL_IDENTIFICATION.md": "a0325651bfbfb2c0a6255a833236fa218f3a327b2db61bc398c694d25f1d8205",
     "LOW_GENUS.md": "79dfa2680efe0ac7e4c125272b6e8adadf096136c165d67956da45eea45adc4e",
@@ -25,11 +25,11 @@
     "CASE64.md": "966a18a6bd876cacf99108265debaa9765fbf0bd4c3eda092c2bb6063ff8b57b",
     "PROOF_OVERVIEW.md": "0fb2d91f88255674e68fdbdb04466ae3a7e91b8da8d2ca3b6e02de3f3bf0e669",
     "audit_results.py": "93e3fcffffbc93031726b81ba6570c44678331a2945bf59c5d09f147883a6a78",
-    "build_inventory.py": "06d7fb982c47ab80e63951f44dab0a498213a252b4ccde71534e7e81472e15a9",
+    "build_inventory.py": "82b78a168658278760c34dbf0cf0b695b5afe94c8801ecc9af6f42bcdfdaec13",
     "build_complete_inventory.py": "6c81cfb582b4f3e8e95b0b69c77eac174706cda9ec2ca6f8a64c9b2619dcb56f",
     "write_classification_report.py": "cfb896d65a6bf4e29a38c00ec072abf0f2c35f37d10439004ab4836a2ae616e9",
-    "classification_inventory.json": "7c7119a31373847e4c4aa377dc52eddd849ccca8be3b538f9620f9d58fd50339",
-    "complete_inventory.json": "292923215724b53c0f4b0eb76e8e5bcd753bc4b25b4b184c99f979f137ff45f5",
+    "classification_inventory.json": "139f96872efdeaa792d1654aba53a2c2525a859f34c8db1d5d6c417225989b96",
+    "complete_inventory.json": "1c02a7887467f43e628e66ef96c3004aa7963142d0c2a84013eecd7036bd6f82",
     "CLASSIFICATION_TABLE.md": "c739335cf28ff625ee08daa94893ee33eb8f789a09988c3f7cc8bb24f9001712"
   }
 }

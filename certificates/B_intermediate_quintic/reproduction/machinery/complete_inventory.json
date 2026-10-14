@@ -2,7 +2,7 @@
   "status": "ALL_CASES_CLASSIFIED_AND_AUDITED",
   "max_enumerated_level": 191,
   "all_level_boundary": "N >= 192 excluded by DHJO and prime-degree projection; X0 has genus > 1",
-  "strict_inventory_sha256": "7c7119a31373847e4c4aa377dc52eddd849ccca8be3b538f9620f9d58fd50339",
+  "strict_inventory_sha256": "139f96872efdeaa792d1654aba53a2c2525a859f34c8db1d5d6c417225989b96",
   "endpoint_source": "ENDPOINTS.md",
   "unresolved": [],
   "curves": [

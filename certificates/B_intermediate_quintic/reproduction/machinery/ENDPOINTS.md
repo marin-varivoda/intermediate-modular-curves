@@ -6,7 +6,7 @@ merely because the strict-curve enumeration omits them.
 
 For X0(N), `build_complete_inventory.py` uses the same positive-level list
 as the strict ledger. Its sources are DHJO Theorem 1.10 together with the
-completed thirty-level proof in `../final/`. The existing strict ledger
+completed thirty-level proof in `../../../A_x0_quintic/`. The existing strict ledger
 already uses precisely this classification for projection exclusions.
 
 For X1(N), the positive levels for exact degree five are
