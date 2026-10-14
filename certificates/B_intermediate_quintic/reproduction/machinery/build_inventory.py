@@ -15,6 +15,14 @@ NEW_X0_NEGATIVE = {74,77,79,82,83,85,86,88,89,92,96,98,99,100,101,103,
                    107,111,118,123,128,131,141,142,143,145,155,159,167,191}
 
 
+def section(path, key):
+    """The log of one curve inside a combined log, under the header '=== key ==='."""
+    blocks = path.read_text().split('=== ')
+    found = [b.split(' ===\n',1)[1] for b in blocks if b.startswith(key+' ===\n')]
+    assert len(found) == 1, (path.name, key)
+    return found[0]
+
+
 def main():
     root = Path(__file__).resolve().parent
     source = root/'enumeration_audit_191.json'
@@ -133,14 +141,14 @@ def main():
             assert r['genus'] == bielliptic_obstruction[(n,tuple(r['delta']))] > 6
             evidence = intermediate_rank[row['id']]
             assert evidence['rank_zero_proved'] and evidence['genus_checked'] == r['genus']
-            log = (root/evidence['log']).read_text()
+            log = section(root/evidence['log'], row['id'])
             assert 'central_zero=false' in log and 'SUCCESS' in log and 'error' not in log.lower()
             row['quintic_status'] = 'FINITE_BY_BIELLIPTIC_AND_RANK_ZERO'
             row['degree5_function'] = 'DOES_NOT_EXIST'
             row['source'] = 'bielliptic_obstruction'
             row['central_value_log'] = evidence['log']
         elif rank_zero.get(str(n),{}).get('rank_zero_proved',False) and at_least_six(r):
-            log = (root/'central_values'/f'{n}.log').read_text()
+            log = section(root/'central_values.log', f'N={n}')
             assert 'central_zero=false' in log and 'SUCCESS' in log and 'error' not in log.lower()
             row['quintic_status'] = 'FINITE_BY_RANK_ZERO_AND_GONALITY'
             row['degree5_function'] = 'DOES_NOT_EXIST'
@@ -148,7 +156,7 @@ def main():
         elif intermediate_rank.get(row['id'],{}).get('rank_zero_proved',False) and at_least_six(r):
             evidence = intermediate_rank[row['id']]
             assert evidence['genus_checked'] == r['genus']
-            log = (root/evidence['log']).read_text()
+            log = section(root/evidence['log'], row['id'])
             assert 'central_zero=false' in log and 'SUCCESS' in log and 'error' not in log.lower()
             row['quintic_status'] = 'FINITE_BY_INTERMEDIATE_RANK_ZERO'
             row['degree5_function'] = 'DOES_NOT_EXIST'
@@ -348,7 +356,7 @@ def main():
             'quintic_41.m': 'quintic_41.m, model_41.m, relations_41.json',
             'low_genus_certificates.py': 'low_genus_certificates.json',
             'low_genus_certificate.json': 'run_low_genus_audit.py; low_genus_certificate.json',
-            'rank_zero_gonality_lemma': 'paper, Section 7; published_gonality.py, central_values/',
+            'rank_zero_gonality_lemma': 'paper, Section 7; published_gonality.py, central_values.log',
             'intermediate_projection_lemma': 'paper, Section 7; rational forgetting maps',
             'intermediate_rank_zero_lemma': 'paper, Section 7; intermediate_central_value.m',
             'elliptic_degree_density_lemma': 'paper, Section 7 (class E); Derickx-Orlic Corollaries 2.5, 4.10 and proof of 4.12',

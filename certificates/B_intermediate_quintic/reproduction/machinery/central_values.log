@@ -1,0 +1,55 @@
+=== N=29 ===
+RESULT N=29 dimension=22 central_zero=false
+SUCCESS central-value test
+
+=== N=33 ===
+RESULT N=33 dimension=21 central_zero=false
+SUCCESS central-value test
+
+=== N=34 ===
+RESULT N=34 dimension=21 central_zero=false
+SUCCESS central-value test
+
+=== N=35 ===
+RESULT N=35 dimension=25 central_zero=false
+SUCCESS central-value test
+
+=== N=38 ===
+RESULT N=38 dimension=28 central_zero=false
+SUCCESS central-value test
+
+=== N=39 ===
+RESULT N=39 dimension=33 central_zero=false
+SUCCESS central-value test
+
+=== N=40 ===
+RESULT N=40 dimension=25 central_zero=false
+SUCCESS central-value test
+
+=== N=41 ===
+RESULT N=41 dimension=51 central_zero=false
+SUCCESS central-value test
+
+=== N=42 ===
+RESULT N=42 dimension=25 central_zero=false
+SUCCESS central-value test
+
+=== N=44 ===
+RESULT N=44 dimension=36 central_zero=false
+SUCCESS central-value test
+
+=== N=45 ===
+RESULT N=45 dimension=41 central_zero=false
+SUCCESS central-value test
+
+=== N=48 ===
+RESULT N=48 dimension=37 central_zero=false
+SUCCESS central-value test
+
+=== N=49 ===
+RESULT N=49 dimension=69 central_zero=false
+SUCCESS central-value test
+
+=== N=50 ===
+RESULT N=50 dimension=48 central_zero=false
+SUCCESS central-value test

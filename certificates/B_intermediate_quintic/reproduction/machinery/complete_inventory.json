@@ -2,7 +2,7 @@
   "status": "ALL_CASES_CLASSIFIED_AND_AUDITED",
   "max_enumerated_level": 191,
   "all_level_boundary": "N >= 192 excluded by DHJO and prime-degree projection; X0 has genus > 1",
-  "strict_inventory_sha256": "197f959eb1b3aa28560d2b26c5c7203993625f6881a3ec76903474a7afe320d5",
+  "strict_inventory_sha256": "e2a3a7c586e0fdc3faf2d26ee696b2f24d5993d556f4d51ff127cb5735c47ce0",
   "endpoint_source": "endpoints: X_1 by Derickx-Sutherland, X_0 by DHJO Theorem 1.10 and Theorem A",
   "unresolved": [],
   "curves": [
@@ -3606,7 +3606,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_BIELLIPTIC_AND_RANK_ZERO",
       "source": "bielliptic_obstruction",
-      "central_value_log": "intermediate_central/d98511aa0f90f7c4.log",
+      "central_value_log": "intermediate_central.log",
       "model_certificate": "hilbert_jobs/d98511aa0f90f7c4",
       "kind": "STRICT"
     },
@@ -7569,7 +7569,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/a67c41fdced628f0.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -7614,7 +7614,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/59b9d59ea2e30f8f.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -7671,7 +7671,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/71aa4d189b5bd453.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -7850,7 +7850,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/0ad23e758c5a848f.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -7897,7 +7897,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/7a19bdcf1cb21702.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -7944,7 +7944,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/3a3132f460cd1cd0.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -8005,7 +8005,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/17984c9e12f68bcc.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -8445,7 +8445,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/300e82ff9eac089c.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -8638,7 +8638,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_BIELLIPTIC_AND_RANK_ZERO",
       "source": "bielliptic_obstruction",
-      "central_value_log": "intermediate_central/1e5199b136fae728.log",
+      "central_value_log": "intermediate_central.log",
       "model_certificate": "hilbert_jobs/1e5199b136fae728",
       "kind": "STRICT"
     },
@@ -8686,7 +8686,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/5b95a0030e556b6d.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -8735,7 +8735,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/fa516ee10dddc3df.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -8800,7 +8800,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/fb2113fb9b49fb8e.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -9001,7 +9001,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/9e6a3a61211ca330.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -9046,7 +9046,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/99479e27ddae552f.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -9091,7 +9091,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/25fc8e005e755ed5.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -9144,7 +9144,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/e22ea2911e3a9b87.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -9195,7 +9195,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/c4f275169b2fd6c7.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -9256,7 +9256,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/4c023ced35ce853c.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -9317,7 +9317,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/7e314bd6cc1cb5db.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -9390,7 +9390,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/20e9e106e51f26c8.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -11498,7 +11498,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/0b514c7439309b2f.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -11547,7 +11547,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/773883c48954514c.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -11596,7 +11596,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/d09f8d1dc9123529.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -11645,7 +11645,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/00e90f0f537ffcc8.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -11702,7 +11702,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/b4cbb4a4ec57081a.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -11761,7 +11761,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/160773ffc802c408.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -11879,7 +11879,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/643e1fbc40baf8f5.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -11954,7 +11954,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/8cb63134ec751703.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -12027,7 +12027,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/e59a19e3eb78cc48.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -12337,7 +12337,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/6e730a83cc323a45.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -12418,7 +12418,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/b574c43977abb18a.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -14114,7 +14114,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/e4f40859da2d3b48.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -15419,7 +15419,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/0d6f8a08c1a3d737.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -15476,7 +15476,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/662037b62cf9e5a0.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -15541,7 +15541,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/7c974506655b7ab6.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -15602,7 +15602,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/35f0748149cab05d.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -15677,7 +15677,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/63af0bf392def99a.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -15750,7 +15750,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/632db4306db6d2ad.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -15823,7 +15823,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/a0817c7628db97ae.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -15912,7 +15912,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/ef74b902433adb61.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -17138,7 +17138,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/57ec9883b135a43d.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -17195,7 +17195,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/397ab92a6fbe80c7.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -19222,7 +19222,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/35d1687069de8b9b.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -19279,7 +19279,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/202ad91dd8e50d2a.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -19340,7 +19340,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/5418bfd0edea7c0f.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -19454,7 +19454,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/6acaefab2d20a3df.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -19511,7 +19511,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/1e2752d8c45887bb.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -19706,7 +19706,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/f00d30643fca44d7.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -20340,7 +20340,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/590441a42d9f5385.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {
@@ -20439,7 +20439,7 @@
       "degree5_function": "DOES_NOT_EXIST",
       "quintic_status": "FINITE_BY_INTERMEDIATE_RANK_ZERO",
       "source": "intermediate_rank_zero_lemma",
-      "central_value_log": "intermediate_central/75bb879cf1743a6d.log",
+      "central_value_log": "intermediate_central.log",
       "kind": "STRICT"
     },
     {

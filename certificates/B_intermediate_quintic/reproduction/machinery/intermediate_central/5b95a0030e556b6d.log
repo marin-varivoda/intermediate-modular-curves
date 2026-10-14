@@ -1,3 +1,0 @@
-RESULT N=55 delta=[ 1, 16, 19, 24, 26, 29, 31, 36, 39, 54 ] dimension=17 
-central_zero=false
-SUCCESS intermediate central-value test

@@ -7,11 +7,11 @@
   "unresolved": 0,
   "sha256": {
     "audit_results.py": "6f5036f86ff36fdfadead46b22d6332c4a29b24a2238df6af04f34042623696e",
-    "build_inventory.py": "df3c90b444f28d07b3efebd6d63b76c6145754f21024371e6b8bd846c3aa0da4",
+    "build_inventory.py": "727cc7a0859238fc0ca9ea4515cd613049a4c205b13c9952f5f2f32d79b8b546",
     "build_complete_inventory.py": "1600a95aaffb0281f21aab08bead58ab92d3ee6cefa993d940ee64231aa6e151",
     "write_classification_report.py": "2dc4d153a7b3c666e3b714c45765ad70e69a0ec1775e1c9267e499b4bae78c1a",
-    "classification_inventory.json": "197f959eb1b3aa28560d2b26c5c7203993625f6881a3ec76903474a7afe320d5",
-    "complete_inventory.json": "a8407d04d33c4d0050bb1f740e80450119ed4e74d2409f2f34446563da18aa21",
+    "classification_inventory.json": "e2a3a7c586e0fdc3faf2d26ee696b2f24d5993d556f4d51ff127cb5735c47ce0",
+    "complete_inventory.json": "a5451bbfeeacc951b8bd973ccaad26d5d4f15050bb5fb61b0c0078bac57b43d9",
     "CLASSIFICATION_TABLE.md": "cb36aec011f5a3c4cd0b92e21d6bddd3c3728eb22f2ed804307b53460e7a32bf"
   }
 }
