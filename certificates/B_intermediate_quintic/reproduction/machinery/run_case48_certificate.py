@@ -67,7 +67,7 @@ def run(key):
                'intermediate_central_value.m','torsion_order_bounds.m',
                'integer_lattices.py','pullback_torsion48.py','canonical_j_map.py',
                'export_closed_cusps.m','closed_cusp_support_sieve.m',
-               'verify_closed_cusp_classes.m','PULLBACK_TORSION48.md','RATIONAL_MODELS.md']
+               'verify_closed_cusp_classes.m']
     artifacts = [parent/'result.json']+[parent/name for name in model['artifact_sha256']]
     artifacts += sorted(p for p in work.rglob('*') if p.is_file())
     certificate = dict(id=row['id'],status='FINITE_BY_COMPLETE_RATIONAL_CLASS_SIEVE',

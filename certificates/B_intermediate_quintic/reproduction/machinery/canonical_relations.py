@@ -1,7 +1,7 @@
 """Construct exact canonical relations from weight-two cusp forms.
 
 This certifies relations, NOT yet that their zero locus is the modular curve.
-The rational convention is justified in RATIONAL_MODELS.md; geometric model
+The rational convention (the mu_N-model) is explained in the paper, Section 2.1; geometric model
 identification remains a separate mandatory gate.
 Run in Sage's Python: canonical_relations.py 33 --generators 32 2
 """
@@ -54,7 +54,7 @@ def construct(n, generators, maximum_degree=3):
                 basis_coefficients=[[str(f[i]) for i in range(precision)] for f in basis],
                 relation_blocks=blocks, relation_status='EXACT_RELATIONS',
                 model_status='UNVERIFIED', rational_descent_status='MU_MODEL_DUALITY',
-                rational_descent_reference='RATIONAL_MODELS.md')
+                rational_descent_reference='paper, Section 2.1')
 
 
 def main():

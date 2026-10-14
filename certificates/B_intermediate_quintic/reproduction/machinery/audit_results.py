@@ -2,7 +2,7 @@
 
 Pass --require-complete to fail if any curve remains unresolved. The full
 replay commands and the distinction between checking and recomputing a
-certificate are documented in REPRODUCING.md.
+certificate are documented in ../../README.md.
 """
 import argparse
 import hashlib
@@ -30,13 +30,7 @@ def main():
     if args.require_complete:
         data['status'] = 'ALL_CASES_CLASSIFIED_AND_AUDITED'
         (ROOT/'complete_inventory.json').write_text(json.dumps(data,indent=2)+'\n')
-        notes = ['AUDIT.md','ENDPOINTS.md','RATIONAL_MODELS.md','MODEL_IDENTIFICATION.md',
-                 'LOW_GENUS.md','UNIFORM_EXCLUSIONS.md','BIELLIPTIC_OBSTRUCTION.md',
-                 'HECKE_TORSION40.md','PULLBACK_TORSION48.md','PETRI_LIFTING_CERTIFICATE.md',
-                 'ELLIPTIC_DEGREE_EXCLUSIONS.md','DEBARRE_FAHLAOUI_OBSTRUCTION.md',
-                 'ELLIPTIC_FAMILY_CERTIFICATE.md','ELLIPTIC_FAMILY65_LINEAR.md',
-                 'ELLIPTIC_FAMILY_SMALL_PRIME.md','CASE43.md','CASE64.md','PROOF_OVERVIEW.md']
-        files = notes+['audit_results.py','build_inventory.py','build_complete_inventory.py',
+        files = ['audit_results.py','build_inventory.py','build_complete_inventory.py',
                        'write_classification_report.py','classification_inventory.json',
                        'complete_inventory.json','CLASSIFICATION_TABLE.md']
         digest = lambda name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest()

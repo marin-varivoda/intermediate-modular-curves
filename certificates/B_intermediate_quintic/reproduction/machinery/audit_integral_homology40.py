@@ -1,7 +1,7 @@
 """Audit the full Manin lattice used for the level-40 Hecke torsion bound.
 
 Uses all integral Manin generators, then the kernel of the cusp boundary;
-it does not use a direct sum of character lattices. See HECKE_TORSION40.md.
+it does not use a direct sum of character lattices. See the paper, Section 7 (class R).
 """
 from sage.all import GammaH, ModularSymbols, QQ, ZZ
 

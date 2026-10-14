@@ -216,7 +216,7 @@ those in Orli\'c's Theorems 1.4--1.5 \cite{Orlic}.
 Fresh model generation and the degree-five witness checks have been replayed
 for all twelve new cases. The fourteen canonical low-genus cases have also
 been replayed; the thirteen genus-at-most-two cases use the uniform argument
-above. Replay evidence is indexed in \texttt{REAUDIT.md}.
+above. The certificates are listed in \texttt{README.md}.
 
 \clearpage
 \begin{center}
@@ -495,11 +495,8 @@ pairs. The endpoint arguments at the start complete the classification.
 The code checks the stated finite-field, divisor-class, rank and model
 identities; the deductions from these identities are the mathematical
 arguments above. This is not a formal proof-assistant verification.
-\texttt{SOURCE\_AUDIT.md} records the published inputs and their hypotheses.
-\texttt{REAUDIT.md} records the completed mathematical review, fresh
-computations and portability tests. The command \texttt{python3 verify.py}
-checks the sealed package and its complete case assignments without
-requiring the working repository.
+The command \texttt{python3 verify.py} rebuilds the case assignments from the
+saved evidence and checks them against the tables, without Sage or Magma.
 The machine-readable \texttt{all\_cases.csv} retains the complete subgroup,
 answer, projection target and proof metadata for every enumerated pair.
 It is an index to the evidence, not a substitute for the arguments.

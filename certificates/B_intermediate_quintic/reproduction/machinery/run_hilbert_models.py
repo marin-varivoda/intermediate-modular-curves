@@ -32,7 +32,7 @@ def run(row):
     checked(['magma','-b',str(ROOT/'verify_canonical_hilbert.m')],directory,
             'geometry.log','SUCCESS: canonical model identified by Hilbert polynomial')
     sources = ['enumeration.py','canonical_relations.py','export_canonical.py',
-               'verify_canonical_hilbert.m','MODEL_IDENTIFICATION.md','RATIONAL_MODELS.md']
+               'verify_canonical_hilbert.m']
     artifacts = ['relations.json','canonical_input.m','geometry.log']
     result = dict(id=row['id'],model_verified=True,
                   seconds=round(time.monotonic()-start,2),

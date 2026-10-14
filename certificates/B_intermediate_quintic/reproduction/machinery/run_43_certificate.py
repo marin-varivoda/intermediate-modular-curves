@@ -26,7 +26,7 @@ checked(['magma','-b','p:=2','ell:=5',str(ROOT/'test_translate_cosets.m')],integ
 log = (integral/'translate_p2_ell5.log').read_text()
 assert 'tested_subgroups=1' in log and 'COMPLETE_COSETS_TOTAL=0' in log
 sources = ['case43_factors.m','test_translate_cosets.m','integral_relations.py',
-           'export_canonical.py','verify_canonical_hilbert.m','CASE43.md']
+           'export_canonical.py','verify_canonical_hilbert.m']
 artifacts = ['relations.json','canonical_input.m','saturation.json',
              'geometry_Q.log','factors.log','translate_p2_ell5.log']
 report = dict(id=model['id'],status='FINITE_BY_ELLIPTIC_TRANSLATE_OBSTRUCTION',

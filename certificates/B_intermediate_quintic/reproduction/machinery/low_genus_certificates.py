@@ -2,7 +2,7 @@
 
 Genus 3: certify 5 is a nongap at the rational Tate cusp.
 Genus 4: certify nonhyperellipticity, then K-P is basepoint free of degree 5.
-See LOW_GENUS.md. Run with Sage's Python.
+See the paper, Section 7 (class K). Run with Sage's Python.
 """
 import json
 from pathlib import Path

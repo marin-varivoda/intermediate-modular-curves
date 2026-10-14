@@ -1,7 +1,7 @@
 """Exact Gamma_Delta enumeration and signatures, using only Python integers.
 
 No external curve tables or home-directory code are imported.
-See AUDIT.md for the coset construction and completeness arguments.
+The census is described in the paper, Section 7.1.
 """
 from fractions import Fraction
 from math import gcd

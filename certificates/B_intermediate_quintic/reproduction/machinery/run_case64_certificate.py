@@ -15,7 +15,7 @@ for name,digest in model['artifact_sha256'].items():
     assert hashlib.sha256((directory/name).read_bytes()).hexdigest()==digest
 checked(['magma','-b',str(ROOT/'case64_quintic.m')],directory,
         'case64_quintic.log','SUCCESS exact degree five at level 64')
-sources = ['case64_quintic.m','run_case64_certificate.py','CASE64.md']
+sources = ['case64_quintic.m','run_case64_certificate.py']
 artifacts = ['result.json','canonical_input.m','relations.json','case64_quintic.log']
 certificate = dict(id=model['id'],status='INFINITE_BY_NEW_EXACT_FUNCTION',
                    source_sha256={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in sources},

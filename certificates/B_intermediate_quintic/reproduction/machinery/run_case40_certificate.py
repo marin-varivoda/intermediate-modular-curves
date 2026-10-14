@@ -73,8 +73,7 @@ def run():
                'verify_canonical_hilbert.m','intermediate_central_value.m',
                'torsion_order_bounds.m','audit_integral_homology40.py',
                'integral_torsion_probe.py','rational_support_sieve.m',
-               'reduce_canonical_basis.py','shorten_signed_support.m','verify_effective_canonical_classes.m',
-               'HECKE_TORSION40.md','RATIONAL_MODELS.md']
+               'reduce_canonical_basis.py','shorten_signed_support.m','verify_effective_canonical_classes.m']
     artifacts = [parent/'result.json']+[parent/name for name in model['artifact_sha256']]
     artifacts += sorted(p for p in work.rglob('*') if p.is_file())
     certificate = dict(id=row['id'],status='FINITE_BY_COMPLETE_RATIONAL_CLASS_SIEVE',

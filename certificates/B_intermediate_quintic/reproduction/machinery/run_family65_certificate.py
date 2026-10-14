@@ -84,9 +84,9 @@ def run(key, prime):
                'verify_canonical_hilbert.m','base_elliptic_quotient.m',
                'intermediate_factor_profile.m','verify_family_reduction.m',
                'verify_elliptic_family65.m','verify_elliptic_immersion65.m',
-               'published_gonality.py','ELLIPTIC_FAMILY_CERTIFICATE.md',
+               'published_gonality.py',
                'quotient_rational_fibers.m','linear_scheme_divisor.m',
-               'canonical_elliptic_fibers.m','ELLIPTIC_FAMILY65_LINEAR.md']
+               'canonical_elliptic_fibers.m']
     artifacts = [model_dir/name for name in model['artifact_sha256']]
     artifacts += [model_dir/'result.json']
     artifacts += [forgetting/name for name in ['map.json','target_relations.json',

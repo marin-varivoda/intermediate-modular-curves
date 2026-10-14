@@ -33,7 +33,7 @@ def run(case):
     assert data['level']==n and data['genus']==5
     sources = ['run_explicit_positive_audit.py','run_genus5_batch.py',
                'canonical_relations.py','enumeration.py','export_genus5.py',
-               'verify_genus5.m',f'quintic_{n}.m','RATIONAL_MODELS.md','MODEL_IDENTIFICATION.md']
+               'verify_genus5.m',f'quintic_{n}.m']
     artifacts = ['relations.json','relations.log','export.log','genus5_input.m',
                  f'model_{n}.m','geometry.log','quintic.log']
     digest = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()

@@ -37,7 +37,7 @@ def main():
         kind = 'X0_AND_X1' if is_x0 and is_x1 else ('X0' if is_x0 else 'X1')
         row = dict(curve,id=identifier,kind=kind,
                    quintic_status=('INFINITE' if positive else 'FINITE')+'_BY_ENDPOINT_CLASSIFICATION',
-                   source='ENDPOINTS.md',degree5_function='NOT_IMPORTED')
+                   source='endpoints: X_1 by Derickx-Sutherland, X_0 by DHJO Theorem 1.10 and Theorem A',degree5_function='NOT_IMPORTED')
         if not positive:
             row['degree5_function']='DOES_NOT_EXIST'
         elif is_x1:
@@ -48,7 +48,7 @@ def main():
     report = dict(status='INCOMPLETE' if unresolved else 'ALL_CASES_CLASSIFIED_PENDING_FINAL_AUDIT',
                   max_enumerated_level=191,all_level_boundary=strict['all_level_boundary'],
                   strict_inventory_sha256=hashlib.sha256(strict_path.read_bytes()).hexdigest(),
-                  endpoint_source='ENDPOINTS.md',unresolved=unresolved,curves=rows)
+                  endpoint_source='endpoints: X_1 by Derickx-Sutherland, X_0 by DHJO Theorem 1.10 and Theorem A',unresolved=unresolved,curves=rows)
     (ROOT/'complete_inventory.json').write_text(json.dumps(report,indent=2)+'\n')
     print('Combined curves:',len(rows),'Unresolved:',len(unresolved),report['status'])
 

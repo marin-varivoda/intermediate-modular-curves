@@ -33,7 +33,7 @@ def run(row):
     checked(['magma', '-b', str(ROOT/'verify_canonical.m')], directory,
             'geometry.log', 'SUCCESS: geometrically integral canonical model')
     sources = ['enumeration.py', 'canonical_relations.py', 'export_canonical.py',
-               'verify_canonical.m', 'RATIONAL_MODELS.md']
+               'verify_canonical.m']
     report = dict(id=row['id'], model_verified=True,
                   seconds=round(time.monotonic()-start, 2),
                   source_sha256={f: hashlib.sha256((ROOT/f).read_bytes()).hexdigest()

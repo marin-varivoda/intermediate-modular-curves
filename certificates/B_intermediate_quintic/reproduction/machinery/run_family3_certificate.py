@@ -74,9 +74,8 @@ def run(key):
                'canonical_forgetting.py','canonical_relations.py','enumeration.py','export_canonical.py',
                'export_fricke_input.py','verify_canonical_hilbert.m','base_elliptic_quotient.m',
                'intermediate_factor_profile.m','verify_family_reduction.m','verify_elliptic_family65.m',
-               'verify_elliptic_immersion65.m','published_gonality.py','ELLIPTIC_FAMILY_CERTIFICATE.md',
-               'quotient_rational_fibers.m','linear_scheme_divisor.m','canonical_elliptic_fibers.m',
-               'ELLIPTIC_FAMILY65_LINEAR.md','ELLIPTIC_FAMILY_SMALL_PRIME.md','run_genus5_batch.py']
+               'verify_elliptic_immersion65.m','published_gonality.py',
+               'quotient_rational_fibers.m','linear_scheme_divisor.m','canonical_elliptic_fibers.m','run_genus5_batch.py']
     artifacts = [model_dir/name for name in model['artifact_sha256']]+[model_dir/'result.json']
     artifacts += [forgetting/name for name in ['map.json','target_relations.json','canonical_input.m',
                   'target_qseries.m','target_geometry.log','base_elliptic_quotient.log']]

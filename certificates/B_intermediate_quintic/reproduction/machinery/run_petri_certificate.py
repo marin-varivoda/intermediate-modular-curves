@@ -42,7 +42,7 @@ def run(key, prime):
             'petri_lifting.log','SUCCESS complete Petri lifting checks')
     sources = ['run_petri_certificate.py','integral_relations.py','export_canonical.py',
                'verify_canonical_hilbert.m','intermediate_central_value.m',
-               'verify_petri_lifting.m','PETRI_LIFTING_CERTIFICATE.md']
+               'verify_petri_lifting.m']
     artifacts = [directory/name for name in model['artifact_sha256']]
     artifacts += [directory/'result.json']
     artifacts += [integral/name for name in ['relations.json','canonical_input.m','saturation.json',

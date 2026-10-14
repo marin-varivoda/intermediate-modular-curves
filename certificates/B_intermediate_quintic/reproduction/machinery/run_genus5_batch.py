@@ -54,8 +54,7 @@ def run(row):
         assert 'SEARCH FINISHED:' in output
     files = [ROOT/'canonical_relations.py',ROOT/'enumeration.py',
              ROOT/'export_genus5.py',ROOT/'verify_genus5.m',
-             ROOT/'search_quintic_genus5.m',ROOT/'search_residual_genus5.m',
-             ROOT/'RATIONAL_MODELS.md']
+             ROOT/'search_quintic_genus5.m',ROOT/'search_residual_genus5.m']
     report = {'id':row['id'],'model_verified':True,
               'quintic_witness':found,'seconds':round(time.monotonic()-start,2),
               'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in files}}

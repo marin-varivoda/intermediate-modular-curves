@@ -22,7 +22,7 @@ for row in rows:
         else:
             assert row['quadratic_product_rank']==9
 sources = ['run_low_genus_audit.py','run_genus5_batch.py',
-           'low_genus_certificates.py','LOW_GENUS.md','RATIONAL_MODELS.md']
+           'low_genus_certificates.py']
 artifacts = ['low_genus_certificates.json','low_genus_audit.log']
 digest = lambda name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest()
 certificate = dict(status='EXACT_LOW_GENUS_CANONICAL_CERTIFICATES',

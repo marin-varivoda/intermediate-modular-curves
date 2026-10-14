@@ -30,7 +30,7 @@ def main():
              '**Status: '+('incomplete' if unresolved else 'all listed cases classified')+'.**',
              f'There are {len(rows):,} subgroup-defined curves through level 191, '
              f'including the X0 and X1 endpoints. {len(unresolved)} entries remain unresolved.',
-             'The all-level exclusion beyond 191 is recorded in [ENDPOINTS.md](ENDPOINTS.md).',
+             'Levels above 191 are handled by projection to X0(N) (paper, Section 7.1).',
              'Rows distinguish subgroups, not Q-isomorphism classes of curves.','',
              '## Proved positive strict intermediate curves','',
              f'All {len(positives)} curves below have a function of exactly degree five over Q,',
@@ -73,20 +73,9 @@ def main():
         count = sum(r['quintic_status'] in values for r in strict)
         if count:
             lines.append(f'| {label} | {count} |')
-    lines += ['','The proof structure is explained in [PROOF_OVERVIEW.md](PROOF_OVERVIEW.md).']
-    lines += ['','## Endpoints and negative certificates','',
-              'The X0 and X1 endpoints, including their source statements, are described',
-              'in [ENDPOINTS.md](ENDPOINTS.md). Every other classified strict row is finite',
-              'for degree-five points; the machine-readable inventory records its proof source.','',
-              'The main new certificate explanations are:', '',
-              '- [Canonical model identification](MODEL_IDENTIFICATION.md).',
-              '- [Genus-three/four function existence](LOW_GENUS.md).',
-              '- [Level-40 exhaustive rational class sieve](HECKE_TORSION40.md).',
-              '- [Level-48 pullback torsion and exhaustive class sieves](PULLBACK_TORSION48.md).',
-              '- [Rank-zero Petri lifting](PETRI_LIFTING_CERTIFICATE.md).',
-              '- [Elliptic-family finiteness](ELLIPTIC_FAMILY_CERTIFICATE.md).',
-              '- [Level-65 exact fiber construction](ELLIPTIC_FAMILY65_LINEAR.md).',
-              '- [Elliptic map-degree exclusions](ELLIPTIC_DEGREE_EXCLUSIONS.md).','',
+    lines += ['','The arguments are in Section 7 of the paper; `../../README.md` maps each class to its',
+              'certificates. The X0 and X1 endpoints are inputs (Theorem A of the paper, DHJO Theorem 1.10,',
+              'Derickx-Sutherland). The machine-readable inventory records the proof source of every row.','',
               'Regenerate after running `build_inventory.py` and `build_complete_inventory.py`:',
               '`python3 write_classification_report.py`.','']
     (ROOT/'CLASSIFICATION_TABLE.md').write_text('\n'.join(lines))
