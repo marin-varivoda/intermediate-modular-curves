@@ -6,8 +6,9 @@ A nonconstant $f\in k(C)$ has degree $\deg f=\deg(f)_\infty$, the degree of its 
 $\gon_kC\le d$ if and only if there is an effective divisor $D$ of degree at most $d$ with $\ell(D)\ge2$.
 
 \subsection{Method I: explicit pencils}\label{sec:method-I}
-To prove $\gon_\Q C\le d$ we exhibit a rational effective divisor $D$ of degree $d$ and compute
-$\ell(D)\ge2$ with Magma's Riemann--Roch routine. The divisors used are of three kinds:
+To prove $\gon_\Q C\le d$ we exhibit a rational divisor $D$ of degree $d$ and compute $\ell(D)\ge2$ with
+Magma's Riemann--Roch routine. The divisor need not be effective: for $0\ne f\in L(D)$ the divisor
+$D+\operatorname{div}f$ is effective, rational and linearly equivalent to $D$. The divisors used are of three kinds:
 \begin{enumerate}
 \item divisors supported on rational cusps, or on cusps and other low-degree points, whose
  Riemann--Roch spaces we compute from $q$-expansions at all cusps, using Zywina's package
@@ -18,8 +19,7 @@ $\ell(D)\ge2$ with Magma's Riemann--Roch routine. The divisors used are of three
  $\gon_\Q C\le g$; if $g\le1$ and $P\in C(\Q)$, then $\ell(2P)\ge2$ (and $\ell(P)=2$ if $g=0$).
 \end{enumerate}
 For $X_1(N)$ the upper bounds in Theorem~D are the degrees of the modular units of Derickx and van
-Hoeij \cite[Table~1]{DerickxVanHoeij2014}, which also equal the degree in $y$ of the model of
-\cite{SutherlandX1}.
+Hoeij \cite[Table~1]{DerickxVanHoeij2014}.
 
 \subsection{Method II: finite-field exclusion}\label{sec:method-II}
 To prove $\gon_\Q C>d$, we choose a prime $p$ of good reduction (\cref{lem:specialization}) and show that
@@ -30,7 +30,9 @@ $q=p$) and has two phases.
 \emph{Phase 1 (places and expansions).} Let $N_1=\#C(\Fq)$ and $n=\lceil N_1/(q+1)\rceil$. CurveArith
 enumerates the places of $C_{\Fq}$ of degree at most $d-\min(n,d-1)$, fixes a basis $\omega_1,\dots,\omega_g$
 of $H^0(C,\Omega^1)$, and at each place $P$ computes the first $m_P$ coefficients of the expansions of the
-$\omega_i$ in a uniformizer at $P$, as vectors over $\Fq$ ($\deg P$ coordinates per coefficient). For an
+$\omega_i$ in a uniformizer at $P$, as vectors over $\Fq$ ($\deg P$ coordinates per coefficient). The precision is
+$m_P=d$ at rational places and $m_P=\lfloor(d-\min(n,d-1))/e\rfloor$ at places of degree $e\ge2$; this suffices
+for all divisors of degree $d$ containing at least $\min(n,d-1)$ rational places. For an
 effective divisor $D=\sum a_PP$ with $a_P\le m_P$ this gives a $g\times\deg D$ matrix $M_D$, whose columns
 are the coefficients of index $<a_P$ at each $P$ in its support.
 
@@ -90,12 +92,15 @@ isomorphism, the order of the pole of $f$ at $P\in\supp H$ is the largest $j\le 
 coordinates of $x$ belonging to the coefficient of index $j-1$ at $P$ are not all zero.
 \end{lemma}
 \begin{proof}
-For each $P\in\supp H$ let $V_P=\mathcal O_P/\mathfrak m_P^{v_P(H)}$ and $V=\bigoplus V_P$. Write each $\omega_i$ as $g_i\,du_P$ with $u_P$ the uniformizer chosen by CurveArith at $P$; the columns of
-$M_H$ are the coordinates (over $k$, using a $k$-basis of the residue field at $P$) of the jets of the $g_i$ in
+For each $P\in\supp H$ let $V_P=\mathcal O_P/\mathfrak m_P^{v_P(H)}$ and $V=\bigoplus V_P$. At each $P$,
+CurveArith writes each $\omega_i$ as $g_i\,\eta_P$, where $\eta_P$ is one of the basis differentials that does not vanish at
+$P$, and expands $g_i$ in a uniformizer $u_P$; the $i$th row of
+$M_H$ is the coordinate vector (over $k$, using a $k$-basis of the residue field at $P$) of the jet of $g_i$ in
 $V$, in which, for every $j$, the subspace $\mathfrak m_P^j/\mathfrak m_P^{v_P(H)}$
 is cut out by the vanishing of the coordinates of index $<j$; indeed, CurveArith computes the coefficients
 one at a time, subtracting a lift of each coefficient and dividing by the uniformizer, and this is
-$k$-linear. The pairing $(\phi,\eta)\mapsto\sum_P\operatorname{Tr}_{k(P)/k}\Res_P(\phi\,\eta\,du_P)$ identifies the principal parts $\bigoplus_P\mathfrak m_P^{-v_P(H)}/\mathcal O_P$
+$k$-linear. The pairing $(\phi,h)\mapsto\sum_P\operatorname{Tr}_{k(P)/k}\Res_P(\phi\,h\,\eta_P)$, which is perfect because
+$\eta_P$ generates the differentials at $P$, identifies the principal parts $\bigoplus_P\mathfrak m_P^{-v_P(H)}/\mathcal O_P$
 with the dual of $V$, a principal part having pole order $\le j$ at $P$ exactly when it annihilates
 $\mathfrak m_P^{j}/\mathfrak m_P^{v_P(H)}$. By the residue theorem and Serre duality, a principal part is
 the principal part of a function in $L(H)$ (unique up to constants) if and only if it annihilates the image
@@ -116,7 +121,8 @@ at most $d$ handles curves without rational points; we did not need this case.
 \Cref{prop:covers} and \cref{lem:kernel} are an elementary variation on the second phase of
 \cite{DerickxTerao}; the first phase is used unchanged. The point is that $\mathcal F_b(d)$ is much smaller
 than the set of divisors of degree $d$ with $n$ rational places: the rational part is fixed to $bS$ up to the
-small excess $E$, and the kernels of $M_H$ have dimension at most $2$ or $3$ in all our computations.
+small excess $E$, and the kernels of $M_H$ are small (their dimension is the number of independent functions in
+$L(H)$, and the divisors $H$ have degree only slightly above $d$).
 For a fixed $Q$, the divisors $bS+E+Q$ share the block of rows of $bS+Q$, so we eliminate those once and
 add the rows of $E$ incrementally. This variation was first implemented as an option
 \texttt{Al:="Cover"} of CurveArith's \texttt{CAHasFunctionOfDegreeAtMost}; for the curves $X_1(N)$ we run
