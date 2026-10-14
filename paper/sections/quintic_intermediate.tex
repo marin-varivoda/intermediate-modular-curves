@@ -22,7 +22,7 @@ enumerated twice, once from primitive rows $(c,d)$ modulo $N$ up to $\Delta$ and
 \texttt{GammaH}; full sets of elements, not orders or genera, are used to identify them. Seven more pairs map to
 intermediate curves already shown to be negative (\cref{tab:projection}), and fifteen more, of genus $57$ to
 $256$, satisfy $119\mu>120000$, so they have $\gon_{\mathbb C}>10$ and finitely many points of degree $5$ by
-\cref{lem:frey} and \cite[Proposition~2.2]{DerickxSutherland2017}. This leaves $182$ strict pairs.
+\cref{lem:abramovich,lem:frey} and \cite[Proposition~2.2]{DerickxSutherland2017} (code S in \cref{tab:negative}). This leaves $182$ strict pairs.
 
 \subsection{The \texorpdfstring{$43$}{43} positive curves}
 Each curve in \cref{tab:positive} has a function of degree $5$ over $\Q$, hence infinitely many points of degree
@@ -31,14 +31,18 @@ $5$ (\cref{lem:hilbert}):
 \item[L] ($13$ curves, $g\le2$): for a rational cusp $P$, $\ell(5P)=6-g>\ell(4P)$;
 \item[K] ($14$ curves, $g=3,4$): in genus $3$, $5$ is not a Weierstrass gap at the cusp $\infty$ (read off
  from the orders of vanishing of a basis of cusp forms); in genus $4$ the curve is not hyperelliptic (the
- quadrics in the canonical ideal have the right rank), so $K-P$ is base-point free of degree $5$;
+ multiplication map $\mathrm{Sym}^2H^0(K)\to H^0(2K)$ has rank $3g-3=9$, checked on $q$-expansions up to the
+ Sturm bound). Then for a rational cusp $P$ the net $|K-P|$ of degree $5$ is base-point free (a base point $Q$
+ would give $h^0(P+Q)=2$), so it maps $C$ birationally onto a plane quintic, and projecting from a point of
+ $\PP^2(\Q)$ not on this quintic gives a morphism of degree $5$ to $\PP^1$;
 \item[W] ($12$ curves): an explicit divisor $D$ of degree $5$ with $\ell(D)=2$ and no base point, on a canonical
  model certified through the Sturm bound and a Hilbert polynomial comparison;
 \item[P] ($4$ curves): the $\Q$-pentagonal curves of \cite[Theorems~1.4--1.5]{Orlic2025}.
 \end{itemize}
 
 \subsection{The negative curves}
-For the remaining $139$ curves we show finiteness. The arguments are listed by code in \cref{tab:negative}.
+For the remaining $139$ curves we show finiteness. The arguments are listed by code in \cref{tab:negative},
+which also lists the $15$ curves of large index (code S) treated above.
 
 \begin{lemma}[Rank zero]\label{lem:rankzero}
 If $C(\Q)\ne\varnothing$, $J(C)(\Q)$ is finite and $C$ has no function of degree $5$ over $\Q$, then $C$ has
@@ -51,7 +55,9 @@ finitely many classes.
 
 \emph{Rank zero} ($82$ curves). We show $J(\Q)$ finite from nonvanishing $L$-values (exact modular-symbol
 $L$-ratios), using Kato \cite[Corollary~14.3]{Kato2004} as applied to modular Jacobians with nontrivial
-character in \cite[\S4]{DerickxSutherland2017}. The absence of a function of degree $5$ comes from
+character in \cite[\S4]{DerickxSutherland2017}. For $25$ of the $74$ curves of class Z we use $L(J_1(N),1)\ne0$:
+the forgetful map $X_1(N)\to X_\Delta(N)$ makes $J_\Delta(N)$ an isogeny quotient of $J_1(N)$, so $J_\Delta(N)(\Q)$ is
+finite as well. The absence of a function of degree $5$ comes from
 \begin{itemize}
 \item[Z] ($74$ curves) Orli\'c's classification: genus $\ge5$ and not in Orli\'c's lists of curves of
  $\Q$-gonality at most $5$, so $\gon_\Q\ge6$ \cite{Orlic2025};
@@ -63,55 +69,95 @@ character in \cite[\S4]{DerickxSutherland2017}. The absence of a function of deg
  near each such class with the Abel curve $A+C$, so a rational pencil of degree $5$ has a base point;
 \item[R] ($3$ curves) a complete sieve of rational divisor classes: an explicit subgroup of $J(\Q)$ generated
  by differences of rational points is shown to be all of $J(\Q)$, and every class of $W^1_5(\Fp)$ in its reduction
- is lifted and checked over $\Q$. At level $40$ the explicit subgroup has order $4032$, and $\#J(\Q)$ is bounded
- above by the Hecke method of \cite[\S4.3]{DEH2021}: rational torsion is fixed by complex conjugation, and for
- $\ell\nmid40$ the Eichler--Shimura relation shows that $1-T_\ell+\ell\langle\ell\rangle$ kills rational torsion of order
- prime to $\ell$; both operators act on the integral homology, computed from Manin symbols. Since the relation
- at $\ell$ says nothing about $\ell$-primary torsion, for each $\ell\in\{3,7,11,13\}$ we bound the $\ell$-primary
- part using only the relations at the other three primes, and the remaining primary parts using all four; each
- of these computations gives a group of order $8064=2^7\cdot3^2\cdot7$. Point counts over finite fields give
- $\#J(\Q)\mid28224$, so $\#J(\Q)\mid\gcd(8064,28224)=4032$; at level $48$ the bounds $2304$ and $12800$ come from the
- description of $J_1(48)(\Q)_{\mathrm{tors}}$ by cuspidal divisors \cite[Theorem~4.13]{DEH2021}, transferred along
- the forgetful map.
+ is lifted and checked over $\Q$ (each turns out to be a rational class $D_4+P$ with a base point $P$).
+ At level $40$ ($\Delta=\langle-1,3\rangle$, genus $7$) the explicit subgroup is generated by the differences of six
+ rational points and has order $4032$. An upper bound for $\#J(\Q)$ comes from the Hecke method of
+ \cite[\S4.3]{DEH2021}. Rational torsion is fixed by complex conjugation, and for a prime $\ell\nmid40$ the
+ Eichler--Shimura relation shows that $1-T_\ell+\ell\langle\ell\rangle=1-T_\ell+T_\ell^2-T_{\ell^2}$ kills rational
+ torsion of order prime to $\ell$. Both operators act on $H_1(X,\Z)$, computed from Manin symbols, and the rational
+ torsion of order prime to the primes used embeds into the common kernel of these operators on
+ $H_1(X,\Q)/H_1(X,\Z)\cong(\Q/\Z)^{2g}$, a finite group computed by a Smith normal form. The relation at $\ell$
+ says nothing about $\ell$-primary torsion, so we compute five such kernels: one with all four primes
+ $\ell\in\{3,7,11,13\}$, which bounds the primary parts for primes other than these four, and for each of the
+ four primes $\ell$ one with the other three primes, which bounds the $\ell$-primary part. All five kernels are
+ isomorphic to $\Z/2\times\Z/24\times\Z/168$, of order $8064=2^7\cdot3^2\cdot7$, so $\#J(\Q)$ divides $8064$.
+ Reduction is injective on $J(\Q)$ at odd good primes, and the $\ell$-parts of $\#J(\F_p)$ for
+ $p\le31$, $p\nmid40\ell$, give $\#J(\Q)\mid2^6\cdot3^2\cdot7^2=28224$. Hence $\#J(\Q)$ divides
+ $\gcd(8064,28224)=4032$, and $J(\Q)$ is the explicit subgroup.
+
+ At level $48$ the two curves ($\Delta=\langle-1,5\rangle$ and $\Delta=\langle-1,7,17\rangle$, both of genus $7$)
+ have explicit subgroups generated by cuspidal divisors, of orders $2304$ and $12800$, and these are also the upper
+ bounds. Let $\pi\colon X_1(48)\to X=X_\Delta(48)$ be the forgetful map, of degree $4$. The pullback
+ $\pi^*\colon J(\Q)\to J_1(48)(\Q)$ is induced on homology by the topological transfer
+ $H_1(X,\Z)\to H_1(X_1(48),\Z)$, the sum of the four lifts of a cycle, which we compute on Manin symbols (and check
+ that it is integral, that $\pi_*\circ\pi^*=4$, and that it commutes with complex conjugation and with $T_7$,
+ $T_{11}$). By \cite[Theorem~4.13]{DEH2021}, $J_1(48)(\Q)_{\mathrm{tors}}$ is the rational cuspidal group, which we
+ compute in the same Manin-symbol model. So every rational torsion class of $J$ lies in the subgroup of the Hecke
+ kernel (computed as at level $40$, with the primes $7,11,13,17,19$) whose transfer lies in the rational
+ cuspidal group of $J_1(48)$. This inverse image has order $2304$ for $\Delta=\langle-1,5\rangle$ and $12800$ for
+ $\Delta=\langle-1,7,17\rangle$. The argument does not need $\pi^*$ to be injective.
 \end{itemize}
 
 \emph{Positive rank} ($57$ curves). None of these curves has a function of degree $5$ over $\Q$: they have genus
-at least $8$ and are not in the classification of curves of $\Q$-gonality at most $5$
-\cite{IshiiMomose1991,JeonKim2007}, \cite[Theorems~1.3--1.5]{Orlic2025}, except $43\langle-1,2\rangle$, which has
-$\Q$-gonality $7$ by \cref{prop:43}. Here we use the classification of curves with infinitely many points of
-degree at most $4$ \cite[Theorems~1.4--1.6]{DerickxOrlic2026}: none of these curves has infinitely many points of
-degree $\le4$, so if it had infinitely many points of degree $5$, its minimum density degree $\min\delta(X/\Q)$ would be $5$. By Kadets and
-Vogt \cite[Theorem~1.3]{KadetsVogt2025}, applied with $d=5$ (so $m=\lceil d/2\rceil-1=2$ and $\varepsilon=3d-1-6m=2$),
-either $g\le\max(d(d-1)/2+1,\,3m(m-1)+m\varepsilon)=11$, or there is a morphism $X\to Y$ of degree $5$ to a curve
-$Y$ with infinitely many rational points, that is, to $\PP^1$ or to an elliptic curve of positive rank. So for
-$g\ge12$ it suffices to exclude these two kinds of maps. For $9\le g\le11$, the classification of curves of minimum density degree $5$
-\cite[Proposition~6.3 and Table~1]{KadetsVogt2025} leaves, besides these covers (and curves of genus at most $8$),
-only normalizations of Debarre--Fahlaoui curves: the points may then come from a curve in
-$\mathrm{Sym}^2E$ of class $(5+j)H-jF$ with $1\le j\le5$ (Debarre--Fahlaoui \cite{DebarreFahlaoui1993}, \cite[Definition~5.1]{KadetsVogt2025}); adjunction gives
-arithmetic genus $11-j(j-1)/2$, so $j\le2$ and the addition map to $E$ has degree $6$ or $7$.
+at least $8$ and are not in the lists of curves of $\Q$-gonality at most $5$ \cite{JeonKim2007},
+\cite[Theorems~1.3--1.5]{Orlic2025}, so their $\Q$-gonality is at least $6$. The five curves of class F and the
+curve of class C are treated directly below. For the other $51$ curves (classes E, E0 and D) we use the
+classification of curves with infinitely many points of degree at most $4$
+\cite[Theorems~1.4--1.6]{DerickxOrlic2026}: none of these $51$ curves has infinitely many points of degree $\le4$, so
+if one of them had infinitely many points of degree $5$, its minimum density degree $\min\delta(X/\Q)$ would be $5$.
+We use two results of Kadets and Vogt for a nice curve $X$ of genus $g$ over a number field $k$.
+\begin{itemize}
+\item \cite[Theorem~1.3]{KadetsVogt2025}: \emph{if $\min\delta(X/k)=d$, $m=\lceil d/2\rceil-1$ and $\varepsilon=3d-1-6m$,
+ then either there is a nonconstant morphism $\varphi\colon X\to Y$ of degree at least $2$ with
+ $d=\min\delta(Y/k)\cdot\deg\varphi$, or $g\le\max\bigl(\frac{d(d-1)}2+1,\,3m(m-1)+m\varepsilon\bigr)$.}
+\item \cite[Proposition~6.3 and Table~1]{KadetsVogt2025}: \emph{if $\min\delta(X/k)=5$, then $X$ is a cover of degree
+ $5$ of $\PP^1$ or of an elliptic curve of positive rank, or the normalization of a Debarre--Fahlaoui curve, or
+ $g\in\{5,6,7,8\}$.} Here a Debarre--Fahlaoui curve \cite[Definition~5.1]{KadetsVogt2025}, \cite{DebarreFahlaoui1993}
+ is a geometrically integral curve on $\mathrm{Sym}^2E$, for an elliptic curve $E/k$ of positive rank, in the
+ numerical class $(d+j)H-jF$ with $1\le j\le d$, where $H$ is the class of the divisors $\{x+y:x=x_0\}$ and $F$ the
+ class of the fibres of the addition map $\mathrm{Sym}^2E\to E$.
+\end{itemize}
+For $d=5$ we have $m=2$ and $\varepsilon=2$, so the bound in Theorem~1.3 is $g\le\max(11,10)=11$; and since $5$ is
+prime, a morphism as in its first alternative has degree $5$ to a curve $Y$ with $\min\delta(Y/\Q)=1$, that is, to
+$\PP^1$ or to an elliptic curve of positive rank (\cite[Corollary~2.5]{DerickxOrlic2026} states this for
+$g\ge12$). So for $g\ge12$ it suffices to exclude these two kinds of maps. For $9\le g\le11$ Proposition~6.3 adds
+only Debarre--Fahlaoui curves. On $\mathrm{Sym}^2E$ we have $H^2=H\cdot F=1$, $F^2=0$ and $K=-2H+F$, so a curve of
+class $(5+j)H-jF$ has arithmetic genus $11-j(j-1)/2$ by adjunction, and $F\cdot((5+j)H-jF)=5+j$. Its normalization has
+genus at most $11-j(j-1)/2$, so $g\ge9$ forces $j\le2$, and the addition map gives a morphism $X\to E$ of degree $6$
+or $7$ to an elliptic curve of positive rank. The curves of genus $8$ ($53\langle-1,4\rangle$ and
+$61\langle-1,4\rangle$) are in class F and do not use this argument.
 \begin{itemize}
 \item[E] ($43$ curves, genus $\ge12$, so only elliptic maps of degree $5$ need to be excluded) every positive-rank elliptic factor $E$ has conductor $N$, multiplicity one
- and odd analytic rank, and for $N\le800$ the parametrization through $X_0(N)$ is optimal
- \cite[Corollary~4.10]{DerickxOrlic2026}; so every morphism $X_\Delta(N)\to E'$ with $E'$ isogenous to $E$ has
- degree divisible by $t\cdot d_E$, where $t=[(\Z/N\Z)^\times:\Delta]$ and $d_E$ is the optimal modular degree,
- and $t,d_E>1$ in all these cases (\cref{tab:classE}; see also \cite[Corollary~4.12]{DerickxOrlic2026}); so $t\,d_E$ is composite and
- the degree is not $5$;
-\item[E0] ($5$ curves, at levels $109$ and $125$) the decomposition of the Jacobian has no positive-rank
- elliptic factor;
+ and odd analytic rank. For such $E$ and $N\le800$, the composition $X_\Delta(N)\to X_0(N)\to E$ with the optimal
+ parametrization of $X_0(N)$ is a strong Weil parametrization of $X_\Delta(N)$, of degree $t\,d_E$, where
+ $t=[(\Z/N\Z)^\times:\Delta]$ and $d_E$ is the modular degree \cite[Corollary~4.10]{DerickxOrlic2026}. Every morphism
+ from $X_\Delta(N)$ to an elliptic curve $E'$ isogenous to $E$ factors, up to translation, through this strong Weil
+ parametrization, as in the proof of \cite[Corollary~4.12]{DerickxOrlic2026}, so its degree is divisible by
+ $t\,d_E$. In all these cases $t,d_E>1$ (\cref{tab:classE}), so $t\,d_E$ is composite and the degree is not $5$.
+ At levels $67$ and $73$ there is no elliptic curve of conductor $N$ and odd analytic rank, and the curves of
+ conductor $1$ or $N$ have analytic rank $0$, hence rank $0$; so these seven curves have no positive-rank elliptic
+ quotient at all and the condition is vacuous. They could equally be listed under E0; we keep the codes of the
+ first version;
+\item[E0] ($5$ curves of genus $16$ to $64$, at levels $109$ and $125$) the decomposition of the Jacobian has
+ no positive-rank elliptic factor, which is certified by a separate computation of the elliptic factors;
 \item[D] ($3$ curves of genus $9$ or $10$: $37\langle-1,10\rangle$, $57\langle-1,2\rangle$, $73\langle-1,6\rangle$)
  here a Debarre--Fahlaoui configuration must also be excluded, that is, elliptic maps of degree $5$, $6$ or $7$:
  at level $73$ there is no positive-rank elliptic factor, and at levels $37$ and $57$ every elliptic map of
  positive rank has degree at least $12$ and $8$ respectively \cite[Corollary~4.10]{DerickxOrlic2026};
-\item[C] ($1$ curve, $43\langle-1,2\rangle$) the only possibly positive-rank factor is an elliptic curve $A$; at
- $p=2$, $A(\F_2)$ has order $5$, and no full coset of it lies in $\W(\F_2)$, which has $2133$ elements. A
- positive-dimensional translate in $\W$ over $\Q$ would reduce to such a coset (prime-to-$2$ torsion specializes
- injectively), so $\W(\Q)$ is finite;
+\item[C] ($1$ curve, $43\langle-1,2\rangle$) the only possibly positive-rank factor is an elliptic curve $A$, so a
+ positive-dimensional translate in $\W$ with dense rational points has the form $x+A$ with $x$ rational; its
+ reduction modulo $2$ contains the full coset $\bar x+A(\F_2)$, of order $5$, in $\W(\F_2)$. The set $\W(\F_2)$ has
+ $2133$ elements, and $J(\F_2)\cong\Z/38\times\Z/1330$ has a unique subgroup of order $5$, which is therefore
+ $A(\F_2)$; no coset of it lies in $\W(\F_2)$. So $\W(\Q)$ is finite;
 \item[F] ($5$ curves, levels $53$, $61$, $65$) there is a map $f\colon C\to E$ of degree $4$ whose pullback is
  the positive-rank part $A$, and the surface $Z=\{f^*Q+P\}$ of reducible divisors lies in $\W$. At a good odd
  prime $p$, with $B=A(\Fp)$, we check that every full $B$-coset in $\W(\Fp)$ lies in $Z$, that the intersection
  of the corresponding tangent spaces has dimension at most $2$, and that $A\times C\to\Pic^5C$ has injective
- differential at the relevant points. Since $f_*f^*=[4]$ and $p$ is odd, $A$ has a smooth model over $\Z_p$;
- lifting $B$ to $A(\Z_p)$ and applying \cref{lem:local} puts every rational translate of $A$ in $\W$ into $Z$.
+ differential at the relevant points. Since $f_*f^*=[4]$ and $p$ is odd, $A$ has a smooth model over $\Z_p$.
+ We lift each point of $B$ to some point of $A(\Z_p)$; for the two curves of genus $11$ at level $65$ we use $p=3$,
+ which divides $\#A(\F_3)=6$, so these lifts need not be torsion or form a subgroup, but nothing requires this: a
+ rational translate of $A$ in $\W$ and the surface $Z$ are both stable under all of $A$, so both lie in
+ $\bigcap_b(\W-a_b)$, and \cref{lem:local} puts every rational translate of $A$ in $\W$ into $Z$.
  A point of degree $5$ in $Z$ would be $f^*Q+P$ with a unique, hence rational, point $P$, which is impossible.
 \end{itemize}
 
