@@ -121,10 +121,9 @@ at most $d$ handles curves without rational points; we did not need this case.
 \Cref{prop:covers} and \cref{lem:kernel} are an elementary variation on the second phase of
 \cite{DerickxTerao}; the first phase is used unchanged. The point is that $\mathcal F_b(d)$ is much smaller
 than the set of divisors of degree $d$ with $n$ rational places: the rational part is fixed to $bS$ up to the
-small excess $E$, and the kernels of $M_H$ are small (their dimension is the number of independent functions in
-$L(H)$, and the divisors $H$ have degree only slightly above $d$).
-For a fixed $Q$, the divisors $bS+E+Q$ share the block of rows of $bS+Q$, so we eliminate those once and
-add the rows of $E$ incrementally. This variation was first implemented as an option
+small excess $E$, and the kernels of $M_H$, of dimension $\ell(H)-1$, are small, because the divisors $H$ have
+degree only slightly above $d$. For a fixed $Q$, the matrices $M_{bS+E+Q}$ share the part belonging to $bS+Q$, so we
+eliminate it once and add the part belonging to $E$ incrementally. This variation was first implemented as an option
 \texttt{Al:="Cover"} of CurveArith's \texttt{CAHasFunctionOfDegreeAtMost}; for the curves $X_1(N)$ we run
 the same search in a short C++ program (\S\ref{sec:computations}).
 \end{remark}

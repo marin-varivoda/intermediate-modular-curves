@@ -74,7 +74,8 @@ finite as well. The absence of a function of degree $5$ comes from
  rational points and has order $4032$. An upper bound for $\#J(\Q)$ comes from the Hecke method of
  \cite[\S4.3]{DEH2021}. Rational torsion is fixed by complex conjugation, and for a prime $\ell\nmid40$ the
  Eichler--Shimura relation shows that $1-T_\ell+\ell\langle\ell\rangle=1-T_\ell+T_\ell^2-T_{\ell^2}$ kills rational
- torsion of order prime to $\ell$. Both operators act on $H_1(X,\Z)$, computed from Manin symbols, and the rational
+ torsion of order prime to $\ell$. The operators $c-1$, with $c$ complex conjugation, and these Eichler--Shimura
+ operators act on $H_1(X,\Z)$, computed from Manin symbols, and the rational
  torsion of order prime to the primes used embeds into the common kernel of these operators on
  $H_1(X,\Q)/H_1(X,\Z)\cong(\Q/\Z)^{2g}$, a finite group computed by a Smith normal form. The relation at $\ell$
  says nothing about $\ell$-primary torsion, so we compute five such kernels: one with all four primes
@@ -92,9 +93,11 @@ finite as well. The absence of a function of degree $5$ comes from
  $H_1(X,\Z)\to H_1(X_1(48),\Z)$, the sum of the four lifts of a cycle, which we compute on Manin symbols (and check
  that it is integral, that $\pi_*\circ\pi^*=4$, and that it commutes with complex conjugation and with $T_7$,
  $T_{11}$). By \cite[Theorem~4.13]{DEH2021}, $J_1(48)(\Q)_{\mathrm{tors}}$ is the rational cuspidal group, which we
- compute in the same Manin-symbol model. So every rational torsion class of $J$ lies in the subgroup of the Hecke
- kernel (computed as at level $40$, with the primes $7,11,13,17,19$) whose transfer lies in the rational
- cuspidal group of $J_1(48)$. This inverse image has order $2304$ for $\Delta=\langle-1,5\rangle$ and $12800$ for
+ compute in the same Manin-symbol model. Point counts give an integer $b$ ($2^{13}\cdot3^4$ and $2^{13}\cdot5^2$)
+ with $b\,J(\Q)=0$, and the primes $\ell\in\{7,11,13,17,19\}$ are prime to $b$, so the Eichler--Shimura relations at
+ these primes kill all of $J(\Q)$; the common kernel of $c-1$, multiplication by $b$ and these relations on
+ $H_1(X,\Q)/H_1(X,\Z)$ has order $36864$ and $204800$ respectively. Every rational torsion class of $J$ lies in the
+ subgroup of this kernel whose transfer lies in the rational cuspidal group of $J_1(48)$. This inverse image has order $2304$ for $\Delta=\langle-1,5\rangle$ and $12800$ for
  $\Delta=\langle-1,7,17\rangle$. The argument does not need $\pi^*$ to be injective.
 \end{itemize}
 
@@ -128,14 +131,15 @@ or $7$ to an elliptic curve of positive rank. The curves of genus $8$ ($53\langl
 $61\langle-1,4\rangle$) are in class F and do not use this argument.
 \begin{itemize}
 \item[E] ($43$ curves, genus $\ge12$, so only elliptic maps of degree $5$ need to be excluded) every positive-rank elliptic factor $E$ has conductor $N$, multiplicity one
- and odd analytic rank. For such $E$ and $N\le800$, the composition $X_\Delta(N)\to X_0(N)\to E$ with the optimal
+ and odd analytic rank (all elliptic curves of conductor less than $389$ have analytic rank $0$ or $1$, and those of
+ analytic rank $0$ have rank $0$). For such $E$ and $N\le800$, the composition $X_\Delta(N)\to X_0(N)\to E$ with the optimal
  parametrization of $X_0(N)$ is a strong Weil parametrization of $X_\Delta(N)$, of degree $t\,d_E$, where
  $t=[(\Z/N\Z)^\times:\Delta]$ and $d_E$ is the modular degree \cite[Corollary~4.10]{DerickxOrlic2026}. Every morphism
  from $X_\Delta(N)$ to an elliptic curve $E'$ isogenous to $E$ factors, up to translation, through this strong Weil
  parametrization, as in the proof of \cite[Corollary~4.12]{DerickxOrlic2026}, so its degree is divisible by
  $t\,d_E$. In all these cases $t,d_E>1$ (\cref{tab:classE}), so $t\,d_E$ is composite and the degree is not $5$.
- At levels $67$ and $73$ there is no elliptic curve of conductor $N$ and odd analytic rank, and the curves of
- conductor $1$ or $N$ have analytic rank $0$, hence rank $0$; so these seven curves have no positive-rank elliptic
+ At levels $67$ and $73$, which are prime, the elliptic curves of conductor $N$ have nonzero central $L$-value,
+ hence rank $0$; so these seven curves have no positive-rank elliptic
  quotient at all and the condition is vacuous. They could equally be listed under E0; we keep the codes of the
  first version;
 \item[E0] ($5$ curves of genus $16$ to $64$, at levels $109$ and $125$) the decomposition of the Jacobian has
@@ -144,7 +148,8 @@ $61\langle-1,4\rangle$) are in class F and do not use this argument.
  here a Debarre--Fahlaoui configuration must also be excluded, that is, elliptic maps of degree $5$, $6$ or $7$:
  at level $73$ there is no positive-rank elliptic factor, and at levels $37$ and $57$ every elliptic map of
  positive rank has degree at least $12$ and $8$ respectively \cite[Corollary~4.10]{DerickxOrlic2026};
-\item[C] ($1$ curve, $43\langle-1,2\rangle$) the only possibly positive-rank factor is an elliptic curve $A$, so a
+\item[C] ($1$ curve, $43\langle-1,2\rangle$) every simple factor of the Jacobian other than one copy of the elliptic
+ curve $A=43a1$ has nonzero central $L$-value, so a
  positive-dimensional translate in $\W$ with dense rational points has the form $x+A$ with $x$ rational; its
  reduction modulo $2$ contains the full coset $\bar x+A(\F_2)$, of order $5$, in $\W(\F_2)$. The set $\W(\F_2)$ has
  $2133$ elements, and $J(\F_2)\cong\Z/38\times\Z/1330$ has a unique subgroup of order $5$, which is therefore
@@ -158,7 +163,9 @@ $61\langle-1,4\rangle$) are in class F and do not use this argument.
  which divides $\#A(\F_3)=6$, so these lifts need not be torsion or form a subgroup, but nothing requires this: a
  rational translate of $A$ in $\W$ and the surface $Z$ are both stable under all of $A$, so both lie in
  $\bigcap_b(\W-a_b)$, and \cref{lem:local} puts every rational translate of $A$ in $\W$ into $Z$.
- A point of degree $5$ in $Z$ would be $f^*Q+P$ with a unique, hence rational, point $P$, which is impossible.
+ A point of degree $5$ in $Z$ would be an effective divisor $f^*Q+P$; two distinct fibres of $f$ are disjoint and
+ together have degree $8>5$, so the fibre $f^*Q$ and the point $P$ are unique, hence Galois-invariant, and $P$ would be a
+ rational point in the support, which is impossible.
 \end{itemize}
 
 \begin{proof}[Proof of Theorem B]
