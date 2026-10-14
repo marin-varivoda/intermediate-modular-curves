@@ -3,6 +3,7 @@
 Only explicitly named theorems are imported. No home-directory status is read.
 """
 import hashlib
+import re
 import json
 from pathlib import Path
 from enumeration import generated, signature, subgroups, units
@@ -16,11 +17,38 @@ NEW_X0_NEGATIVE = {74,77,79,82,83,85,86,88,89,92,96,98,99,100,101,103,
 
 
 def section(path, key):
-    """The log of one curve inside a combined log, under the header '=== key ==='."""
-    blocks = path.read_text().split('=== ')
-    found = [b.split(' ===\n',1)[1] for b in blocks if b.startswith(key+' ===\n')]
-    assert len(found) == 1, (path.name, key)
-    return found[0]
+    """The log of one curve inside a combined log: the lines after the header line '=== key ===' up to the next
+    header line. Every key must occur exactly once."""
+    sections, current = {}, None
+    for line in path.read_text().splitlines():
+        header = re.fullmatch(r'=== (N=\d+|\d+:[\d,]+) ===', line)
+        if header:
+            current = header.group(1)
+            assert current not in sections, (path.name, current)
+            sections[current] = []
+        else:
+            assert current is not None, (path.name, line)
+            sections[current].append(line)
+    assert key in sections, (path.name, key)
+    return '\n'.join(sections[key])
+
+
+def central_value_inputs(log):
+    """Level and subgroup printed on the RESULT line of a central-value transcript (Magma may wrap lines)."""
+    text = ' '.join(log.split())
+    level = int(re.search(r'RESULT N=(\d+)', text).group(1))
+    delta = re.search(r'delta=\[([\d, ]*)\]', text)
+    return level, (sorted(int(a) for a in delta.group(1).split(',')) if delta else None)
+
+
+def odd_rank_degrees(path):
+    """Modular degrees of the elliptic curves of odd analytic rank, by level, from modular_degrees.log."""
+    degrees = {}
+    for line in path.read_text().splitlines():
+        match = re.match(r'N=(\d+) odd-rank curves \[(.*)\]', line)
+        if match:
+            degrees[int(match.group(1))] = [int(d) for d in re.findall(r'<"\w+", 1, (\d+)>', match.group(2))]
+    return degrees
 
 
 def main():
@@ -142,6 +170,7 @@ def main():
             evidence = intermediate_rank[row['id']]
             assert evidence['rank_zero_proved'] and evidence['genus_checked'] == r['genus']
             log = section(root/evidence['log'], row['id'])
+            assert central_value_inputs(log) == (n, sorted(r['delta']))
             assert 'central_zero=false' in log and 'SUCCESS' in log and 'error' not in log.lower()
             row['quintic_status'] = 'FINITE_BY_BIELLIPTIC_AND_RANK_ZERO'
             row['degree5_function'] = 'DOES_NOT_EXIST'
@@ -149,6 +178,7 @@ def main():
             row['central_value_log'] = evidence['log']
         elif rank_zero.get(str(n),{}).get('rank_zero_proved',False) and at_least_six(r):
             log = section(root/'central_values.log', f'N={n}')
+            assert central_value_inputs(log) == (n, None)
             assert 'central_zero=false' in log and 'SUCCESS' in log and 'error' not in log.lower()
             row['quintic_status'] = 'FINITE_BY_RANK_ZERO_AND_GONALITY'
             row['degree5_function'] = 'DOES_NOT_EXIST'
@@ -157,6 +187,7 @@ def main():
             evidence = intermediate_rank[row['id']]
             assert evidence['genus_checked'] == r['genus']
             log = section(root/evidence['log'], row['id'])
+            assert central_value_inputs(log) == (n, sorted(r['delta']))
             assert 'central_zero=false' in log and 'SUCCESS' in log and 'error' not in log.lower()
             row['quintic_status'] = 'FINITE_BY_INTERMEDIATE_RANK_ZERO'
             row['degree5_function'] = 'DOES_NOT_EXIST'
@@ -176,6 +207,9 @@ def main():
               and at_least_six(r)):
             logname = f'elliptic_factors_{n}.log' if n == 73 else f'small_density_{n}.log'
             log = (root/logname).read_text()
+            # 37a1 and 57a1, the elliptic curves of positive rank at these levels
+            expected = {37:'positive_factor=[ 0, 0, 1, -1, 0 ]',57:'positive_factor=[ 0, -1, 1, -2, 2 ]'}
+            assert (f'N={n} genus=' in log) if n == 73 else (expected[n] in log)
             if n == 73:
                 assert 'CERTIFIED: no positive-rank elliptic factors' in log
                 assert 'SUCCESS elliptic factor census' in log
@@ -189,6 +223,7 @@ def main():
             row['source'] = 'debarre_fahlaoui_obstruction'
         elif n in {109,125} and r['genus'] >= 12 and at_least_six(r):
             log = (root/f'elliptic_factors_{n}.log').read_text()
+            assert f'N={n} genus=' in log
             assert 'CERTIFIED: no positive-rank elliptic factors' in log
             assert 'SUCCESS elliptic factor census' in log and 'error' not in log.lower()
             row['quintic_status'] = 'FINITE_BY_NO_ELLIPTIC_FACTORS_AND_DENSITY'
@@ -199,6 +234,9 @@ def main():
             # Published elliptic-factor/optimality inputs; see the complete
             # minimum-density and prime-degree argument in this document.
             assert signature(n, units(n))['genus'] > 1
+            # every elliptic curve of odd analytic rank and conductor N has modular degree > 1 (none at 67, 73)
+            degrees = odd_rank_degrees(root/'../../../B_class_E_degrees/modular_degrees.log')
+            assert n in degrees and all(d > 1 for d in degrees[n]) and (degrees[n] or n in (67,73))
             row['quintic_status'] = 'FINITE_BY_ELLIPTIC_DEGREE_AND_DENSITY'
             row['degree5_function'] = 'DOES_NOT_EXIST'
             row['source'] = 'elliptic_degree_density_lemma'
@@ -223,9 +261,9 @@ def main():
         for key in ['level','delta','genus','index']:
             assert relations['invariants'][key] == row[key]
         log = (path.parent/'geometry.log').read_text()
+        assert (path.parent/'canonical_input.m').read_text() == export_canonical(relations)
         if path.parent.parent.name == 'hilbert_jobs':
             assert 'SUCCESS: canonical model identified by Hilbert polynomial' in log
-            assert (path.parent/'canonical_input.m').read_text() == export_canonical(relations)
         else:
             assert 'SUCCESS: geometrically integral canonical model' in log
         assert 'error' not in log.lower()

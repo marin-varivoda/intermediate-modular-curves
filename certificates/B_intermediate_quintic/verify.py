@@ -91,8 +91,10 @@ def main():
     check_typeset_tables(by_id)
     # Recompute the accepted classifications without modifying distributed files.
     with tempfile.TemporaryDirectory(prefix='quintic-verify-') as temporary:
-        work = Path(temporary)/'machinery'
+        # Same layout as in the repository: the class E check reads ../../../B_class_E_degrees/.
+        work = Path(temporary)/'B_intermediate_quintic'/'reproduction'/'machinery'
         shutil.copytree(bundle/'machinery',work)
+        shutil.copytree(FOLDER.parent/'B_class_E_degrees',Path(temporary)/'B_class_E_degrees')
         result = subprocess.run([sys.executable,str(work/'audit_results.py'),'--require-complete'],
                                 cwd=work,env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1'),
                                 stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True)

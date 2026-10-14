@@ -3,7 +3,8 @@
 central_values.json lists the levels N for which L(J_1(N),1) != 0 is used (central_value.m), and
 intermediate_central.json the pairs (N, Delta) for which L(J_Delta(N),1) != 0 is used
 (intermediate_central_value.m). This script reruns Magma for each of them and writes the transcripts, one
-section '=== key ===' per curve, to central_values.log and intermediate_central.log (or to --out).
+section '=== key ===' per curve, to central_values.log and intermediate_central.log in --out (by default this
+folder, replacing the saved logs; with --only, --out must be another folder).
 
     python3 run_rank_zero.py [--out DIR] [--jobs 4] [--only KEY ...]
 """
@@ -49,6 +50,12 @@ def main():
     pairs = json.loads((ROOT/'intermediate_central.json').read_text())
     keys = sorted(pairs, key=lambda s: (int(s.split(':')[0]), s))
     if args.only is not None:
+        # A partial run must not overwrite the complete logs that the classification reads.
+        if args.out.resolve() == ROOT:
+            parser.error('--only needs --out with a separate directory')
+        unknown = set(args.only) - {f'N={n}' for n in levels} - set(keys)
+        if unknown:
+            parser.error(f'unknown keys: {sorted(unknown)}')
         levels = [n for n in levels if f'N={n}' in args.only]
         keys = [k for k in keys if k in args.only]
     with ThreadPoolExecutor(max_workers=args.jobs) as pool:
