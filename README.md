@@ -73,8 +73,8 @@ the good-reduction checks and the class E modular degrees, writing all output to
 
 Each folder in `certificates/` has a README explaining what it proves and how to rerun it. The longest
 computations are those of Theorem D (up to 30 hours of wall-clock time per level, with up to
-150 GB of memory per process for $X_1(47)$) and the lower bound for 48.384.19.bc.1 in Theorem C (more than 3 hours
-and about 53 GB of memory); everything else runs in minutes to an hour.
+150 GB of memory per process for $X_1(47)$) and the lower bound for 48.384.19.bc.1 in Theorem C (3 to 5 hours
+and about 55 GB of memory); everything else runs in minutes to an hour.
 
 ## External software and data
 

@@ -12,10 +12,6 @@ are Orlić's), with the method for each bound. The curve 43.132.9.a.2 is in `../
 | `upper/pullback.py`, `pullback.json` | pullback bounds along forgetful maps (MD Sage) | `sage -python pullback.py` |
 | `upper/special/` | the two special divisors at level 43 | `cd upper/special/<label>; magma -b certificate.m` |
 
-The longest lower-bound run is 48.384.19.bc.1 at p = 7: about 66 minutes in `CAGonality`, but more than 3 hours in
-total, because Magma's genus computation for the reduced model is slow, and about 53 GB of memory. All others take at
-most 11 minutes.
-
-The logs in `lower/runs/` were produced before the models were moved into this repository; their first line still
-reads `Loading "../../../release/models/<label>.m"`. The model files in `models/` are byte-identical to the ones
-loaded then.
+The longest lower-bound run is 48.384.19.bc.1 at p = 7: 66 to 92 minutes in `CAGonality`, but 3 to 5 hours in
+total, because Magma's genus computation for the reduced model is slow, and about 55 GB of memory. All others take at
+most 11 minutes. All logs in `lower/runs/` were produced by the committed scripts.
