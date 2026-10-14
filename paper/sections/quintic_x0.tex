@@ -102,7 +102,7 @@ $3$ and $5$ have order $513$. It meets the torsion-free group $\A(\Q)$ trivially
 isomorphically, onto $R(\Q)$, and $J(\Q)=\mathcal C+\A(\Q)$. Every rational class of degree $5$ is therefore
 $[5\infty]+z+a$ with $z\in\mathcal C$ and $a\in\A(\Q)$, and its reduction lies in $[5\infty]+\bar z+J(\Fp)[\ell^\infty]$,
 where $\ell=7$ for $p=3$ and $\ell=2$ for $p=5$ (these primary subgroups have orders $49$ and $256$, and contain
-$\A(\Fp)$). Call $z\in\mathcal C$ \emph{exceptional at $p$} if some class in $[5\infty]+\bar z+J(\Fp)[\ell^\infty]$
+$\A(\Fp)$). Call $z\in\mathcal C$ \emph{exceptional at $p$} (the certificate is \texttt{pencils74.m}; see also \cite{SuppA}) if some class in $[5\infty]+\bar z+J(\Fp)[\ell^\infty]$
 lies in $W^1_5(\Fp)$ and either has a base-point-free pencil of degree $5$ or has $\dim T W^1_5\ne1$. The certificate
 finds exactly two exceptional $z$ at each prime, and the two pairs are disjoint. For every $z$ we choose a prime at
 which $z$ is not exceptional; there the argument of the previous paragraph applies verbatim to every rational class
@@ -163,7 +163,7 @@ $Y$, hence effective, so
 the image of the proper map $B\times C\to\Pic^5(C)$; it is closed, of dimension $\dim B+1$, and stable under
 translation by $B$.
 
-\emph{The certificate.} At the prime $p$ of \cref{tab:routeT}, a set of subgroups $S\subseteq J(\Fp)$ is tested: for
+\emph{The certificate} (see also \cite{SuppA}). At the prime $p$ of \cref{tab:routeT}, a set of subgroups $S\subseteq J(\Fp)$ is tested: for
 a list of primes $\ell\ne p$ (and $n=8$ at $N=86$), all subgroups of $J(\Fp)$ of order $\ell$, chosen so that every
 simple factor $A_i$ of $\A$ has $\#A_i(\Fp)$ divisible by some tested $\ell$. For every tested $S$ and every full
 coset $x+S\subseteq\W(\Fp)$ the certificate checks
@@ -214,7 +214,8 @@ degree $5$.
 
 \begin{proof}[Proof of Theorem A]
 Combine the function exclusions with the three routes, as in \cref{tab:A}. The $36$ certificates are in the
-accompanying repository (\texttt{certificates/A\_x0\_quintic}), with a list of the data per level.
+accompanying repository (\texttt{certificates/A\_x0\_quintic}), with a list of the data per level; the
+supplementary write-up \cite{SuppA} gives the computation at each level in more detail.
 \end{proof}
 
 \begin{table}[ht]\centering\small
