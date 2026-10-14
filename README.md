@@ -64,12 +64,17 @@ Requirements: Magma V2.29-4, SageMath 10.7, Python 3, and for Theorem D a C++20 
 ```sh
 git clone --recursive https://github.com/marin-varivoda/intermediate-modular-curves
 cd intermediate-modular-curves
-python3 verify.py                                    # checks all saved logs (seconds)
+python3 verify.py                                    # checks all saved logs (seconds); same as `make check`
+make verify                                          # reruns the certificates that take minutes (needs Magma)
 ```
+
+`make verify` reruns Theorem A, the cuspidal and special upper-bound certificates and Proposition 4.1 of Theorem C,
+the good-reduction checks and the class E modular degrees, writing all output to `build/verify/` (30 to 60 minutes with 8 processes, depending on the load).
 
 Each folder in `certificates/` has a README explaining what it proves and how to rerun it. The longest
 computations are those of Theorem D (up to 30 hours of wall-clock time per level, with up to
-150 GB of memory per process for $X_1(47)$); everything else runs in minutes to an hour.
+150 GB of memory per process for $X_1(47)$) and the lower bound for 48.384.19.bc.1 in Theorem C (more than 3 hours
+and about 53 GB of memory); everything else runs in minutes to an hour.
 
 ## External software and data
 

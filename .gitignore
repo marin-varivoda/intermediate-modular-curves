@@ -14,3 +14,4 @@ certificates/D_x1_gonality/validation/ca_*.m
 __pycache__/
 certificates/D_x1_gonality/runs/**/shard_*.m
 certificates/D_x1_gonality/runs/**/phase1.m
+build/
