@@ -1,0 +1,21 @@
+{
+  "seconds": 71399.41975813918,
+  "bound": 28,
+  "status": "complete",
+  "log_sha256": "cf8ce0774cbdb9aea4a9d219f92af2023abca0fd308c8d456422feec96d6ea56",
+  "kind": "plane",
+  "field_size": 2,
+  "format": "F2JETS",
+  "backend": "curvearith",
+  "shard": 3,
+  "shards": 4,
+  "files": {
+    "/home/mvarivoda/imc/intermediate-modular-curves-lab/finite-field-gonality/runs/x1_47_f2_d28_20260930T130140Z/model.m": "59aa10e04c2428fc71be2e14a5930ba17ee24128be56dfc1a8d8f0f62129d8c1",
+    "/home/mvarivoda/imc/intermediate-modular-curves-lab/third_party/CurveArith/src/gonality.m": "531da410783ac64fa3f17f1880a149e33c7602efe0fbafca853ec7abbbccd35e",
+    "/home/mvarivoda/imc/intermediate-modular-curves-lab/finite-field-gonality/runs/x1_47_f2_d28_20260930T130140Z/parts/part_3.export.m": "adc205aeb50d6b06bcd7717cf8674fcfa31a51340e990b82593b20ba9d30978c",
+    "/home/mvarivoda/imc/intermediate-modular-curves-lab/finite-field-gonality/runs/x1_47_f2_d28_20260930T130140Z/parts/part_3.driver.m": "e9bbfcfd994e40dd1c149c6b1da7d7649d97257ca6cce9873c4eb3bea4262111",
+    "/home/mvarivoda/imc/intermediate-modular-curves-lab/finite-field-gonality/runs/x1_47_f2_d28_20260930T130140Z/parts/part_3.jets": "5ec936205e7d337858e13bc54583be51a2ddb29b4439a5826c4aa93b1132e3e6",
+    "/home/mvarivoda/imc/intermediate-modular-curves-lab/finite-field-gonality/runs/x1_47_f2_d28_20260930T130140Z/parts/part_3.jets.places": "bfd32e7b48ab61fd91e22bf779547063fecb5b2ceff9e669cbca6fff3d61f12a",
+    "/home/mvarivoda/imc/intermediate-modular-curves-lab/finite-field-gonality/runs/x1_47_f2_d28_20260930T130140Z/parts/part_3.jets.basis": "3c4f928661a5b30840827a1316992a174e8caec93171401e41446cd201ffffa5"
+  }
+}

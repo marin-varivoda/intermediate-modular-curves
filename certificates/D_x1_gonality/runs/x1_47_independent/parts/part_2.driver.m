@@ -1,0 +1,15 @@
+SetQuitOnError(true);
+SetColumns(0);
+vmajor,vminor,vpatch:=GetVersion();
+printf "MAGMA_VERSION %o.%o-%o\n", vmajor,vminor,vpatch;
+AttachSpec("/home/mvarivoda/imc/intermediate-modular-curves-lab/third_party/CurveArith/CurveArith.spec");
+import "/home/mvarivoda/imc/intermediate-modular-curves-lab/third_party/CurveArith/src/gonality.m" : DifferentialExpansionMatrices;
+load "/home/mvarivoda/imc/intermediate-modular-curves-lab/finite-field-gonality/runs/x1_47_f2_d28_20260930T130140Z/parts/part_2.export.m";
+A<x,y>:=PolynomialRing(Rationals(),2);
+load "/home/mvarivoda/imc/intermediate-modular-curves-lab/finite-field-gonality/runs/x1_47_f2_d28_20260930T130140Z/model.m";
+RF<xx>:=FunctionField(GF(2)); T<yy>:=PolynomialRing(RF);
+f:=Evaluate(ChangeRing(X,GF(2)),[T!xx,yy]);
+assert IsIrreducible(f); K<a>:=FunctionField(f);
+ps,blocks:=ExportF2Jets(K,28,"/home/mvarivoda/imc/intermediate-modular-curves-lab/finite-field-gonality/runs/x1_47_f2_d28_20260930T130140Z/parts/part_2.jets":Checks:=16,Backend:="curvearith",Shard:=2,Shards:=4,PlaceEnumerator:=F2PlacesOfDegree);
+print "EXPORT_RUN_COMPLETE";
+quit;

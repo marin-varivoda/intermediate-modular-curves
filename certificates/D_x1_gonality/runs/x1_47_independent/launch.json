@@ -1,0 +1,35 @@
+{
+  "curve": "X1(47)",
+  "field_size": 2,
+  "bound": 28,
+  "backend": "curvearith",
+  "magma_workers": 4,
+  "cpp_threads": 8,
+  "timeout": null,
+  "memory_limit": null,
+  "resource_limits": {
+    "RLIMIT_CPU": [
+      -1,
+      -1
+    ],
+    "RLIMIT_AS": [
+      -1,
+      -1
+    ],
+    "RLIMIT_DATA": [
+      -1,
+      -1
+    ],
+    "RLIMIT_RSS": [
+      -1,
+      -1
+    ]
+  },
+  "files": {
+    "/home/mvarivoda/imc/intermediate-modular-curves-lab/finite-field-gonality/runs/x1_47_f2_d28_20260930T130140Z/model.m": "59aa10e04c2428fc71be2e14a5930ba17ee24128be56dfc1a8d8f0f62129d8c1",
+    "/home/mvarivoda/imc/intermediate-modular-curves-lab/finite-field-gonality/runs/x1_47_f2_d28_20260930T130140Z/export_uncapped.py": "193998cf3d2592da9cf3baaaa0074aedc741a3a8083fe18566926f141561bc20",
+    "/home/mvarivoda/imc/intermediate-modular-curves-lab/finite-field-gonality/runs/x1_47_f2_d28_20260930T130140Z/merge_snapshot.py": "8c729429f424b25f123e1931059e0c7c9687952cba2857961333b2016c6d0230",
+    "/home/mvarivoda/imc/intermediate-modular-curves-lab/finite-field-gonality/runs/x1_47_f2_d28_20260930T130140Z/bin/X47_CPP_Ph2": "0f715fa05613e661521ff2423acd09e69dc513f4123bb21b78faff032b7814ad",
+    "/home/mvarivoda/imc/intermediate-modular-curves-lab/finite-field-gonality/runs/x1_47_f2_d28_20260930T130140Z/run.py": "79932268b1559815bb34b5f2f3e0d02f44860fb8ee54f9ea1f0cba0b364d1695"
+  }
+}
