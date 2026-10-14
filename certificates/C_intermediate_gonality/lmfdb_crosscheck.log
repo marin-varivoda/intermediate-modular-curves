@@ -1,0 +1,27 @@
+# 2026-10-14 LMFDB (beta.lmfdb.org), table gps_gl2zhat_fine
+41.84.5.a.1      g= 5 paper= 4 LMFDB bounds=[3,4] q_gonality=None ok
+41.168.11.b.1    g=11 paper= 6 LMFDB bounds=[3,6] q_gonality=None ok
+41.210.11.b.1    g=11 paper= 8 LMFDB bounds=[5,8] q_gonality=None ok
+41.420.21.d.1    g=21 paper=11 LMFDB bounds=[5,16] q_gonality=None ok
+42.192.9.c.2     g= 9 paper= 6 LMFDB bounds=[4,6] q_gonality=None ok
+42.288.13.a.1    g=13 paper= 6 LMFDB bounds=[4,6] q_gonality=None ok
+43.132.9.a.2     g= 9 paper= 7 LMFDB bounds=[4,8] q_gonality=None ok
+43.308.15.b.1    g=15 paper= 9 LMFDB bounds=[4,15] q_gonality=None ok
+44.144.8.c.4     g= 8 paper= 5 LMFDB bounds=[4,7] q_gonality=None ok
+44.360.16.e.1    g=16 paper= 8 LMFDB bounds=[4,8] q_gonality=None ok
+45.144.5.a.1     g= 5 paper= 4 LMFDB bounds=[4,4] q_gonality=4 ok
+45.216.11.d.2    g=11 paper= 6 LMFDB bounds=[3,6] q_gonality=None ok
+45.288.9.a.4     g= 9 paper= 6 LMFDB bounds=[4,6] q_gonality=None ok
+45.432.21.g.2    g=21 paper=10 LMFDB bounds=[5,12] q_gonality=None ok
+48.192.5.ky.2    g= 5 paper= 4 LMFDB bounds=[4,4] q_gonality=4 ok
+48.192.7.hj.1    g= 7 paper= 4 LMFDB bounds=[4,4] q_gonality=4 ok
+48.192.7.ho.1    g= 7 paper= 4 LMFDB bounds=[4,4] q_gonality=4 ok
+48.384.13.nt.1   g=13 paper= 8 LMFDB bounds=[4,8] q_gonality=None ok
+48.384.19.bc.1   g=19 paper= 8 LMFDB bounds=[6,8] q_gonality=None ok
+48.384.19.bj.1   g=19 paper= 8 LMFDB bounds=[4,8] q_gonality=None ok
+49.168.3.b.1     g= 3 paper= 3 LMFDB bounds=[3,3] q_gonality=3 ok
+49.392.19.i.2    g=19 paper=11 LMFDB bounds=[4,14] q_gonality=None ok
+50.180.4.a.2     g= 4 paper= 3 LMFDB bounds=[3,3] q_gonality=3 ok
+50.450.22.f.1    g=22 paper=10 LMFDB bounds=[6,10] q_gonality=None ok
+24 curves, 0 conflicts
+SUCCESS

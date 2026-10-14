@@ -11,6 +11,7 @@ are Orlić's), with the method for each bound. The curve 43.132.9.a.2 is in `../
 | `upper/certificates/` | cuspidal divisors with ℓ(D) = 2 (q-expansions from Zywina's package) | `cd upper/certificates; magma -b <file>` |
 | `upper/pullback.py`, `pullback.json` | pullback bounds along forgetful maps (MD Sage) | `sage -python pullback.py` |
 | `upper/special/` | the two special divisors at level 43 | `cd upper/special/<label>; magma -b certificate.m` |
+| `lmfdb_crosscheck.py`, `.log` | consistency check: every value with $41\le N\le50$ lies in the LMFDB's bounds for the $\mathbb Q$-gonality | `python3 lmfdb_crosscheck.py` (network) |
 
 The longest lower-bound run is 48.384.19.bc.1 at p = 7: 66 to 92 minutes in `CAGonality`, but 3 to 5 hours in
 total, because Magma's genus computation for the reduced model is slow, and about 55 GB of memory. All others take at
