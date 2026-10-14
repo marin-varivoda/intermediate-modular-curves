@@ -1,8 +1,7 @@
-"""Exploratory full-GammaH homology bounds, with prime exclusions explicit.
+"""Hecke bound for rational torsion at level 40, on the full Gamma_H homology, with prime exclusions explicit.
 
-No characterwise lattice is used. No classification imports this output:
-identification with integral Jacobian homology remains a separate audit gate.
-Run with Sage's Python and a model directory containing relations.json.
+No characterwise lattice is used. That this lattice is the integral homology of the Jacobian is checked by
+audit_integral_homology40.py. Run with Sage's Python and a model directory containing relations.json.
 """
 import argparse
 import json
@@ -51,5 +50,5 @@ for omitted in [0]+primes:
     results.append(result)
     print(result,flush=True)
 (args.directory/'integral_torsion_probe.json').write_text(json.dumps(dict(
-    status='EXPLORATORY_PENDING_LATTICE_AUDIT',level=n,delta=data['delta'],
+    status='HECKE_TORSION_BOUND',level=n,delta=data['delta'],
     results=results),indent=2)+'\n')

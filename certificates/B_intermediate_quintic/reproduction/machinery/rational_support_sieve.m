@@ -54,5 +54,5 @@ end for;
 PrintFile("signed_support_candidates.m",Sprintf("support_points := %o;",[Eltseq(P):P in qpoints]):Overwrite:=true);
 PrintFile("signed_support_candidates.m",Sprintf("support_divisors := %o;",survivors));
 printf "special_classes=%o rational_support_survivors=%o\n",special,#survivors;
-print "SUCCESS rational-support class sieve; no completeness claim";
+print "SUCCESS rational-support class sieve (complete once J(Q) is known to be the subgroup)";
 quit;
