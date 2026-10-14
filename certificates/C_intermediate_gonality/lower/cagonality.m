@@ -1,7 +1,7 @@
 // Lower bound gon_Q(X) >= gon_{F_p}(X mod p), for a prime p not dividing N at which the model
 // reduces to a curve of the same genus. Caller assigns: label, p.
-// The caller first loads the MD Sage canonical model ../../release/models/<label>.m (defines N, g, X).
-// CAGonality is from CurveArith (Derickx-Terao), pinned in ../../third_party/CurveArith.
+// The caller (a script in runs/) first loads the MD Sage canonical model ../../models/<label>.m (defines N, g, X).
+// CAGonality is from CurveArith (Derickx-Terao), the submodule third_party/CurveArith at the repository root.
 SetQuitOnError(true);
 AttachSpec("../../../../third_party/CurveArith/CurveArith.spec");
 assert N mod p ne 0;

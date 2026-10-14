@@ -56,7 +56,7 @@ def relations(forms, k, prec):
 # (Sage's integral basis), so that the model has the right reduction mod p.
 ideal = []
 if maxdeg == 2:
-    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../third_party/mdsage"))
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../../third_party/mdsage"))
     from mdsage import vanishing_quadratic_forms
     Q = vanishing_quadratic_forms(GY, minimize_strategy="LLL")
     for q in Q:
