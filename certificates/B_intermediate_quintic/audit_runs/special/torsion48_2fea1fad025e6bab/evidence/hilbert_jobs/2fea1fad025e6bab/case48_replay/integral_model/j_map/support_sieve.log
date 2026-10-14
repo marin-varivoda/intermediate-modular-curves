@@ -1,6 +1,0 @@
-Loading "canonical_input.m"
-Loading "closed_cusp_ideals.m"
-closed_cusp_support=12 subgroup_order=2304 ambient_invariants=[ 12, 24, 48, 48, 
-0 ]
-special_classes=32 closed_cusp_survivors=4
-SUCCESS closed-cusp sieve; candidate generation only

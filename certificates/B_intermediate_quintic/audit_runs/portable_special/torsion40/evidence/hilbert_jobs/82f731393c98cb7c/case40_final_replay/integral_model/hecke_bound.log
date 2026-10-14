@@ -1,9 +1,0 @@
-integral Eichler-Shimura operator 3
-integral Eichler-Shimura operator 7
-integral Eichler-Shimura operator 11
-integral Eichler-Shimura operator 13
-{'omit_residue_prime': 0, 'smith': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 24, 168]}
-{'omit_residue_prime': 3, 'smith': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 24, 168]}
-{'omit_residue_prime': 7, 'smith': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 24, 168]}
-{'omit_residue_prime': 11, 'smith': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 24, 168]}
-{'omit_residue_prime': 13, 'smith': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 24, 168]}

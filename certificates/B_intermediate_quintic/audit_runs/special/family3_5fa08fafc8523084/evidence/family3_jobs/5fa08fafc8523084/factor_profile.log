@@ -1,8 +1,0 @@
-FACTOR dimension=1 multiplicity=1 central_zero=true
-POTENTIAL_POSITIVE p=2 polynomial=$.1^2 + $.1 + 2 order=4
-POTENTIAL_POSITIVE p=3 polynomial=$.1^2 + 2*$.1 + 3 order=6
-POTENTIAL_POSITIVE p=7 polynomial=$.1^2 + 4*$.1 + 7 order=12
-FACTOR dimension=2 multiplicity=1 central_zero=false
-FACTOR dimension=2 multiplicity=1 central_zero=false
-FACTOR dimension=6 multiplicity=1 central_zero=false
-SUCCESS full intermediate factor profile

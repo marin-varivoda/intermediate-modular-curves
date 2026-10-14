@@ -1,9 +1,0 @@
-{
-  "command": [
-    "/opt/sage/envs/sage/bin/python",
-    "run_case48_certificate.py",
-    "2fea1fad025e6bab"
-  ],
-  "snapshot": "/tmp/quintic-torsion48_2fea1fad025e6bab-fo8yg7lo/machinery",
-  "pid": 3626177
-}

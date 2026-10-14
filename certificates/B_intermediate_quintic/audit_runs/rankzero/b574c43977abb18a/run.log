@@ -1,2 +1,0 @@
-RESULT N=64 delta=[ 1, 31, 33, 63 ] dimension=37 central_zero=false
-SUCCESS intermediate central-value test

@@ -1,4 +1,0 @@
-X1 genus 37 cusp orbit degrees [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 8, 8] rational cuspidal order 35306864640000
-verified integral transfer, pushforward, degree and real action 4
-{'status': 'PULLBACK_TORSION_UPPER_BOUND', 'level': 48, 'delta': [1, 5, 19, 23, 25, 29, 43, 47], 'degree_to_intermediate': 4, 'old_hecke_bound': 36864, 'pullback_restricted_bound': 2304, 'x1_rational_cuspidal_order': 35306864640000}
-SUCCESS exact full-homology pullback torsion bound
