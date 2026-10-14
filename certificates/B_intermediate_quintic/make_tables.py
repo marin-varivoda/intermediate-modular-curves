@@ -80,7 +80,7 @@ negative_codes = {
 direct = [r for r in rows if r['strict'] and r['quintic_status'] in negative_codes]
 assert len(direct) == 154
 out = [r'\begin{longtable}{rrrrl}',
-       r'\caption{All direct negative assignments (excluding projection).}\label{tab:negative}\\',
+       r'\caption{The $154$ strict pairs with a direct negative argument: the $139$ curves of \S\ref{sec:quintic-intermediate} and the $15$ curves of large index (code S, $119\mu>120000$). Projections are in \cref{tab:projection}.}\label{tab:negative}\\',
        r'\toprule $N$ & Generators of $\Delta$ & $g$ & $\mu$ & Proof \\',
        r'\midrule\endfirsthead',
        r'\toprule $N$ & Generators of $\Delta$ & $g$ & $\mu$ & Proof \\',
