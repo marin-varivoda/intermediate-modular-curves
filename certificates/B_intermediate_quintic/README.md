@@ -1,8 +1,11 @@
 # Intermediate modular curves with infinitely many quintic points
 
-This folder is the self-contained presentation package. Start with
-`classification.pdf` (source: `classification.tex`); `x0_proof.pdf` is the
-companion proof for the thirty formerly unresolved X0 levels.
+This folder is the self-contained presentation package for Theorem B and
+Corollary E. The proofs are in Section 7 of the paper (`../../paper/main.pdf`),
+which is authoritative; `classification.pdf` (source: `classification.tex`) is a
+longer write-up, and `x0_proof.pdf` is a copy of
+`../A_x0_quintic/quintic_points.pdf` (Theorem A). The package code `C` for the
+positive curves of genus 3 and 4 is `K` in the paper.
 
 The classification has **43 positive strict subgroup-defined pairs**.
 Each has a rational function of degree exactly five. The proof also gives
@@ -18,7 +21,7 @@ Pairs are not identified merely because their curves are isomorphic.
   projection targets and proof metadata. The proof handles larger levels
   uniformly by projection to X0.
 - `SOURCE_AUDIT.md`: precise published inputs and their hypotheses.
-- `REAUDIT.md`: completed review checklist and chronological audit findings.
+- `REAUDIT.md`: the review checklist kept while the package was built (historical).
 - `audit_runs/`: fresh computational replay evidence, including independent
   portable replays of all positive batches and twelve exceptional negatives.
 
@@ -55,6 +58,3 @@ Compile the main TeX with `tectonic classification.tex`, or run
 `pdflatex classification.tex` twice. Do regeneration in a working copy.
 `PACKAGE_MANIFEST.json` freezes the reviewed distribution; `seal_package.py`
 is the maintenance tool used to create it after all verification gates pass.
-
-The separate, unfinished X1(41) gonality research is not part of this package
-and is not used in the classification.

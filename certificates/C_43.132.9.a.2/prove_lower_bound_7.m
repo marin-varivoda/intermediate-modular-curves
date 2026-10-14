@@ -1,6 +1,6 @@
 // Reproducible certificate that X = 43.132.9.a.2 has no Q-rational g^1_6.
 //
-// The earlier certificate had a saturation gap.  It is closed here using
+// The rational points of Jac(X) are determined using
 // the quotient B = Jac(X)/43A.  Magma constructs a modular abelian variety
 // Bmod that is Q-isogenous to B and certifies a rational-torsion multiple
 // 532 for Bmod.  Point counts, hence this torsion bound, are invariant
@@ -125,7 +125,7 @@ printf "CHECK|ELLIPTIC_REDUCTION_ORDER=6\n";
 printf "CHECK|ELLIPTIC_PLUS_CUSPIDAL_ORDER=%o\n",#H3;
 printf "CHECK|TARGET_OUTSIDE_ELLIPTIC_PLUS_CUSPIDAL=true\n";
 
-// ---------- Close the saturation gap over Q ----------
+// ---------- J(Q) = A(Q) + cuspidal group (saturation over Q) ----------
 //
 // The modular Jacobian is J_H(43) for H=<2> in (Z/43Z)^*.  Magma's JH
 // object is Q-isogenous, not canonically isomorphic, to Jac(X).  This is

@@ -88,10 +88,8 @@ specified levels. The local lifting lemma is proved in the text.
 This is a reproducible computational proof, not a formal-proof-assistant
 verification or an independent peer review.
 
-## Provenance
+## Relation to the paper
 
-The earlier work was committed first, as requested: `69c9db4` in the
-parent repository. This folder replaces the scattered working reports;
-reading them is unnecessary. The code was consolidated from the earlier
-certificates and their canonical-coordinate helpers. References are
-listed in the document. No superseded experiments are included.
+`quintic_points.pdf` is a longer write-up of Section 6 of the paper, level by
+level. The paper (`paper/main.pdf`) is the authoritative statement of the
+arguments; where the two differ in wording, follow the paper.
