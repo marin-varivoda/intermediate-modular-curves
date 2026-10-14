@@ -2,6 +2,6 @@
 CXX ?= g++
 CXXFLAGS ?= -O3 -std=c++20 -pthread -Wall -Wextra
 search: main.cpp include/ff_gonality.hpp $(wildcard include/ff/*.hpp)
-	$(CXX) $(CXXFLAGS) $< -lgmpxx -lgmp -o $@
+	$(CXX) $(CXXFLAGS) $(CPPFLAGS) $< $(LDFLAGS) -lgmpxx -lgmp -o $@
 clean:
 	rm -f search

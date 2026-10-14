@@ -9,4 +9,6 @@ line=$(grep "^$1," levels.csv)
 p=$(echo $line | cut -d, -f2); d=$(echo $line | cut -d, -f3); s=$(echo $line | cut -d, -f4); m=$(echo $line | cut -d, -f5)
 make -C phase2 search
 MEMGB=${MEMGB:-$m} python3 phase1/run_phase1.py models/X1_$1.txt $p $d $s runs/x1_$1
-phase2/search runs/x1_$1/curve.ffjets --degree $d --threads ${THREADS:-8} | tee runs/x1_$1/phase2.json
+# Write to the file first (not through tee), so that a failing search stops the script.
+phase2/search runs/x1_$1/curve.ffjets --degree $d --threads ${THREADS:-8} > runs/x1_$1/phase2.json
+cat runs/x1_$1/phase2.json

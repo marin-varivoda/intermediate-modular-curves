@@ -66,7 +66,9 @@ splits the places between several Magma processes and merges their output.
 
 ## Running
 
-Requirements: Magma (tested with V2.29-4), a C++20 compiler and GMP. CurveArith is the pinned submodule in
+Requirements: Magma (tested with V2.29-4), a C++20 compiler and GMP (for example `apt install libgmp-dev`; with
+conda, `conda install -c conda-forge gmp` and then
+`make -C phase2 CPPFLAGS=-I$CONDA_PREFIX/include LDFLAGS="-L$CONDA_PREFIX/lib -Wl,-rpath,$CONDA_PREFIX/lib"`). CurveArith is the pinned submodule in
 `third_party/`.
 
 ```sh
