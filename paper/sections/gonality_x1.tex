@@ -18,10 +18,11 @@ $\gon_{\Fp}X_1(N)_{\Fp}>d$, and by \cref{lem:specialization}, $\gon_\Q X_1(N)\ge
 The second phase also counts the divisors it tests and compares the total with an independent count of
 $\#\mathcal F_b(d)$ computed from the numbers of places of each degree; they agree in every case.
 As a check of the whole pipeline, the same programs reproduce $\gon_{\F_2}X_1(29)=11$ (degree $10$ is
-excluded after testing $8568$ divisors, and a function of degree $11$ is found). For $X_1(47)$, an independent earlier computation,
-with a different implementation of the first phase (a different enumeration of places and expansions), tested
+excluded after testing $8568$ divisors, and a function of degree $11$ is found). For $X_1(47)$, an earlier run
+with a different Phase~1 driver (a different distribution of the places among the processes; in both runs the
+expansions are computed by CurveArith) and an earlier build of the Phase~2 program tested
 exactly the same number $651{,}609{,}964$ of divisors and also found no function of degree at most $28$. It ran on the
-same machine and with the same version of Magma, so it checks the implementation rather than the platform; its
+same machine and with the same version of Magma, so it checks our drivers rather than the platform; its
 record is in \texttt{certificates/D\_x1\_gonality/runs/x1\_47\_independent}.
 
 \subsection{The level \texorpdfstring{$48$}{48}: a double cover}\label{sec:double-cover}
