@@ -37,7 +37,7 @@ of good reduction (\cref{tab:C}). Six of these curves ($41.84.5.a.1$, $44.144.8.
 three curves of genus $5$ and $7$ at level $48$) are also covered by Orli\'c's classification
 \cite{Orlic2025}; we recompute them as a check. The longest computation, for $48.384.19.bc.1$ at $p=7$, takes
 about an hour; all others take at most eleven minutes. The curves $49.168.3.b.1$ and $50.180.4.a.2$ have
-genus $3$ and $4$ and are not hyperelliptic \cite{IshiiMomose1991}, hence have gonality at least $3$.
+genus $3$ and $4$ and are not hyperelliptic \cite[Theorem~3.6]{JeonKimSchweizer2020}, hence have gonality at least $3$.
 
 The remaining curve, $43.132.9.a.2$, needs Method~III.
 
@@ -62,12 +62,15 @@ the Abel--Jacobi map.
 \emph{Step 1: over $\F_3$.} \texttt{CAGonality} gives $\gon_{\F_3}X_{\F_3}=6$, so by \cref{lem:specialization}
 there is no function of degree at most $5$ over $\Q$. Here $n=\lceil 4/4\rceil=1$, and testing the $845$
 effective divisors of degree $6$ over $\F_3$ containing a rational place shows that exactly four have
-$\ell\ge2$, and that they are linearly equivalent. So $W^1_6(X_{\F_3})(\F_3)$ is a single class $T$, and
+$\ell\ge2$, and that they are linearly equivalent. These four divisors exhaust $W^1_6(X_{\F_3})(\F_3)$: a class in it
+has a pencil without base points (a base point would give a function of degree at most $5$), hence a morphism to
+$\PP^1$ of degree $6$ over $\F_3$, and by \cref{lem:fibres} with $n=1$ one of its fibres over $\PP^1(\F_3)$ is an
+effective divisor in the class that contains a rational place. So $W^1_6(X_{\F_3})(\F_3)$ is a single class $T$, and
 $T-6c$ has order $1596$ in $J(\F_3)$, a group of order $19152$.
 
 \emph{Step 2: the rational points of $J$.} Let $A=\pi^*E\subseteq J$ and $B=J/A$. The pullback $\pi^*$ is
-injective: a nontrivial kernel would make $\pi$ factor through an isogeny onto $E$ of degree dividing $6$, but
-$43a1$ has no rational cyclic isogeny and $E(\Q)_{\mathrm{tors}}=0$. So $A(\Q)\cong E(\Q)\cong\Z$. The
+injective: its kernel is a rational finite subgroup of $E$ of order dividing $\deg\pi=6$, hence cyclic since $6$ is
+squarefree, and a nontrivial one would give a rational cyclic isogeny of $43a1$, which has none. So $A(\Q)\cong E(\Q)\cong\Z$. The
 abelian variety $B$ is isogenous to a product of modular abelian varieties of dimensions $2$, $2$ and $4$
 whose $L$-values at $1$ are nonzero (exact modular-symbol computations of $L$-ratios $2/7$, $3/16$,
 $1/361$); by Kato \cite[Corollary~14.3]{Kato2004}, $B(\Q)$ is finite. Its order divides

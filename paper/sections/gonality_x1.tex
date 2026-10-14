@@ -2,8 +2,7 @@
 
 \begin{proof}[Proof of Theorem D]
 \emph{Upper bounds.} Derickx and van Hoeij \cite[Table~1]{DerickxVanHoeij2014} give, for each $N$, a modular unit
-on $X_1(N)$ over $\Q$ whose degree is the value in Theorem~D; it is also the degree in $y$ of the plane model of
-\cite{SutherlandX1}, i.e.\ the degree of the coordinate function $x$.
+on $X_1(N)$ over $\Q$ whose degree is the value in Theorem~D.
 
 \emph{Lower bounds.} Let $u$ be the value in Theorem~D and $d=u-1$. For $N=48$ see \S\ref{sec:double-cover}. For the other $N$ we apply Method~II to $X_1(N)$ at the prime
 $p$ of \cref{tab:D}, which does not divide $N$; \S\ref{sec:prelim} explains why the reduction of the plane model
@@ -77,7 +76,9 @@ $q$-expansions, $y_0=q+O(q^2)$), checked to have good reduction at $7$ as in \S\
 $\psi\in S_2(\Gamma_1(48))$ have integral $q$-expansion, nonzero modulo $7$, with $\langle23\rangle\psi=-\psi$, and put
 $w=\psi/y_0$, a function on $X_1(48)$ with $\sigma w=-w$. Then $\delta=w^2=\psi^2/y_0^2$ is a ratio of two forms of
 weight $8$ on $Y$, $\delta=\mathrm{Nm}(y)/\mathrm{Dn}(y)$, from an identity $\psi^2\,\mathrm{Dn}(y)=y_0^2\,\mathrm{Nm}(y)$
-with integral coefficients checked to the Sturm bound. Reducing modulo $7$, $\bar w$ is a function on
+with integral coefficients checked to the Sturm bound. The reduction $\mathrm{Dn}(\bar y)$ is not identically zero on
+$Y_{\F_7}$ (the certificate divides by it), so $\bar\delta=\mathrm{Nm}(\bar y)/\mathrm{Dn}(\bar y)$ is a well-defined
+function on $Y_{\F_7}$, and $\psi^2\equiv y_0^2\bar\delta$. Reducing modulo $7$, $\bar w$ is a function on
 $X_1(48)_{\F_7}$ with $\sigma\bar w=-\bar w$ and $\bar w^2=\bar\delta$, so the function field of $X_1(48)_{\F_7}$ is
 $\F_7(Y)(\sqrt{\bar\delta})$; as a check, Magma computes its genus as $37$. \texttt{CAGonality} gives
 $\gon_{\F_7}Y=8$, so $2\gon Y=16>15$. There are $1328$ effective divisors $E$ of degree $3$ on $Y_{\F_7}$; each
