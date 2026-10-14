@@ -8,11 +8,12 @@ each curve with its LMFDB label by checking that the corresponding open subgroup
  H_\Delta=\left\{\begin{pmatrix}a&b\\0&d\end{pmatrix}\in\GL_2(\Z/N\Z): a\in\Delta\right\},
 \]
 is conjugate to the group of the label. Rational Fourier expansions at the cusp $\infty$ describe the model
-of $X_\Delta(N)$ that parametrizes $\mu_N$-markings; since $\Delta=\Delta^{-1}$, it is $\Q$-isomorphic to
-the model parametrizing points of order $N$: quotienting by the marked subgroup and dualizing interchanges the two
-moduli problems over $\Q$ and carries the diamond operator $\langle a\rangle$ to $\langle a^{-1}\rangle$, so it descends to
-$X_\Delta(N)$ because $\Delta^{-1}=\Delta$. In particular the cusp
-$\infty$ is a rational point of $X_\Delta(N)$.
+of $X_\Delta(N)$ that parametrizes embeddings $\mu_N\hookrightarrow E$ up to $\Delta$; on this model the cusp $\infty$
+is a rational point. This model is $\Q$-isomorphic to the one parametrizing points of order $N$ up to $\Delta$:
+quotienting by the marked subgroup and using the Weil pairing interchanges the two moduli problems over $\Q$ and
+carries the diamond operator $\langle a\rangle$ to $\langle a^{-1}\rangle$, which preserves the subgroup $\Delta$, so
+the isomorphism descends to $X_\Delta(N)$. On the second model the cusp $\infty$ corresponds to the cusp $0$. We
+only use that $X_\Delta(N)$ has a rational cusp, which we call $\infty$.
 
 For genus $g\ge 5$ we use the canonical model computed by MD~Sage
 (\texttt{vanishing\_quadratic\_forms} with \texttt{minimize\_strategy="LLL"}); all lower bounds over
@@ -46,9 +47,16 @@ We certify good reduction at $p$ in one of two ways.
  do \cite{DerickxVanHoeij2014}. Lemma~2.3 of \cite{AKMJ2024} does not apply in this case, because these models are singular.
  Instead, the script \texttt{model\_checks.m} checks that the reduction of $F$ modulo $p$ has the same degree in $y$ as $F$, that
  it is irreducible over $\Fp(x)$, and that its function field $K_p$ has exact constant field $\Fp$ and genus
- $g=g(X_1(N))$. Since $X_1(N)$ has good reduction at $p$ \cite{DeligneRapoport1973}, the reduction of any model
- of $X_1(N)$ consists of $X_1(N)_{\Fp}$ and possibly curves of genus $0$ \cite[\S8.3.4, \S9.2.1, \S9.3]{Liu2002}.
- As $K_p$ has genus $g\ge2$, it is the function field of $X_1(N)_{\Fp}$.
+ $g=g(X_1(N))$. Let $\mathcal X$ be the smooth proper model of $X_1(N)$ over $\Z_{(p)}$, which exists because
+ $p\nmid N$ \cite{DeligneRapoport1973}. The field $K_p$ is the residue field of the Gauss valuation of
+ $\Q(x,y)\supseteq\Q(x)$ extending the $p$-adic valuation, so it is the function field of an irreducible component
+ of the special fibre of a normal proper model $\mathcal Y$ of $X_1(N)$ over $\Z_{(p)}$ (the normalization of
+ the closure of the plane curve). Let $\mathcal Y'\to\mathcal Y$ be a desingularization \cite[\S8.3.4]{Liu2002};
+ every component of $\mathcal Y_{\Fp}$ is birational to a component of $\mathcal Y'_{\Fp}$. Since $g\ge1$,
+ $\mathcal X$ is the minimal regular model, and the birational map $\mathcal Y'\to\mathcal X$ is a composition of
+ blow-ups of closed points \cite[\S9.2.1, \S9.3]{Liu2002}. Hence the components of $\mathcal Y'_{\Fp}$ are the strict
+ transform of $X_1(N)_{\Fp}$ and exceptional curves, which are rational. As $K_p$ has genus $g\ge2$, it is the
+ function field of $X_1(N)_{\Fp}$.
 \end{enumerate}
 
 \subsection{Tools from the geometry of curves}
@@ -76,11 +84,16 @@ By Hilbert's irreducibility theorem, the set of $t\in\PP^1(\Q)$ whose fibre is a
 is the complement of a thin set, and in particular infinite.
 \end{proof}
 
-\begin{lemma}[{Frey \cite{Frey1994}, Abramovich \cite{Abramovich1996}}]\label{lem:frey}
-If $C/\Q$ has infinitely many points of degree $d$, then $\gon_\Q C\le 2d$. For a modular curve of index
-$\mu$ in $\mathrm{PSL}_2(\Z)$, $\gon_{\mathbb C}\ge\frac{\lambda_1}{24}\mu$ with $\lambda_1\ge\frac{975}{4096}$
-by Kim and Sarnak \cite[Appendix~2]{KimSarnak2003}.
+\begin{lemma}[{Frey \cite{Frey1994}}]\label{lem:frey}
+If $C/\Q$ has infinitely many points of degree $d$, then $\gon_\Q C\le 2d$.
 \end{lemma}
 
-In particular, a modular curve with $119\mu>120000$ has $\gon_{\mathbb C}>10$ and so only finitely many
-points of degree $5$; this is the form used in \cite[Theorem~3.16]{Orlic2025} and below.
+\begin{lemma}[{Abramovich \cite{Abramovich1996}}]\label{lem:abramovich}
+A modular curve of index $\mu$ in $\mathrm{PSL}_2(\Z)$ has $\gon_{\mathbb C}\ge\frac{\lambda_1}{24}\mu$, where
+$\lambda_1$ is a lower bound for the smallest positive eigenvalue of the Laplacian on congruence subgroups. By Kim and
+Sarnak \cite[Appendix~2]{KimSarnak2003} one may take $\lambda_1=\frac{975}{4096}$.
+\end{lemma}
+
+Since $\frac{119}{12000}<\frac{975}{24\cdot4096}$, a modular curve with $119\mu>120000$ has
+$\gon_{\mathbb C}\ge\frac{975}{24\cdot4096}\mu>\frac{119\mu}{12000}>10$, so by \cref{lem:frey} it has only finitely
+many points of degree $5$; this is the form used in \cite[Theorem~3.16]{Orlic2025} and below.
