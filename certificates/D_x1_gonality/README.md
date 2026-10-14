@@ -46,6 +46,14 @@ and prime used, that the reduction mod $p$ has the same degree in $y$, is irredu
 $\mathbb F_p$, and has genus $g(X_1(N))$. By §2.2 of the paper, this identifies its function field with that of
 $`X_1(N)_{\mathbb F_p}`$. The output is in `model_checks.log`.
 
+## The cover search inside CurveArith
+
+`curvearith_cover_option.patch` adds the same search, as an option `Al:="Cover"` of CurveArith's
+`CAHasFunctionOfDegreeAtMost`, with tests (`tests/src/test_covers.m`). It applies to CurveArith commit `0263b34`
+(`git apply curvearith_cover_option.patch` in a clone of <https://github.com/nt-lib/CurveArith>), and
+CurveArith's test suite passes with it. It was used to cross-check `phase2/` on small curves; the certificates of
+Theorem D use `phase2/` and the unmodified CurveArith pinned in `third_party/`.
+
 ## Running Phase 1 in parallel
 
 Most of the time is spent in Phase 1, in computing expansions at places of large degree. `phase1/run_phase1.py`

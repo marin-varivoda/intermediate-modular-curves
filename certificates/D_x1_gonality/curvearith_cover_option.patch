@@ -1,0 +1,269 @@
+From cf5641da0a7726231c3f2acad2954a86caf582c3 Mon Sep 17 00:00:00 2001
+From: Marin Varivoda <marinvarivoda@gmail.com>
+Date: Fri, 2 Oct 2026 17:05:48 +0200
+Subject: [PATCH] Add a cover search backend to CAHasFunctionOfDegreeAtMost
+
+Al := "Cover" uses the places and expansions of "LinAlg", but only tests
+the covers b*S + E + Q of the family C_b. In each cover it reads the pole
+degrees of the functions in L(H) from the kernel of the transposed
+vanishing matrix. Baseline sets b.
+---
+ README.md               |   6 +-
+ src/gonality.m          | 124 +++++++++++++++++++++++++++++++++++++---
+ tests/src/test_all.m    |   1 +
+ tests/src/test_covers.m |  28 +++++++++
+ 4 files changed, 150 insertions(+), 9 deletions(-)
+ create mode 100644 tests/src/test_covers.m
+
+diff --git a/README.md b/README.md
+index e24fc0c..6040d2f 100644
+--- a/README.md
++++ b/README.md
+@@ -44,9 +44,11 @@ This package provides three intrinsics:
+ - `CAHasFunctionOfDegreeAtMost(C, d) : Crv[FldFin], RngIntElt -> BoolElt`  
+     `CAHasFunctionOfDegreeAtMost(F, d) : FldFun, RngIntElt -> BoolElt`  
+     Returns whether there is a function on the curve C, or in the function field F, of degree at most d.  
+-    Takes four optional parameters:
++    Takes five optional parameters:
+     - `Al: MonStgElt`  
+-        The method to use for computing Riemann-Roch dimensions. The default, `"LinAlg"`, uses a linear algebra-based procedure described in [[1]](#citing). Can be set to `"Hess"` to use Magma's `Dimension` intrinsic instead, which may be faster on very small examples.
++        The method to use for computing Riemann-Roch dimensions. The default, `"LinAlg"`, uses a linear algebra-based procedure described in [[1]](#citing). Can be set to `"Hess"` to use Magma's `Dimension` intrinsic instead, which may be faster on very small examples. Can be set to `"Cover"` to use the same expansions as `"LinAlg"`, but to test a smaller family of covering divisors and find the functions of degree at most d in their Riemann-Roch spaces. On curves without rational points, `"Cover"` uses `"LinAlg"`.
++    - `Baseline: RngIntElt`  
++        The baseline b, with 1 <= b <= d, for `Al := "Cover"`. Every such b gives a correct result; it only affects the running time. Default 1.
+     - `MaximumTime: RngReSubElt`  
+         The maximum time (in seconds) after which the calculation is aborted. If omitted, no time limit is used.
+     - `TimingData : BoolElt`  
+diff --git a/src/gonality.m b/src/gonality.m
+index 915dfb3..7bb9cec 100644
+--- a/src/gonality.m
++++ b/src/gonality.m
+@@ -137,6 +137,85 @@ By default MinimumDegree = #degree_counts, i.e. only divisors of degree exactly
+     return divisors, divisors_tried;
+ end function;
+ 
++function NonrationalDivisors(degree_counts, R)
++/*
++Returns all effective divisors Q of degree at most R supported on places of degree at least 2.
++Q is stored as the sequence [Q_2, ..., Q_d] of multisets, in the format of DivisorCandidatesByPartition.
++*/
++    d := #degree_counts;
++    Qs := [[{* Integers() | *} : i in [2..d]]];
++    for q in [2..R] do
++        for degree_partition in IntegerSolutions([2..d], q) do
++            Qs cat:= [[Q[i] : i in [1..d - 1]] : Q in CartesianProduct([Multisets({1..degree_counts[i]}, degree_partition[i - 1]) : i in [2..d]])];
++        end for;
++    end for;
++    return Qs;
++end function;
++
++function ExcessDivisors(N, n, b, r)
++/*
++Returns the maximal excess divisors E on the N places of degree 1, as multisets of their indices,
++for a fixed Q with r = d - deg(Q). With s = #Supp(E), condition (*) reads b*s + max(n - s, 0) + deg(E) <= r.
++If r < b + n, no nonzero E satisfies (*) and the only maximal E is 0. Otherwise E = 0 is not maximal,
++and a nonzero E is maximal exactly when equality holds in (*).
++*/
++    if r lt b + n then
++        return [{* Integers() | *}];
++    end if;
++    Es := [];
++    for s in [1..N] do
++        e := r - b*s - Max(n - s, 0);
++        if e lt s then
++            continue;
++        end if;
++        for T in Subsets({1..N}, s) do
++            for Y in Multisets(T, e - s) do
++                Append(~Es, Multiset(T) join Y);
++            end for;
++        end for;
++    end for;
++    return Es;
++end function;
++
++function CoverCandidates(degree_counts, n, b, cache, filter : First := false, MaximumTime := Infinity())
++/*
++Loop over the cover family C_b and return the covers H that satisfy filter(H, cache) eq true.
++H is stored like the divisors in DivisorCandidatesByPartition.
++
++Here d = #degree_counts and S is the sum of the N places of degree 1. Let f have degree at most d,
++with pole divisor D = A + Q whose support contains at least n places of degree 1, where A is supported
++on places of degree 1 and Q is not. Put E = sum max(v_P(A) - b, 0) P and s = #Supp(E). Then
++    (*)  b*s + max(n - s, 0) + deg(E) + deg(Q) <= d,
++and D <= b*S + E + Q. By (*), deg(Q) <= d - n, and enlarging E to a maximal E for this Q keeps
++D <= b*S + E + Q. So C_b consists of b*S + E + Q for every Q of degree at most d - n
++(NonrationalDivisors) and every maximal E for that Q (ExcessDivisors).
++Requires n ge 1 and 1 le b le d.
++*/
++    start_time := Realtime();
++    d := #degree_counts;
++    N := degree_counts[1];
++    baseline := {* i^^b : i in [1..N] *};
++    excess := [ExcessDivisors(N, n, b, r) : r in [1..d]];
++    covers := [];
++    covers_tried := 0;
++    for Q in NonrationalDivisors(degree_counts, d - n) do
++        r := d - &+[Integers() | i * #Q[i - 1] : i in [2..d]];
++        for E in excess[r] do
++            H := [baseline join E] cat Q;
++            covers_tried +:= 1;
++            if filter(H, cache) then
++                if First then return [H], covers_tried; end if;
++                Append(~covers, H);
++            end if;
++
++            if Realtime(start_time) ge MaximumTime then
++                return -1, covers_tried;
++            end if;
++        end for;
++    end for;
++    return covers, covers_tried;
++end function;
++
+ function PrecomputePowerseriesExpansions(FF, places, precisions : MaximumTime := Infinity())
+     // The PowerseriesExpansions at all x in places
+     // up to precision precisions[deg(x)]
+@@ -181,6 +260,32 @@ function HasNonconstantFunction(D, powerseries_expansions)
+     return r lt d;
+ end function;
+ 
++function HasNonconstantFunctionOfDegreeAtMost(H, powerseries_expansions)
++    // Returns whether L(H) contains a nonconstant function of degree at most d = #H.
++    // The kernel of the transpose of the vanishing matrix is L(H) modulo constants, in local
++    // coordinates of the principal parts. For a kernel vector, the last nonzero block of a place
++    // gives the pole order of the function at that place.
++    d := #H;
++    M := DifferentialVanishingMatrix(powerseries_expansions, H);
++    for v in Nullspace(Transpose(M)) do
++        if IsZero(v) then continue; end if;
++        c := Eltseq(v);
++        degree := 0;
++        offset := 0;
++        for i -> x in H do
++            for j -> m in x do
++                pole_order := Max([0] cat [k : k in [1..m] | exists{t : t in [1..i] | c[offset + (k - 1)*i + t] ne 0}]);
++                degree +:= i * pole_order;
++                offset +:= i * m;
++            end for;
++        end for;
++        if degree le d then
++            return true;
++        end if;
++    end for;
++    return false;
++end function;
++
+ function HasNonconstantFunctionHess(D, places)
+     divisor := &+[exponent * Divisor(places[degree][place]) : place -> exponent in multiset, degree -> multiset in D];
+     return Dimension(divisor) gt 1;
+@@ -190,7 +295,7 @@ declare verbose Gonality, 1;
+ 
+ timing_data_format := recformat<place_degree_bound, places, divisors, place_enumeration_time, expansions_time, riemann_roch_time, timeout>;
+ 
+-intrinsic CAHasFunctionOfDegreeAtMost(FF::FldFun, d::RngIntElt : Al := "LinAlg", MaximumTime := Infinity(), TimingData := false, StopAfterFirst := true, LowerBound := 1) -> BoolElt
++intrinsic CAHasFunctionOfDegreeAtMost(FF::FldFun, d::RngIntElt : Al := "LinAlg", Baseline := 1, MaximumTime := Infinity(), TimingData := false, StopAfterFirst := true, LowerBound := 1) -> BoolElt
+ { Returns whether there is a function in FF with degree at most d.
+ 
+ The optional parameter LowerBound can be used to tell the function that the caller already knows that FF has no
+@@ -199,7 +304,7 @@ then divisors of all degrees between LowerBound and d have to be tried. }
+     FF := RationalExtensionRepresentation(FF);
+     if DimensionOfExactConstantField(FF) ne 1 then
+         k := DimensionOfExactConstantField(FF);
+-        return CAHasFunctionOfDegreeAtMost(ConstantFieldExtension(FF, ExactConstantField(FF)), d div k : Al := Al, MaximumTime := MaximumTime, TimingData := TimingData, StopAfterFirst := StopAfterFirst, LowerBound := Ceiling(LowerBound / k));
++        return CAHasFunctionOfDegreeAtMost(ConstantFieldExtension(FF, ExactConstantField(FF)), d div k : Al := Al, Baseline := Baseline, MaximumTime := MaximumTime, TimingData := TimingData, StopAfterFirst := StopAfterFirst, LowerBound := Ceiling(LowerBound / k));
+     end if;
+ 
+     start_time := Realtime();
+@@ -248,7 +353,8 @@ then divisors of all degrees between LowerBound and d have to be tried. }
+     min_degree := n gt 0 select d else Max(LowerBound, 1);
+ 
+     case Al:
+-        when "LinAlg":
++        when "LinAlg", "Cover":
++            require Al eq "LinAlg" or Baseline in [1..d]: "Baseline must be between 1 and d";
+             vprint Gonality: "Precomputing power series expansions";
+             expansion_start_time := Cputime();
+             precisions := [i eq 1 select d else (d - n1) div i : i in [1..d]];
+@@ -266,14 +372,18 @@ then divisors of all degrees between LowerBound and d have to be tried. }
+             end if;
+ 
+             riemann_roch_start_time := Cputime();
+-            g_d_1s, timing_data`divisors := DivisorCandidates(degree_counts, n, powerseries_expansions, HasNonconstantFunction : First := StopAfterFirst, MaximumTime := MaximumTime - Realtime(start_time), MinimumDegree := min_degree);
++            if Al eq "Cover" and n ge 1 then
++                g_d_1s, timing_data`divisors := CoverCandidates(degree_counts, n, Baseline, powerseries_expansions, HasNonconstantFunctionOfDegreeAtMost : First := StopAfterFirst, MaximumTime := MaximumTime - Realtime(start_time));
++            else
++                g_d_1s, timing_data`divisors := DivisorCandidates(degree_counts, n, powerseries_expansions, HasNonconstantFunction : First := StopAfterFirst, MaximumTime := MaximumTime - Realtime(start_time), MinimumDegree := min_degree);
++            end if;
+             timing_data`riemann_roch_time := Cputime(riemann_roch_start_time);
+         when "Hess":
+             riemann_roch_start_time := Cputime();
+             g_d_1s, timing_data`divisors := DivisorCandidates(degree_counts, n, places, HasNonconstantFunctionHess : First := StopAfterFirst, MaximumTime := MaximumTime - Realtime(start_time), MinimumDegree := min_degree);
+             timing_data`riemann_roch_time := Cputime(riemann_roch_start_time);
+         else:
+-            error "Al must be \"LinAlg\" or \"Hess\"";
++            error "Al must be \"LinAlg\", \"Hess\" or \"Cover\"";
+     end case;
+ 
+     if g_d_1s cmpeq -1 then
+@@ -330,10 +440,10 @@ If d = Bound + 1 then d is a lowerbound for the gonality of FF. }
+     return d;
+ end intrinsic;
+ 
+-intrinsic CAHasFunctionOfDegreeAtMost(C::Crv[FldFin], d::RngIntElt : Al := "LinAlg", MaximumTime := Infinity(), TimingData := false, StopAfterFirst := true) -> BoolElt
++intrinsic CAHasFunctionOfDegreeAtMost(C::Crv[FldFin], d::RngIntElt : Al := "LinAlg", Baseline := 1, MaximumTime := Infinity(), TimingData := false, StopAfterFirst := true) -> BoolElt
+ { Returns whether there is a function on C with degree at most d. }
+     FF := AlgorithmicFunctionField(FunctionField(C));
+-    return CAHasFunctionOfDegreeAtMost(FF, d : Al := Al, MaximumTime := MaximumTime, TimingData := TimingData, StopAfterFirst := StopAfterFirst);
++    return CAHasFunctionOfDegreeAtMost(FF, d : Al := Al, Baseline := Baseline, MaximumTime := MaximumTime, TimingData := TimingData, StopAfterFirst := StopAfterFirst);
+ end intrinsic;
+ 
+ intrinsic CAGonality(C::Crv[FldFin] : Bound := -1, Al := "LinAlg", MaximumTime := Infinity()) -> RngIntElt
+diff --git a/tests/src/test_all.m b/tests/src/test_all.m
+index aef00a0..eea4361 100644
+--- a/tests/src/test_all.m
++++ b/tests/src/test_all.m
+@@ -4,6 +4,7 @@ SetDebugOnError(true);
+ 
+ load "tst.m";
+ load "src/test_gonality.m";
++load "src/test_covers.m";
+ load "src/test_classgroup.m";
+ 
+ print "All test finished!";
+diff --git a/tests/src/test_covers.m b/tests/src/test_covers.m
+new file mode 100644
+index 0000000..b99d036
+--- /dev/null
++++ b/tests/src/test_covers.m
+@@ -0,0 +1,28 @@
++
++// C3 and C5 are the curves of test_gonality.m. On C3 at d = 2 every cover has
++// a nonconstant function, but none of degree at most 2. C5 has no rational
++// points, so "Cover" uses "LinAlg".
++P<x,y,z> := ProjectiveSpace(GF(3), 2);
++C3 := Curve(P, 4*x^4 - y^4 - z^4);
++P<x,y,z> := ProjectiveSpace(GF(5), 2);
++C5 := Curve(P, 4*x^4 - y^4 - z^4);
++
++// Two plane quintics over F_2, of genus 6. On D3 at d = 3 a cover containing
++// a place of degree 2 has a nonconstant function, but none of degree at most 3.
++// On D1 at d = 4 every cover with a function of degree at most 4 contains a
++// place of degree 2.
++P<x,y,z> := ProjectiveSpace(GF(2), 2);
++D3 := Curve(P, x^5 + x^3*y^2 + y^5 + x^4*z + y^4*z + x*y^2*z^2 + y^3*z^2 + x^2*z^3 + x*y*z^3 + x*z^4);
++D1 := Curve(P, x^5 + x^4*y + x^3*y^2 + y^5 + x^3*y*z + x^2*z^3 + x*y*z^3 + y^2*z^3 + z^5);
++
++procedure TestCoverHasFunctionOfDegreeAtMost()
++    for b in [1, 2] do
++        TSTAssertEQ(CAHasFunctionOfDegreeAtMost(C3, 2 : Al := "Cover", Baseline := b), false);
++        TSTAssertEQ(CAHasFunctionOfDegreeAtMost(C5, 3 : Al := "Cover", Baseline := b), false);
++        TSTAssertEQ(CAHasFunctionOfDegreeAtMost(D3, 3 : Al := "Cover", Baseline := b), false);
++        TSTAssertEQ(CAHasFunctionOfDegreeAtMost(D1, 4 : Al := "Cover", Baseline := b), true);
++    end for;
++end procedure;
++
++
++TestCoverHasFunctionOfDegreeAtMost();
+-- 
+2.43.0
+
