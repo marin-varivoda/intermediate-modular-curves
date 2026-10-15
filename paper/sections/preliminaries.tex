@@ -47,19 +47,9 @@ We certify good reduction at $p$ in one of two ways.
  do \cite{DerickxVanHoeij2014}. Lemma~2.3 of \cite{AKMJ2024} does not apply in this case, because these models are singular.
  Instead, the script \texttt{model\_checks.m} checks that the reduction of $F$ modulo $p$ has the same degree in $y$ as $F$, that
  it is irreducible over $\Fp(x)$, and that its function field $K_p$ has exact constant field $\Fp$ and genus
- $g=g(X_1(N))$. Let $\mathcal X$ be the smooth proper model of $X_1(N)$ over $\Z_{(p)}$, which exists because
- $p\nmid N$ \cite{DeligneRapoport1973}. Because $\bar F$ is irreducible over $\Fp(x)$ of the same degree in $y$, the Gauss valuation of $\Q(x)$ extending the
- $p$-adic valuation has a unique extension to $\Q(x,y)$, with residue field $K_p$, so it is the function field of an irreducible component
- of the special fibre of a normal proper model $\mathcal Y$ of $X_1(N)$ over $\Z_{(p)}$ (the normalization of
- the closure of the plane curve). Let $\mathcal Y'\to\mathcal Y$ be a desingularization \cite[\S8.3.4]{Liu2002};
- every component of $\mathcal Y_{\Fp}$ is birational to a component of $\mathcal Y'_{\Fp}$. The smooth model
- $\mathcal X$ is relatively minimal (its special fibre is irreducible of genus $g$, so contains no exceptional
- curve), hence, as $g\ge1$, it is the minimal regular model, and every regular model dominates it
- \cite[9.3.21 and \S9.3]{Liu2002}. So the birational map $\mathcal Y'\dashrightarrow\mathcal X$ is a
- morphism, and by the factorization theorem \cite[\S9.2.1]{Liu2002} it is a composition of blow-ups of closed
- points. Hence the components of $\mathcal Y'_{\Fp}$ are the strict transform of $X_1(N)_{\Fp}$ and exceptional
- components, of geometric genus $0$. As $K_p$ has genus $g\ge2$, it is the
- function field of $X_1(N)_{\Fp}$.
+ $g=g(X_1(N))$. Since $X_1(N)$ has good reduction at $p$ \cite{DeligneRapoport1973}, the reduction of any model
+ of $X_1(N)$ consists of $X_1(N)_{\Fp}$ and possibly curves of genus $0$ \cite[\S8.3.4, \S9.2.1, \S9.3]{Liu2002}.
+ As $K_p$ has genus $g\ge2$, it is the function field of $X_1(N)_{\Fp}$.
 \end{enumerate}
 
 \subsection{Tools from the geometry of curves}
